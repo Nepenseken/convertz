@@ -1,8 +1,0 @@
-{
-  "credit": "Made with Blockbench",
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "particle": "elitecreatures:witchcaster_animated/armor/witchcasteranimated_leggings_cyan",
-    "layer0": "elitecreatures:witchcaster_animated/armor/witchcasteranimated_leggings_cyan"
-  }
-}

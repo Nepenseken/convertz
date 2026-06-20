@@ -1,8 +1,0 @@
-{
-  "credit": "Made with Blockbench",
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "particle": "elitecreatures:roman_armor/general_leggings_lightblue",
-    "layer0": "elitecreatures:roman_armor/general_leggings_lightblue"
-  }
-}

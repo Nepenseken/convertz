@@ -1,8 +1,0 @@
-{
-  "credit": "Made with Blockbench",
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "particle": "ec_elitearmors:item/ec_elitearmorsvol6/ecrubychest_green",
-    "layer0": "ec_elitearmors:item/ec_elitearmorsvol6/ecrubychest_green"
-  }
-}

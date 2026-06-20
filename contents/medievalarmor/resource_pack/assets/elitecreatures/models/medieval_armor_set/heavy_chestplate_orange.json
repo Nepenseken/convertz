@@ -1,8 +1,0 @@
-{
-  "credit": "Made with Blockbench",
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "particle": "elitecreatures:medieval_armor_set/heavy_chestplate_orange",
-    "layer0": "elitecreatures:medieval_armor_set/heavy_chestplate_orange"
-  }
-}

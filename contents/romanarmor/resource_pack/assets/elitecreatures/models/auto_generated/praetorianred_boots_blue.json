@@ -1,8 +1,0 @@
-{
-  "credit": "Made with Blockbench",
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "particle": "elitecreatures:roman_armor/praetorianred_boots_blue",
-    "layer0": "elitecreatures:roman_armor/praetorianred_boots_blue"
-  }
-}

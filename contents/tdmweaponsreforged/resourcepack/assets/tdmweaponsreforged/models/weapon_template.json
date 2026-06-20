@@ -1,8 +1,0 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"particle": "tdmweaponsreforged:item/weapon_template",
-		"layer0": "tdmweaponsreforged:item/weapon_template"
-	}
-}
