@@ -1,0 +1,329 @@
+info:
+  namespace: ec_elitearmors
+armors_rendering:
+  ecrubyarmor_teal:
+    color: '#5cec34'
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_teal
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_teal_2
+    emissive_1: armor/ec_elitearmorsvol6/ecrubyarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecrubyarmore_2
+    use_color: false
+  eclightknightarmor_teal:
+    color: '#66f6b6'
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_teal
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_teal_2
+    emissive_1: armor/ec_elitearmorsvol6/eclightknightarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclightknightarmore_2
+    use_color: false
+  ecbluemecharmor_teal:
+    color: '#87dfbf'
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_teal
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_teal_2
+    emissive_1: armor/ec_elitearmorsvol6/ecbluemecharmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecbluemecharmore_2
+    use_color: false
+  eclavabeastarmor_teal:
+    color: '#28a7f7'
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_teal
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_teal_2
+    emissive_1: armor/ec_elitearmorsvol6/eclavabeastarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclavabeastarmore_2
+    use_color: false
+equipments:
+  ecrubyarmor_teal:
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_teal
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_teal_2
+  eclightknightarmor_teal:
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_teal
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_teal_2
+  ecbluemecharmor_teal:
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_teal
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_teal_2
+  eclavabeastarmor_teal:
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_teal
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_teal_2
+items:
+  ecrubychest_teal:
+    display_name: Ruby Chestplate (teal)
+    resource:
+      model_id: 2656
+      model_path: auto_generated/ecrubychest_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubychest_teal.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_teal
+      legacy_armor_rendering_id: ecrubyarmor_teal
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  ecrubyhelmet_teal:
+    display_name: Ruby Helmet (teal)
+    resource:
+      model_id: 2657
+      model_path: auto_generated/ecrubyhelmet_teal
+      generate: false
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_teal
+      legacy_armor_rendering_id: ecrubyarmor_teal
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecrubylegs_teal:
+    display_name: Ruby Leggings (teal)
+    resource:
+      model_id: 2658
+      model_path: auto_generated/ecrubylegs_teal
+      generate: false
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_teal
+      legacy_armor_rendering_id: ecrubyarmor_teal
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  ecrubyboots_teal:
+    display_name: Ruby Boots (teal)
+    resource:
+      model_id: 2655
+      model_path: auto_generated/ecrubyboots_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubyboots_teal.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_teal
+      legacy_armor_rendering_id: ecrubyarmor_teal
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclightknightchest_teal:
+    display_name: Lightknight Chestplate (teal)
+    resource:
+      model_id: 2652
+      model_path: auto_generated/eclightknightchest_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightchest_teal.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_teal
+      legacy_armor_rendering_id: eclightknightarmor_teal
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  eclightknighthelmet_teal:
+    display_name: Lightknight Helmet (teal)
+    resource:
+      model_id: 2653
+      model_path: auto_generated/eclightknighthelmet_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknighthelmet_teal.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_teal
+      legacy_armor_rendering_id: eclightknightarmor_teal
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclightknightlegs_teal:
+    display_name: Lightknight Leggings (teal)
+    resource:
+      model_id: 2654
+      model_path: auto_generated/eclightknightlegs_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightleggings_teal.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_teal
+      legacy_armor_rendering_id: eclightknightarmor_teal
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  eclightknightboots_teal:
+    display_name: Lightknight Boots (teal)
+    resource:
+      model_id: 2651
+      model_path: auto_generated/eclightknightboots_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightboots_teal.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_teal
+      legacy_armor_rendering_id: eclightknightarmor_teal
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecbluemechchest_teal:
+    display_name: Bluemech Chestplate (teal)
+    resource:
+      model_id: 2644
+      model_path: auto_generated/ecbluemechchest_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechchest_teal.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_teal
+      legacy_armor_rendering_id: ecbluemecharmor_teal
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  ecbluemechhelmet_teal:
+    display_name: Bluemech Helmet (teal)
+    resource:
+      model_id: 2645
+      model_path: auto_generated/ecbluemechhelmet_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechhelmet_teal.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_teal
+      legacy_armor_rendering_id: ecbluemecharmor_teal
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecbluemechlegs_teal:
+    display_name: Bluemech Leggings (teal)
+    resource:
+      model_id: 2646
+      model_path: auto_generated/ecbluemechlegs_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechleggings_teal.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_teal
+      legacy_armor_rendering_id: ecbluemecharmor_teal
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  ecbluemechboots_teal:
+    display_name: Bluemech Boots (teal)
+    resource:
+      model_id: 2643
+      model_path: auto_generated/ecbluemechboots_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechboots_teal.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_teal
+      legacy_armor_rendering_id: ecbluemecharmor_teal
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclavabeastchest_teal:
+    display_name: Lavabeast Chestplate (teal)
+    resource:
+      model_id: 2648
+      model_path: auto_generated/eclavabeastchest_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastchest_teal.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_teal
+      legacy_armor_rendering_id: eclavabeastarmor_teal
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  eclavabeasthelmet_teal:
+    display_name: Lavabeast Helmet (teal)
+    resource:
+      model_id: 2649
+      model_path: auto_generated/eclavabeasthelmet_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeasthelmet_teal.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_teal
+      legacy_armor_rendering_id: eclavabeastarmor_teal
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclavabeastlegs_teal:
+    display_name: Lavabeast Leggings (teal)
+    resource:
+      model_id: 2650
+      model_path: auto_generated/eclavabeastlegs_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastleggings_teal.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_teal
+      legacy_armor_rendering_id: eclavabeastarmor_teal
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  eclavabeastboots_teal:
+    display_name: Lavabeast Boots (teal)
+    resource:
+      model_id: 2647
+      model_path: auto_generated/eclavabeastboots_teal
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastboots_teal.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_teal
+      legacy_armor_rendering_id: eclavabeastarmor_teal
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3

@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_darkyellow:
+    color: '#552093'
+    layer_1: medieval_armor_set/heavy_armor_layer_darkyellow_1
+    layer_2: medieval_armor_set/heavy_armor_layer_darkyellow_2
+    use_color: false
+  medieval_armor_set_light_armor_darkyellow:
+    color: '#552094'
+    layer_1: medieval_armor_set/light_armor_layer_darkyellow_1
+    layer_2: medieval_armor_set/light_armor_layer_darkyellow_2
+    use_color: false
+  medieval_armor_set_medium_armor_darkyellow:
+    color: '#552095'
+    layer_1: medieval_armor_set/medium_armor_layer_darkyellow_1
+    layer_2: medieval_armor_set/medium_armor_layer_darkyellow_2
+    use_color: false
+  medieval_armor_set_wizard_armor_darkyellow:
+    color: '#552096'
+    layer_1: medieval_armor_set/wizard_armor_layer_darkyellow_1
+    layer_2: medieval_armor_set/wizard_armor_layer_darkyellow_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_darkyellow:
+    layer_1: medieval_armor_set/heavy_armor_layer_darkyellow_1
+    layer_2: medieval_armor_set/heavy_armor_layer_darkyellow_2
+  medieval_armor_set_light_armor_darkyellow:
+    layer_1: medieval_armor_set/light_armor_layer_darkyellow_1
+    layer_2: medieval_armor_set/light_armor_layer_darkyellow_2
+  medieval_armor_set_medium_armor_darkyellow:
+    layer_1: medieval_armor_set/medium_armor_layer_darkyellow_1
+    layer_2: medieval_armor_set/medium_armor_layer_darkyellow_2
+  medieval_armor_set_wizard_armor_darkyellow:
+    layer_1: medieval_armor_set/wizard_armor_layer_darkyellow_1
+    layer_2: medieval_armor_set/wizard_armor_layer_darkyellow_2
+items:
+  medieval_armor_set_heavy_helmet_darkyellow:
+    display_name: Heavy Helmet (darkyellow)
+    resource:
+      model_id: 648
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_darkyellow
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkyellow
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_darkyellow:
+    display_name: Heavy Chestplate (darkyellow)
+    resource:
+      model_id: 647
+      model_path: medieval_armor_set/heavy_chestplate_darkyellow
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkyellow
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_darkyellow:
+    display_name: Heavy Leggings (darkyellow)
+    resource:
+      model_id: 649
+      model_path: medieval_armor_set/heavy_leggings_darkyellow
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkyellow
+      slot: LEGS
+  medieval_armor_set_heavy_boots_darkyellow:
+    display_name: Heavy Boots (darkyellow)
+    resource:
+      model_id: 646
+      model_path: medieval_armor_set/heavy_boots_darkyellow
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkyellow
+      slot: FEET
+  medieval_armor_set_light_helmet_darkyellow:
+    display_name: Light Helmet (darkyellow)
+    resource:
+      model_id: 652
+      model_path: medieval_armor_set/light_helmet_darkyellow
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkyellow
+      slot: HEAD
+  medieval_armor_set_light_chestplate_darkyellow:
+    display_name: Light Chestplate (darkyellow)
+    resource:
+      model_id: 651
+      model_path: medieval_armor_set/light_chestplate_darkyellow
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkyellow
+      slot: CHEST
+  medieval_armor_set_light_leggings_darkyellow:
+    display_name: Light Leggings (darkyellow)
+    resource:
+      model_id: 653
+      model_path: medieval_armor_set/light_leggings_darkyellow
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkyellow
+      slot: LEGS
+  medieval_armor_set_light_boots_darkyellow:
+    display_name: Light Boots (darkyellow)
+    resource:
+      model_id: 650
+      model_path: medieval_armor_set/light_boots_darkyellow
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkyellow
+      slot: FEET
+  medieval_armor_set_medium_helmet_darkyellow:
+    display_name: Medium Helmet (darkyellow)
+    resource:
+      model_id: 656
+      model_path: medieval_armor_set/medium_helmet_darkyellow
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkyellow
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_darkyellow:
+    display_name: Medium Chestplate (darkyellow)
+    resource:
+      model_id: 655
+      model_path: medieval_armor_set/medium_chestplate_darkyellow
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkyellow
+      slot: CHEST
+  medieval_armor_set_medium_leggings_darkyellow:
+    display_name: Medium Leggings (darkyellow)
+    resource:
+      model_id: 657
+      model_path: medieval_armor_set/medium_leggings_darkyellow
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkyellow
+      slot: LEGS
+  medieval_armor_set_medium_boots_darkyellow:
+    display_name: Medium Boots (darkyellow)
+    resource:
+      model_id: 654
+      model_path: medieval_armor_set/medium_boots_darkyellow
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkyellow
+      slot: FEET
+  medieval_armor_set_wizard_helmet_darkyellow:
+    display_name: Wizard Helmet (darkyellow)
+    resource:
+      model_id: 660
+      model_path: medieval_armor_set/wizard_helmet_darkyellow
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkyellow
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_darkyellow:
+    display_name: Wizard Chestplate (darkyellow)
+    resource:
+      model_id: 659
+      model_path: medieval_armor_set/wizard_chestplate_darkyellow
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkyellow
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_darkyellow:
+    display_name: Wizard Leggings (darkyellow)
+    resource:
+      model_id: 661
+      model_path: medieval_armor_set/wizard_leggings_darkyellow
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkyellow
+      slot: LEGS
+  medieval_armor_set_wizard_boots_darkyellow:
+    display_name: Wizard Boots (darkyellow)
+    resource:
+      model_id: 658
+      model_path: medieval_armor_set/wizard_boots_darkyellow
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkyellow
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkyellow
+      slot: FEET

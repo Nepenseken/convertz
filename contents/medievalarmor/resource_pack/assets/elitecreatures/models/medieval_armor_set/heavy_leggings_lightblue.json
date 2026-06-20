@@ -1,0 +1,8 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "particle": "elitecreatures:medieval_armor_set/heavy_leggings_lightblue",
+    "layer0": "elitecreatures:medieval_armor_set/heavy_leggings_lightblue"
+  }
+}

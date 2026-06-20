@@ -1,0 +1,55 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_lightpurple:
+    color: '#ffffef'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_lightpurple_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_lightpurple_2
+    use_color: false
+equipments:
+  witchcaster_animated_lightpurple:
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_lightpurple_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_lightpurple_2
+items:
+  witchcaster_animated_hat_lightpurple:
+    display_name: DISPLAY (lightpurple)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_lightpurple
+      model_id: 2313
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_lightpurple:
+    display_name: DISPLAY (lightpurple)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_lightpurple
+      model_id: 2312
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: witchcaster_animated_lightpurple
+      legacy_armor_rendering_id: witchcaster_animated_lightpurple
+      slot: CHEST
+  witchcaster_animated_leggings_lightpurple:
+    display_name: DISPLAY (lightpurple)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_lightpurple
+      model_id: 2314
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: witchcaster_animated_lightpurple
+      legacy_armor_rendering_id: witchcaster_animated_lightpurple
+      slot: LEGS
+  witchcaster_animated_boots_lightpurple:
+    display_name: DISPLAY (lightpurple)
+    resource:
+      model_path: witchcaster_animated/armor/boots_lightpurple
+      model_id: 2311
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: witchcaster_animated_lightpurple
+      legacy_armor_rendering_id: witchcaster_animated_lightpurple
+      slot: FEET

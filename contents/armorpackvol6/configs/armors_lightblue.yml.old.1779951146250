@@ -1,0 +1,316 @@
+info:
+  namespace: ec_elitearmors
+armors_rendering:
+  ecrubyarmor_lightblue:
+    color: '#5cec2d'
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_lightblue
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_lightblue_2
+    emissive_1: armor/ec_elitearmorsvol6/ecrubyarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecrubyarmore_2
+    use_color: false
+  eclightknightarmor_lightblue:
+    color: '#66f6af'
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_lightblue
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_lightblue_2
+    emissive_1: armor/ec_elitearmorsvol6/eclightknightarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclightknightarmore_2
+    use_color: false
+  ecbluemecharmor_lightblue:
+    color: '#87dfb8'
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_lightblue
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_lightblue_2
+    emissive_1: armor/ec_elitearmorsvol6/ecbluemecharmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecbluemecharmore_2
+    use_color: false
+  eclavabeastarmor_lightblue:
+    color: '#28a7f0'
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_lightblue
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_lightblue_2
+    emissive_1: armor/ec_elitearmorsvol6/eclavabeastarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclavabeastarmore_2
+    use_color: false
+items:
+  ecrubychest_lightblue:
+    display_name: Ruby Chestplate (lightblue)
+    resource:
+      model_id: 2672
+      model_path: auto_generated/ecrubychest_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubychest_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecrubyarmor_lightblue
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecrubyhelmet_lightblue:
+    display_name: Ruby Helmet (lightblue)
+    resource:
+      model_id: 2673
+      model_path: auto_generated/ecrubyhelmet_lightblue
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecrubyarmor_lightblue
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecrubylegs_lightblue:
+    display_name: Ruby Leggings (lightblue)
+    resource:
+      model_id: 2674
+      model_path: auto_generated/ecrubylegs_lightblue
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecrubyarmor_lightblue
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecrubyboots_lightblue:
+    display_name: Ruby Boots (lightblue)
+    resource:
+      model_id: 2671
+      model_path: auto_generated/ecrubyboots_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubyboots_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecrubyarmor_lightblue
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclightknightchest_lightblue:
+    display_name: Lightknight Chestplate (lightblue)
+    resource:
+      model_id: 2668
+      model_path: auto_generated/eclightknightchest_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightchest_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclightknightarmor_lightblue
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclightknighthelmet_lightblue:
+    display_name: Lightknight Helmet (lightblue)
+    resource:
+      model_id: 2669
+      model_path: auto_generated/eclightknighthelmet_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknighthelmet_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclightknightarmor_lightblue
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclightknightlegs_lightblue:
+    display_name: Lightknight Leggings (lightblue)
+    resource:
+      model_id: 2670
+      model_path: auto_generated/eclightknightlegs_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightleggings_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclightknightarmor_lightblue
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclightknightboots_lightblue:
+    display_name: Lightknight Boots (lightblue)
+    resource:
+      model_id: 2667
+      model_path: auto_generated/eclightknightboots_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightboots_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclightknightarmor_lightblue
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  ecbluemechchest_lightblue:
+    display_name: Bluemech Chestplate (lightblue)
+    resource:
+      model_id: 2660
+      model_path: auto_generated/ecbluemechchest_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechchest_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecbluemecharmor_lightblue
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecbluemechhelmet_lightblue:
+    display_name: Bluemech Helmet (lightblue)
+    resource:
+      model_id: 2661
+      model_path: auto_generated/ecbluemechhelmet_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechhelmet_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecbluemecharmor_lightblue
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecbluemechlegs_lightblue:
+    display_name: Bluemech Leggings (lightblue)
+    resource:
+      model_id: 2662
+      model_path: auto_generated/ecbluemechlegs_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechleggings_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecbluemecharmor_lightblue
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecbluemechboots_lightblue:
+    display_name: Bluemech Boots (lightblue)
+    resource:
+      model_id: 2659
+      model_path: auto_generated/ecbluemechboots_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechboots_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecbluemecharmor_lightblue
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclavabeastchest_lightblue:
+    display_name: Lavabeast Chestplate (lightblue)
+    resource:
+      model_id: 2664
+      model_path: auto_generated/eclavabeastchest_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastchest_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclavabeastarmor_lightblue
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclavabeasthelmet_lightblue:
+    display_name: Lavabeast Helmet (lightblue)
+    resource:
+      model_id: 2665
+      model_path: auto_generated/eclavabeasthelmet_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeasthelmet_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclavabeastarmor_lightblue
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclavabeastlegs_lightblue:
+    display_name: Lavabeast Leggings (lightblue)
+    resource:
+      model_id: 2666
+      model_path: auto_generated/eclavabeastlegs_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastleggings_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclavabeastarmor_lightblue
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclavabeastboots_lightblue:
+    display_name: Lavabeast Boots (lightblue)
+    resource:
+      model_id: 2663
+      model_path: auto_generated/eclavabeastboots_lightblue
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastboots_lightblue.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclavabeastarmor_lightblue
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3

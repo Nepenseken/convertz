@@ -1,0 +1,8 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "particle": "elitecreatures:witchcaster_animated/armor/witchcasteranimated_chestplate_darkpink",
+    "layer0": "elitecreatures:witchcaster_animated/armor/witchcasteranimated_chestplate_darkpink"
+  }
+}

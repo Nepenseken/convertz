@@ -1,0 +1,48 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_yellow:
+    color: '#fffffa'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_yellow_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_yellow_2
+    use_color: false
+items:
+  witchcaster_animated_hat_yellow:
+    display_name: DISPLAY (yellow)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_yellow
+      model_id: 2273
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_yellow:
+    display_name: DISPLAY (yellow)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_yellow
+      model_id: 2272
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: witchcaster_animated_yellow
+  witchcaster_animated_leggings_yellow:
+    display_name: DISPLAY (yellow)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_yellow
+      model_id: 2274
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: witchcaster_animated_yellow
+  witchcaster_animated_boots_yellow:
+    display_name: DISPLAY (yellow)
+    resource:
+      model_path: witchcaster_animated/armor/boots_yellow
+      model_id: 2271
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: witchcaster_animated_yellow

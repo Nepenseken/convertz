@@ -1,0 +1,316 @@
+info:
+  namespace: ec_elitearmors
+armors_rendering:
+  ecrubyarmor_yellow:
+    color: '#5cec2d'
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_yellow
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_yellow_2
+    emissive_1: armor/ec_elitearmorsvol6/ecrubyarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecrubyarmore_2
+    use_color: false
+  eclightknightarmor_yellow:
+    color: '#66f6af'
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_yellow
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_yellow_2
+    emissive_1: armor/ec_elitearmorsvol6/eclightknightarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclightknightarmore_2
+    use_color: false
+  ecbluemecharmor_yellow:
+    color: '#87dfb8'
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_yellow
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_yellow_2
+    emissive_1: armor/ec_elitearmorsvol6/ecbluemecharmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecbluemecharmore_2
+    use_color: false
+  eclavabeastarmor_yellow:
+    color: '#28a7f0'
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_yellow
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_yellow_2
+    emissive_1: armor/ec_elitearmorsvol6/eclavabeastarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclavabeastarmore_2
+    use_color: false
+items:
+  ecrubychest_yellow:
+    display_name: Ruby Chestplate (yellow)
+    resource:
+      model_id: 2560
+      model_path: auto_generated/ecrubychest_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubychest_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecrubyarmor_yellow
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecrubyhelmet_yellow:
+    display_name: Ruby Helmet (yellow)
+    resource:
+      model_id: 2561
+      model_path: auto_generated/ecrubyhelmet_yellow
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecrubyarmor_yellow
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecrubylegs_yellow:
+    display_name: Ruby Leggings (yellow)
+    resource:
+      model_id: 2562
+      model_path: auto_generated/ecrubylegs_yellow
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecrubyarmor_yellow
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecrubyboots_yellow:
+    display_name: Ruby Boots (yellow)
+    resource:
+      model_id: 2559
+      model_path: auto_generated/ecrubyboots_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubyboots_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecrubyarmor_yellow
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclightknightchest_yellow:
+    display_name: Lightknight Chestplate (yellow)
+    resource:
+      model_id: 2556
+      model_path: auto_generated/eclightknightchest_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightchest_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclightknightarmor_yellow
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclightknighthelmet_yellow:
+    display_name: Lightknight Helmet (yellow)
+    resource:
+      model_id: 2557
+      model_path: auto_generated/eclightknighthelmet_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknighthelmet_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclightknightarmor_yellow
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclightknightlegs_yellow:
+    display_name: Lightknight Leggings (yellow)
+    resource:
+      model_id: 2558
+      model_path: auto_generated/eclightknightlegs_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightleggings_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclightknightarmor_yellow
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclightknightboots_yellow:
+    display_name: Lightknight Boots (yellow)
+    resource:
+      model_id: 2555
+      model_path: auto_generated/eclightknightboots_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightboots_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclightknightarmor_yellow
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  ecbluemechchest_yellow:
+    display_name: Bluemech Chestplate (yellow)
+    resource:
+      model_id: 2548
+      model_path: auto_generated/ecbluemechchest_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechchest_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecbluemecharmor_yellow
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecbluemechhelmet_yellow:
+    display_name: Bluemech Helmet (yellow)
+    resource:
+      model_id: 2549
+      model_path: auto_generated/ecbluemechhelmet_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechhelmet_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecbluemecharmor_yellow
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecbluemechlegs_yellow:
+    display_name: Bluemech Leggings (yellow)
+    resource:
+      model_id: 2550
+      model_path: auto_generated/ecbluemechlegs_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechleggings_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecbluemecharmor_yellow
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecbluemechboots_yellow:
+    display_name: Bluemech Boots (yellow)
+    resource:
+      model_id: 2547
+      model_path: auto_generated/ecbluemechboots_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechboots_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecbluemecharmor_yellow
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclavabeastchest_yellow:
+    display_name: Lavabeast Chestplate (yellow)
+    resource:
+      model_id: 2552
+      model_path: auto_generated/eclavabeastchest_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastchest_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclavabeastarmor_yellow
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclavabeasthelmet_yellow:
+    display_name: Lavabeast Helmet (yellow)
+    resource:
+      model_id: 2553
+      model_path: auto_generated/eclavabeasthelmet_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeasthelmet_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclavabeastarmor_yellow
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclavabeastlegs_yellow:
+    display_name: Lavabeast Leggings (yellow)
+    resource:
+      model_id: 2554
+      model_path: auto_generated/eclavabeastlegs_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastleggings_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclavabeastarmor_yellow
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclavabeastboots_yellow:
+    display_name: Lavabeast Boots (yellow)
+    resource:
+      model_id: 2551
+      model_path: auto_generated/eclavabeastboots_yellow
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastboots_yellow.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclavabeastarmor_yellow
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3

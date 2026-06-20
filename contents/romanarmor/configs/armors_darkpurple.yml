@@ -1,0 +1,650 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  roman_armor_aquilifer_darkpurple:
+    color: '#8c1a13'
+    layer_1: roman_armor/aquilifer_armor_layer_darkpurple_1
+    layer_2: roman_armor/aquilifer_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_centurion_darkpurple:
+    color: '#8c1a14'
+    layer_1: roman_armor/centurion_armor_layer_darkpurple_1
+    layer_2: roman_armor/centurion_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_emperor_darkpurple:
+    color: '#8c1a15'
+    layer_1: roman_armor/emperor_armor_layer_darkpurple_1
+    layer_2: roman_armor/emperor_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_general_darkpurple:
+    color: '#8c1a16'
+    layer_1: roman_armor/general_armor_layer_darkpurple_1
+    layer_2: roman_armor/general_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_hastatus_darkpurple:
+    color: '#8c1a17'
+    layer_1: roman_armor/hastatus_armor_layer_darkpurple_1
+    layer_2: roman_armor/hastatus_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_veles_darkpurple:
+    color: '#8c1a18'
+    layer_1: roman_armor/veles_armor_layer_darkpurple_1
+    layer_2: roman_armor/veles_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_triarius_darkpurple:
+    color: '#8c1a19'
+    layer_1: roman_armor/triarius_armor_layer_darkpurple_1
+    layer_2: roman_armor/triarius_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_legionnaire_darkpurple:
+    color: '#8c1a1a'
+    layer_1: roman_armor/legionnaire_armor_layer_darkpurple_1
+    layer_2: roman_armor/legionnaire_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_praetorian_darkpurple:
+    color: '#8c1a1b'
+    layer_1: roman_armor/praetorian_armor_layer_darkpurple_1
+    layer_2: roman_armor/praetorian_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_romanelite_darkpurple:
+    color: '#8c1a1c'
+    layer_1: roman_armor/romanelite_armor_layer_darkpurple_1
+    layer_2: roman_armor/romanelite_armor_layer_darkpurple_2
+    use_color: false
+  roman_armor_praetorianred_darkpurple:
+    color: '#8c1a1d'
+    layer_1: roman_armor/praetorianred_armor_layer_darkpurple_1
+    layer_2: roman_armor/praetorianred_armor_layer_darkpurple_2
+    use_color: false
+equipments:
+  roman_armor_aquilifer_darkpurple:
+    layer_1: roman_armor/aquilifer_armor_layer_darkpurple_1
+    layer_2: roman_armor/aquilifer_armor_layer_darkpurple_2
+  roman_armor_centurion_darkpurple:
+    layer_1: roman_armor/centurion_armor_layer_darkpurple_1
+    layer_2: roman_armor/centurion_armor_layer_darkpurple_2
+  roman_armor_emperor_darkpurple:
+    layer_1: roman_armor/emperor_armor_layer_darkpurple_1
+    layer_2: roman_armor/emperor_armor_layer_darkpurple_2
+  roman_armor_general_darkpurple:
+    layer_1: roman_armor/general_armor_layer_darkpurple_1
+    layer_2: roman_armor/general_armor_layer_darkpurple_2
+  roman_armor_hastatus_darkpurple:
+    layer_1: roman_armor/hastatus_armor_layer_darkpurple_1
+    layer_2: roman_armor/hastatus_armor_layer_darkpurple_2
+  roman_armor_veles_darkpurple:
+    layer_1: roman_armor/veles_armor_layer_darkpurple_1
+    layer_2: roman_armor/veles_armor_layer_darkpurple_2
+  roman_armor_triarius_darkpurple:
+    layer_1: roman_armor/triarius_armor_layer_darkpurple_1
+    layer_2: roman_armor/triarius_armor_layer_darkpurple_2
+  roman_armor_legionnaire_darkpurple:
+    layer_1: roman_armor/legionnaire_armor_layer_darkpurple_1
+    layer_2: roman_armor/legionnaire_armor_layer_darkpurple_2
+  roman_armor_praetorian_darkpurple:
+    layer_1: roman_armor/praetorian_armor_layer_darkpurple_1
+    layer_2: roman_armor/praetorian_armor_layer_darkpurple_2
+  roman_armor_romanelite_darkpurple:
+    layer_1: roman_armor/romanelite_armor_layer_darkpurple_1
+    layer_2: roman_armor/romanelite_armor_layer_darkpurple_2
+  roman_armor_praetorianred_darkpurple:
+    layer_1: roman_armor/praetorianred_armor_layer_darkpurple_1
+    layer_2: roman_armor/praetorianred_armor_layer_darkpurple_2
+items:
+  roman_armor_aquilifer_helmet_darkpurple:
+    display_name: Aquilifer Helmet (darkpurple)
+    resource:
+      model_id: 3927
+      generate: false
+      model_path: auto_generated/aquilifer_helmet_darkpurple
+      textures:
+      - roman_armor/aquilifer_helmet_darkpurple.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_aquilifer_darkpurple
+      legacy_armor_rendering_id: roman_armor_aquilifer_darkpurple
+      slot: HEAD
+  roman_armor_aquilifer_chestplate_darkpurple:
+    display_name: Aquilifer Chestplate (darkpurple)
+    resource:
+      model_id: 3926
+      generate: false
+      model_path: auto_generated/aquilifer_chestplate_darkpurple
+      textures:
+      - roman_armor/aquilifer_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_aquilifer_darkpurple
+      legacy_armor_rendering_id: roman_armor_aquilifer_darkpurple
+      slot: CHEST
+  roman_armor_aquilifer_leggings_darkpurple:
+    display_name: Aquilifer Leggings (darkpurple)
+    resource:
+      model_id: 3928
+      generate: false
+      model_path: auto_generated/aquilifer_leggings_darkpurple
+      textures:
+      - roman_armor/aquilifer_leggings_darkpurple.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_aquilifer_darkpurple
+      legacy_armor_rendering_id: roman_armor_aquilifer_darkpurple
+      slot: LEGS
+  roman_armor_aquilifer_boots_darkpurple:
+    display_name: Aquilifer Boots (darkpurple)
+    resource:
+      model_id: 3925
+      generate: false
+      model_path: auto_generated/aquilifer_boots_darkpurple
+      textures:
+      - roman_armor/aquilifer_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_aquilifer_darkpurple
+      legacy_armor_rendering_id: roman_armor_aquilifer_darkpurple
+      slot: FEET
+  roman_armor_centurion_helmet_darkpurple:
+    display_name: Centurion Helmet (darkpurple)
+    resource:
+      model_id: 3934
+      generate: false
+      model_path: auto_generated/centurion_helmet_darkpurple
+      textures:
+      - roman_armor/centurion_helmet_darkpurple.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_centurion_darkpurple
+      legacy_armor_rendering_id: roman_armor_centurion_darkpurple
+      slot: HEAD
+  roman_armor_centurion_chestplate_darkpurple:
+    display_name: Centurion Chestplate (darkpurple)
+    resource:
+      model_id: 3930
+      generate: false
+      model_path: auto_generated/centurion_chestplate_darkpurple
+      textures:
+      - roman_armor/centurion_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_centurion_darkpurple
+      legacy_armor_rendering_id: roman_armor_centurion_darkpurple
+      slot: CHEST
+  roman_armor_centurion_leggings_darkpurple:
+    display_name: Centurion Leggings (darkpurple)
+    resource:
+      model_id: 3935
+      generate: false
+      model_path: auto_generated/centurion_leggings_darkpurple
+      textures:
+      - roman_armor/centurion_leggings_darkpurple.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_centurion_darkpurple
+      legacy_armor_rendering_id: roman_armor_centurion_darkpurple
+      slot: LEGS
+  roman_armor_centurion_boots_darkpurple:
+    display_name: Centurion Boots (darkpurple)
+    resource:
+      model_id: 3929
+      generate: false
+      model_path: auto_generated/centurion_boots_darkpurple
+      textures:
+      - roman_armor/centurion_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_centurion_darkpurple
+      legacy_armor_rendering_id: roman_armor_centurion_darkpurple
+      slot: FEET
+  roman_armor_centurion_hat_1_darkpurple:
+    display_name: Centurion Hat 1 (darkpurple)
+    resource:
+      model_id: 3931
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_darkpurple_1
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_2_darkpurple:
+    display_name: Centurion Hat 2 (darkpurple)
+    resource:
+      model_id: 3932
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_darkpurple_2
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_3_darkpurple:
+    display_name: Centurion Hat 3 (darkpurple)
+    resource:
+      model_id: 3933
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_darkpurple_3
+    behaviours:
+      hat: true
+  roman_armor_emperor_helmet_darkpurple:
+    display_name: Emperor Helmet (darkpurple)
+    resource:
+      model_id: 3938
+      generate: false
+      model_path: auto_generated/emperor_helmet_darkpurple
+      textures:
+      - roman_armor/emperor_helmet_darkpurple.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_emperor_darkpurple
+      legacy_armor_rendering_id: roman_armor_emperor_darkpurple
+      slot: HEAD
+  roman_armor_emperor_chestplate_darkpurple:
+    display_name: Emperor Chestplate (darkpurple)
+    resource:
+      model_id: 3937
+      generate: false
+      model_path: auto_generated/emperor_chestplate_darkpurple
+      textures:
+      - roman_armor/emperor_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_emperor_darkpurple
+      legacy_armor_rendering_id: roman_armor_emperor_darkpurple
+      slot: CHEST
+  roman_armor_emperor_leggings_darkpurple:
+    display_name: Emperor Leggings (darkpurple)
+    resource:
+      model_id: 3939
+      generate: false
+      model_path: auto_generated/emperor_leggings_darkpurple
+      textures:
+      - roman_armor/emperor_leggings_darkpurple.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_emperor_darkpurple
+      legacy_armor_rendering_id: roman_armor_emperor_darkpurple
+      slot: LEGS
+  roman_armor_emperor_boots_darkpurple:
+    display_name: Emperor Boots (darkpurple)
+    resource:
+      model_id: 3936
+      generate: false
+      model_path: auto_generated/emperor_boots_darkpurple
+      textures:
+      - roman_armor/emperor_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_emperor_darkpurple
+      legacy_armor_rendering_id: roman_armor_emperor_darkpurple
+      slot: FEET
+  roman_armor_general_hat_darkpurple:
+    display_name: General Hat (darkpurple)
+    resource:
+      model_id: 3942
+      material: PAPER
+      generate: false
+      model_path: roman_armor/general_hat_darkpurple
+    behaviours:
+      hat: true
+  roman_armor_general_chestplate_darkpurple:
+    display_name: General Chestplate (darkpurple)
+    resource:
+      model_id: 3941
+      generate: false
+      model_path: auto_generated/general_chestplate_darkpurple
+      textures:
+      - roman_armor/general_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_general_darkpurple
+      legacy_armor_rendering_id: roman_armor_general_darkpurple
+      slot: CHEST
+  roman_armor_general_leggings_darkpurple:
+    display_name: General Leggings (darkpurple)
+    resource:
+      model_id: 3943
+      generate: false
+      model_path: auto_generated/general_leggings_darkpurple
+      textures:
+      - roman_armor/general_leggings_darkpurple.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_general_darkpurple
+      legacy_armor_rendering_id: roman_armor_general_darkpurple
+      slot: LEGS
+  roman_armor_general_boots_darkpurple:
+    display_name: General Boots (darkpurple)
+    resource:
+      model_id: 3940
+      generate: false
+      model_path: auto_generated/general_boots_darkpurple
+      textures:
+      - roman_armor/general_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_general_darkpurple
+      legacy_armor_rendering_id: roman_armor_general_darkpurple
+      slot: FEET
+  roman_armor_hastatus_helmet_darkpurple:
+    display_name: Hastatus Helmet (darkpurple)
+    resource:
+      model_id: 3946
+      generate: false
+      model_path: auto_generated/hastatus_helmet_darkpurple
+      textures:
+      - roman_armor/hastatus_helmet_darkpurple.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_hastatus_darkpurple
+      legacy_armor_rendering_id: roman_armor_hastatus_darkpurple
+      slot: HEAD
+  roman_armor_hastatus_chestplate_darkpurple:
+    display_name: Hastatus Chestplate (darkpurple)
+    resource:
+      model_id: 3945
+      generate: false
+      model_path: auto_generated/hastatus_chestplate_darkpurple
+      textures:
+      - roman_armor/hastatus_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_hastatus_darkpurple
+      legacy_armor_rendering_id: roman_armor_hastatus_darkpurple
+      slot: CHEST
+  roman_armor_hastatus_boots_darkpurple:
+    display_name: Hastatus Boots (darkpurple)
+    resource:
+      model_id: 3944
+      generate: false
+      model_path: auto_generated/hastatus_boots_darkpurple
+      textures:
+      - roman_armor/hastatus_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_hastatus_darkpurple
+      legacy_armor_rendering_id: roman_armor_hastatus_darkpurple
+      slot: FEET
+  roman_armor_veles_helmet_darkpurple:
+    display_name: Veles Helmet (darkpurple)
+    resource:
+      model_id: 3969
+      generate: false
+      model_path: auto_generated/veles_helmet_darkpurple
+      textures:
+      - roman_armor/veles_helmet_darkpurple.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_veles_darkpurple
+      legacy_armor_rendering_id: roman_armor_veles_darkpurple
+      slot: HEAD
+  roman_armor_veles_chestplate_darkpurple:
+    display_name: Veles Chestplate (darkpurple)
+    resource:
+      model_id: 3968
+      generate: false
+      model_path: auto_generated/veles_chestplate_darkpurple
+      textures:
+      - roman_armor/veles_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_veles_darkpurple
+      legacy_armor_rendering_id: roman_armor_veles_darkpurple
+      slot: CHEST
+  roman_armor_veles_boots_darkpurple:
+    display_name: Veles Boots (darkpurple)
+    resource:
+      model_id: 3967
+      generate: false
+      model_path: auto_generated/veles_boots_darkpurple
+      textures:
+      - roman_armor/veles_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_veles_darkpurple
+      legacy_armor_rendering_id: roman_armor_veles_darkpurple
+      slot: FEET
+  roman_armor_triarius_helmet_darkpurple:
+    display_name: Triarius Helmet (darkpurple)
+    resource:
+      model_id: 3965
+      generate: false
+      model_path: auto_generated/triarius_helmet_darkpurple
+      textures:
+      - roman_armor/triarius_helmet_darkpurple.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_triarius_darkpurple
+      legacy_armor_rendering_id: roman_armor_triarius_darkpurple
+      slot: HEAD
+  roman_armor_triarius_chestplate_darkpurple:
+    display_name: Triarius Chestplate (darkpurple)
+    resource:
+      model_id: 3964
+      generate: false
+      model_path: auto_generated/triarius_chestplate_darkpurple
+      textures:
+      - roman_armor/triarius_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_triarius_darkpurple
+      legacy_armor_rendering_id: roman_armor_triarius_darkpurple
+      slot: CHEST
+  roman_armor_triarius_leggings_darkpurple:
+    display_name: Triarius Leggings (darkpurple)
+    resource:
+      model_id: 3966
+      generate: false
+      model_path: auto_generated/triarius_leggings_darkpurple
+      textures:
+      - roman_armor/triarius_leggings_darkpurple.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_triarius_darkpurple
+      legacy_armor_rendering_id: roman_armor_triarius_darkpurple
+      slot: LEGS
+  roman_armor_triarius_boots_darkpurple:
+    display_name: Triarius Boots (darkpurple)
+    resource:
+      model_id: 3963
+      generate: false
+      model_path: auto_generated/triarius_boots_darkpurple
+      textures:
+      - roman_armor/triarius_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_triarius_darkpurple
+      legacy_armor_rendering_id: roman_armor_triarius_darkpurple
+      slot: FEET
+  roman_armor_legionnaire_helmet_darkpurple:
+    display_name: Legionnaire Helmet (darkpurple)
+    resource:
+      model_id: 3949
+      generate: false
+      model_path: auto_generated/legionnaire_helmet_darkpurple
+      textures:
+      - roman_armor/legionnaire_helmet_darkpurple.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_legionnaire_darkpurple
+      legacy_armor_rendering_id: roman_armor_legionnaire_darkpurple
+      slot: HEAD
+  roman_armor_legionnaire_chestplate_darkpurple:
+    display_name: Legionnaire Chestplate (darkpurple)
+    resource:
+      model_id: 3948
+      generate: false
+      model_path: auto_generated/legionnaire_chestplate_darkpurple
+      textures:
+      - roman_armor/legionnaire_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_legionnaire_darkpurple
+      legacy_armor_rendering_id: roman_armor_legionnaire_darkpurple
+      slot: CHEST
+  roman_armor_legionnaire_leggings_darkpurple:
+    display_name: Legionnaire Leggings (darkpurple)
+    resource:
+      model_id: 3950
+      generate: false
+      model_path: auto_generated/legionnaire_leggings_darkpurple
+      textures:
+      - roman_armor/legionnaire_leggings_darkpurple.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_legionnaire_darkpurple
+      legacy_armor_rendering_id: roman_armor_legionnaire_darkpurple
+      slot: LEGS
+  roman_armor_legionnaire_boots_darkpurple:
+    display_name: Legionnaire Boots (darkpurple)
+    resource:
+      model_id: 3947
+      generate: false
+      model_path: auto_generated/legionnaire_boots_darkpurple
+      textures:
+      - roman_armor/legionnaire_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_legionnaire_darkpurple
+      legacy_armor_rendering_id: roman_armor_legionnaire_darkpurple
+      slot: FEET
+  roman_armor_praetorian_hat_darkpurple:
+    display_name: Praetorian Hat (darkpurple)
+    resource:
+      model_id: 3953
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorian_hat_darkpurple
+    behaviours:
+      hat: true
+  roman_armor_praetorian_chestplate_darkpurple:
+    display_name: Praetorian Chestplate (darkpurple)
+    resource:
+      model_id: 3952
+      generate: false
+      model_path: auto_generated/praetorian_chestplate_darkpurple
+      textures:
+      - roman_armor/praetorian_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_praetorian_darkpurple
+      legacy_armor_rendering_id: roman_armor_praetorian_darkpurple
+      slot: CHEST
+  roman_armor_praetorian_leggings_darkpurple:
+    display_name: Praetorian Leggings (darkpurple)
+    resource:
+      model_id: 3954
+      generate: false
+      model_path: auto_generated/praetorian_leggings_darkpurple
+      textures:
+      - roman_armor/praetorian_leggings_darkpurple.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_praetorian_darkpurple
+      legacy_armor_rendering_id: roman_armor_praetorian_darkpurple
+      slot: LEGS
+  roman_armor_praetorian_boots_darkpurple:
+    display_name: Praetorian Boots (darkpurple)
+    resource:
+      model_id: 3951
+      generate: false
+      model_path: auto_generated/praetorian_boots_darkpurple
+      textures:
+      - roman_armor/praetorian_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_praetorian_darkpurple
+      legacy_armor_rendering_id: roman_armor_praetorian_darkpurple
+      slot: FEET
+  roman_armor_romanelite_hat_darkpurple:
+    display_name: Romanelite Hat (darkpurple)
+    resource:
+      model_id: 3961
+      material: PAPER
+      generate: false
+      model_path: roman_armor/romanelite_hat_darkpurple
+    behaviours:
+      hat: true
+  roman_armor_romanelite_chestplate_darkpurple:
+    display_name: Romanelite Chestplate (darkpurple)
+    resource:
+      model_id: 3960
+      generate: false
+      model_path: auto_generated/romanelite_chestplate_darkpurple
+      textures:
+      - roman_armor/romanelite_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_romanelite_darkpurple
+      legacy_armor_rendering_id: roman_armor_romanelite_darkpurple
+      slot: CHEST
+  roman_armor_romanelite_leggings_darkpurple:
+    display_name: Romanelite Leggings (darkpurple)
+    resource:
+      model_id: 3962
+      generate: false
+      model_path: auto_generated/romanelite_leggings_darkpurple
+      textures:
+      - roman_armor/romanelite_leggings_darkpurple.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_romanelite_darkpurple
+      legacy_armor_rendering_id: roman_armor_romanelite_darkpurple
+      slot: LEGS
+  roman_armor_romanelite_boots_darkpurple:
+    display_name: Romanelite Boots (darkpurple)
+    resource:
+      model_id: 3959
+      generate: false
+      model_path: auto_generated/romanelite_boots_darkpurple
+      textures:
+      - roman_armor/romanelite_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_romanelite_darkpurple
+      legacy_armor_rendering_id: roman_armor_romanelite_darkpurple
+      slot: FEET
+  roman_armor_praetorianred_hat_darkpurple:
+    display_name: Praetorianred Hat (darkpurple)
+    resource:
+      model_id: 3957
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorianred_hat_darkpurple
+    behaviours:
+      hat: true
+  roman_armor_praetorianred_chestplate_darkpurple:
+    display_name: Praetorianred Chestplate (darkpurple)
+    resource:
+      model_id: 3956
+      generate: false
+      model_path: auto_generated/praetorianred_chestplate_darkpurple
+      textures:
+      - roman_armor/praetorianred_chestplate_darkpurple.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_praetorianred_darkpurple
+      legacy_armor_rendering_id: roman_armor_praetorianred_darkpurple
+      slot: CHEST
+  roman_armor_praetorianred_leggings_darkpurple:
+    display_name: Praetorianred Leggings (darkpurple)
+    resource:
+      model_id: 3958
+      generate: false
+      model_path: auto_generated/praetorianred_leggings_darkpurple
+      textures:
+      - roman_armor/praetorianred_leggings_darkpurple.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_praetorianred_darkpurple
+      legacy_armor_rendering_id: roman_armor_praetorianred_darkpurple
+      slot: LEGS
+  roman_armor_praetorianred_boots_darkpurple:
+    display_name: Praetorianred Boots (darkpurple)
+    resource:
+      model_id: 3955
+      generate: false
+      model_path: auto_generated/praetorianred_boots_darkpurple
+      textures:
+      - roman_armor/praetorianred_boots_darkpurple.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_praetorianred_darkpurple
+      legacy_armor_rendering_id: roman_armor_praetorianred_darkpurple
+      slot: FEET

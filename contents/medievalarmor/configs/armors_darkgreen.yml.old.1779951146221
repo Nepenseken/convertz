@@ -1,0 +1,184 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_darkgreen:
+    color: '#55208f'
+    layer_1: medieval_armor_set/heavy_armor_layer_darkgreen_1
+    layer_2: medieval_armor_set/heavy_armor_layer_darkgreen_2
+    use_color: false
+  medieval_armor_set_light_armor_darkgreen:
+    color: '#552090'
+    layer_1: medieval_armor_set/light_armor_layer_darkgreen_1
+    layer_2: medieval_armor_set/light_armor_layer_darkgreen_2
+    use_color: false
+  medieval_armor_set_medium_armor_darkgreen:
+    color: '#552091'
+    layer_1: medieval_armor_set/medium_armor_layer_darkgreen_1
+    layer_2: medieval_armor_set/medium_armor_layer_darkgreen_2
+    use_color: false
+  medieval_armor_set_wizard_armor_darkgreen:
+    color: '#552092'
+    layer_1: medieval_armor_set/wizard_armor_layer_darkgreen_1
+    layer_2: medieval_armor_set/wizard_armor_layer_darkgreen_2
+    use_color: false
+items:
+  medieval_armor_set_heavy_helmet_darkgreen:
+    display_name: Heavy Helmet (darkgreen)
+    resource:
+      model_id: 696
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_darkgreen
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_heavy_armor_darkgreen
+  medieval_armor_set_heavy_chestplate_darkgreen:
+    display_name: Heavy Chestplate (darkgreen)
+    resource:
+      model_id: 695
+      model_path: medieval_armor_set/heavy_chestplate_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_heavy_armor_darkgreen
+  medieval_armor_set_heavy_leggings_darkgreen:
+    display_name: Heavy Leggings (darkgreen)
+    resource:
+      model_id: 697
+      model_path: medieval_armor_set/heavy_leggings_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_heavy_armor_darkgreen
+  medieval_armor_set_heavy_boots_darkgreen:
+    display_name: Heavy Boots (darkgreen)
+    resource:
+      model_id: 694
+      model_path: medieval_armor_set/heavy_boots_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_heavy_armor_darkgreen
+  medieval_armor_set_light_helmet_darkgreen:
+    display_name: Light Helmet (darkgreen)
+    resource:
+      model_id: 700
+      model_path: medieval_armor_set/light_helmet_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_light_armor_darkgreen
+  medieval_armor_set_light_chestplate_darkgreen:
+    display_name: Light Chestplate (darkgreen)
+    resource:
+      model_id: 699
+      model_path: medieval_armor_set/light_chestplate_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_light_armor_darkgreen
+  medieval_armor_set_light_leggings_darkgreen:
+    display_name: Light Leggings (darkgreen)
+    resource:
+      model_id: 701
+      model_path: medieval_armor_set/light_leggings_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_light_armor_darkgreen
+  medieval_armor_set_light_boots_darkgreen:
+    display_name: Light Boots (darkgreen)
+    resource:
+      model_id: 698
+      model_path: medieval_armor_set/light_boots_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_light_armor_darkgreen
+  medieval_armor_set_medium_helmet_darkgreen:
+    display_name: Medium Helmet (darkgreen)
+    resource:
+      model_id: 704
+      model_path: medieval_armor_set/medium_helmet_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_medium_armor_darkgreen
+  medieval_armor_set_medium_chestplate_darkgreen:
+    display_name: Medium Chestplate (darkgreen)
+    resource:
+      model_id: 703
+      model_path: medieval_armor_set/medium_chestplate_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_medium_armor_darkgreen
+  medieval_armor_set_medium_leggings_darkgreen:
+    display_name: Medium Leggings (darkgreen)
+    resource:
+      model_id: 705
+      model_path: medieval_armor_set/medium_leggings_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_medium_armor_darkgreen
+  medieval_armor_set_medium_boots_darkgreen:
+    display_name: Medium Boots (darkgreen)
+    resource:
+      model_id: 702
+      model_path: medieval_armor_set/medium_boots_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_medium_armor_darkgreen
+  medieval_armor_set_wizard_helmet_darkgreen:
+    display_name: Wizard Helmet (darkgreen)
+    resource:
+      model_id: 708
+      model_path: medieval_armor_set/wizard_helmet_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_wizard_armor_darkgreen
+  medieval_armor_set_wizard_chestplate_darkgreen:
+    display_name: Wizard Chestplate (darkgreen)
+    resource:
+      model_id: 707
+      model_path: medieval_armor_set/wizard_chestplate_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_wizard_armor_darkgreen
+  medieval_armor_set_wizard_leggings_darkgreen:
+    display_name: Wizard Leggings (darkgreen)
+    resource:
+      model_id: 709
+      model_path: medieval_armor_set/wizard_leggings_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_wizard_armor_darkgreen
+  medieval_armor_set_wizard_boots_darkgreen:
+    display_name: Wizard Boots (darkgreen)
+    resource:
+      model_id: 706
+      model_path: medieval_armor_set/wizard_boots_darkgreen
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_wizard_armor_darkgreen

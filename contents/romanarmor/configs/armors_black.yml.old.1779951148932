@@ -1,0 +1,578 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  roman_armor_aquilifer_black:
+    color: '#8c196e'
+    layer_1: roman_armor/aquilifer_armor_layer_black_1
+    layer_2: roman_armor/aquilifer_armor_layer_black_2
+    use_color: false
+  roman_armor_centurion_black:
+    color: '#8c1970'
+    layer_1: roman_armor/centurion_armor_layer_black_1
+    layer_2: roman_armor/centurion_armor_layer_black_2
+    use_color: false
+  roman_armor_emperor_black:
+    color: '#8c1976'
+    layer_1: roman_armor/emperor_armor_layer_black_1
+    layer_2: roman_armor/emperor_armor_layer_black_2
+    use_color: false
+  roman_armor_general_black:
+    color: '#8c1977'
+    layer_1: roman_armor/general_armor_layer_black_1
+    layer_2: roman_armor/general_armor_layer_black_2
+    use_color: false
+  roman_armor_hastatus_black:
+    color: '#8c1978'
+    layer_1: roman_armor/hastatus_armor_layer_black_1
+    layer_2: roman_armor/hastatus_armor_layer_black_2
+    use_color: false
+  roman_armor_veles_black:
+    color: '#8c1979'
+    layer_1: roman_armor/veles_armor_layer_black_1
+    layer_2: roman_armor/veles_armor_layer_black_2
+    use_color: false
+  roman_armor_triarius_black:
+    color: '#8c197a'
+    layer_1: roman_armor/triarius_armor_layer_black_1
+    layer_2: roman_armor/triarius_armor_layer_black_2
+    use_color: false
+  roman_armor_legionnaire_black:
+    color: '#8c197b'
+    layer_1: roman_armor/legionnaire_armor_layer_black_1
+    layer_2: roman_armor/legionnaire_armor_layer_black_2
+    use_color: false
+  roman_armor_praetorian_black:
+    color: '#8c197c'
+    layer_1: roman_armor/praetorian_armor_layer_black_1
+    layer_2: roman_armor/praetorian_armor_layer_black_2
+    use_color: false
+  roman_armor_romanelite_black:
+    color: '#8c197d'
+    layer_1: roman_armor/romanelite_armor_layer_black_1
+    layer_2: roman_armor/romanelite_armor_layer_black_2
+    use_color: false
+  roman_armor_praetorianred_black:
+    color: '#8c197e'
+    layer_1: roman_armor/praetorianred_armor_layer_black_1
+    layer_2: roman_armor/praetorianred_armor_layer_black_2
+    use_color: false
+items:
+  roman_armor_aquilifer_helmet_black:
+    display_name: Aquilifer Helmet (black)
+    resource:
+      model_id: 2937
+      generate: false
+      model_path: auto_generated/aquilifer_helmet_black
+      textures:
+      - roman_armor/aquilifer_helmet_black.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_aquilifer_black
+  roman_armor_aquilifer_chestplate_black:
+    display_name: Aquilifer Chestplate (black)
+    resource:
+      model_id: 2936
+      generate: false
+      model_path: auto_generated/aquilifer_chestplate_black
+      textures:
+      - roman_armor/aquilifer_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_aquilifer_black
+  roman_armor_aquilifer_leggings_black:
+    display_name: Aquilifer Leggings (black)
+    resource:
+      model_id: 2938
+      generate: false
+      model_path: auto_generated/aquilifer_leggings_black
+      textures:
+      - roman_armor/aquilifer_leggings_black.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_aquilifer_black
+  roman_armor_aquilifer_boots_black:
+    display_name: Aquilifer Boots (black)
+    resource:
+      model_id: 2935
+      generate: false
+      model_path: auto_generated/aquilifer_boots_black
+      textures:
+      - roman_armor/aquilifer_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_aquilifer_black
+  roman_armor_centurion_helmet_black:
+    display_name: Centurion Helmet (black)
+    resource:
+      model_id: 2944
+      generate: false
+      model_path: auto_generated/centurion_helmet_black
+      textures:
+      - roman_armor/centurion_helmet_black.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_centurion_black
+  roman_armor_centurion_chestplate_black:
+    display_name: Centurion Chestplate (black)
+    resource:
+      model_id: 2940
+      generate: false
+      model_path: auto_generated/centurion_chestplate_black
+      textures:
+      - roman_armor/centurion_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_centurion_black
+  roman_armor_centurion_leggings_black:
+    display_name: Centurion Leggings (black)
+    resource:
+      model_id: 2945
+      generate: false
+      model_path: auto_generated/centurion_leggings_black
+      textures:
+      - roman_armor/centurion_leggings_black.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_centurion_black
+  roman_armor_centurion_boots_black:
+    display_name: Centurion Boots (black)
+    resource:
+      model_id: 2939
+      generate: false
+      model_path: auto_generated/centurion_boots_black
+      textures:
+      - roman_armor/centurion_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_centurion_black
+  roman_armor_centurion_hat_1_black:
+    display_name: Centurion Hat 1 (black)
+    resource:
+      model_id: 2941
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_black_1
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_2_black:
+    display_name: Centurion Hat 2 (black)
+    resource:
+      model_id: 2942
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_black_2
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_3_black:
+    display_name: Centurion Hat 3 (black)
+    resource:
+      model_id: 2943
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_black_3
+    behaviours:
+      hat: true
+  roman_armor_emperor_helmet_black:
+    display_name: Emperor Helmet (black)
+    resource:
+      model_id: 2948
+      generate: false
+      model_path: auto_generated/emperor_helmet_black
+      textures:
+      - roman_armor/emperor_helmet_black.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_emperor_black
+  roman_armor_emperor_chestplate_black:
+    display_name: Emperor Chestplate (black)
+    resource:
+      model_id: 2947
+      generate: false
+      model_path: auto_generated/emperor_chestplate_black
+      textures:
+      - roman_armor/emperor_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_emperor_black
+  roman_armor_emperor_leggings_black:
+    display_name: Emperor Leggings (black)
+    resource:
+      model_id: 2949
+      generate: false
+      model_path: auto_generated/emperor_leggings_black
+      textures:
+      - roman_armor/emperor_leggings_black.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_emperor_black
+  roman_armor_emperor_boots_black:
+    display_name: Emperor Boots (black)
+    resource:
+      model_id: 2946
+      generate: false
+      model_path: auto_generated/emperor_boots_black
+      textures:
+      - roman_armor/emperor_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_emperor_black
+  roman_armor_general_hat_black:
+    display_name: General Hat (black)
+    resource:
+      model_id: 2952
+      material: PAPER
+      generate: false
+      model_path: roman_armor/general_hat_black
+    behaviours:
+      hat: true
+  roman_armor_general_chestplate_black:
+    display_name: General Chestplate (black)
+    resource:
+      model_id: 2951
+      generate: false
+      model_path: auto_generated/general_chestplate_black
+      textures:
+      - roman_armor/general_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_general_black
+  roman_armor_general_leggings_black:
+    display_name: General Leggings (black)
+    resource:
+      model_id: 2953
+      generate: false
+      model_path: auto_generated/general_leggings_black
+      textures:
+      - roman_armor/general_leggings_black.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_general_black
+  roman_armor_general_boots_black:
+    display_name: General Boots (black)
+    resource:
+      model_id: 2950
+      generate: false
+      model_path: auto_generated/general_boots_black
+      textures:
+      - roman_armor/general_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_general_black
+  roman_armor_hastatus_helmet_black:
+    display_name: Hastatus Helmet (black)
+    resource:
+      model_id: 2956
+      generate: false
+      model_path: auto_generated/hastatus_helmet_black
+      textures:
+      - roman_armor/hastatus_helmet_black.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_hastatus_black
+  roman_armor_hastatus_chestplate_black:
+    display_name: Hastatus Chestplate (black)
+    resource:
+      model_id: 2955
+      generate: false
+      model_path: auto_generated/hastatus_chestplate_black
+      textures:
+      - roman_armor/hastatus_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_hastatus_black
+  roman_armor_hastatus_boots_black:
+    display_name: Hastatus Boots (black)
+    resource:
+      model_id: 2954
+      generate: false
+      model_path: auto_generated/hastatus_boots_black
+      textures:
+      - roman_armor/hastatus_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_hastatus_black
+  roman_armor_veles_helmet_black:
+    display_name: Veles Helmet (black)
+    resource:
+      model_id: 2979
+      generate: false
+      model_path: auto_generated/veles_helmet_black
+      textures:
+      - roman_armor/veles_helmet_black.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_veles_black
+  roman_armor_veles_chestplate_black:
+    display_name: Veles Chestplate (black)
+    resource:
+      model_id: 2978
+      generate: false
+      model_path: auto_generated/veles_chestplate_black
+      textures:
+      - roman_armor/veles_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_veles_black
+  roman_armor_veles_boots_black:
+    display_name: Veles Boots (black)
+    resource:
+      model_id: 2977
+      generate: false
+      model_path: auto_generated/veles_boots_black
+      textures:
+      - roman_armor/veles_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_veles_black
+  roman_armor_triarius_helmet_black:
+    display_name: Triarius Helmet (black)
+    resource:
+      model_id: 2975
+      generate: false
+      model_path: auto_generated/triarius_helmet_black
+      textures:
+      - roman_armor/triarius_helmet_black.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_triarius_black
+  roman_armor_triarius_chestplate_black:
+    display_name: Triarius Chestplate (black)
+    resource:
+      model_id: 2974
+      generate: false
+      model_path: auto_generated/triarius_chestplate_black
+      textures:
+      - roman_armor/triarius_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_triarius_black
+  roman_armor_triarius_leggings_black:
+    display_name: Triarius Leggings (black)
+    resource:
+      model_id: 2976
+      generate: false
+      model_path: auto_generated/triarius_leggings_black
+      textures:
+      - roman_armor/triarius_leggings_black.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_triarius_black
+  roman_armor_triarius_boots_black:
+    display_name: Triarius Boots (black)
+    resource:
+      model_id: 2973
+      generate: false
+      model_path: auto_generated/triarius_boots_black
+      textures:
+      - roman_armor/triarius_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_triarius_black
+  roman_armor_legionnaire_helmet_black:
+    display_name: Legionnaire Helmet (black)
+    resource:
+      model_id: 2959
+      generate: false
+      model_path: auto_generated/legionnaire_helmet_black
+      textures:
+      - roman_armor/legionnaire_helmet_black.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_legionnaire_black
+  roman_armor_legionnaire_chestplate_black:
+    display_name: Legionnaire Chestplate (black)
+    resource:
+      model_id: 2958
+      generate: false
+      model_path: auto_generated/legionnaire_chestplate_black
+      textures:
+      - roman_armor/legionnaire_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_legionnaire_black
+  roman_armor_legionnaire_leggings_black:
+    display_name: Legionnaire Leggings (black)
+    resource:
+      model_id: 2960
+      generate: false
+      model_path: auto_generated/legionnaire_leggings_black
+      textures:
+      - roman_armor/legionnaire_leggings_black.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_legionnaire_black
+  roman_armor_legionnaire_boots_black:
+    display_name: Legionnaire Boots (black)
+    resource:
+      model_id: 2957
+      generate: false
+      model_path: auto_generated/legionnaire_boots_black
+      textures:
+      - roman_armor/legionnaire_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_legionnaire_black
+  roman_armor_praetorian_hat_black:
+    display_name: Praetorian Hat (black)
+    resource:
+      model_id: 2963
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorian_hat_black
+    behaviours:
+      hat: true
+  roman_armor_praetorian_chestplate_black:
+    display_name: Praetorian Chestplate (black)
+    resource:
+      model_id: 2962
+      generate: false
+      model_path: auto_generated/praetorian_chestplate_black
+      textures:
+      - roman_armor/praetorian_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_praetorian_black
+  roman_armor_praetorian_leggings_black:
+    display_name: Praetorian Leggings (black)
+    resource:
+      model_id: 2964
+      generate: false
+      model_path: auto_generated/praetorian_leggings_black
+      textures:
+      - roman_armor/praetorian_leggings_black.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_praetorian_black
+  roman_armor_praetorian_boots_black:
+    display_name: Praetorian Boots (black)
+    resource:
+      model_id: 2961
+      generate: false
+      model_path: auto_generated/praetorian_boots_black
+      textures:
+      - roman_armor/praetorian_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_praetorian_black
+  roman_armor_romanelite_hat_black:
+    display_name: Romanelite Hat (black)
+    resource:
+      model_id: 2971
+      material: PAPER
+      generate: false
+      model_path: roman_armor/romanelite_hat_black
+    behaviours:
+      hat: true
+  roman_armor_romanelite_chestplate_black:
+    display_name: Romanelite Chestplate (black)
+    resource:
+      model_id: 2970
+      generate: false
+      model_path: auto_generated/romanelite_chestplate_black
+      textures:
+      - roman_armor/romanelite_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_romanelite_black
+  roman_armor_romanelite_leggings_black:
+    display_name: Romanelite Leggings (black)
+    resource:
+      model_id: 2972
+      generate: false
+      model_path: auto_generated/romanelite_leggings_black
+      textures:
+      - roman_armor/romanelite_leggings_black.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_romanelite_black
+  roman_armor_romanelite_boots_black:
+    display_name: Romanelite Boots (black)
+    resource:
+      model_id: 2969
+      generate: false
+      model_path: auto_generated/romanelite_boots_black
+      textures:
+      - roman_armor/romanelite_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_romanelite_black
+  roman_armor_praetorianred_hat_black:
+    display_name: Praetorianred Hat (black)
+    resource:
+      model_id: 2967
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorianred_hat_black
+    behaviours:
+      hat: true
+  roman_armor_praetorianred_chestplate_black:
+    display_name: Praetorianred Chestplate (black)
+    resource:
+      model_id: 2966
+      generate: false
+      model_path: auto_generated/praetorianred_chestplate_black
+      textures:
+      - roman_armor/praetorianred_chestplate_black.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_praetorianred_black
+  roman_armor_praetorianred_leggings_black:
+    display_name: Praetorianred Leggings (black)
+    resource:
+      model_id: 2968
+      generate: false
+      model_path: auto_generated/praetorianred_leggings_black
+      textures:
+      - roman_armor/praetorianred_leggings_black.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_praetorianred_black
+  roman_armor_praetorianred_boots_black:
+    display_name: Praetorianred Boots (black)
+    resource:
+      model_id: 2965
+      generate: false
+      model_path: auto_generated/praetorianred_boots_black
+      textures:
+      - roman_armor/praetorianred_boots_black.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_praetorianred_black

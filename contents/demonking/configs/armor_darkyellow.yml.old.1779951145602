@@ -1,0 +1,49 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  demonking_assortment_darkyellow:
+    color: '#fffffa'
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_darkyellow_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_darkyellow_2
+    use_color: false
+items:
+  demonking_assortment_hat_darkyellow:
+    display_name: demonkinghat (darkyellow)
+    permission: demonking_assortment.darkyellow
+    resource:
+      model_id: 198
+      material: PAPER
+      model_path: demonking_assortment/armor/hat_darkyellow
+      generate: false
+    behaviours:
+      hat: true
+  demonking_assortment_chestplate_darkyellow:
+    display_name: demonkingchestplate (darkyellow)
+    resource:
+      model_id: 197
+      generate: false
+      model_path: demonking_assortment/armor/chestplate_darkyellow
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: demonking_assortment_darkyellow
+  demonking_assortment_leggings_darkyellow:
+    display_name: demonkingleggings (darkyellow)
+    resource:
+      model_id: 199
+      generate: false
+      model_path: demonking_assortment/armor/leggings_darkyellow
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: demonking_assortment_darkyellow
+  demonking_assortment_boots_darkyellow:
+    display_name: demonkingboots (darkyellow)
+    resource:
+      model_id: 196
+      generate: false
+      model_path: demonking_assortment/armor/boots_darkyellow
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: demonking_assortment_darkyellow

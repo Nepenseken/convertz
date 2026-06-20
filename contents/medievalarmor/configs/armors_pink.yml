@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_pink:
+    color: '#5520a3'
+    layer_1: medieval_armor_set/heavy_armor_layer_pink_1
+    layer_2: medieval_armor_set/heavy_armor_layer_pink_2
+    use_color: false
+  medieval_armor_set_light_armor_pink:
+    color: '#5520a4'
+    layer_1: medieval_armor_set/light_armor_layer_pink_1
+    layer_2: medieval_armor_set/light_armor_layer_pink_2
+    use_color: false
+  medieval_armor_set_medium_armor_pink:
+    color: '#5520a5'
+    layer_1: medieval_armor_set/medium_armor_layer_pink_1
+    layer_2: medieval_armor_set/medium_armor_layer_pink_2
+    use_color: false
+  medieval_armor_set_wizard_armor_pink:
+    color: '#5520a6'
+    layer_1: medieval_armor_set/wizard_armor_layer_pink_1
+    layer_2: medieval_armor_set/wizard_armor_layer_pink_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_pink:
+    layer_1: medieval_armor_set/heavy_armor_layer_pink_1
+    layer_2: medieval_armor_set/heavy_armor_layer_pink_2
+  medieval_armor_set_light_armor_pink:
+    layer_1: medieval_armor_set/light_armor_layer_pink_1
+    layer_2: medieval_armor_set/light_armor_layer_pink_2
+  medieval_armor_set_medium_armor_pink:
+    layer_1: medieval_armor_set/medium_armor_layer_pink_1
+    layer_2: medieval_armor_set/medium_armor_layer_pink_2
+  medieval_armor_set_wizard_armor_pink:
+    layer_1: medieval_armor_set/wizard_armor_layer_pink_1
+    layer_2: medieval_armor_set/wizard_armor_layer_pink_2
+items:
+  medieval_armor_set_heavy_helmet_pink:
+    display_name: Heavy Helmet (pink)
+    resource:
+      model_id: 536
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_pink
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_pink
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_pink:
+    display_name: Heavy Chestplate (pink)
+    resource:
+      model_id: 535
+      model_path: medieval_armor_set/heavy_chestplate_pink
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_pink
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_pink:
+    display_name: Heavy Leggings (pink)
+    resource:
+      model_id: 537
+      model_path: medieval_armor_set/heavy_leggings_pink
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_pink
+      slot: LEGS
+  medieval_armor_set_heavy_boots_pink:
+    display_name: Heavy Boots (pink)
+    resource:
+      model_id: 534
+      model_path: medieval_armor_set/heavy_boots_pink
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_pink
+      slot: FEET
+  medieval_armor_set_light_helmet_pink:
+    display_name: Light Helmet (pink)
+    resource:
+      model_id: 540
+      model_path: medieval_armor_set/light_helmet_pink
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_pink
+      slot: HEAD
+  medieval_armor_set_light_chestplate_pink:
+    display_name: Light Chestplate (pink)
+    resource:
+      model_id: 539
+      model_path: medieval_armor_set/light_chestplate_pink
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_pink
+      slot: CHEST
+  medieval_armor_set_light_leggings_pink:
+    display_name: Light Leggings (pink)
+    resource:
+      model_id: 541
+      model_path: medieval_armor_set/light_leggings_pink
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_pink
+      slot: LEGS
+  medieval_armor_set_light_boots_pink:
+    display_name: Light Boots (pink)
+    resource:
+      model_id: 538
+      model_path: medieval_armor_set/light_boots_pink
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_pink
+      slot: FEET
+  medieval_armor_set_medium_helmet_pink:
+    display_name: Medium Helmet (pink)
+    resource:
+      model_id: 544
+      model_path: medieval_armor_set/medium_helmet_pink
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_pink
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_pink:
+    display_name: Medium Chestplate (pink)
+    resource:
+      model_id: 543
+      model_path: medieval_armor_set/medium_chestplate_pink
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_pink
+      slot: CHEST
+  medieval_armor_set_medium_leggings_pink:
+    display_name: Medium Leggings (pink)
+    resource:
+      model_id: 545
+      model_path: medieval_armor_set/medium_leggings_pink
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_pink
+      slot: LEGS
+  medieval_armor_set_medium_boots_pink:
+    display_name: Medium Boots (pink)
+    resource:
+      model_id: 542
+      model_path: medieval_armor_set/medium_boots_pink
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_pink
+      slot: FEET
+  medieval_armor_set_wizard_helmet_pink:
+    display_name: Wizard Helmet (pink)
+    resource:
+      model_id: 548
+      model_path: medieval_armor_set/wizard_helmet_pink
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_pink
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_pink:
+    display_name: Wizard Chestplate (pink)
+    resource:
+      model_id: 547
+      model_path: medieval_armor_set/wizard_chestplate_pink
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_pink
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_pink:
+    display_name: Wizard Leggings (pink)
+    resource:
+      model_id: 549
+      model_path: medieval_armor_set/wizard_leggings_pink
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_pink
+      slot: LEGS
+  medieval_armor_set_wizard_boots_pink:
+    display_name: Wizard Boots (pink)
+    resource:
+      model_id: 546
+      model_path: medieval_armor_set/wizard_boots_pink
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_pink
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_pink
+      slot: FEET

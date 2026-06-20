@@ -1,0 +1,329 @@
+info:
+  namespace: ec_elitearmors
+armors_rendering:
+  ecrubyarmor_brown:
+    color: '#5cec46'
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_brown
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_brown_2
+    emissive_1: armor/ec_elitearmorsvol6/ecrubyarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecrubyarmore_2
+    use_color: false
+  eclightknightarmor_brown:
+    color: '#66f6c8'
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_brown
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_brown_2
+    emissive_1: armor/ec_elitearmorsvol6/eclightknightarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclightknightarmore_2
+    use_color: false
+  ecbluemecharmor_brown:
+    color: '#87dfd1'
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_brown
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_brown_2
+    emissive_1: armor/ec_elitearmorsvol6/ecbluemecharmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecbluemecharmore_2
+    use_color: false
+  eclavabeastarmor_brown:
+    color: '#28a809'
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_brown
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_brown_2
+    emissive_1: armor/ec_elitearmorsvol6/eclavabeastarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclavabeastarmore_2
+    use_color: false
+equipments:
+  ecrubyarmor_brown:
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_brown
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_brown_2
+  eclightknightarmor_brown:
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_brown
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_brown_2
+  ecbluemecharmor_brown:
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_brown
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_brown_2
+  eclavabeastarmor_brown:
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_brown
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_brown_2
+items:
+  ecrubychest_brown:
+    display_name: Ruby Chestplate (brown)
+    resource:
+      model_id: 2528
+      model_path: auto_generated/ecrubychest_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubychest_brown.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_brown
+      legacy_armor_rendering_id: ecrubyarmor_brown
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  ecrubyhelmet_brown:
+    display_name: Ruby Helmet (brown)
+    resource:
+      model_id: 2529
+      model_path: auto_generated/ecrubyhelmet_brown
+      generate: false
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_brown
+      legacy_armor_rendering_id: ecrubyarmor_brown
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecrubylegs_brown:
+    display_name: Ruby Leggings (brown)
+    resource:
+      model_id: 2530
+      model_path: auto_generated/ecrubylegs_brown
+      generate: false
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_brown
+      legacy_armor_rendering_id: ecrubyarmor_brown
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  ecrubyboots_brown:
+    display_name: Ruby Boots (brown)
+    resource:
+      model_id: 2527
+      model_path: auto_generated/ecrubyboots_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubyboots_brown.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_brown
+      legacy_armor_rendering_id: ecrubyarmor_brown
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclightknightchest_brown:
+    display_name: Lightknight Chestplate (brown)
+    resource:
+      model_id: 2524
+      model_path: auto_generated/eclightknightchest_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightchest_brown.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_brown
+      legacy_armor_rendering_id: eclightknightarmor_brown
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  eclightknighthelmet_brown:
+    display_name: Lightknight Helmet (brown)
+    resource:
+      model_id: 2525
+      model_path: auto_generated/eclightknighthelmet_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknighthelmet_brown.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_brown
+      legacy_armor_rendering_id: eclightknightarmor_brown
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclightknightlegs_brown:
+    display_name: Lightknight Leggings (brown)
+    resource:
+      model_id: 2526
+      model_path: auto_generated/eclightknightlegs_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightleggings_brown.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_brown
+      legacy_armor_rendering_id: eclightknightarmor_brown
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  eclightknightboots_brown:
+    display_name: Lightknight Boots (brown)
+    resource:
+      model_id: 2523
+      model_path: auto_generated/eclightknightboots_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightboots_brown.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_brown
+      legacy_armor_rendering_id: eclightknightarmor_brown
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecbluemechchest_brown:
+    display_name: Bluemech Chestplate (brown)
+    resource:
+      model_id: 2516
+      model_path: auto_generated/ecbluemechchest_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechchest_brown.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_brown
+      legacy_armor_rendering_id: ecbluemecharmor_brown
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  ecbluemechhelmet_brown:
+    display_name: Bluemech Helmet (brown)
+    resource:
+      model_id: 2517
+      model_path: auto_generated/ecbluemechhelmet_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechhelmet_brown.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_brown
+      legacy_armor_rendering_id: ecbluemecharmor_brown
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecbluemechlegs_brown:
+    display_name: Bluemech Leggings (brown)
+    resource:
+      model_id: 2518
+      model_path: auto_generated/ecbluemechlegs_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechleggings_brown.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_brown
+      legacy_armor_rendering_id: ecbluemecharmor_brown
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  ecbluemechboots_brown:
+    display_name: Bluemech Boots (brown)
+    resource:
+      model_id: 2515
+      model_path: auto_generated/ecbluemechboots_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechboots_brown.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_brown
+      legacy_armor_rendering_id: ecbluemecharmor_brown
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclavabeastchest_brown:
+    display_name: Lavabeast Chestplate (brown)
+    resource:
+      model_id: 2520
+      model_path: auto_generated/eclavabeastchest_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastchest_brown.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_brown
+      legacy_armor_rendering_id: eclavabeastarmor_brown
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  eclavabeasthelmet_brown:
+    display_name: Lavabeast Helmet (brown)
+    resource:
+      model_id: 2521
+      model_path: auto_generated/eclavabeasthelmet_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeasthelmet_brown.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_brown
+      legacy_armor_rendering_id: eclavabeastarmor_brown
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclavabeastlegs_brown:
+    display_name: Lavabeast Leggings (brown)
+    resource:
+      model_id: 2522
+      model_path: auto_generated/eclavabeastlegs_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastleggings_brown.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_brown
+      legacy_armor_rendering_id: eclavabeastarmor_brown
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  eclavabeastboots_brown:
+    display_name: Lavabeast Boots (brown)
+    resource:
+      model_id: 2519
+      model_path: auto_generated/eclavabeastboots_brown
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastboots_brown.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_brown
+      legacy_armor_rendering_id: eclavabeastarmor_brown
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3

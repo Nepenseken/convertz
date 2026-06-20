@@ -1,0 +1,184 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_white:
+    color: '#55208f'
+    layer_1: medieval_armor_set/heavy_armor_layer_white_1
+    layer_2: medieval_armor_set/heavy_armor_layer_white_2
+    use_color: false
+  medieval_armor_set_light_armor_white:
+    color: '#552090'
+    layer_1: medieval_armor_set/light_armor_layer_white_1
+    layer_2: medieval_armor_set/light_armor_layer_white_2
+    use_color: false
+  medieval_armor_set_medium_armor_white:
+    color: '#552091'
+    layer_1: medieval_armor_set/medium_armor_layer_white_1
+    layer_2: medieval_armor_set/medium_armor_layer_white_2
+    use_color: false
+  medieval_armor_set_wizard_armor_white:
+    color: '#552092'
+    layer_1: medieval_armor_set/wizard_armor_layer_white_1
+    layer_2: medieval_armor_set/wizard_armor_layer_white_2
+    use_color: false
+items:
+  medieval_armor_set_heavy_helmet_white:
+    display_name: Heavy Helmet (white)
+    resource:
+      model_id: 424
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_white
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_heavy_armor_white
+  medieval_armor_set_heavy_chestplate_white:
+    display_name: Heavy Chestplate (white)
+    resource:
+      model_id: 423
+      model_path: medieval_armor_set/heavy_chestplate_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_heavy_armor_white
+  medieval_armor_set_heavy_leggings_white:
+    display_name: Heavy Leggings (white)
+    resource:
+      model_id: 425
+      model_path: medieval_armor_set/heavy_leggings_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_heavy_armor_white
+  medieval_armor_set_heavy_boots_white:
+    display_name: Heavy Boots (white)
+    resource:
+      model_id: 422
+      model_path: medieval_armor_set/heavy_boots_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_heavy_armor_white
+  medieval_armor_set_light_helmet_white:
+    display_name: Light Helmet (white)
+    resource:
+      model_id: 428
+      model_path: medieval_armor_set/light_helmet_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_light_armor_white
+  medieval_armor_set_light_chestplate_white:
+    display_name: Light Chestplate (white)
+    resource:
+      model_id: 427
+      model_path: medieval_armor_set/light_chestplate_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_light_armor_white
+  medieval_armor_set_light_leggings_white:
+    display_name: Light Leggings (white)
+    resource:
+      model_id: 429
+      model_path: medieval_armor_set/light_leggings_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_light_armor_white
+  medieval_armor_set_light_boots_white:
+    display_name: Light Boots (white)
+    resource:
+      model_id: 426
+      model_path: medieval_armor_set/light_boots_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_light_armor_white
+  medieval_armor_set_medium_helmet_white:
+    display_name: Medium Helmet (white)
+    resource:
+      model_id: 432
+      model_path: medieval_armor_set/medium_helmet_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_medium_armor_white
+  medieval_armor_set_medium_chestplate_white:
+    display_name: Medium Chestplate (white)
+    resource:
+      model_id: 431
+      model_path: medieval_armor_set/medium_chestplate_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_medium_armor_white
+  medieval_armor_set_medium_leggings_white:
+    display_name: Medium Leggings (white)
+    resource:
+      model_id: 433
+      model_path: medieval_armor_set/medium_leggings_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_medium_armor_white
+  medieval_armor_set_medium_boots_white:
+    display_name: Medium Boots (white)
+    resource:
+      model_id: 430
+      model_path: medieval_armor_set/medium_boots_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_medium_armor_white
+  medieval_armor_set_wizard_helmet_white:
+    display_name: Wizard Helmet (white)
+    resource:
+      model_id: 436
+      model_path: medieval_armor_set/wizard_helmet_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_wizard_armor_white
+  medieval_armor_set_wizard_chestplate_white:
+    display_name: Wizard Chestplate (white)
+    resource:
+      model_id: 435
+      model_path: medieval_armor_set/wizard_chestplate_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_wizard_armor_white
+  medieval_armor_set_wizard_leggings_white:
+    display_name: Wizard Leggings (white)
+    resource:
+      model_id: 437
+      model_path: medieval_armor_set/wizard_leggings_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_wizard_armor_white
+  medieval_armor_set_wizard_boots_white:
+    display_name: Wizard Boots (white)
+    resource:
+      model_id: 434
+      model_path: medieval_armor_set/wizard_boots_white
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_wizard_armor_white

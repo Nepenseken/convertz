@@ -1,0 +1,56 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  demonking_assortment_lightgray:
+    color: '#ffffc9'
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_lightgray_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_lightgray_2
+    use_color: false
+equipments:
+  demonking_assortment_lightgray:
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_lightgray_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_lightgray_2
+items:
+  demonking_assortment_hat_lightgray:
+    display_name: demonkinghat (lightgray)
+    permission: demonking_assortment.lightgray
+    resource:
+      model_id: 146
+      material: PAPER
+      model_path: demonking_assortment/armor/hat_lightgray
+      generate: false
+    behaviours:
+      hat: true
+  demonking_assortment_chestplate_lightgray:
+    display_name: demonkingchestplate (lightgray)
+    resource:
+      model_id: 145
+      generate: false
+      model_path: demonking_assortment/armor/chestplate_lightgray
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: demonking_assortment_lightgray
+      legacy_armor_rendering_id: demonking_assortment_lightgray
+      slot: CHEST
+  demonking_assortment_leggings_lightgray:
+    display_name: demonkingleggings (lightgray)
+    resource:
+      model_id: 147
+      generate: false
+      model_path: demonking_assortment/armor/leggings_lightgray
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: demonking_assortment_lightgray
+      legacy_armor_rendering_id: demonking_assortment_lightgray
+      slot: LEGS
+  demonking_assortment_boots_lightgray:
+    display_name: demonkingboots (lightgray)
+    resource:
+      model_id: 144
+      generate: false
+      model_path: demonking_assortment/armor/boots_lightgray
+      material: LEATHER_BOOTS
+    equipment:
+      id: demonking_assortment_lightgray
+      legacy_armor_rendering_id: demonking_assortment_lightgray
+      slot: FEET

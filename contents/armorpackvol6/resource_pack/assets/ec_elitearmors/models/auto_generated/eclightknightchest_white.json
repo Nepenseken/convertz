@@ -1,0 +1,8 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "particle": "ec_elitearmors:item/ec_elitearmorsvol6/eclightknightchest_white",
+    "layer0": "ec_elitearmors:item/ec_elitearmorsvol6/eclightknightchest_white"
+  }
+}

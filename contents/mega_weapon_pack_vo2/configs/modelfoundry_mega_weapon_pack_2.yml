@@ -1,0 +1,3027 @@
+info:
+  namespace: modelfoundry_mega_weapon_pack_2
+items:
+  orcaspear:
+    display_name: orcaspear
+    resource:
+      material: IRON_SWORD
+      model_id: 1405
+      generate: false
+      model_path: orcaspear
+  hellspear:
+    display_name: hellspear
+    resource:
+      material: IRON_SWORD
+      model_id: 1297
+      generate: false
+      model_path: hellspear
+  warriorspear:
+    display_name: warriorspear
+    resource:
+      material: IRON_SWORD
+      model_id: 1540
+      generate: false
+      model_path: warriorspear
+  futurehalberd:
+    display_name: futurehalberd
+    resource:
+      material: IRON_SWORD
+      model_id: 1270
+      generate: false
+      model_path: futurehalberd
+  crossspear:
+    display_name: crossspear
+    resource:
+      material: IRON_SWORD
+      model_id: 1162
+      generate: false
+      model_path: crossspear
+  poseidontrident:
+    display_name: poseidontrident
+    resource:
+      material: IRON_SWORD
+      model_id: 1432
+      generate: false
+      model_path: poseidontrident
+  holyspear:
+    display_name: holyspear
+    resource:
+      material: IRON_SWORD
+      model_id: 1324
+      generate: false
+      model_path: holyspear
+  exclusive_hammer:
+    display_name: hammer
+    resource:
+      model_id: 1243
+      material: MACE
+      generate: false
+      model_path: hammer_2
+  rust_hammer:
+    display_name: hammer
+    resource:
+      model_id: 1486
+      material: MACE
+      generate: false
+      model_path: hammer_3
+  missile_hammer:
+    display_name: hammer
+    resource:
+      model_id: 1378
+      material: MACE
+      generate: false
+      model_path: hammer_4
+  death_block_hammer:
+    display_name: hammer
+    resource:
+      model_id: 1216
+      material: MACE
+      generate: false
+      model_path: hammer_5
+  artifact_hammer:
+    display_name: hammer
+    resource:
+      model_id: 1135
+      material: MACE
+      generate: false
+      model_path: hammer_6
+  justice_hammer:
+    display_name: hammer
+    resource:
+      model_id: 1351
+      material: MACE
+      generate: false
+      model_path: hammer_7
+  roman_hammer:
+    display_name: hammer
+    resource:
+      model_id: 1459
+      material: MACE
+      generate: false
+      model_path: hammer_8
+  curve_hammer:
+    display_name: hammer
+    resource:
+      model_id: 1189
+      material: MACE
+      generate: false
+      model_path: hammer_9
+  slim_layer_hammer:
+    display_name: hammer
+    resource:
+      model_id: 1513
+      material: MACE
+      generate: false
+      model_path: hammer_10
+  artifact_hammer_white:
+    display_name: hammer (white)
+    resource:
+      model_id: 1136
+      material: MACE
+      generate: false
+      model_path: hammer_white_6
+  artifact_hammer_lightgray:
+    display_name: hammer (lightgray)
+    resource:
+      model_id: 1137
+      material: MACE
+      generate: false
+      model_path: hammer_lightgray_6
+  artifact_hammer_gray:
+    display_name: hammer (gray)
+    resource:
+      model_id: 1138
+      material: MACE
+      generate: false
+      model_path: hammer_gray_6
+  artifact_hammer_black:
+    display_name: hammer (black)
+    resource:
+      model_id: 1139
+      material: MACE
+      generate: false
+      model_path: hammer_black_6
+  artifact_hammer_lightred:
+    display_name: hammer (lightred)
+    resource:
+      model_id: 1140
+      material: MACE
+      generate: false
+      model_path: hammer_lightred_6
+  artifact_hammer_red:
+    display_name: hammer (red)
+    resource:
+      model_id: 1141
+      material: MACE
+      generate: false
+      model_path: hammer_red_6
+  artifact_hammer_darkred:
+    display_name: hammer (darkred)
+    resource:
+      model_id: 1142
+      material: MACE
+      generate: false
+      model_path: hammer_darkred_6
+  artifact_hammer_pink:
+    display_name: hammer (pink)
+    resource:
+      model_id: 1143
+      material: MACE
+      generate: false
+      model_path: hammer_pink_6
+  artifact_hammer_darkpink:
+    display_name: hammer (darkpink)
+    resource:
+      model_id: 1144
+      material: MACE
+      generate: false
+      model_path: hammer_darkpink_6
+  artifact_hammer_orange:
+    display_name: hammer (orange)
+    resource:
+      model_id: 1145
+      material: MACE
+      generate: false
+      model_path: hammer_orange_6
+  artifact_hammer_darkorange:
+    display_name: hammer (darkorange)
+    resource:
+      model_id: 1146
+      material: MACE
+      generate: false
+      model_path: hammer_darkorange_6
+  artifact_hammer_brown:
+    display_name: hammer (brown)
+    resource:
+      model_id: 1147
+      material: MACE
+      generate: false
+      model_path: hammer_brown_6
+  artifact_hammer_darkbrown:
+    display_name: hammer (darkbrown)
+    resource:
+      model_id: 1148
+      material: MACE
+      generate: false
+      model_path: hammer_darkbrown_6
+  artifact_hammer_yellow:
+    display_name: hammer (yellow)
+    resource:
+      model_id: 1149
+      material: MACE
+      generate: false
+      model_path: hammer_yellow_6
+  artifact_hammer_darkyellow:
+    display_name: hammer (darkyellow)
+    resource:
+      model_id: 1150
+      material: MACE
+      generate: false
+      model_path: hammer_darkyellow_6
+  artifact_hammer_lightgreen:
+    display_name: hammer (lightgreen)
+    resource:
+      model_id: 1151
+      material: MACE
+      generate: false
+      model_path: hammer_lightgreen_6
+  artifact_hammer_green:
+    display_name: hammer (green)
+    resource:
+      model_id: 1152
+      material: MACE
+      generate: false
+      model_path: hammer_green_6
+  artifact_hammer_darkgreen:
+    display_name: hammer (darkgreen)
+    resource:
+      model_id: 1153
+      material: MACE
+      generate: false
+      model_path: hammer_darkgreen_6
+  artifact_hammer_cyan:
+    display_name: hammer (cyan)
+    resource:
+      model_id: 1154
+      material: MACE
+      generate: false
+      model_path: hammer_cyan_6
+  artifact_hammer_teal:
+    display_name: hammer (teal)
+    resource:
+      model_id: 1155
+      material: MACE
+      generate: false
+      model_path: hammer_teal_6
+  artifact_hammer_lightblue:
+    display_name: hammer (lightblue)
+    resource:
+      model_id: 1156
+      material: MACE
+      generate: false
+      model_path: hammer_lightblue_6
+  artifact_hammer_blue:
+    display_name: hammer (blue)
+    resource:
+      model_id: 1157
+      material: MACE
+      generate: false
+      model_path: hammer_blue_6
+  artifact_hammer_darkblue:
+    display_name: hammer (darkblue)
+    resource:
+      model_id: 1158
+      material: MACE
+      generate: false
+      model_path: hammer_darkblue_6
+  artifact_hammer_lightpurple:
+    display_name: hammer (lightpurple)
+    resource:
+      model_id: 1159
+      material: MACE
+      generate: false
+      model_path: hammer_lightpurple_6
+  artifact_hammer_purple:
+    display_name: hammer (purple)
+    resource:
+      model_id: 1160
+      material: MACE
+      generate: false
+      model_path: hammer_purple_6
+  artifact_hammer_darkpurple:
+    display_name: hammer (darkpurple)
+    resource:
+      model_id: 1161
+      material: MACE
+      generate: false
+      model_path: hammer_darkpurple_6
+  crossspear_white:
+    display_name: crossspear (white)
+    resource:
+      material: IRON_SWORD
+      model_id: 1163
+      generate: false
+      model_path: crossspear_white
+  crossspear_lightgray:
+    display_name: crossspear (lightgray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1164
+      generate: false
+      model_path: crossspear_lightgray
+  crossspear_gray:
+    display_name: crossspear (gray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1165
+      generate: false
+      model_path: crossspear_gray
+  crossspear_black:
+    display_name: crossspear (black)
+    resource:
+      material: IRON_SWORD
+      model_id: 1166
+      generate: false
+      model_path: crossspear_black
+  crossspear_lightred:
+    display_name: crossspear (lightred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1167
+      generate: false
+      model_path: crossspear_lightred
+  crossspear_red:
+    display_name: crossspear (red)
+    resource:
+      material: IRON_SWORD
+      model_id: 1168
+      generate: false
+      model_path: crossspear_red
+  crossspear_darkred:
+    display_name: crossspear (darkred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1169
+      generate: false
+      model_path: crossspear_darkred
+  crossspear_pink:
+    display_name: crossspear (pink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1170
+      generate: false
+      model_path: crossspear_pink
+  crossspear_darkpink:
+    display_name: crossspear (darkpink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1171
+      generate: false
+      model_path: crossspear_darkpink
+  crossspear_orange:
+    display_name: crossspear (orange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1172
+      generate: false
+      model_path: crossspear_orange
+  crossspear_darkorange:
+    display_name: crossspear (darkorange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1173
+      generate: false
+      model_path: crossspear_darkorange
+  crossspear_brown:
+    display_name: crossspear (brown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1174
+      generate: false
+      model_path: crossspear_brown
+  crossspear_darkbrown:
+    display_name: crossspear (darkbrown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1175
+      generate: false
+      model_path: crossspear_darkbrown
+  crossspear_yellow:
+    display_name: crossspear (yellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1176
+      generate: false
+      model_path: crossspear_yellow
+  crossspear_darkyellow:
+    display_name: crossspear (darkyellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1177
+      generate: false
+      model_path: crossspear_darkyellow
+  crossspear_lightgreen:
+    display_name: crossspear (lightgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1178
+      generate: false
+      model_path: crossspear_lightgreen
+  crossspear_green:
+    display_name: crossspear (green)
+    resource:
+      material: IRON_SWORD
+      model_id: 1179
+      generate: false
+      model_path: crossspear_green
+  crossspear_darkgreen:
+    display_name: crossspear (darkgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1180
+      generate: false
+      model_path: crossspear_darkgreen
+  crossspear_cyan:
+    display_name: crossspear (cyan)
+    resource:
+      material: IRON_SWORD
+      model_id: 1181
+      generate: false
+      model_path: crossspear_cyan
+  crossspear_teal:
+    display_name: crossspear (teal)
+    resource:
+      material: IRON_SWORD
+      model_id: 1182
+      generate: false
+      model_path: crossspear_teal
+  crossspear_lightblue:
+    display_name: crossspear (lightblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1183
+      generate: false
+      model_path: crossspear_lightblue
+  crossspear_blue:
+    display_name: crossspear (blue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1184
+      generate: false
+      model_path: crossspear_blue
+  crossspear_darkblue:
+    display_name: crossspear (darkblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1185
+      generate: false
+      model_path: crossspear_darkblue
+  crossspear_lightpurple:
+    display_name: crossspear (lightpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1186
+      generate: false
+      model_path: crossspear_lightpurple
+  crossspear_purple:
+    display_name: crossspear (purple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1187
+      generate: false
+      model_path: crossspear_purple
+  crossspear_darkpurple:
+    display_name: crossspear (darkpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1188
+      generate: false
+      model_path: crossspear_darkpurple
+  curve_hammer_white:
+    display_name: hammer (white)
+    resource:
+      model_id: 1190
+      material: MACE
+      generate: false
+      model_path: hammer_white_9
+  curve_hammer_lightgray:
+    display_name: hammer (lightgray)
+    resource:
+      model_id: 1191
+      material: MACE
+      generate: false
+      model_path: hammer_lightgray_9
+  curve_hammer_gray:
+    display_name: hammer (gray)
+    resource:
+      model_id: 1192
+      material: MACE
+      generate: false
+      model_path: hammer_gray_9
+  curve_hammer_black:
+    display_name: hammer (black)
+    resource:
+      model_id: 1193
+      material: MACE
+      generate: false
+      model_path: hammer_black_9
+  curve_hammer_lightred:
+    display_name: hammer (lightred)
+    resource:
+      model_id: 1194
+      material: MACE
+      generate: false
+      model_path: hammer_lightred_9
+  curve_hammer_red:
+    display_name: hammer (red)
+    resource:
+      model_id: 1195
+      material: MACE
+      generate: false
+      model_path: hammer_red_9
+  curve_hammer_darkred:
+    display_name: hammer (darkred)
+    resource:
+      model_id: 1196
+      material: MACE
+      generate: false
+      model_path: hammer_darkred_9
+  curve_hammer_pink:
+    display_name: hammer (pink)
+    resource:
+      model_id: 1197
+      material: MACE
+      generate: false
+      model_path: hammer_pink_9
+  curve_hammer_darkpink:
+    display_name: hammer (darkpink)
+    resource:
+      model_id: 1198
+      material: MACE
+      generate: false
+      model_path: hammer_darkpink_9
+  curve_hammer_orange:
+    display_name: hammer (orange)
+    resource:
+      model_id: 1199
+      material: MACE
+      generate: false
+      model_path: hammer_orange_9
+  curve_hammer_darkorange:
+    display_name: hammer (darkorange)
+    resource:
+      model_id: 1200
+      material: MACE
+      generate: false
+      model_path: hammer_darkorange_9
+  curve_hammer_brown:
+    display_name: hammer (brown)
+    resource:
+      model_id: 1201
+      material: MACE
+      generate: false
+      model_path: hammer_brown_9
+  curve_hammer_darkbrown:
+    display_name: hammer (darkbrown)
+    resource:
+      model_id: 1202
+      material: MACE
+      generate: false
+      model_path: hammer_darkbrown_9
+  curve_hammer_yellow:
+    display_name: hammer (yellow)
+    resource:
+      model_id: 1203
+      material: MACE
+      generate: false
+      model_path: hammer_yellow_9
+  curve_hammer_darkyellow:
+    display_name: hammer (darkyellow)
+    resource:
+      model_id: 1204
+      material: MACE
+      generate: false
+      model_path: hammer_darkyellow_9
+  curve_hammer_lightgreen:
+    display_name: hammer (lightgreen)
+    resource:
+      model_id: 1205
+      material: MACE
+      generate: false
+      model_path: hammer_lightgreen_9
+  curve_hammer_green:
+    display_name: hammer (green)
+    resource:
+      model_id: 1206
+      material: MACE
+      generate: false
+      model_path: hammer_green_9
+  curve_hammer_darkgreen:
+    display_name: hammer (darkgreen)
+    resource:
+      model_id: 1207
+      material: MACE
+      generate: false
+      model_path: hammer_darkgreen_9
+  curve_hammer_cyan:
+    display_name: hammer (cyan)
+    resource:
+      model_id: 1208
+      material: MACE
+      generate: false
+      model_path: hammer_cyan_9
+  curve_hammer_teal:
+    display_name: hammer (teal)
+    resource:
+      model_id: 1209
+      material: MACE
+      generate: false
+      model_path: hammer_teal_9
+  curve_hammer_lightblue:
+    display_name: hammer (lightblue)
+    resource:
+      model_id: 1210
+      material: MACE
+      generate: false
+      model_path: hammer_lightblue_9
+  curve_hammer_blue:
+    display_name: hammer (blue)
+    resource:
+      model_id: 1211
+      material: MACE
+      generate: false
+      model_path: hammer_blue_9
+  curve_hammer_darkblue:
+    display_name: hammer (darkblue)
+    resource:
+      model_id: 1212
+      material: MACE
+      generate: false
+      model_path: hammer_darkblue_9
+  curve_hammer_lightpurple:
+    display_name: hammer (lightpurple)
+    resource:
+      model_id: 1213
+      material: MACE
+      generate: false
+      model_path: hammer_lightpurple_9
+  curve_hammer_purple:
+    display_name: hammer (purple)
+    resource:
+      model_id: 1214
+      material: MACE
+      generate: false
+      model_path: hammer_purple_9
+  curve_hammer_darkpurple:
+    display_name: hammer (darkpurple)
+    resource:
+      model_id: 1215
+      material: MACE
+      generate: false
+      model_path: hammer_darkpurple_9
+  death_block_hammer_white:
+    display_name: hammer (white)
+    resource:
+      model_id: 1217
+      material: MACE
+      generate: false
+      model_path: hammer_white_5
+  death_block_hammer_lightgray:
+    display_name: hammer (lightgray)
+    resource:
+      model_id: 1218
+      material: MACE
+      generate: false
+      model_path: hammer_lightgray_5
+  death_block_hammer_gray:
+    display_name: hammer (gray)
+    resource:
+      model_id: 1219
+      material: MACE
+      generate: false
+      model_path: hammer_gray_5
+  death_block_hammer_black:
+    display_name: hammer (black)
+    resource:
+      model_id: 1220
+      material: MACE
+      generate: false
+      model_path: hammer_black_5
+  death_block_hammer_lightred:
+    display_name: hammer (lightred)
+    resource:
+      model_id: 1221
+      material: MACE
+      generate: false
+      model_path: hammer_lightred_5
+  death_block_hammer_red:
+    display_name: hammer (red)
+    resource:
+      model_id: 1222
+      material: MACE
+      generate: false
+      model_path: hammer_red_5
+  death_block_hammer_darkred:
+    display_name: hammer (darkred)
+    resource:
+      model_id: 1223
+      material: MACE
+      generate: false
+      model_path: hammer_darkred_5
+  death_block_hammer_pink:
+    display_name: hammer (pink)
+    resource:
+      model_id: 1224
+      material: MACE
+      generate: false
+      model_path: hammer_pink_5
+  death_block_hammer_darkpink:
+    display_name: hammer (darkpink)
+    resource:
+      model_id: 1225
+      material: MACE
+      generate: false
+      model_path: hammer_darkpink_5
+  death_block_hammer_orange:
+    display_name: hammer (orange)
+    resource:
+      model_id: 1226
+      material: MACE
+      generate: false
+      model_path: hammer_orange_5
+  death_block_hammer_darkorange:
+    display_name: hammer (darkorange)
+    resource:
+      model_id: 1227
+      material: MACE
+      generate: false
+      model_path: hammer_darkorange_5
+  death_block_hammer_brown:
+    display_name: hammer (brown)
+    resource:
+      model_id: 1228
+      material: MACE
+      generate: false
+      model_path: hammer_brown_5
+  death_block_hammer_darkbrown:
+    display_name: hammer (darkbrown)
+    resource:
+      model_id: 1229
+      material: MACE
+      generate: false
+      model_path: hammer_darkbrown_5
+  death_block_hammer_yellow:
+    display_name: hammer (yellow)
+    resource:
+      model_id: 1230
+      material: MACE
+      generate: false
+      model_path: hammer_yellow_5
+  death_block_hammer_darkyellow:
+    display_name: hammer (darkyellow)
+    resource:
+      model_id: 1231
+      material: MACE
+      generate: false
+      model_path: hammer_darkyellow_5
+  death_block_hammer_lightgreen:
+    display_name: hammer (lightgreen)
+    resource:
+      model_id: 1232
+      material: MACE
+      generate: false
+      model_path: hammer_lightgreen_5
+  death_block_hammer_green:
+    display_name: hammer (green)
+    resource:
+      model_id: 1233
+      material: MACE
+      generate: false
+      model_path: hammer_green_5
+  death_block_hammer_darkgreen:
+    display_name: hammer (darkgreen)
+    resource:
+      model_id: 1234
+      material: MACE
+      generate: false
+      model_path: hammer_darkgreen_5
+  death_block_hammer_cyan:
+    display_name: hammer (cyan)
+    resource:
+      model_id: 1235
+      material: MACE
+      generate: false
+      model_path: hammer_cyan_5
+  death_block_hammer_teal:
+    display_name: hammer (teal)
+    resource:
+      model_id: 1236
+      material: MACE
+      generate: false
+      model_path: hammer_teal_5
+  death_block_hammer_lightblue:
+    display_name: hammer (lightblue)
+    resource:
+      model_id: 1237
+      material: MACE
+      generate: false
+      model_path: hammer_lightblue_5
+  death_block_hammer_blue:
+    display_name: hammer (blue)
+    resource:
+      model_id: 1238
+      material: MACE
+      generate: false
+      model_path: hammer_blue_5
+  death_block_hammer_darkblue:
+    display_name: hammer (darkblue)
+    resource:
+      model_id: 1239
+      material: MACE
+      generate: false
+      model_path: hammer_darkblue_5
+  death_block_hammer_lightpurple:
+    display_name: hammer (lightpurple)
+    resource:
+      model_id: 1240
+      material: MACE
+      generate: false
+      model_path: hammer_lightpurple_5
+  death_block_hammer_purple:
+    display_name: hammer (purple)
+    resource:
+      model_id: 1241
+      material: MACE
+      generate: false
+      model_path: hammer_purple_5
+  death_block_hammer_darkpurple:
+    display_name: hammer (darkpurple)
+    resource:
+      model_id: 1242
+      material: MACE
+      generate: false
+      model_path: hammer_darkpurple_5
+  exclusive_hammer_white:
+    display_name: hammer (white)
+    resource:
+      model_id: 1244
+      material: MACE
+      generate: false
+      model_path: hammer_white_2
+  exclusive_hammer_lightgray:
+    display_name: hammer (lightgray)
+    resource:
+      model_id: 1245
+      material: MACE
+      generate: false
+      model_path: hammer_lightgray_2
+  exclusive_hammer_gray:
+    display_name: hammer (gray)
+    resource:
+      model_id: 1246
+      material: MACE
+      generate: false
+      model_path: hammer_gray_2
+  exclusive_hammer_black:
+    display_name: hammer (black)
+    resource:
+      model_id: 1247
+      material: MACE
+      generate: false
+      model_path: hammer_black_2
+  exclusive_hammer_lightred:
+    display_name: hammer (lightred)
+    resource:
+      model_id: 1248
+      material: MACE
+      generate: false
+      model_path: hammer_lightred_2
+  exclusive_hammer_red:
+    display_name: hammer (red)
+    resource:
+      model_id: 1249
+      material: MACE
+      generate: false
+      model_path: hammer_red_2
+  exclusive_hammer_darkred:
+    display_name: hammer (darkred)
+    resource:
+      model_id: 1250
+      material: MACE
+      generate: false
+      model_path: hammer_darkred_2
+  exclusive_hammer_pink:
+    display_name: hammer (pink)
+    resource:
+      model_id: 1251
+      material: MACE
+      generate: false
+      model_path: hammer_pink_2
+  exclusive_hammer_darkpink:
+    display_name: hammer (darkpink)
+    resource:
+      model_id: 1252
+      material: MACE
+      generate: false
+      model_path: hammer_darkpink_2
+  exclusive_hammer_orange:
+    display_name: hammer (orange)
+    resource:
+      model_id: 1253
+      material: MACE
+      generate: false
+      model_path: hammer_orange_2
+  exclusive_hammer_darkorange:
+    display_name: hammer (darkorange)
+    resource:
+      model_id: 1254
+      material: MACE
+      generate: false
+      model_path: hammer_darkorange_2
+  exclusive_hammer_brown:
+    display_name: hammer (brown)
+    resource:
+      model_id: 1255
+      material: MACE
+      generate: false
+      model_path: hammer_brown_2
+  exclusive_hammer_darkbrown:
+    display_name: hammer (darkbrown)
+    resource:
+      model_id: 1256
+      material: MACE
+      generate: false
+      model_path: hammer_darkbrown_2
+  exclusive_hammer_yellow:
+    display_name: hammer (yellow)
+    resource:
+      model_id: 1257
+      material: MACE
+      generate: false
+      model_path: hammer_yellow_2
+  exclusive_hammer_darkyellow:
+    display_name: hammer (darkyellow)
+    resource:
+      model_id: 1258
+      material: MACE
+      generate: false
+      model_path: hammer_darkyellow_2
+  exclusive_hammer_lightgreen:
+    display_name: hammer (lightgreen)
+    resource:
+      model_id: 1259
+      material: MACE
+      generate: false
+      model_path: hammer_lightgreen_2
+  exclusive_hammer_green:
+    display_name: hammer (green)
+    resource:
+      model_id: 1260
+      material: MACE
+      generate: false
+      model_path: hammer_green_2
+  exclusive_hammer_darkgreen:
+    display_name: hammer (darkgreen)
+    resource:
+      model_id: 1261
+      material: MACE
+      generate: false
+      model_path: hammer_darkgreen_2
+  exclusive_hammer_cyan:
+    display_name: hammer (cyan)
+    resource:
+      model_id: 1262
+      material: MACE
+      generate: false
+      model_path: hammer_cyan_2
+  exclusive_hammer_teal:
+    display_name: hammer (teal)
+    resource:
+      model_id: 1263
+      material: MACE
+      generate: false
+      model_path: hammer_teal_2
+  exclusive_hammer_lightblue:
+    display_name: hammer (lightblue)
+    resource:
+      model_id: 1264
+      material: MACE
+      generate: false
+      model_path: hammer_lightblue_2
+  exclusive_hammer_blue:
+    display_name: hammer (blue)
+    resource:
+      model_id: 1265
+      material: MACE
+      generate: false
+      model_path: hammer_blue_2
+  exclusive_hammer_darkblue:
+    display_name: hammer (darkblue)
+    resource:
+      model_id: 1266
+      material: MACE
+      generate: false
+      model_path: hammer_darkblue_2
+  exclusive_hammer_lightpurple:
+    display_name: hammer (lightpurple)
+    resource:
+      model_id: 1267
+      material: MACE
+      generate: false
+      model_path: hammer_lightpurple_2
+  exclusive_hammer_purple:
+    display_name: hammer (purple)
+    resource:
+      model_id: 1268
+      material: MACE
+      generate: false
+      model_path: hammer_purple_2
+  exclusive_hammer_darkpurple:
+    display_name: hammer (darkpurple)
+    resource:
+      model_id: 1269
+      material: MACE
+      generate: false
+      model_path: hammer_darkpurple_2
+  futurehalberd_white:
+    display_name: futurehalberd (white)
+    resource:
+      material: IRON_SWORD
+      model_id: 1271
+      generate: false
+      model_path: futurehalberd_white
+  futurehalberd_lightgray:
+    display_name: futurehalberd (lightgray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1272
+      generate: false
+      model_path: futurehalberd_lightgray
+  futurehalberd_gray:
+    display_name: futurehalberd (gray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1273
+      generate: false
+      model_path: futurehalberd_gray
+  futurehalberd_black:
+    display_name: futurehalberd (black)
+    resource:
+      material: IRON_SWORD
+      model_id: 1274
+      generate: false
+      model_path: futurehalberd_black
+  futurehalberd_lightred:
+    display_name: futurehalberd (lightred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1275
+      generate: false
+      model_path: futurehalberd_lightred
+  futurehalberd_red:
+    display_name: futurehalberd (red)
+    resource:
+      material: IRON_SWORD
+      model_id: 1276
+      generate: false
+      model_path: futurehalberd_red
+  futurehalberd_darkred:
+    display_name: futurehalberd (darkred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1277
+      generate: false
+      model_path: futurehalberd_darkred
+  futurehalberd_pink:
+    display_name: futurehalberd (pink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1278
+      generate: false
+      model_path: futurehalberd_pink
+  futurehalberd_darkpink:
+    display_name: futurehalberd (darkpink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1279
+      generate: false
+      model_path: futurehalberd_darkpink
+  futurehalberd_orange:
+    display_name: futurehalberd (orange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1280
+      generate: false
+      model_path: futurehalberd_orange
+  futurehalberd_darkorange:
+    display_name: futurehalberd (darkorange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1281
+      generate: false
+      model_path: futurehalberd_darkorange
+  futurehalberd_brown:
+    display_name: futurehalberd (brown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1282
+      generate: false
+      model_path: futurehalberd_brown
+  futurehalberd_darkbrown:
+    display_name: futurehalberd (darkbrown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1283
+      generate: false
+      model_path: futurehalberd_darkbrown
+  futurehalberd_yellow:
+    display_name: futurehalberd (yellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1284
+      generate: false
+      model_path: futurehalberd_yellow
+  futurehalberd_darkyellow:
+    display_name: futurehalberd (darkyellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1285
+      generate: false
+      model_path: futurehalberd_darkyellow
+  futurehalberd_lightgreen:
+    display_name: futurehalberd (lightgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1286
+      generate: false
+      model_path: futurehalberd_lightgreen
+  futurehalberd_green:
+    display_name: futurehalberd (green)
+    resource:
+      material: IRON_SWORD
+      model_id: 1287
+      generate: false
+      model_path: futurehalberd_green
+  futurehalberd_darkgreen:
+    display_name: futurehalberd (darkgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1288
+      generate: false
+      model_path: futurehalberd_darkgreen
+  futurehalberd_cyan:
+    display_name: futurehalberd (cyan)
+    resource:
+      material: IRON_SWORD
+      model_id: 1289
+      generate: false
+      model_path: futurehalberd_cyan
+  futurehalberd_teal:
+    display_name: futurehalberd (teal)
+    resource:
+      material: IRON_SWORD
+      model_id: 1290
+      generate: false
+      model_path: futurehalberd_teal
+  futurehalberd_lightblue:
+    display_name: futurehalberd (lightblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1291
+      generate: false
+      model_path: futurehalberd_lightblue
+  futurehalberd_blue:
+    display_name: futurehalberd (blue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1292
+      generate: false
+      model_path: futurehalberd_blue
+  futurehalberd_darkblue:
+    display_name: futurehalberd (darkblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1293
+      generate: false
+      model_path: futurehalberd_darkblue
+  futurehalberd_lightpurple:
+    display_name: futurehalberd (lightpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1294
+      generate: false
+      model_path: futurehalberd_lightpurple
+  futurehalberd_purple:
+    display_name: futurehalberd (purple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1295
+      generate: false
+      model_path: futurehalberd_purple
+  futurehalberd_darkpurple:
+    display_name: futurehalberd (darkpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1296
+      generate: false
+      model_path: futurehalberd_darkpurple
+  hellspear_white:
+    display_name: hellspear (white)
+    resource:
+      material: IRON_SWORD
+      model_id: 1298
+      generate: false
+      model_path: hellspear_white
+  hellspear_lightgray:
+    display_name: hellspear (lightgray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1299
+      generate: false
+      model_path: hellspear_lightgray
+  hellspear_gray:
+    display_name: hellspear (gray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1300
+      generate: false
+      model_path: hellspear_gray
+  hellspear_black:
+    display_name: hellspear (black)
+    resource:
+      material: IRON_SWORD
+      model_id: 1301
+      generate: false
+      model_path: hellspear_black
+  hellspear_lightred:
+    display_name: hellspear (lightred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1302
+      generate: false
+      model_path: hellspear_lightred
+  hellspear_red:
+    display_name: hellspear (red)
+    resource:
+      material: IRON_SWORD
+      model_id: 1303
+      generate: false
+      model_path: hellspear_red
+  hellspear_darkred:
+    display_name: hellspear (darkred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1304
+      generate: false
+      model_path: hellspear_darkred
+  hellspear_pink:
+    display_name: hellspear (pink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1305
+      generate: false
+      model_path: hellspear_pink
+  hellspear_darkpink:
+    display_name: hellspear (darkpink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1306
+      generate: false
+      model_path: hellspear_darkpink
+  hellspear_orange:
+    display_name: hellspear (orange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1307
+      generate: false
+      model_path: hellspear_orange
+  hellspear_darkorange:
+    display_name: hellspear (darkorange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1308
+      generate: false
+      model_path: hellspear_darkorange
+  hellspear_brown:
+    display_name: hellspear (brown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1309
+      generate: false
+      model_path: hellspear_brown
+  hellspear_darkbrown:
+    display_name: hellspear (darkbrown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1310
+      generate: false
+      model_path: hellspear_darkbrown
+  hellspear_yellow:
+    display_name: hellspear (yellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1311
+      generate: false
+      model_path: hellspear_yellow
+  hellspear_darkyellow:
+    display_name: hellspear (darkyellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1312
+      generate: false
+      model_path: hellspear_darkyellow
+  hellspear_lightgreen:
+    display_name: hellspear (lightgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1313
+      generate: false
+      model_path: hellspear_lightgreen
+  hellspear_green:
+    display_name: hellspear (green)
+    resource:
+      material: IRON_SWORD
+      model_id: 1314
+      generate: false
+      model_path: hellspear_green
+  hellspear_darkgreen:
+    display_name: hellspear (darkgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1315
+      generate: false
+      model_path: hellspear_darkgreen
+  hellspear_cyan:
+    display_name: hellspear (cyan)
+    resource:
+      material: IRON_SWORD
+      model_id: 1316
+      generate: false
+      model_path: hellspear_cyan
+  hellspear_teal:
+    display_name: hellspear (teal)
+    resource:
+      material: IRON_SWORD
+      model_id: 1317
+      generate: false
+      model_path: hellspear_teal
+  hellspear_lightblue:
+    display_name: hellspear (lightblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1318
+      generate: false
+      model_path: hellspear_lightblue
+  hellspear_blue:
+    display_name: hellspear (blue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1319
+      generate: false
+      model_path: hellspear_blue
+  hellspear_darkblue:
+    display_name: hellspear (darkblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1320
+      generate: false
+      model_path: hellspear_darkblue
+  hellspear_lightpurple:
+    display_name: hellspear (lightpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1321
+      generate: false
+      model_path: hellspear_lightpurple
+  hellspear_purple:
+    display_name: hellspear (purple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1322
+      generate: false
+      model_path: hellspear_purple
+  hellspear_darkpurple:
+    display_name: hellspear (darkpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1323
+      generate: false
+      model_path: hellspear_darkpurple
+  holyspear_white:
+    display_name: holyspear (white)
+    resource:
+      material: IRON_SWORD
+      model_id: 1325
+      generate: false
+      model_path: holyspear_white
+  holyspear_lightgray:
+    display_name: holyspear (lightgray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1326
+      generate: false
+      model_path: holyspear_lightgray
+  holyspear_gray:
+    display_name: holyspear (gray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1327
+      generate: false
+      model_path: holyspear_gray
+  holyspear_black:
+    display_name: holyspear (black)
+    resource:
+      material: IRON_SWORD
+      model_id: 1328
+      generate: false
+      model_path: holyspear_black
+  holyspear_lightred:
+    display_name: holyspear (lightred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1329
+      generate: false
+      model_path: holyspear_lightred
+  holyspear_red:
+    display_name: holyspear (red)
+    resource:
+      material: IRON_SWORD
+      model_id: 1330
+      generate: false
+      model_path: holyspear_red
+  holyspear_darkred:
+    display_name: holyspear (darkred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1331
+      generate: false
+      model_path: holyspear_darkred
+  holyspear_pink:
+    display_name: holyspear (pink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1332
+      generate: false
+      model_path: holyspear_pink
+  holyspear_darkpink:
+    display_name: holyspear (darkpink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1333
+      generate: false
+      model_path: holyspear_darkpink
+  holyspear_orange:
+    display_name: holyspear (orange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1334
+      generate: false
+      model_path: holyspear_orange
+  holyspear_darkorange:
+    display_name: holyspear (darkorange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1335
+      generate: false
+      model_path: holyspear_darkorange
+  holyspear_brown:
+    display_name: holyspear (brown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1336
+      generate: false
+      model_path: holyspear_brown
+  holyspear_darkbrown:
+    display_name: holyspear (darkbrown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1337
+      generate: false
+      model_path: holyspear_darkbrown
+  holyspear_yellow:
+    display_name: holyspear (yellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1338
+      generate: false
+      model_path: holyspear_yellow
+  holyspear_darkyellow:
+    display_name: holyspear (darkyellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1339
+      generate: false
+      model_path: holyspear_darkyellow
+  holyspear_lightgreen:
+    display_name: holyspear (lightgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1340
+      generate: false
+      model_path: holyspear_lightgreen
+  holyspear_green:
+    display_name: holyspear (green)
+    resource:
+      material: IRON_SWORD
+      model_id: 1341
+      generate: false
+      model_path: holyspear_green
+  holyspear_darkgreen:
+    display_name: holyspear (darkgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1342
+      generate: false
+      model_path: holyspear_darkgreen
+  holyspear_cyan:
+    display_name: holyspear (cyan)
+    resource:
+      material: IRON_SWORD
+      model_id: 1343
+      generate: false
+      model_path: holyspear_cyan
+  holyspear_teal:
+    display_name: holyspear (teal)
+    resource:
+      material: IRON_SWORD
+      model_id: 1344
+      generate: false
+      model_path: holyspear_teal
+  holyspear_lightblue:
+    display_name: holyspear (lightblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1345
+      generate: false
+      model_path: holyspear_lightblue
+  holyspear_blue:
+    display_name: holyspear (blue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1346
+      generate: false
+      model_path: holyspear_blue
+  holyspear_darkblue:
+    display_name: holyspear (darkblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1347
+      generate: false
+      model_path: holyspear_darkblue
+  holyspear_lightpurple:
+    display_name: holyspear (lightpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1348
+      generate: false
+      model_path: holyspear_lightpurple
+  holyspear_purple:
+    display_name: holyspear (purple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1349
+      generate: false
+      model_path: holyspear_purple
+  holyspear_darkpurple:
+    display_name: holyspear (darkpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1350
+      generate: false
+      model_path: holyspear_darkpurple
+  justice_hammer_white:
+    display_name: hammer (white)
+    resource:
+      model_id: 1352
+      material: MACE
+      generate: false
+      model_path: hammer_white_7
+  justice_hammer_lightgray:
+    display_name: hammer (lightgray)
+    resource:
+      model_id: 1353
+      material: MACE
+      generate: false
+      model_path: hammer_lightgray_7
+  justice_hammer_gray:
+    display_name: hammer (gray)
+    resource:
+      model_id: 1354
+      material: MACE
+      generate: false
+      model_path: hammer_gray_7
+  justice_hammer_black:
+    display_name: hammer (black)
+    resource:
+      model_id: 1355
+      material: MACE
+      generate: false
+      model_path: hammer_black_7
+  justice_hammer_lightred:
+    display_name: hammer (lightred)
+    resource:
+      model_id: 1356
+      material: MACE
+      generate: false
+      model_path: hammer_lightred_7
+  justice_hammer_red:
+    display_name: hammer (red)
+    resource:
+      model_id: 1357
+      material: MACE
+      generate: false
+      model_path: hammer_red_7
+  justice_hammer_darkred:
+    display_name: hammer (darkred)
+    resource:
+      model_id: 1358
+      material: MACE
+      generate: false
+      model_path: hammer_darkred_7
+  justice_hammer_pink:
+    display_name: hammer (pink)
+    resource:
+      model_id: 1359
+      material: MACE
+      generate: false
+      model_path: hammer_pink_7
+  justice_hammer_darkpink:
+    display_name: hammer (darkpink)
+    resource:
+      model_id: 1360
+      material: MACE
+      generate: false
+      model_path: hammer_darkpink_7
+  justice_hammer_orange:
+    display_name: hammer (orange)
+    resource:
+      model_id: 1361
+      material: MACE
+      generate: false
+      model_path: hammer_orange_7
+  justice_hammer_darkorange:
+    display_name: hammer (darkorange)
+    resource:
+      model_id: 1362
+      material: MACE
+      generate: false
+      model_path: hammer_darkorange_7
+  justice_hammer_brown:
+    display_name: hammer (brown)
+    resource:
+      model_id: 1363
+      material: MACE
+      generate: false
+      model_path: hammer_brown_7
+  justice_hammer_darkbrown:
+    display_name: hammer (darkbrown)
+    resource:
+      model_id: 1364
+      material: MACE
+      generate: false
+      model_path: hammer_darkbrown_7
+  justice_hammer_yellow:
+    display_name: hammer (yellow)
+    resource:
+      model_id: 1365
+      material: MACE
+      generate: false
+      model_path: hammer_yellow_7
+  justice_hammer_darkyellow:
+    display_name: hammer (darkyellow)
+    resource:
+      model_id: 1366
+      material: MACE
+      generate: false
+      model_path: hammer_darkyellow_7
+  justice_hammer_lightgreen:
+    display_name: hammer (lightgreen)
+    resource:
+      model_id: 1367
+      material: MACE
+      generate: false
+      model_path: hammer_lightgreen_7
+  justice_hammer_green:
+    display_name: hammer (green)
+    resource:
+      model_id: 1368
+      material: MACE
+      generate: false
+      model_path: hammer_green_7
+  justice_hammer_darkgreen:
+    display_name: hammer (darkgreen)
+    resource:
+      model_id: 1369
+      material: MACE
+      generate: false
+      model_path: hammer_darkgreen_7
+  justice_hammer_cyan:
+    display_name: hammer (cyan)
+    resource:
+      model_id: 1370
+      material: MACE
+      generate: false
+      model_path: hammer_cyan_7
+  justice_hammer_teal:
+    display_name: hammer (teal)
+    resource:
+      model_id: 1371
+      material: MACE
+      generate: false
+      model_path: hammer_teal_7
+  justice_hammer_lightblue:
+    display_name: hammer (lightblue)
+    resource:
+      model_id: 1372
+      material: MACE
+      generate: false
+      model_path: hammer_lightblue_7
+  justice_hammer_blue:
+    display_name: hammer (blue)
+    resource:
+      model_id: 1373
+      material: MACE
+      generate: false
+      model_path: hammer_blue_7
+  justice_hammer_darkblue:
+    display_name: hammer (darkblue)
+    resource:
+      model_id: 1374
+      material: MACE
+      generate: false
+      model_path: hammer_darkblue_7
+  justice_hammer_lightpurple:
+    display_name: hammer (lightpurple)
+    resource:
+      model_id: 1375
+      material: MACE
+      generate: false
+      model_path: hammer_lightpurple_7
+  justice_hammer_purple:
+    display_name: hammer (purple)
+    resource:
+      model_id: 1376
+      material: MACE
+      generate: false
+      model_path: hammer_purple_7
+  justice_hammer_darkpurple:
+    display_name: hammer (darkpurple)
+    resource:
+      model_id: 1377
+      material: MACE
+      generate: false
+      model_path: hammer_darkpurple_7
+  missile_hammer_white:
+    display_name: hammer (white)
+    resource:
+      model_id: 1379
+      material: MACE
+      generate: false
+      model_path: hammer_white_4
+  missile_hammer_lightgray:
+    display_name: hammer (lightgray)
+    resource:
+      model_id: 1380
+      material: MACE
+      generate: false
+      model_path: hammer_lightgray_4
+  missile_hammer_gray:
+    display_name: hammer (gray)
+    resource:
+      model_id: 1381
+      material: MACE
+      generate: false
+      model_path: hammer_gray_4
+  missile_hammer_black:
+    display_name: hammer (black)
+    resource:
+      model_id: 1382
+      material: MACE
+      generate: false
+      model_path: hammer_black_4
+  missile_hammer_lightred:
+    display_name: hammer (lightred)
+    resource:
+      model_id: 1383
+      material: MACE
+      generate: false
+      model_path: hammer_lightred_4
+  missile_hammer_red:
+    display_name: hammer (red)
+    resource:
+      model_id: 1384
+      material: MACE
+      generate: false
+      model_path: hammer_red_4
+  missile_hammer_darkred:
+    display_name: hammer (darkred)
+    resource:
+      model_id: 1385
+      material: MACE
+      generate: false
+      model_path: hammer_darkred_4
+  missile_hammer_pink:
+    display_name: hammer (pink)
+    resource:
+      model_id: 1386
+      material: MACE
+      generate: false
+      model_path: hammer_pink_4
+  missile_hammer_darkpink:
+    display_name: hammer (darkpink)
+    resource:
+      model_id: 1387
+      material: MACE
+      generate: false
+      model_path: hammer_darkpink_4
+  missile_hammer_orange:
+    display_name: hammer (orange)
+    resource:
+      model_id: 1388
+      material: MACE
+      generate: false
+      model_path: hammer_orange_4
+  missile_hammer_darkorange:
+    display_name: hammer (darkorange)
+    resource:
+      model_id: 1389
+      material: MACE
+      generate: false
+      model_path: hammer_darkorange_4
+  missile_hammer_brown:
+    display_name: hammer (brown)
+    resource:
+      model_id: 1390
+      material: MACE
+      generate: false
+      model_path: hammer_brown_4
+  missile_hammer_darkbrown:
+    display_name: hammer (darkbrown)
+    resource:
+      model_id: 1391
+      material: MACE
+      generate: false
+      model_path: hammer_darkbrown_4
+  missile_hammer_yellow:
+    display_name: hammer (yellow)
+    resource:
+      model_id: 1392
+      material: MACE
+      generate: false
+      model_path: hammer_yellow_4
+  missile_hammer_darkyellow:
+    display_name: hammer (darkyellow)
+    resource:
+      model_id: 1393
+      material: MACE
+      generate: false
+      model_path: hammer_darkyellow_4
+  missile_hammer_lightgreen:
+    display_name: hammer (lightgreen)
+    resource:
+      model_id: 1394
+      material: MACE
+      generate: false
+      model_path: hammer_lightgreen_4
+  missile_hammer_green:
+    display_name: hammer (green)
+    resource:
+      model_id: 1395
+      material: MACE
+      generate: false
+      model_path: hammer_green_4
+  missile_hammer_darkgreen:
+    display_name: hammer (darkgreen)
+    resource:
+      model_id: 1396
+      material: MACE
+      generate: false
+      model_path: hammer_darkgreen_4
+  missile_hammer_cyan:
+    display_name: hammer (cyan)
+    resource:
+      model_id: 1397
+      material: MACE
+      generate: false
+      model_path: hammer_cyan_4
+  missile_hammer_teal:
+    display_name: hammer (teal)
+    resource:
+      model_id: 1398
+      material: MACE
+      generate: false
+      model_path: hammer_teal_4
+  missile_hammer_lightblue:
+    display_name: hammer (lightblue)
+    resource:
+      model_id: 1399
+      material: MACE
+      generate: false
+      model_path: hammer_lightblue_4
+  missile_hammer_blue:
+    display_name: hammer (blue)
+    resource:
+      model_id: 1400
+      material: MACE
+      generate: false
+      model_path: hammer_blue_4
+  missile_hammer_darkblue:
+    display_name: hammer (darkblue)
+    resource:
+      model_id: 1401
+      material: MACE
+      generate: false
+      model_path: hammer_darkblue_4
+  missile_hammer_lightpurple:
+    display_name: hammer (lightpurple)
+    resource:
+      model_id: 1402
+      material: MACE
+      generate: false
+      model_path: hammer_lightpurple_4
+  missile_hammer_purple:
+    display_name: hammer (purple)
+    resource:
+      model_id: 1403
+      material: MACE
+      generate: false
+      model_path: hammer_purple_4
+  missile_hammer_darkpurple:
+    display_name: hammer (darkpurple)
+    resource:
+      model_id: 1404
+      material: MACE
+      generate: false
+      model_path: hammer_darkpurple_4
+  orcaspear_white:
+    display_name: orcaspear (white)
+    resource:
+      material: IRON_SWORD
+      model_id: 1406
+      generate: false
+      model_path: orcaspear_white
+  orcaspear_lightgray:
+    display_name: orcaspear (lightgray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1407
+      generate: false
+      model_path: orcaspear_lightgray
+  orcaspear_gray:
+    display_name: orcaspear (gray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1408
+      generate: false
+      model_path: orcaspear_gray
+  orcaspear_black:
+    display_name: orcaspear (black)
+    resource:
+      material: IRON_SWORD
+      model_id: 1409
+      generate: false
+      model_path: orcaspear_black
+  orcaspear_lightred:
+    display_name: orcaspear (lightred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1410
+      generate: false
+      model_path: orcaspear_lightred
+  orcaspear_red:
+    display_name: orcaspear (red)
+    resource:
+      material: IRON_SWORD
+      model_id: 1411
+      generate: false
+      model_path: orcaspear_red
+  orcaspear_darkred:
+    display_name: orcaspear (darkred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1412
+      generate: false
+      model_path: orcaspear_darkred
+  orcaspear_pink:
+    display_name: orcaspear (pink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1413
+      generate: false
+      model_path: orcaspear_pink
+  orcaspear_darkpink:
+    display_name: orcaspear (darkpink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1414
+      generate: false
+      model_path: orcaspear_darkpink
+  orcaspear_orange:
+    display_name: orcaspear (orange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1415
+      generate: false
+      model_path: orcaspear_orange
+  orcaspear_darkorange:
+    display_name: orcaspear (darkorange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1416
+      generate: false
+      model_path: orcaspear_darkorange
+  orcaspear_brown:
+    display_name: orcaspear (brown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1417
+      generate: false
+      model_path: orcaspear_brown
+  orcaspear_darkbrown:
+    display_name: orcaspear (darkbrown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1418
+      generate: false
+      model_path: orcaspear_darkbrown
+  orcaspear_yellow:
+    display_name: orcaspear (yellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1419
+      generate: false
+      model_path: orcaspear_yellow
+  orcaspear_darkyellow:
+    display_name: orcaspear (darkyellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1420
+      generate: false
+      model_path: orcaspear_darkyellow
+  orcaspear_lightgreen:
+    display_name: orcaspear (lightgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1421
+      generate: false
+      model_path: orcaspear_lightgreen
+  orcaspear_green:
+    display_name: orcaspear (green)
+    resource:
+      material: IRON_SWORD
+      model_id: 1422
+      generate: false
+      model_path: orcaspear_green
+  orcaspear_darkgreen:
+    display_name: orcaspear (darkgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1423
+      generate: false
+      model_path: orcaspear_darkgreen
+  orcaspear_cyan:
+    display_name: orcaspear (cyan)
+    resource:
+      material: IRON_SWORD
+      model_id: 1424
+      generate: false
+      model_path: orcaspear_cyan
+  orcaspear_teal:
+    display_name: orcaspear (teal)
+    resource:
+      material: IRON_SWORD
+      model_id: 1425
+      generate: false
+      model_path: orcaspear_teal
+  orcaspear_lightblue:
+    display_name: orcaspear (lightblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1426
+      generate: false
+      model_path: orcaspear_lightblue
+  orcaspear_blue:
+    display_name: orcaspear (blue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1427
+      generate: false
+      model_path: orcaspear_blue
+  orcaspear_darkblue:
+    display_name: orcaspear (darkblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1428
+      generate: false
+      model_path: orcaspear_darkblue
+  orcaspear_lightpurple:
+    display_name: orcaspear (lightpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1429
+      generate: false
+      model_path: orcaspear_lightpurple
+  orcaspear_purple:
+    display_name: orcaspear (purple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1430
+      generate: false
+      model_path: orcaspear_purple
+  orcaspear_darkpurple:
+    display_name: orcaspear (darkpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1431
+      generate: false
+      model_path: orcaspear_darkpurple
+  poseidontrident_white:
+    display_name: poseidontrident (white)
+    resource:
+      material: IRON_SWORD
+      model_id: 1433
+      generate: false
+      model_path: poseidontrident_white
+  poseidontrident_lightgray:
+    display_name: poseidontrident (lightgray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1434
+      generate: false
+      model_path: poseidontrident_lightgray
+  poseidontrident_gray:
+    display_name: poseidontrident (gray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1435
+      generate: false
+      model_path: poseidontrident_gray
+  poseidontrident_black:
+    display_name: poseidontrident (black)
+    resource:
+      material: IRON_SWORD
+      model_id: 1436
+      generate: false
+      model_path: poseidontrident_black
+  poseidontrident_lightred:
+    display_name: poseidontrident (lightred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1437
+      generate: false
+      model_path: poseidontrident_lightred
+  poseidontrident_red:
+    display_name: poseidontrident (red)
+    resource:
+      material: IRON_SWORD
+      model_id: 1438
+      generate: false
+      model_path: poseidontrident_red
+  poseidontrident_darkred:
+    display_name: poseidontrident (darkred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1439
+      generate: false
+      model_path: poseidontrident_darkred
+  poseidontrident_pink:
+    display_name: poseidontrident (pink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1440
+      generate: false
+      model_path: poseidontrident_pink
+  poseidontrident_darkpink:
+    display_name: poseidontrident (darkpink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1441
+      generate: false
+      model_path: poseidontrident_darkpink
+  poseidontrident_orange:
+    display_name: poseidontrident (orange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1442
+      generate: false
+      model_path: poseidontrident_orange
+  poseidontrident_darkorange:
+    display_name: poseidontrident (darkorange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1443
+      generate: false
+      model_path: poseidontrident_darkorange
+  poseidontrident_brown:
+    display_name: poseidontrident (brown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1444
+      generate: false
+      model_path: poseidontrident_brown
+  poseidontrident_darkbrown:
+    display_name: poseidontrident (darkbrown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1445
+      generate: false
+      model_path: poseidontrident_darkbrown
+  poseidontrident_yellow:
+    display_name: poseidontrident (yellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1446
+      generate: false
+      model_path: poseidontrident_yellow
+  poseidontrident_darkyellow:
+    display_name: poseidontrident (darkyellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1447
+      generate: false
+      model_path: poseidontrident_darkyellow
+  poseidontrident_lightgreen:
+    display_name: poseidontrident (lightgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1448
+      generate: false
+      model_path: poseidontrident_lightgreen
+  poseidontrident_green:
+    display_name: poseidontrident (green)
+    resource:
+      material: IRON_SWORD
+      model_id: 1449
+      generate: false
+      model_path: poseidontrident_green
+  poseidontrident_darkgreen:
+    display_name: poseidontrident (darkgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1450
+      generate: false
+      model_path: poseidontrident_darkgreen
+  poseidontrident_cyan:
+    display_name: poseidontrident (cyan)
+    resource:
+      material: IRON_SWORD
+      model_id: 1451
+      generate: false
+      model_path: poseidontrident_cyan
+  poseidontrident_teal:
+    display_name: poseidontrident (teal)
+    resource:
+      material: IRON_SWORD
+      model_id: 1452
+      generate: false
+      model_path: poseidontrident_teal
+  poseidontrident_lightblue:
+    display_name: poseidontrident (lightblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1453
+      generate: false
+      model_path: poseidontrident_lightblue
+  poseidontrident_blue:
+    display_name: poseidontrident (blue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1454
+      generate: false
+      model_path: poseidontrident_blue
+  poseidontrident_darkblue:
+    display_name: poseidontrident (darkblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1455
+      generate: false
+      model_path: poseidontrident_darkblue
+  poseidontrident_lightpurple:
+    display_name: poseidontrident (lightpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1456
+      generate: false
+      model_path: poseidontrident_lightpurple
+  poseidontrident_purple:
+    display_name: poseidontrident (purple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1457
+      generate: false
+      model_path: poseidontrident_purple
+  poseidontrident_darkpurple:
+    display_name: poseidontrident (darkpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1458
+      generate: false
+      model_path: poseidontrident_darkpurple
+  roman_hammer_white:
+    display_name: hammer (white)
+    resource:
+      model_id: 1460
+      material: MACE
+      generate: false
+      model_path: hammer_white_8
+  roman_hammer_lightgray:
+    display_name: hammer (lightgray)
+    resource:
+      model_id: 1461
+      material: MACE
+      generate: false
+      model_path: hammer_lightgray_8
+  roman_hammer_gray:
+    display_name: hammer (gray)
+    resource:
+      model_id: 1462
+      material: MACE
+      generate: false
+      model_path: hammer_gray_8
+  roman_hammer_black:
+    display_name: hammer (black)
+    resource:
+      model_id: 1463
+      material: MACE
+      generate: false
+      model_path: hammer_black_8
+  roman_hammer_lightred:
+    display_name: hammer (lightred)
+    resource:
+      model_id: 1464
+      material: MACE
+      generate: false
+      model_path: hammer_lightred_8
+  roman_hammer_red:
+    display_name: hammer (red)
+    resource:
+      model_id: 1465
+      material: MACE
+      generate: false
+      model_path: hammer_red_8
+  roman_hammer_darkred:
+    display_name: hammer (darkred)
+    resource:
+      model_id: 1466
+      material: MACE
+      generate: false
+      model_path: hammer_darkred_8
+  roman_hammer_pink:
+    display_name: hammer (pink)
+    resource:
+      model_id: 1467
+      material: MACE
+      generate: false
+      model_path: hammer_pink_8
+  roman_hammer_darkpink:
+    display_name: hammer (darkpink)
+    resource:
+      model_id: 1468
+      material: MACE
+      generate: false
+      model_path: hammer_darkpink_8
+  roman_hammer_orange:
+    display_name: hammer (orange)
+    resource:
+      model_id: 1469
+      material: MACE
+      generate: false
+      model_path: hammer_orange_8
+  roman_hammer_darkorange:
+    display_name: hammer (darkorange)
+    resource:
+      model_id: 1470
+      material: MACE
+      generate: false
+      model_path: hammer_darkorange_8
+  roman_hammer_brown:
+    display_name: hammer (brown)
+    resource:
+      model_id: 1471
+      material: MACE
+      generate: false
+      model_path: hammer_brown_8
+  roman_hammer_darkbrown:
+    display_name: hammer (darkbrown)
+    resource:
+      model_id: 1472
+      material: MACE
+      generate: false
+      model_path: hammer_darkbrown_8
+  roman_hammer_yellow:
+    display_name: hammer (yellow)
+    resource:
+      model_id: 1473
+      material: MACE
+      generate: false
+      model_path: hammer_yellow_8
+  roman_hammer_darkyellow:
+    display_name: hammer (darkyellow)
+    resource:
+      model_id: 1474
+      material: MACE
+      generate: false
+      model_path: hammer_darkyellow_8
+  roman_hammer_lightgreen:
+    display_name: hammer (lightgreen)
+    resource:
+      model_id: 1475
+      material: MACE
+      generate: false
+      model_path: hammer_lightgreen_8
+  roman_hammer_green:
+    display_name: hammer (green)
+    resource:
+      model_id: 1476
+      material: MACE
+      generate: false
+      model_path: hammer_green_8
+  roman_hammer_darkgreen:
+    display_name: hammer (darkgreen)
+    resource:
+      model_id: 1477
+      material: MACE
+      generate: false
+      model_path: hammer_darkgreen_8
+  roman_hammer_cyan:
+    display_name: hammer (cyan)
+    resource:
+      model_id: 1478
+      material: MACE
+      generate: false
+      model_path: hammer_cyan_8
+  roman_hammer_teal:
+    display_name: hammer (teal)
+    resource:
+      model_id: 1479
+      material: MACE
+      generate: false
+      model_path: hammer_teal_8
+  roman_hammer_lightblue:
+    display_name: hammer (lightblue)
+    resource:
+      model_id: 1480
+      material: MACE
+      generate: false
+      model_path: hammer_lightblue_8
+  roman_hammer_blue:
+    display_name: hammer (blue)
+    resource:
+      model_id: 1481
+      material: MACE
+      generate: false
+      model_path: hammer_blue_8
+  roman_hammer_darkblue:
+    display_name: hammer (darkblue)
+    resource:
+      model_id: 1482
+      material: MACE
+      generate: false
+      model_path: hammer_darkblue_8
+  roman_hammer_lightpurple:
+    display_name: hammer (lightpurple)
+    resource:
+      model_id: 1483
+      material: MACE
+      generate: false
+      model_path: hammer_lightpurple_8
+  roman_hammer_purple:
+    display_name: hammer (purple)
+    resource:
+      model_id: 1484
+      material: MACE
+      generate: false
+      model_path: hammer_purple_8
+  roman_hammer_darkpurple:
+    display_name: hammer (darkpurple)
+    resource:
+      model_id: 1485
+      material: MACE
+      generate: false
+      model_path: hammer_darkpurple_8
+  rust_hammer_white:
+    display_name: hammer (white)
+    resource:
+      model_id: 1487
+      material: MACE
+      generate: false
+      model_path: hammer_white_3
+  rust_hammer_lightgray:
+    display_name: hammer (lightgray)
+    resource:
+      model_id: 1488
+      material: MACE
+      generate: false
+      model_path: hammer_lightgray_3
+  rust_hammer_gray:
+    display_name: hammer (gray)
+    resource:
+      model_id: 1489
+      material: MACE
+      generate: false
+      model_path: hammer_gray_3
+  rust_hammer_black:
+    display_name: hammer (black)
+    resource:
+      model_id: 1490
+      material: MACE
+      generate: false
+      model_path: hammer_black_3
+  rust_hammer_lightred:
+    display_name: hammer (lightred)
+    resource:
+      model_id: 1491
+      material: MACE
+      generate: false
+      model_path: hammer_lightred_3
+  rust_hammer_red:
+    display_name: hammer (red)
+    resource:
+      model_id: 1492
+      material: MACE
+      generate: false
+      model_path: hammer_red_3
+  rust_hammer_darkred:
+    display_name: hammer (darkred)
+    resource:
+      model_id: 1493
+      material: MACE
+      generate: false
+      model_path: hammer_darkred_3
+  rust_hammer_pink:
+    display_name: hammer (pink)
+    resource:
+      model_id: 1494
+      material: MACE
+      generate: false
+      model_path: hammer_pink_3
+  rust_hammer_darkpink:
+    display_name: hammer (darkpink)
+    resource:
+      model_id: 1495
+      material: MACE
+      generate: false
+      model_path: hammer_darkpink_3
+  rust_hammer_orange:
+    display_name: hammer (orange)
+    resource:
+      model_id: 1496
+      material: MACE
+      generate: false
+      model_path: hammer_orange_3
+  rust_hammer_darkorange:
+    display_name: hammer (darkorange)
+    resource:
+      model_id: 1497
+      material: MACE
+      generate: false
+      model_path: hammer_darkorange_3
+  rust_hammer_brown:
+    display_name: hammer (brown)
+    resource:
+      model_id: 1498
+      material: MACE
+      generate: false
+      model_path: hammer_brown_3
+  rust_hammer_darkbrown:
+    display_name: hammer (darkbrown)
+    resource:
+      model_id: 1499
+      material: MACE
+      generate: false
+      model_path: hammer_darkbrown_3
+  rust_hammer_yellow:
+    display_name: hammer (yellow)
+    resource:
+      model_id: 1500
+      material: MACE
+      generate: false
+      model_path: hammer_yellow_3
+  rust_hammer_darkyellow:
+    display_name: hammer (darkyellow)
+    resource:
+      model_id: 1501
+      material: MACE
+      generate: false
+      model_path: hammer_darkyellow_3
+  rust_hammer_lightgreen:
+    display_name: hammer (lightgreen)
+    resource:
+      model_id: 1502
+      material: MACE
+      generate: false
+      model_path: hammer_lightgreen_3
+  rust_hammer_green:
+    display_name: hammer (green)
+    resource:
+      model_id: 1503
+      material: MACE
+      generate: false
+      model_path: hammer_green_3
+  rust_hammer_darkgreen:
+    display_name: hammer (darkgreen)
+    resource:
+      model_id: 1504
+      material: MACE
+      generate: false
+      model_path: hammer_darkgreen_3
+  rust_hammer_cyan:
+    display_name: hammer (cyan)
+    resource:
+      model_id: 1505
+      material: MACE
+      generate: false
+      model_path: hammer_cyan_3
+  rust_hammer_teal:
+    display_name: hammer (teal)
+    resource:
+      model_id: 1506
+      material: MACE
+      generate: false
+      model_path: hammer_teal_3
+  rust_hammer_lightblue:
+    display_name: hammer (lightblue)
+    resource:
+      model_id: 1507
+      material: MACE
+      generate: false
+      model_path: hammer_lightblue_3
+  rust_hammer_blue:
+    display_name: hammer (blue)
+    resource:
+      model_id: 1508
+      material: MACE
+      generate: false
+      model_path: hammer_blue_3
+  rust_hammer_darkblue:
+    display_name: hammer (darkblue)
+    resource:
+      model_id: 1509
+      material: MACE
+      generate: false
+      model_path: hammer_darkblue_3
+  rust_hammer_lightpurple:
+    display_name: hammer (lightpurple)
+    resource:
+      model_id: 1510
+      material: MACE
+      generate: false
+      model_path: hammer_lightpurple_3
+  rust_hammer_purple:
+    display_name: hammer (purple)
+    resource:
+      model_id: 1511
+      material: MACE
+      generate: false
+      model_path: hammer_purple_3
+  rust_hammer_darkpurple:
+    display_name: hammer (darkpurple)
+    resource:
+      model_id: 1512
+      material: MACE
+      generate: false
+      model_path: hammer_darkpurple_3
+  slim_layer_hammer_white:
+    display_name: hammer (white)
+    resource:
+      model_id: 1514
+      material: MACE
+      generate: false
+      model_path: hammer_white_10
+  slim_layer_hammer_lightgray:
+    display_name: hammer (lightgray)
+    resource:
+      model_id: 1515
+      material: MACE
+      generate: false
+      model_path: hammer_lightgray_10
+  slim_layer_hammer_gray:
+    display_name: hammer (gray)
+    resource:
+      model_id: 1516
+      material: MACE
+      generate: false
+      model_path: hammer_gray_10
+  slim_layer_hammer_black:
+    display_name: hammer (black)
+    resource:
+      model_id: 1517
+      material: MACE
+      generate: false
+      model_path: hammer_black_10
+  slim_layer_hammer_lightred:
+    display_name: hammer (lightred)
+    resource:
+      model_id: 1518
+      material: MACE
+      generate: false
+      model_path: hammer_lightred_10
+  slim_layer_hammer_red:
+    display_name: hammer (red)
+    resource:
+      model_id: 1519
+      material: MACE
+      generate: false
+      model_path: hammer_red_10
+  slim_layer_hammer_darkred:
+    display_name: hammer (darkred)
+    resource:
+      model_id: 1520
+      material: MACE
+      generate: false
+      model_path: hammer_darkred_10
+  slim_layer_hammer_pink:
+    display_name: hammer (pink)
+    resource:
+      model_id: 1521
+      material: MACE
+      generate: false
+      model_path: hammer_pink_10
+  slim_layer_hammer_darkpink:
+    display_name: hammer (darkpink)
+    resource:
+      model_id: 1522
+      material: MACE
+      generate: false
+      model_path: hammer_darkpink_10
+  slim_layer_hammer_orange:
+    display_name: hammer (orange)
+    resource:
+      model_id: 1523
+      material: MACE
+      generate: false
+      model_path: hammer_orange_10
+  slim_layer_hammer_darkorange:
+    display_name: hammer (darkorange)
+    resource:
+      model_id: 1524
+      material: MACE
+      generate: false
+      model_path: hammer_darkorange_10
+  slim_layer_hammer_brown:
+    display_name: hammer (brown)
+    resource:
+      model_id: 1525
+      material: MACE
+      generate: false
+      model_path: hammer_brown_10
+  slim_layer_hammer_darkbrown:
+    display_name: hammer (darkbrown)
+    resource:
+      model_id: 1526
+      material: MACE
+      generate: false
+      model_path: hammer_darkbrown_10
+  slim_layer_hammer_yellow:
+    display_name: hammer (yellow)
+    resource:
+      model_id: 1527
+      material: MACE
+      generate: false
+      model_path: hammer_yellow_10
+  slim_layer_hammer_darkyellow:
+    display_name: hammer (darkyellow)
+    resource:
+      model_id: 1528
+      material: MACE
+      generate: false
+      model_path: hammer_darkyellow_10
+  slim_layer_hammer_lightgreen:
+    display_name: hammer (lightgreen)
+    resource:
+      model_id: 1529
+      material: MACE
+      generate: false
+      model_path: hammer_lightgreen_10
+  slim_layer_hammer_green:
+    display_name: hammer (green)
+    resource:
+      model_id: 1530
+      material: MACE
+      generate: false
+      model_path: hammer_green_10
+  slim_layer_hammer_darkgreen:
+    display_name: hammer (darkgreen)
+    resource:
+      model_id: 1531
+      material: MACE
+      generate: false
+      model_path: hammer_darkgreen_10
+  slim_layer_hammer_cyan:
+    display_name: hammer (cyan)
+    resource:
+      model_id: 1532
+      material: MACE
+      generate: false
+      model_path: hammer_cyan_10
+  slim_layer_hammer_teal:
+    display_name: hammer (teal)
+    resource:
+      model_id: 1533
+      material: MACE
+      generate: false
+      model_path: hammer_teal_10
+  slim_layer_hammer_lightblue:
+    display_name: hammer (lightblue)
+    resource:
+      model_id: 1534
+      material: MACE
+      generate: false
+      model_path: hammer_lightblue_10
+  slim_layer_hammer_blue:
+    display_name: hammer (blue)
+    resource:
+      model_id: 1535
+      material: MACE
+      generate: false
+      model_path: hammer_blue_10
+  slim_layer_hammer_darkblue:
+    display_name: hammer (darkblue)
+    resource:
+      model_id: 1536
+      material: MACE
+      generate: false
+      model_path: hammer_darkblue_10
+  slim_layer_hammer_lightpurple:
+    display_name: hammer (lightpurple)
+    resource:
+      model_id: 1537
+      material: MACE
+      generate: false
+      model_path: hammer_lightpurple_10
+  slim_layer_hammer_purple:
+    display_name: hammer (purple)
+    resource:
+      model_id: 1538
+      material: MACE
+      generate: false
+      model_path: hammer_purple_10
+  slim_layer_hammer_darkpurple:
+    display_name: hammer (darkpurple)
+    resource:
+      model_id: 1539
+      material: MACE
+      generate: false
+      model_path: hammer_darkpurple_10
+  warriorspear_white:
+    display_name: warriorspear (white)
+    resource:
+      material: IRON_SWORD
+      model_id: 1541
+      generate: false
+      model_path: warriorspear_white
+  warriorspear_lightgray:
+    display_name: warriorspear (lightgray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1542
+      generate: false
+      model_path: warriorspear_lightgray
+  warriorspear_gray:
+    display_name: warriorspear (gray)
+    resource:
+      material: IRON_SWORD
+      model_id: 1543
+      generate: false
+      model_path: warriorspear_gray
+  warriorspear_black:
+    display_name: warriorspear (black)
+    resource:
+      material: IRON_SWORD
+      model_id: 1544
+      generate: false
+      model_path: warriorspear_black
+  warriorspear_lightred:
+    display_name: warriorspear (lightred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1545
+      generate: false
+      model_path: warriorspear_lightred
+  warriorspear_red:
+    display_name: warriorspear (red)
+    resource:
+      material: IRON_SWORD
+      model_id: 1546
+      generate: false
+      model_path: warriorspear_red
+  warriorspear_darkred:
+    display_name: warriorspear (darkred)
+    resource:
+      material: IRON_SWORD
+      model_id: 1547
+      generate: false
+      model_path: warriorspear_darkred
+  warriorspear_pink:
+    display_name: warriorspear (pink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1548
+      generate: false
+      model_path: warriorspear_pink
+  warriorspear_darkpink:
+    display_name: warriorspear (darkpink)
+    resource:
+      material: IRON_SWORD
+      model_id: 1549
+      generate: false
+      model_path: warriorspear_darkpink
+  warriorspear_orange:
+    display_name: warriorspear (orange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1550
+      generate: false
+      model_path: warriorspear_orange
+  warriorspear_darkorange:
+    display_name: warriorspear (darkorange)
+    resource:
+      material: IRON_SWORD
+      model_id: 1551
+      generate: false
+      model_path: warriorspear_darkorange
+  warriorspear_brown:
+    display_name: warriorspear (brown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1552
+      generate: false
+      model_path: warriorspear_brown
+  warriorspear_darkbrown:
+    display_name: warriorspear (darkbrown)
+    resource:
+      material: IRON_SWORD
+      model_id: 1553
+      generate: false
+      model_path: warriorspear_darkbrown
+  warriorspear_yellow:
+    display_name: warriorspear (yellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1554
+      generate: false
+      model_path: warriorspear_yellow
+  warriorspear_darkyellow:
+    display_name: warriorspear (darkyellow)
+    resource:
+      material: IRON_SWORD
+      model_id: 1555
+      generate: false
+      model_path: warriorspear_darkyellow
+  warriorspear_lightgreen:
+    display_name: warriorspear (lightgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1556
+      generate: false
+      model_path: warriorspear_lightgreen
+  warriorspear_green:
+    display_name: warriorspear (green)
+    resource:
+      material: IRON_SWORD
+      model_id: 1557
+      generate: false
+      model_path: warriorspear_green
+  warriorspear_darkgreen:
+    display_name: warriorspear (darkgreen)
+    resource:
+      material: IRON_SWORD
+      model_id: 1558
+      generate: false
+      model_path: warriorspear_darkgreen
+  warriorspear_cyan:
+    display_name: warriorspear (cyan)
+    resource:
+      material: IRON_SWORD
+      model_id: 1559
+      generate: false
+      model_path: warriorspear_cyan
+  warriorspear_teal:
+    display_name: warriorspear (teal)
+    resource:
+      material: IRON_SWORD
+      model_id: 1560
+      generate: false
+      model_path: warriorspear_teal
+  warriorspear_lightblue:
+    display_name: warriorspear (lightblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1561
+      generate: false
+      model_path: warriorspear_lightblue
+  warriorspear_blue:
+    display_name: warriorspear (blue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1562
+      generate: false
+      model_path: warriorspear_blue
+  warriorspear_darkblue:
+    display_name: warriorspear (darkblue)
+    resource:
+      material: IRON_SWORD
+      model_id: 1563
+      generate: false
+      model_path: warriorspear_darkblue
+  warriorspear_lightpurple:
+    display_name: warriorspear (lightpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1564
+      generate: false
+      model_path: warriorspear_lightpurple
+  warriorspear_purple:
+    display_name: warriorspear (purple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1565
+      generate: false
+      model_path: warriorspear_purple
+  warriorspear_darkpurple:
+    display_name: warriorspear (darkpurple)
+    resource:
+      material: IRON_SWORD
+      model_id: 1566
+      generate: false
+      model_path: warriorspear_darkpurple

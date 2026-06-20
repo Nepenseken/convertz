@@ -1,0 +1,55 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_darkyellow:
+    color: '#ffffcb'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_darkyellow_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_darkyellow_2
+    use_color: false
+equipments:
+  witchcaster_animated_darkyellow:
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_darkyellow_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_darkyellow_2
+items:
+  witchcaster_animated_hat_darkyellow:
+    display_name: DISPLAY (darkyellow)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_darkyellow
+      model_id: 2277
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_darkyellow:
+    display_name: DISPLAY (darkyellow)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_darkyellow
+      model_id: 2276
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: witchcaster_animated_darkyellow
+      legacy_armor_rendering_id: witchcaster_animated_darkyellow
+      slot: CHEST
+  witchcaster_animated_leggings_darkyellow:
+    display_name: DISPLAY (darkyellow)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_darkyellow
+      model_id: 2278
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: witchcaster_animated_darkyellow
+      legacy_armor_rendering_id: witchcaster_animated_darkyellow
+      slot: LEGS
+  witchcaster_animated_boots_darkyellow:
+    display_name: DISPLAY (darkyellow)
+    resource:
+      model_path: witchcaster_animated/armor/boots_darkyellow
+      model_id: 2275
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: witchcaster_animated_darkyellow
+      legacy_armor_rendering_id: witchcaster_animated_darkyellow
+      slot: FEET

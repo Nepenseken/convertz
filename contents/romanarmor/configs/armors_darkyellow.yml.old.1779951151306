@@ -1,0 +1,578 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  roman_armor_aquilifer_darkyellow:
+    color: '#8c196e'
+    layer_1: roman_armor/aquilifer_armor_layer_darkyellow_1
+    layer_2: roman_armor/aquilifer_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_centurion_darkyellow:
+    color: '#8c1970'
+    layer_1: roman_armor/centurion_armor_layer_darkyellow_1
+    layer_2: roman_armor/centurion_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_emperor_darkyellow:
+    color: '#8c1976'
+    layer_1: roman_armor/emperor_armor_layer_darkyellow_1
+    layer_2: roman_armor/emperor_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_general_darkyellow:
+    color: '#8c1977'
+    layer_1: roman_armor/general_armor_layer_darkyellow_1
+    layer_2: roman_armor/general_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_hastatus_darkyellow:
+    color: '#8c1978'
+    layer_1: roman_armor/hastatus_armor_layer_darkyellow_1
+    layer_2: roman_armor/hastatus_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_veles_darkyellow:
+    color: '#8c1979'
+    layer_1: roman_armor/veles_armor_layer_darkyellow_1
+    layer_2: roman_armor/veles_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_triarius_darkyellow:
+    color: '#8c197a'
+    layer_1: roman_armor/triarius_armor_layer_darkyellow_1
+    layer_2: roman_armor/triarius_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_legionnaire_darkyellow:
+    color: '#8c197b'
+    layer_1: roman_armor/legionnaire_armor_layer_darkyellow_1
+    layer_2: roman_armor/legionnaire_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_praetorian_darkyellow:
+    color: '#8c197c'
+    layer_1: roman_armor/praetorian_armor_layer_darkyellow_1
+    layer_2: roman_armor/praetorian_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_romanelite_darkyellow:
+    color: '#8c197d'
+    layer_1: roman_armor/romanelite_armor_layer_darkyellow_1
+    layer_2: roman_armor/romanelite_armor_layer_darkyellow_2
+    use_color: false
+  roman_armor_praetorianred_darkyellow:
+    color: '#8c197e'
+    layer_1: roman_armor/praetorianred_armor_layer_darkyellow_1
+    layer_2: roman_armor/praetorianred_armor_layer_darkyellow_2
+    use_color: false
+items:
+  roman_armor_aquilifer_helmet_darkyellow:
+    display_name: Aquilifer Helmet (darkyellow)
+    resource:
+      model_id: 3432
+      generate: false
+      model_path: auto_generated/aquilifer_helmet_darkyellow
+      textures:
+      - roman_armor/aquilifer_helmet_darkyellow.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_aquilifer_darkyellow
+  roman_armor_aquilifer_chestplate_darkyellow:
+    display_name: Aquilifer Chestplate (darkyellow)
+    resource:
+      model_id: 3431
+      generate: false
+      model_path: auto_generated/aquilifer_chestplate_darkyellow
+      textures:
+      - roman_armor/aquilifer_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_aquilifer_darkyellow
+  roman_armor_aquilifer_leggings_darkyellow:
+    display_name: Aquilifer Leggings (darkyellow)
+    resource:
+      model_id: 3433
+      generate: false
+      model_path: auto_generated/aquilifer_leggings_darkyellow
+      textures:
+      - roman_armor/aquilifer_leggings_darkyellow.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_aquilifer_darkyellow
+  roman_armor_aquilifer_boots_darkyellow:
+    display_name: Aquilifer Boots (darkyellow)
+    resource:
+      model_id: 3430
+      generate: false
+      model_path: auto_generated/aquilifer_boots_darkyellow
+      textures:
+      - roman_armor/aquilifer_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_aquilifer_darkyellow
+  roman_armor_centurion_helmet_darkyellow:
+    display_name: Centurion Helmet (darkyellow)
+    resource:
+      model_id: 3439
+      generate: false
+      model_path: auto_generated/centurion_helmet_darkyellow
+      textures:
+      - roman_armor/centurion_helmet_darkyellow.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_centurion_darkyellow
+  roman_armor_centurion_chestplate_darkyellow:
+    display_name: Centurion Chestplate (darkyellow)
+    resource:
+      model_id: 3435
+      generate: false
+      model_path: auto_generated/centurion_chestplate_darkyellow
+      textures:
+      - roman_armor/centurion_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_centurion_darkyellow
+  roman_armor_centurion_leggings_darkyellow:
+    display_name: Centurion Leggings (darkyellow)
+    resource:
+      model_id: 3440
+      generate: false
+      model_path: auto_generated/centurion_leggings_darkyellow
+      textures:
+      - roman_armor/centurion_leggings_darkyellow.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_centurion_darkyellow
+  roman_armor_centurion_boots_darkyellow:
+    display_name: Centurion Boots (darkyellow)
+    resource:
+      model_id: 3434
+      generate: false
+      model_path: auto_generated/centurion_boots_darkyellow
+      textures:
+      - roman_armor/centurion_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_centurion_darkyellow
+  roman_armor_centurion_hat_1_darkyellow:
+    display_name: Centurion Hat 1 (darkyellow)
+    resource:
+      model_id: 3436
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_darkyellow_1
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_2_darkyellow:
+    display_name: Centurion Hat 2 (darkyellow)
+    resource:
+      model_id: 3437
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_darkyellow_2
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_3_darkyellow:
+    display_name: Centurion Hat 3 (darkyellow)
+    resource:
+      model_id: 3438
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_darkyellow_3
+    behaviours:
+      hat: true
+  roman_armor_emperor_helmet_darkyellow:
+    display_name: Emperor Helmet (darkyellow)
+    resource:
+      model_id: 3443
+      generate: false
+      model_path: auto_generated/emperor_helmet_darkyellow
+      textures:
+      - roman_armor/emperor_helmet_darkyellow.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_emperor_darkyellow
+  roman_armor_emperor_chestplate_darkyellow:
+    display_name: Emperor Chestplate (darkyellow)
+    resource:
+      model_id: 3442
+      generate: false
+      model_path: auto_generated/emperor_chestplate_darkyellow
+      textures:
+      - roman_armor/emperor_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_emperor_darkyellow
+  roman_armor_emperor_leggings_darkyellow:
+    display_name: Emperor Leggings (darkyellow)
+    resource:
+      model_id: 3444
+      generate: false
+      model_path: auto_generated/emperor_leggings_darkyellow
+      textures:
+      - roman_armor/emperor_leggings_darkyellow.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_emperor_darkyellow
+  roman_armor_emperor_boots_darkyellow:
+    display_name: Emperor Boots (darkyellow)
+    resource:
+      model_id: 3441
+      generate: false
+      model_path: auto_generated/emperor_boots_darkyellow
+      textures:
+      - roman_armor/emperor_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_emperor_darkyellow
+  roman_armor_general_hat_darkyellow:
+    display_name: General Hat (darkyellow)
+    resource:
+      model_id: 3447
+      material: PAPER
+      generate: false
+      model_path: roman_armor/general_hat_darkyellow
+    behaviours:
+      hat: true
+  roman_armor_general_chestplate_darkyellow:
+    display_name: General Chestplate (darkyellow)
+    resource:
+      model_id: 3446
+      generate: false
+      model_path: auto_generated/general_chestplate_darkyellow
+      textures:
+      - roman_armor/general_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_general_darkyellow
+  roman_armor_general_leggings_darkyellow:
+    display_name: General Leggings (darkyellow)
+    resource:
+      model_id: 3448
+      generate: false
+      model_path: auto_generated/general_leggings_darkyellow
+      textures:
+      - roman_armor/general_leggings_darkyellow.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_general_darkyellow
+  roman_armor_general_boots_darkyellow:
+    display_name: General Boots (darkyellow)
+    resource:
+      model_id: 3445
+      generate: false
+      model_path: auto_generated/general_boots_darkyellow
+      textures:
+      - roman_armor/general_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_general_darkyellow
+  roman_armor_hastatus_helmet_darkyellow:
+    display_name: Hastatus Helmet (darkyellow)
+    resource:
+      model_id: 3451
+      generate: false
+      model_path: auto_generated/hastatus_helmet_darkyellow
+      textures:
+      - roman_armor/hastatus_helmet_darkyellow.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_hastatus_darkyellow
+  roman_armor_hastatus_chestplate_darkyellow:
+    display_name: Hastatus Chestplate (darkyellow)
+    resource:
+      model_id: 3450
+      generate: false
+      model_path: auto_generated/hastatus_chestplate_darkyellow
+      textures:
+      - roman_armor/hastatus_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_hastatus_darkyellow
+  roman_armor_hastatus_boots_darkyellow:
+    display_name: Hastatus Boots (darkyellow)
+    resource:
+      model_id: 3449
+      generate: false
+      model_path: auto_generated/hastatus_boots_darkyellow
+      textures:
+      - roman_armor/hastatus_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_hastatus_darkyellow
+  roman_armor_veles_helmet_darkyellow:
+    display_name: Veles Helmet (darkyellow)
+    resource:
+      model_id: 3474
+      generate: false
+      model_path: auto_generated/veles_helmet_darkyellow
+      textures:
+      - roman_armor/veles_helmet_darkyellow.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_veles_darkyellow
+  roman_armor_veles_chestplate_darkyellow:
+    display_name: Veles Chestplate (darkyellow)
+    resource:
+      model_id: 3473
+      generate: false
+      model_path: auto_generated/veles_chestplate_darkyellow
+      textures:
+      - roman_armor/veles_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_veles_darkyellow
+  roman_armor_veles_boots_darkyellow:
+    display_name: Veles Boots (darkyellow)
+    resource:
+      model_id: 3472
+      generate: false
+      model_path: auto_generated/veles_boots_darkyellow
+      textures:
+      - roman_armor/veles_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_veles_darkyellow
+  roman_armor_triarius_helmet_darkyellow:
+    display_name: Triarius Helmet (darkyellow)
+    resource:
+      model_id: 3470
+      generate: false
+      model_path: auto_generated/triarius_helmet_darkyellow
+      textures:
+      - roman_armor/triarius_helmet_darkyellow.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_triarius_darkyellow
+  roman_armor_triarius_chestplate_darkyellow:
+    display_name: Triarius Chestplate (darkyellow)
+    resource:
+      model_id: 3469
+      generate: false
+      model_path: auto_generated/triarius_chestplate_darkyellow
+      textures:
+      - roman_armor/triarius_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_triarius_darkyellow
+  roman_armor_triarius_leggings_darkyellow:
+    display_name: Triarius Leggings (darkyellow)
+    resource:
+      model_id: 3471
+      generate: false
+      model_path: auto_generated/triarius_leggings_darkyellow
+      textures:
+      - roman_armor/triarius_leggings_darkyellow.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_triarius_darkyellow
+  roman_armor_triarius_boots_darkyellow:
+    display_name: Triarius Boots (darkyellow)
+    resource:
+      model_id: 3468
+      generate: false
+      model_path: auto_generated/triarius_boots_darkyellow
+      textures:
+      - roman_armor/triarius_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_triarius_darkyellow
+  roman_armor_legionnaire_helmet_darkyellow:
+    display_name: Legionnaire Helmet (darkyellow)
+    resource:
+      model_id: 3454
+      generate: false
+      model_path: auto_generated/legionnaire_helmet_darkyellow
+      textures:
+      - roman_armor/legionnaire_helmet_darkyellow.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_legionnaire_darkyellow
+  roman_armor_legionnaire_chestplate_darkyellow:
+    display_name: Legionnaire Chestplate (darkyellow)
+    resource:
+      model_id: 3453
+      generate: false
+      model_path: auto_generated/legionnaire_chestplate_darkyellow
+      textures:
+      - roman_armor/legionnaire_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_legionnaire_darkyellow
+  roman_armor_legionnaire_leggings_darkyellow:
+    display_name: Legionnaire Leggings (darkyellow)
+    resource:
+      model_id: 3455
+      generate: false
+      model_path: auto_generated/legionnaire_leggings_darkyellow
+      textures:
+      - roman_armor/legionnaire_leggings_darkyellow.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_legionnaire_darkyellow
+  roman_armor_legionnaire_boots_darkyellow:
+    display_name: Legionnaire Boots (darkyellow)
+    resource:
+      model_id: 3452
+      generate: false
+      model_path: auto_generated/legionnaire_boots_darkyellow
+      textures:
+      - roman_armor/legionnaire_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_legionnaire_darkyellow
+  roman_armor_praetorian_hat_darkyellow:
+    display_name: Praetorian Hat (darkyellow)
+    resource:
+      model_id: 3458
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorian_hat_darkyellow
+    behaviours:
+      hat: true
+  roman_armor_praetorian_chestplate_darkyellow:
+    display_name: Praetorian Chestplate (darkyellow)
+    resource:
+      model_id: 3457
+      generate: false
+      model_path: auto_generated/praetorian_chestplate_darkyellow
+      textures:
+      - roman_armor/praetorian_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_praetorian_darkyellow
+  roman_armor_praetorian_leggings_darkyellow:
+    display_name: Praetorian Leggings (darkyellow)
+    resource:
+      model_id: 3459
+      generate: false
+      model_path: auto_generated/praetorian_leggings_darkyellow
+      textures:
+      - roman_armor/praetorian_leggings_darkyellow.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_praetorian_darkyellow
+  roman_armor_praetorian_boots_darkyellow:
+    display_name: Praetorian Boots (darkyellow)
+    resource:
+      model_id: 3456
+      generate: false
+      model_path: auto_generated/praetorian_boots_darkyellow
+      textures:
+      - roman_armor/praetorian_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_praetorian_darkyellow
+  roman_armor_romanelite_hat_darkyellow:
+    display_name: Romanelite Hat (darkyellow)
+    resource:
+      model_id: 3466
+      material: PAPER
+      generate: false
+      model_path: roman_armor/romanelite_hat_darkyellow
+    behaviours:
+      hat: true
+  roman_armor_romanelite_chestplate_darkyellow:
+    display_name: Romanelite Chestplate (darkyellow)
+    resource:
+      model_id: 3465
+      generate: false
+      model_path: auto_generated/romanelite_chestplate_darkyellow
+      textures:
+      - roman_armor/romanelite_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_romanelite_darkyellow
+  roman_armor_romanelite_leggings_darkyellow:
+    display_name: Romanelite Leggings (darkyellow)
+    resource:
+      model_id: 3467
+      generate: false
+      model_path: auto_generated/romanelite_leggings_darkyellow
+      textures:
+      - roman_armor/romanelite_leggings_darkyellow.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_romanelite_darkyellow
+  roman_armor_romanelite_boots_darkyellow:
+    display_name: Romanelite Boots (darkyellow)
+    resource:
+      model_id: 3464
+      generate: false
+      model_path: auto_generated/romanelite_boots_darkyellow
+      textures:
+      - roman_armor/romanelite_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_romanelite_darkyellow
+  roman_armor_praetorianred_hat_darkyellow:
+    display_name: Praetorianred Hat (darkyellow)
+    resource:
+      model_id: 3462
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorianred_hat_darkyellow
+    behaviours:
+      hat: true
+  roman_armor_praetorianred_chestplate_darkyellow:
+    display_name: Praetorianred Chestplate (darkyellow)
+    resource:
+      model_id: 3461
+      generate: false
+      model_path: auto_generated/praetorianred_chestplate_darkyellow
+      textures:
+      - roman_armor/praetorianred_chestplate_darkyellow.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_praetorianred_darkyellow
+  roman_armor_praetorianred_leggings_darkyellow:
+    display_name: Praetorianred Leggings (darkyellow)
+    resource:
+      model_id: 3463
+      generate: false
+      model_path: auto_generated/praetorianred_leggings_darkyellow
+      textures:
+      - roman_armor/praetorianred_leggings_darkyellow.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_praetorianred_darkyellow
+  roman_armor_praetorianred_boots_darkyellow:
+    display_name: Praetorianred Boots (darkyellow)
+    resource:
+      model_id: 3460
+      generate: false
+      model_path: auto_generated/praetorianred_boots_darkyellow
+      textures:
+      - roman_armor/praetorianred_boots_darkyellow.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_praetorianred_darkyellow

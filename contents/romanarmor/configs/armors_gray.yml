@@ -1,0 +1,650 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  roman_armor_aquilifer_gray:
+    color: '#8c1a34'
+    layer_1: roman_armor/aquilifer_armor_layer_gray_1
+    layer_2: roman_armor/aquilifer_armor_layer_gray_2
+    use_color: false
+  roman_armor_centurion_gray:
+    color: '#8c1a35'
+    layer_1: roman_armor/centurion_armor_layer_gray_1
+    layer_2: roman_armor/centurion_armor_layer_gray_2
+    use_color: false
+  roman_armor_emperor_gray:
+    color: '#8c1a36'
+    layer_1: roman_armor/emperor_armor_layer_gray_1
+    layer_2: roman_armor/emperor_armor_layer_gray_2
+    use_color: false
+  roman_armor_general_gray:
+    color: '#8c1a37'
+    layer_1: roman_armor/general_armor_layer_gray_1
+    layer_2: roman_armor/general_armor_layer_gray_2
+    use_color: false
+  roman_armor_hastatus_gray:
+    color: '#8c1a38'
+    layer_1: roman_armor/hastatus_armor_layer_gray_1
+    layer_2: roman_armor/hastatus_armor_layer_gray_2
+    use_color: false
+  roman_armor_veles_gray:
+    color: '#8c1a39'
+    layer_1: roman_armor/veles_armor_layer_gray_1
+    layer_2: roman_armor/veles_armor_layer_gray_2
+    use_color: false
+  roman_armor_triarius_gray:
+    color: '#8c1a3a'
+    layer_1: roman_armor/triarius_armor_layer_gray_1
+    layer_2: roman_armor/triarius_armor_layer_gray_2
+    use_color: false
+  roman_armor_legionnaire_gray:
+    color: '#8c1a3b'
+    layer_1: roman_armor/legionnaire_armor_layer_gray_1
+    layer_2: roman_armor/legionnaire_armor_layer_gray_2
+    use_color: false
+  roman_armor_praetorian_gray:
+    color: '#8c1a3c'
+    layer_1: roman_armor/praetorian_armor_layer_gray_1
+    layer_2: roman_armor/praetorian_armor_layer_gray_2
+    use_color: false
+  roman_armor_romanelite_gray:
+    color: '#8c1a3d'
+    layer_1: roman_armor/romanelite_armor_layer_gray_1
+    layer_2: roman_armor/romanelite_armor_layer_gray_2
+    use_color: false
+  roman_armor_praetorianred_gray:
+    color: '#8c1a3e'
+    layer_1: roman_armor/praetorianred_armor_layer_gray_1
+    layer_2: roman_armor/praetorianred_armor_layer_gray_2
+    use_color: false
+equipments:
+  roman_armor_aquilifer_gray:
+    layer_1: roman_armor/aquilifer_armor_layer_gray_1
+    layer_2: roman_armor/aquilifer_armor_layer_gray_2
+  roman_armor_centurion_gray:
+    layer_1: roman_armor/centurion_armor_layer_gray_1
+    layer_2: roman_armor/centurion_armor_layer_gray_2
+  roman_armor_emperor_gray:
+    layer_1: roman_armor/emperor_armor_layer_gray_1
+    layer_2: roman_armor/emperor_armor_layer_gray_2
+  roman_armor_general_gray:
+    layer_1: roman_armor/general_armor_layer_gray_1
+    layer_2: roman_armor/general_armor_layer_gray_2
+  roman_armor_hastatus_gray:
+    layer_1: roman_armor/hastatus_armor_layer_gray_1
+    layer_2: roman_armor/hastatus_armor_layer_gray_2
+  roman_armor_veles_gray:
+    layer_1: roman_armor/veles_armor_layer_gray_1
+    layer_2: roman_armor/veles_armor_layer_gray_2
+  roman_armor_triarius_gray:
+    layer_1: roman_armor/triarius_armor_layer_gray_1
+    layer_2: roman_armor/triarius_armor_layer_gray_2
+  roman_armor_legionnaire_gray:
+    layer_1: roman_armor/legionnaire_armor_layer_gray_1
+    layer_2: roman_armor/legionnaire_armor_layer_gray_2
+  roman_armor_praetorian_gray:
+    layer_1: roman_armor/praetorian_armor_layer_gray_1
+    layer_2: roman_armor/praetorian_armor_layer_gray_2
+  roman_armor_romanelite_gray:
+    layer_1: roman_armor/romanelite_armor_layer_gray_1
+    layer_2: roman_armor/romanelite_armor_layer_gray_2
+  roman_armor_praetorianred_gray:
+    layer_1: roman_armor/praetorianred_armor_layer_gray_1
+    layer_2: roman_armor/praetorianred_armor_layer_gray_2
+items:
+  roman_armor_aquilifer_helmet_gray:
+    display_name: Aquilifer Helmet (gray)
+    resource:
+      model_id: 2892
+      generate: false
+      model_path: auto_generated/aquilifer_helmet_gray
+      textures:
+      - roman_armor/aquilifer_helmet_gray.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_aquilifer_gray
+      legacy_armor_rendering_id: roman_armor_aquilifer_gray
+      slot: HEAD
+  roman_armor_aquilifer_chestplate_gray:
+    display_name: Aquilifer Chestplate (gray)
+    resource:
+      model_id: 2891
+      generate: false
+      model_path: auto_generated/aquilifer_chestplate_gray
+      textures:
+      - roman_armor/aquilifer_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_aquilifer_gray
+      legacy_armor_rendering_id: roman_armor_aquilifer_gray
+      slot: CHEST
+  roman_armor_aquilifer_leggings_gray:
+    display_name: Aquilifer Leggings (gray)
+    resource:
+      model_id: 2893
+      generate: false
+      model_path: auto_generated/aquilifer_leggings_gray
+      textures:
+      - roman_armor/aquilifer_leggings_gray.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_aquilifer_gray
+      legacy_armor_rendering_id: roman_armor_aquilifer_gray
+      slot: LEGS
+  roman_armor_aquilifer_boots_gray:
+    display_name: Aquilifer Boots (gray)
+    resource:
+      model_id: 2890
+      generate: false
+      model_path: auto_generated/aquilifer_boots_gray
+      textures:
+      - roman_armor/aquilifer_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_aquilifer_gray
+      legacy_armor_rendering_id: roman_armor_aquilifer_gray
+      slot: FEET
+  roman_armor_centurion_helmet_gray:
+    display_name: Centurion Helmet (gray)
+    resource:
+      model_id: 2899
+      generate: false
+      model_path: auto_generated/centurion_helmet_gray
+      textures:
+      - roman_armor/centurion_helmet_gray.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_centurion_gray
+      legacy_armor_rendering_id: roman_armor_centurion_gray
+      slot: HEAD
+  roman_armor_centurion_chestplate_gray:
+    display_name: Centurion Chestplate (gray)
+    resource:
+      model_id: 2895
+      generate: false
+      model_path: auto_generated/centurion_chestplate_gray
+      textures:
+      - roman_armor/centurion_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_centurion_gray
+      legacy_armor_rendering_id: roman_armor_centurion_gray
+      slot: CHEST
+  roman_armor_centurion_leggings_gray:
+    display_name: Centurion Leggings (gray)
+    resource:
+      model_id: 2900
+      generate: false
+      model_path: auto_generated/centurion_leggings_gray
+      textures:
+      - roman_armor/centurion_leggings_gray.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_centurion_gray
+      legacy_armor_rendering_id: roman_armor_centurion_gray
+      slot: LEGS
+  roman_armor_centurion_boots_gray:
+    display_name: Centurion Boots (gray)
+    resource:
+      model_id: 2894
+      generate: false
+      model_path: auto_generated/centurion_boots_gray
+      textures:
+      - roman_armor/centurion_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_centurion_gray
+      legacy_armor_rendering_id: roman_armor_centurion_gray
+      slot: FEET
+  roman_armor_centurion_hat_1_gray:
+    display_name: Centurion Hat 1 (gray)
+    resource:
+      model_id: 2896
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_gray_1
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_2_gray:
+    display_name: Centurion Hat 2 (gray)
+    resource:
+      model_id: 2897
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_gray_2
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_3_gray:
+    display_name: Centurion Hat 3 (gray)
+    resource:
+      model_id: 2898
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_gray_3
+    behaviours:
+      hat: true
+  roman_armor_emperor_helmet_gray:
+    display_name: Emperor Helmet (gray)
+    resource:
+      model_id: 2903
+      generate: false
+      model_path: auto_generated/emperor_helmet_gray
+      textures:
+      - roman_armor/emperor_helmet_gray.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_emperor_gray
+      legacy_armor_rendering_id: roman_armor_emperor_gray
+      slot: HEAD
+  roman_armor_emperor_chestplate_gray:
+    display_name: Emperor Chestplate (gray)
+    resource:
+      model_id: 2902
+      generate: false
+      model_path: auto_generated/emperor_chestplate_gray
+      textures:
+      - roman_armor/emperor_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_emperor_gray
+      legacy_armor_rendering_id: roman_armor_emperor_gray
+      slot: CHEST
+  roman_armor_emperor_leggings_gray:
+    display_name: Emperor Leggings (gray)
+    resource:
+      model_id: 2904
+      generate: false
+      model_path: auto_generated/emperor_leggings_gray
+      textures:
+      - roman_armor/emperor_leggings_gray.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_emperor_gray
+      legacy_armor_rendering_id: roman_armor_emperor_gray
+      slot: LEGS
+  roman_armor_emperor_boots_gray:
+    display_name: Emperor Boots (gray)
+    resource:
+      model_id: 2901
+      generate: false
+      model_path: auto_generated/emperor_boots_gray
+      textures:
+      - roman_armor/emperor_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_emperor_gray
+      legacy_armor_rendering_id: roman_armor_emperor_gray
+      slot: FEET
+  roman_armor_general_hat_gray:
+    display_name: General Hat (gray)
+    resource:
+      model_id: 2907
+      material: PAPER
+      generate: false
+      model_path: roman_armor/general_hat_gray
+    behaviours:
+      hat: true
+  roman_armor_general_chestplate_gray:
+    display_name: General Chestplate (gray)
+    resource:
+      model_id: 2906
+      generate: false
+      model_path: auto_generated/general_chestplate_gray
+      textures:
+      - roman_armor/general_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_general_gray
+      legacy_armor_rendering_id: roman_armor_general_gray
+      slot: CHEST
+  roman_armor_general_leggings_gray:
+    display_name: General Leggings (gray)
+    resource:
+      model_id: 2908
+      generate: false
+      model_path: auto_generated/general_leggings_gray
+      textures:
+      - roman_armor/general_leggings_gray.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_general_gray
+      legacy_armor_rendering_id: roman_armor_general_gray
+      slot: LEGS
+  roman_armor_general_boots_gray:
+    display_name: General Boots (gray)
+    resource:
+      model_id: 2905
+      generate: false
+      model_path: auto_generated/general_boots_gray
+      textures:
+      - roman_armor/general_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_general_gray
+      legacy_armor_rendering_id: roman_armor_general_gray
+      slot: FEET
+  roman_armor_hastatus_helmet_gray:
+    display_name: Hastatus Helmet (gray)
+    resource:
+      model_id: 2911
+      generate: false
+      model_path: auto_generated/hastatus_helmet_gray
+      textures:
+      - roman_armor/hastatus_helmet_gray.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_hastatus_gray
+      legacy_armor_rendering_id: roman_armor_hastatus_gray
+      slot: HEAD
+  roman_armor_hastatus_chestplate_gray:
+    display_name: Hastatus Chestplate (gray)
+    resource:
+      model_id: 2910
+      generate: false
+      model_path: auto_generated/hastatus_chestplate_gray
+      textures:
+      - roman_armor/hastatus_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_hastatus_gray
+      legacy_armor_rendering_id: roman_armor_hastatus_gray
+      slot: CHEST
+  roman_armor_hastatus_boots_gray:
+    display_name: Hastatus Boots (gray)
+    resource:
+      model_id: 2909
+      generate: false
+      model_path: auto_generated/hastatus_boots_gray
+      textures:
+      - roman_armor/hastatus_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_hastatus_gray
+      legacy_armor_rendering_id: roman_armor_hastatus_gray
+      slot: FEET
+  roman_armor_veles_helmet_gray:
+    display_name: Veles Helmet (gray)
+    resource:
+      model_id: 2934
+      generate: false
+      model_path: auto_generated/veles_helmet_gray
+      textures:
+      - roman_armor/veles_helmet_gray.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_veles_gray
+      legacy_armor_rendering_id: roman_armor_veles_gray
+      slot: HEAD
+  roman_armor_veles_chestplate_gray:
+    display_name: Veles Chestplate (gray)
+    resource:
+      model_id: 2933
+      generate: false
+      model_path: auto_generated/veles_chestplate_gray
+      textures:
+      - roman_armor/veles_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_veles_gray
+      legacy_armor_rendering_id: roman_armor_veles_gray
+      slot: CHEST
+  roman_armor_veles_boots_gray:
+    display_name: Veles Boots (gray)
+    resource:
+      model_id: 2932
+      generate: false
+      model_path: auto_generated/veles_boots_gray
+      textures:
+      - roman_armor/veles_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_veles_gray
+      legacy_armor_rendering_id: roman_armor_veles_gray
+      slot: FEET
+  roman_armor_triarius_helmet_gray:
+    display_name: Triarius Helmet (gray)
+    resource:
+      model_id: 2930
+      generate: false
+      model_path: auto_generated/triarius_helmet_gray
+      textures:
+      - roman_armor/triarius_helmet_gray.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_triarius_gray
+      legacy_armor_rendering_id: roman_armor_triarius_gray
+      slot: HEAD
+  roman_armor_triarius_chestplate_gray:
+    display_name: Triarius Chestplate (gray)
+    resource:
+      model_id: 2929
+      generate: false
+      model_path: auto_generated/triarius_chestplate_gray
+      textures:
+      - roman_armor/triarius_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_triarius_gray
+      legacy_armor_rendering_id: roman_armor_triarius_gray
+      slot: CHEST
+  roman_armor_triarius_leggings_gray:
+    display_name: Triarius Leggings (gray)
+    resource:
+      model_id: 2931
+      generate: false
+      model_path: auto_generated/triarius_leggings_gray
+      textures:
+      - roman_armor/triarius_leggings_gray.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_triarius_gray
+      legacy_armor_rendering_id: roman_armor_triarius_gray
+      slot: LEGS
+  roman_armor_triarius_boots_gray:
+    display_name: Triarius Boots (gray)
+    resource:
+      model_id: 2928
+      generate: false
+      model_path: auto_generated/triarius_boots_gray
+      textures:
+      - roman_armor/triarius_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_triarius_gray
+      legacy_armor_rendering_id: roman_armor_triarius_gray
+      slot: FEET
+  roman_armor_legionnaire_helmet_gray:
+    display_name: Legionnaire Helmet (gray)
+    resource:
+      model_id: 2914
+      generate: false
+      model_path: auto_generated/legionnaire_helmet_gray
+      textures:
+      - roman_armor/legionnaire_helmet_gray.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_legionnaire_gray
+      legacy_armor_rendering_id: roman_armor_legionnaire_gray
+      slot: HEAD
+  roman_armor_legionnaire_chestplate_gray:
+    display_name: Legionnaire Chestplate (gray)
+    resource:
+      model_id: 2913
+      generate: false
+      model_path: auto_generated/legionnaire_chestplate_gray
+      textures:
+      - roman_armor/legionnaire_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_legionnaire_gray
+      legacy_armor_rendering_id: roman_armor_legionnaire_gray
+      slot: CHEST
+  roman_armor_legionnaire_leggings_gray:
+    display_name: Legionnaire Leggings (gray)
+    resource:
+      model_id: 2915
+      generate: false
+      model_path: auto_generated/legionnaire_leggings_gray
+      textures:
+      - roman_armor/legionnaire_leggings_gray.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_legionnaire_gray
+      legacy_armor_rendering_id: roman_armor_legionnaire_gray
+      slot: LEGS
+  roman_armor_legionnaire_boots_gray:
+    display_name: Legionnaire Boots (gray)
+    resource:
+      model_id: 2912
+      generate: false
+      model_path: auto_generated/legionnaire_boots_gray
+      textures:
+      - roman_armor/legionnaire_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_legionnaire_gray
+      legacy_armor_rendering_id: roman_armor_legionnaire_gray
+      slot: FEET
+  roman_armor_praetorian_hat_gray:
+    display_name: Praetorian Hat (gray)
+    resource:
+      model_id: 2918
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorian_hat_gray
+    behaviours:
+      hat: true
+  roman_armor_praetorian_chestplate_gray:
+    display_name: Praetorian Chestplate (gray)
+    resource:
+      model_id: 2917
+      generate: false
+      model_path: auto_generated/praetorian_chestplate_gray
+      textures:
+      - roman_armor/praetorian_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_praetorian_gray
+      legacy_armor_rendering_id: roman_armor_praetorian_gray
+      slot: CHEST
+  roman_armor_praetorian_leggings_gray:
+    display_name: Praetorian Leggings (gray)
+    resource:
+      model_id: 2919
+      generate: false
+      model_path: auto_generated/praetorian_leggings_gray
+      textures:
+      - roman_armor/praetorian_leggings_gray.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_praetorian_gray
+      legacy_armor_rendering_id: roman_armor_praetorian_gray
+      slot: LEGS
+  roman_armor_praetorian_boots_gray:
+    display_name: Praetorian Boots (gray)
+    resource:
+      model_id: 2916
+      generate: false
+      model_path: auto_generated/praetorian_boots_gray
+      textures:
+      - roman_armor/praetorian_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_praetorian_gray
+      legacy_armor_rendering_id: roman_armor_praetorian_gray
+      slot: FEET
+  roman_armor_romanelite_hat_gray:
+    display_name: Romanelite Hat (gray)
+    resource:
+      model_id: 2926
+      material: PAPER
+      generate: false
+      model_path: roman_armor/romanelite_hat_gray
+    behaviours:
+      hat: true
+  roman_armor_romanelite_chestplate_gray:
+    display_name: Romanelite Chestplate (gray)
+    resource:
+      model_id: 2925
+      generate: false
+      model_path: auto_generated/romanelite_chestplate_gray
+      textures:
+      - roman_armor/romanelite_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_romanelite_gray
+      legacy_armor_rendering_id: roman_armor_romanelite_gray
+      slot: CHEST
+  roman_armor_romanelite_leggings_gray:
+    display_name: Romanelite Leggings (gray)
+    resource:
+      model_id: 2927
+      generate: false
+      model_path: auto_generated/romanelite_leggings_gray
+      textures:
+      - roman_armor/romanelite_leggings_gray.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_romanelite_gray
+      legacy_armor_rendering_id: roman_armor_romanelite_gray
+      slot: LEGS
+  roman_armor_romanelite_boots_gray:
+    display_name: Romanelite Boots (gray)
+    resource:
+      model_id: 2924
+      generate: false
+      model_path: auto_generated/romanelite_boots_gray
+      textures:
+      - roman_armor/romanelite_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_romanelite_gray
+      legacy_armor_rendering_id: roman_armor_romanelite_gray
+      slot: FEET
+  roman_armor_praetorianred_hat_gray:
+    display_name: Praetorianred Hat (gray)
+    resource:
+      model_id: 2922
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorianred_hat_gray
+    behaviours:
+      hat: true
+  roman_armor_praetorianred_chestplate_gray:
+    display_name: Praetorianred Chestplate (gray)
+    resource:
+      model_id: 2921
+      generate: false
+      model_path: auto_generated/praetorianred_chestplate_gray
+      textures:
+      - roman_armor/praetorianred_chestplate_gray.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_praetorianred_gray
+      legacy_armor_rendering_id: roman_armor_praetorianred_gray
+      slot: CHEST
+  roman_armor_praetorianred_leggings_gray:
+    display_name: Praetorianred Leggings (gray)
+    resource:
+      model_id: 2923
+      generate: false
+      model_path: auto_generated/praetorianred_leggings_gray
+      textures:
+      - roman_armor/praetorianred_leggings_gray.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_praetorianred_gray
+      legacy_armor_rendering_id: roman_armor_praetorianred_gray
+      slot: LEGS
+  roman_armor_praetorianred_boots_gray:
+    display_name: Praetorianred Boots (gray)
+    resource:
+      model_id: 2920
+      generate: false
+      model_path: auto_generated/praetorianred_boots_gray
+      textures:
+      - roman_armor/praetorianred_boots_gray.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_praetorianred_gray
+      legacy_armor_rendering_id: roman_armor_praetorianred_gray
+      slot: FEET

@@ -1,0 +1,650 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  roman_armor_aquilifer_blue:
+    color: '#8c19f2'
+    layer_1: roman_armor/aquilifer_armor_layer_blue_1
+    layer_2: roman_armor/aquilifer_armor_layer_blue_2
+    use_color: false
+  roman_armor_centurion_blue:
+    color: '#8c19f3'
+    layer_1: roman_armor/centurion_armor_layer_blue_1
+    layer_2: roman_armor/centurion_armor_layer_blue_2
+    use_color: false
+  roman_armor_emperor_blue:
+    color: '#8c19f4'
+    layer_1: roman_armor/emperor_armor_layer_blue_1
+    layer_2: roman_armor/emperor_armor_layer_blue_2
+    use_color: false
+  roman_armor_general_blue:
+    color: '#8c19f5'
+    layer_1: roman_armor/general_armor_layer_blue_1
+    layer_2: roman_armor/general_armor_layer_blue_2
+    use_color: false
+  roman_armor_hastatus_blue:
+    color: '#8c19f6'
+    layer_1: roman_armor/hastatus_armor_layer_blue_1
+    layer_2: roman_armor/hastatus_armor_layer_blue_2
+    use_color: false
+  roman_armor_veles_blue:
+    color: '#8c19f7'
+    layer_1: roman_armor/veles_armor_layer_blue_1
+    layer_2: roman_armor/veles_armor_layer_blue_2
+    use_color: false
+  roman_armor_triarius_blue:
+    color: '#8c19f8'
+    layer_1: roman_armor/triarius_armor_layer_blue_1
+    layer_2: roman_armor/triarius_armor_layer_blue_2
+    use_color: false
+  roman_armor_legionnaire_blue:
+    color: '#8c19f9'
+    layer_1: roman_armor/legionnaire_armor_layer_blue_1
+    layer_2: roman_armor/legionnaire_armor_layer_blue_2
+    use_color: false
+  roman_armor_praetorian_blue:
+    color: '#8c19fa'
+    layer_1: roman_armor/praetorian_armor_layer_blue_1
+    layer_2: roman_armor/praetorian_armor_layer_blue_2
+    use_color: false
+  roman_armor_romanelite_blue:
+    color: '#8c19fb'
+    layer_1: roman_armor/romanelite_armor_layer_blue_1
+    layer_2: roman_armor/romanelite_armor_layer_blue_2
+    use_color: false
+  roman_armor_praetorianred_blue:
+    color: '#8c19fc'
+    layer_1: roman_armor/praetorianred_armor_layer_blue_1
+    layer_2: roman_armor/praetorianred_armor_layer_blue_2
+    use_color: false
+equipments:
+  roman_armor_aquilifer_blue:
+    layer_1: roman_armor/aquilifer_armor_layer_blue_1
+    layer_2: roman_armor/aquilifer_armor_layer_blue_2
+  roman_armor_centurion_blue:
+    layer_1: roman_armor/centurion_armor_layer_blue_1
+    layer_2: roman_armor/centurion_armor_layer_blue_2
+  roman_armor_emperor_blue:
+    layer_1: roman_armor/emperor_armor_layer_blue_1
+    layer_2: roman_armor/emperor_armor_layer_blue_2
+  roman_armor_general_blue:
+    layer_1: roman_armor/general_armor_layer_blue_1
+    layer_2: roman_armor/general_armor_layer_blue_2
+  roman_armor_hastatus_blue:
+    layer_1: roman_armor/hastatus_armor_layer_blue_1
+    layer_2: roman_armor/hastatus_armor_layer_blue_2
+  roman_armor_veles_blue:
+    layer_1: roman_armor/veles_armor_layer_blue_1
+    layer_2: roman_armor/veles_armor_layer_blue_2
+  roman_armor_triarius_blue:
+    layer_1: roman_armor/triarius_armor_layer_blue_1
+    layer_2: roman_armor/triarius_armor_layer_blue_2
+  roman_armor_legionnaire_blue:
+    layer_1: roman_armor/legionnaire_armor_layer_blue_1
+    layer_2: roman_armor/legionnaire_armor_layer_blue_2
+  roman_armor_praetorian_blue:
+    layer_1: roman_armor/praetorian_armor_layer_blue_1
+    layer_2: roman_armor/praetorian_armor_layer_blue_2
+  roman_armor_romanelite_blue:
+    layer_1: roman_armor/romanelite_armor_layer_blue_1
+    layer_2: roman_armor/romanelite_armor_layer_blue_2
+  roman_armor_praetorianred_blue:
+    layer_1: roman_armor/praetorianred_armor_layer_blue_1
+    layer_2: roman_armor/praetorianred_armor_layer_blue_2
+items:
+  roman_armor_aquilifer_helmet_blue:
+    display_name: Aquilifer Helmet (blue)
+    resource:
+      model_id: 3747
+      generate: false
+      model_path: auto_generated/aquilifer_helmet_blue
+      textures:
+      - roman_armor/aquilifer_helmet_blue.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_aquilifer_blue
+      legacy_armor_rendering_id: roman_armor_aquilifer_blue
+      slot: HEAD
+  roman_armor_aquilifer_chestplate_blue:
+    display_name: Aquilifer Chestplate (blue)
+    resource:
+      model_id: 3746
+      generate: false
+      model_path: auto_generated/aquilifer_chestplate_blue
+      textures:
+      - roman_armor/aquilifer_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_aquilifer_blue
+      legacy_armor_rendering_id: roman_armor_aquilifer_blue
+      slot: CHEST
+  roman_armor_aquilifer_leggings_blue:
+    display_name: Aquilifer Leggings (blue)
+    resource:
+      model_id: 3748
+      generate: false
+      model_path: auto_generated/aquilifer_leggings_blue
+      textures:
+      - roman_armor/aquilifer_leggings_blue.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_aquilifer_blue
+      legacy_armor_rendering_id: roman_armor_aquilifer_blue
+      slot: LEGS
+  roman_armor_aquilifer_boots_blue:
+    display_name: Aquilifer Boots (blue)
+    resource:
+      model_id: 3745
+      generate: false
+      model_path: auto_generated/aquilifer_boots_blue
+      textures:
+      - roman_armor/aquilifer_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_aquilifer_blue
+      legacy_armor_rendering_id: roman_armor_aquilifer_blue
+      slot: FEET
+  roman_armor_centurion_helmet_blue:
+    display_name: Centurion Helmet (blue)
+    resource:
+      model_id: 3754
+      generate: false
+      model_path: auto_generated/centurion_helmet_blue
+      textures:
+      - roman_armor/centurion_helmet_blue.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_centurion_blue
+      legacy_armor_rendering_id: roman_armor_centurion_blue
+      slot: HEAD
+  roman_armor_centurion_chestplate_blue:
+    display_name: Centurion Chestplate (blue)
+    resource:
+      model_id: 3750
+      generate: false
+      model_path: auto_generated/centurion_chestplate_blue
+      textures:
+      - roman_armor/centurion_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_centurion_blue
+      legacy_armor_rendering_id: roman_armor_centurion_blue
+      slot: CHEST
+  roman_armor_centurion_leggings_blue:
+    display_name: Centurion Leggings (blue)
+    resource:
+      model_id: 3755
+      generate: false
+      model_path: auto_generated/centurion_leggings_blue
+      textures:
+      - roman_armor/centurion_leggings_blue.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_centurion_blue
+      legacy_armor_rendering_id: roman_armor_centurion_blue
+      slot: LEGS
+  roman_armor_centurion_boots_blue:
+    display_name: Centurion Boots (blue)
+    resource:
+      model_id: 3749
+      generate: false
+      model_path: auto_generated/centurion_boots_blue
+      textures:
+      - roman_armor/centurion_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_centurion_blue
+      legacy_armor_rendering_id: roman_armor_centurion_blue
+      slot: FEET
+  roman_armor_centurion_hat_1_blue:
+    display_name: Centurion Hat 1 (blue)
+    resource:
+      model_id: 3751
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_blue_1
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_2_blue:
+    display_name: Centurion Hat 2 (blue)
+    resource:
+      model_id: 3752
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_blue_2
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_3_blue:
+    display_name: Centurion Hat 3 (blue)
+    resource:
+      model_id: 3753
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_blue_3
+    behaviours:
+      hat: true
+  roman_armor_emperor_helmet_blue:
+    display_name: Emperor Helmet (blue)
+    resource:
+      model_id: 3758
+      generate: false
+      model_path: auto_generated/emperor_helmet_blue
+      textures:
+      - roman_armor/emperor_helmet_blue.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_emperor_blue
+      legacy_armor_rendering_id: roman_armor_emperor_blue
+      slot: HEAD
+  roman_armor_emperor_chestplate_blue:
+    display_name: Emperor Chestplate (blue)
+    resource:
+      model_id: 3757
+      generate: false
+      model_path: auto_generated/emperor_chestplate_blue
+      textures:
+      - roman_armor/emperor_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_emperor_blue
+      legacy_armor_rendering_id: roman_armor_emperor_blue
+      slot: CHEST
+  roman_armor_emperor_leggings_blue:
+    display_name: Emperor Leggings (blue)
+    resource:
+      model_id: 3759
+      generate: false
+      model_path: auto_generated/emperor_leggings_blue
+      textures:
+      - roman_armor/emperor_leggings_blue.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_emperor_blue
+      legacy_armor_rendering_id: roman_armor_emperor_blue
+      slot: LEGS
+  roman_armor_emperor_boots_blue:
+    display_name: Emperor Boots (blue)
+    resource:
+      model_id: 3756
+      generate: false
+      model_path: auto_generated/emperor_boots_blue
+      textures:
+      - roman_armor/emperor_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_emperor_blue
+      legacy_armor_rendering_id: roman_armor_emperor_blue
+      slot: FEET
+  roman_armor_general_hat_blue:
+    display_name: General Hat (blue)
+    resource:
+      model_id: 3762
+      material: PAPER
+      generate: false
+      model_path: roman_armor/general_hat_blue
+    behaviours:
+      hat: true
+  roman_armor_general_chestplate_blue:
+    display_name: General Chestplate (blue)
+    resource:
+      model_id: 3761
+      generate: false
+      model_path: auto_generated/general_chestplate_blue
+      textures:
+      - roman_armor/general_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_general_blue
+      legacy_armor_rendering_id: roman_armor_general_blue
+      slot: CHEST
+  roman_armor_general_leggings_blue:
+    display_name: General Leggings (blue)
+    resource:
+      model_id: 3763
+      generate: false
+      model_path: auto_generated/general_leggings_blue
+      textures:
+      - roman_armor/general_leggings_blue.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_general_blue
+      legacy_armor_rendering_id: roman_armor_general_blue
+      slot: LEGS
+  roman_armor_general_boots_blue:
+    display_name: General Boots (blue)
+    resource:
+      model_id: 3760
+      generate: false
+      model_path: auto_generated/general_boots_blue
+      textures:
+      - roman_armor/general_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_general_blue
+      legacy_armor_rendering_id: roman_armor_general_blue
+      slot: FEET
+  roman_armor_hastatus_helmet_blue:
+    display_name: Hastatus Helmet (blue)
+    resource:
+      model_id: 3766
+      generate: false
+      model_path: auto_generated/hastatus_helmet_blue
+      textures:
+      - roman_armor/hastatus_helmet_blue.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_hastatus_blue
+      legacy_armor_rendering_id: roman_armor_hastatus_blue
+      slot: HEAD
+  roman_armor_hastatus_chestplate_blue:
+    display_name: Hastatus Chestplate (blue)
+    resource:
+      model_id: 3765
+      generate: false
+      model_path: auto_generated/hastatus_chestplate_blue
+      textures:
+      - roman_armor/hastatus_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_hastatus_blue
+      legacy_armor_rendering_id: roman_armor_hastatus_blue
+      slot: CHEST
+  roman_armor_hastatus_boots_blue:
+    display_name: Hastatus Boots (blue)
+    resource:
+      model_id: 3764
+      generate: false
+      model_path: auto_generated/hastatus_boots_blue
+      textures:
+      - roman_armor/hastatus_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_hastatus_blue
+      legacy_armor_rendering_id: roman_armor_hastatus_blue
+      slot: FEET
+  roman_armor_veles_helmet_blue:
+    display_name: Veles Helmet (blue)
+    resource:
+      model_id: 3789
+      generate: false
+      model_path: auto_generated/veles_helmet_blue
+      textures:
+      - roman_armor/veles_helmet_blue.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_veles_blue
+      legacy_armor_rendering_id: roman_armor_veles_blue
+      slot: HEAD
+  roman_armor_veles_chestplate_blue:
+    display_name: Veles Chestplate (blue)
+    resource:
+      model_id: 3788
+      generate: false
+      model_path: auto_generated/veles_chestplate_blue
+      textures:
+      - roman_armor/veles_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_veles_blue
+      legacy_armor_rendering_id: roman_armor_veles_blue
+      slot: CHEST
+  roman_armor_veles_boots_blue:
+    display_name: Veles Boots (blue)
+    resource:
+      model_id: 3787
+      generate: false
+      model_path: auto_generated/veles_boots_blue
+      textures:
+      - roman_armor/veles_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_veles_blue
+      legacy_armor_rendering_id: roman_armor_veles_blue
+      slot: FEET
+  roman_armor_triarius_helmet_blue:
+    display_name: Triarius Helmet (blue)
+    resource:
+      model_id: 3785
+      generate: false
+      model_path: auto_generated/triarius_helmet_blue
+      textures:
+      - roman_armor/triarius_helmet_blue.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_triarius_blue
+      legacy_armor_rendering_id: roman_armor_triarius_blue
+      slot: HEAD
+  roman_armor_triarius_chestplate_blue:
+    display_name: Triarius Chestplate (blue)
+    resource:
+      model_id: 3784
+      generate: false
+      model_path: auto_generated/triarius_chestplate_blue
+      textures:
+      - roman_armor/triarius_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_triarius_blue
+      legacy_armor_rendering_id: roman_armor_triarius_blue
+      slot: CHEST
+  roman_armor_triarius_leggings_blue:
+    display_name: Triarius Leggings (blue)
+    resource:
+      model_id: 3786
+      generate: false
+      model_path: auto_generated/triarius_leggings_blue
+      textures:
+      - roman_armor/triarius_leggings_blue.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_triarius_blue
+      legacy_armor_rendering_id: roman_armor_triarius_blue
+      slot: LEGS
+  roman_armor_triarius_boots_blue:
+    display_name: Triarius Boots (blue)
+    resource:
+      model_id: 3783
+      generate: false
+      model_path: auto_generated/triarius_boots_blue
+      textures:
+      - roman_armor/triarius_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_triarius_blue
+      legacy_armor_rendering_id: roman_armor_triarius_blue
+      slot: FEET
+  roman_armor_legionnaire_helmet_blue:
+    display_name: Legionnaire Helmet (blue)
+    resource:
+      model_id: 3769
+      generate: false
+      model_path: auto_generated/legionnaire_helmet_blue
+      textures:
+      - roman_armor/legionnaire_helmet_blue.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_legionnaire_blue
+      legacy_armor_rendering_id: roman_armor_legionnaire_blue
+      slot: HEAD
+  roman_armor_legionnaire_chestplate_blue:
+    display_name: Legionnaire Chestplate (blue)
+    resource:
+      model_id: 3768
+      generate: false
+      model_path: auto_generated/legionnaire_chestplate_blue
+      textures:
+      - roman_armor/legionnaire_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_legionnaire_blue
+      legacy_armor_rendering_id: roman_armor_legionnaire_blue
+      slot: CHEST
+  roman_armor_legionnaire_leggings_blue:
+    display_name: Legionnaire Leggings (blue)
+    resource:
+      model_id: 3770
+      generate: false
+      model_path: auto_generated/legionnaire_leggings_blue
+      textures:
+      - roman_armor/legionnaire_leggings_blue.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_legionnaire_blue
+      legacy_armor_rendering_id: roman_armor_legionnaire_blue
+      slot: LEGS
+  roman_armor_legionnaire_boots_blue:
+    display_name: Legionnaire Boots (blue)
+    resource:
+      model_id: 3767
+      generate: false
+      model_path: auto_generated/legionnaire_boots_blue
+      textures:
+      - roman_armor/legionnaire_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_legionnaire_blue
+      legacy_armor_rendering_id: roman_armor_legionnaire_blue
+      slot: FEET
+  roman_armor_praetorian_hat_blue:
+    display_name: Praetorian Hat (blue)
+    resource:
+      model_id: 3773
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorian_hat_blue
+    behaviours:
+      hat: true
+  roman_armor_praetorian_chestplate_blue:
+    display_name: Praetorian Chestplate (blue)
+    resource:
+      model_id: 3772
+      generate: false
+      model_path: auto_generated/praetorian_chestplate_blue
+      textures:
+      - roman_armor/praetorian_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_praetorian_blue
+      legacy_armor_rendering_id: roman_armor_praetorian_blue
+      slot: CHEST
+  roman_armor_praetorian_leggings_blue:
+    display_name: Praetorian Leggings (blue)
+    resource:
+      model_id: 3774
+      generate: false
+      model_path: auto_generated/praetorian_leggings_blue
+      textures:
+      - roman_armor/praetorian_leggings_blue.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_praetorian_blue
+      legacy_armor_rendering_id: roman_armor_praetorian_blue
+      slot: LEGS
+  roman_armor_praetorian_boots_blue:
+    display_name: Praetorian Boots (blue)
+    resource:
+      model_id: 3771
+      generate: false
+      model_path: auto_generated/praetorian_boots_blue
+      textures:
+      - roman_armor/praetorian_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_praetorian_blue
+      legacy_armor_rendering_id: roman_armor_praetorian_blue
+      slot: FEET
+  roman_armor_romanelite_hat_blue:
+    display_name: Romanelite Hat (blue)
+    resource:
+      model_id: 3781
+      material: PAPER
+      generate: false
+      model_path: roman_armor/romanelite_hat_blue
+    behaviours:
+      hat: true
+  roman_armor_romanelite_chestplate_blue:
+    display_name: Romanelite Chestplate (blue)
+    resource:
+      model_id: 3780
+      generate: false
+      model_path: auto_generated/romanelite_chestplate_blue
+      textures:
+      - roman_armor/romanelite_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_romanelite_blue
+      legacy_armor_rendering_id: roman_armor_romanelite_blue
+      slot: CHEST
+  roman_armor_romanelite_leggings_blue:
+    display_name: Romanelite Leggings (blue)
+    resource:
+      model_id: 3782
+      generate: false
+      model_path: auto_generated/romanelite_leggings_blue
+      textures:
+      - roman_armor/romanelite_leggings_blue.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_romanelite_blue
+      legacy_armor_rendering_id: roman_armor_romanelite_blue
+      slot: LEGS
+  roman_armor_romanelite_boots_blue:
+    display_name: Romanelite Boots (blue)
+    resource:
+      model_id: 3779
+      generate: false
+      model_path: auto_generated/romanelite_boots_blue
+      textures:
+      - roman_armor/romanelite_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_romanelite_blue
+      legacy_armor_rendering_id: roman_armor_romanelite_blue
+      slot: FEET
+  roman_armor_praetorianred_hat_blue:
+    display_name: Praetorianred Hat (blue)
+    resource:
+      model_id: 3777
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorianred_hat_blue
+    behaviours:
+      hat: true
+  roman_armor_praetorianred_chestplate_blue:
+    display_name: Praetorianred Chestplate (blue)
+    resource:
+      model_id: 3776
+      generate: false
+      model_path: auto_generated/praetorianred_chestplate_blue
+      textures:
+      - roman_armor/praetorianred_chestplate_blue.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_praetorianred_blue
+      legacy_armor_rendering_id: roman_armor_praetorianred_blue
+      slot: CHEST
+  roman_armor_praetorianred_leggings_blue:
+    display_name: Praetorianred Leggings (blue)
+    resource:
+      model_id: 3778
+      generate: false
+      model_path: auto_generated/praetorianred_leggings_blue
+      textures:
+      - roman_armor/praetorianred_leggings_blue.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_praetorianred_blue
+      legacy_armor_rendering_id: roman_armor_praetorianred_blue
+      slot: LEGS
+  roman_armor_praetorianred_boots_blue:
+    display_name: Praetorianred Boots (blue)
+    resource:
+      model_id: 3775
+      generate: false
+      model_path: auto_generated/praetorianred_boots_blue
+      textures:
+      - roman_armor/praetorianred_boots_blue.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_praetorianred_blue
+      legacy_armor_rendering_id: roman_armor_praetorianred_blue
+      slot: FEET

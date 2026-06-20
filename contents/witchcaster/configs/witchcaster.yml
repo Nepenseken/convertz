@@ -1,0 +1,1704 @@
+info:
+  namespace: elitecreatures
+items:
+  witchcaster_animated-axe:
+    display_name: Display
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1972
+      model_path: witchcaster_animated/axe
+  witchcaster_animated_bow:
+    display_name: Display
+    resource:
+      material: BOW
+      generate: false
+      model_id: 1999
+      model_path: witchcaster_animated/bow
+  witchcaster_animated_sword:
+    display_name: Display
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2188
+      model_path: witchcaster_animated/sword
+  witchcaster_animated_dagger:
+    display_name: Display
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2026
+      model_path: witchcaster_animated/dagger
+  witchcaster_animated_greatsword:
+    display_name: Display
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2053
+      model_path: witchcaster_animated/greatsword
+  witchcaster_animated_hammer:
+    display_name: Display
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2080
+      model_path: witchcaster_animated/hammer
+  witchcaster_animated_mace:
+    display_name: Display
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2134
+      model_path: witchcaster_animated/mace
+  witchcaster_animated_spear:
+    display_name: Display
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2161
+      model_path: witchcaster_animated/spear
+  witchcaster_animated_key:
+    display_name: Display
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2107
+      model_path: witchcaster_animated/key
+  witchcaster_animated-axe_white:
+    display_name: Display (white)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1973
+      model_path: witchcaster_animated/axe_white
+  witchcaster_animated-axe_lightgray:
+    display_name: Display (lightgray)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1974
+      model_path: witchcaster_animated/axe_lightgray
+  witchcaster_animated-axe_gray:
+    display_name: Display (gray)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1975
+      model_path: witchcaster_animated/axe_gray
+  witchcaster_animated-axe_black:
+    display_name: Display (black)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1976
+      model_path: witchcaster_animated/axe_black
+  witchcaster_animated-axe_lightred:
+    display_name: Display (lightred)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1977
+      model_path: witchcaster_animated/axe_lightred
+  witchcaster_animated-axe_red:
+    display_name: Display (red)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1978
+      model_path: witchcaster_animated/axe_red
+  witchcaster_animated-axe_darkred:
+    display_name: Display (darkred)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1979
+      model_path: witchcaster_animated/axe_darkred
+  witchcaster_animated-axe_pink:
+    display_name: Display (pink)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1980
+      model_path: witchcaster_animated/axe_pink
+  witchcaster_animated-axe_darkpink:
+    display_name: Display (darkpink)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1981
+      model_path: witchcaster_animated/axe_darkpink
+  witchcaster_animated-axe_orange:
+    display_name: Display (orange)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1982
+      model_path: witchcaster_animated/axe_orange
+  witchcaster_animated-axe_darkorange:
+    display_name: Display (darkorange)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1983
+      model_path: witchcaster_animated/axe_darkorange
+  witchcaster_animated-axe_brown:
+    display_name: Display (brown)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1984
+      model_path: witchcaster_animated/axe_brown
+  witchcaster_animated-axe_darkbrown:
+    display_name: Display (darkbrown)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1985
+      model_path: witchcaster_animated/axe_darkbrown
+  witchcaster_animated-axe_yellow:
+    display_name: Display (yellow)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1986
+      model_path: witchcaster_animated/axe_yellow
+  witchcaster_animated-axe_darkyellow:
+    display_name: Display (darkyellow)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1987
+      model_path: witchcaster_animated/axe_darkyellow
+  witchcaster_animated-axe_lightgreen:
+    display_name: Display (lightgreen)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1988
+      model_path: witchcaster_animated/axe_lightgreen
+  witchcaster_animated-axe_green:
+    display_name: Display (green)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1989
+      model_path: witchcaster_animated/axe_green
+  witchcaster_animated-axe_darkgreen:
+    display_name: Display (darkgreen)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1990
+      model_path: witchcaster_animated/axe_darkgreen
+  witchcaster_animated-axe_cyan:
+    display_name: Display (cyan)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1991
+      model_path: witchcaster_animated/axe_cyan
+  witchcaster_animated-axe_teal:
+    display_name: Display (teal)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1992
+      model_path: witchcaster_animated/axe_teal
+  witchcaster_animated-axe_lightblue:
+    display_name: Display (lightblue)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1993
+      model_path: witchcaster_animated/axe_lightblue
+  witchcaster_animated-axe_blue:
+    display_name: Display (blue)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1994
+      model_path: witchcaster_animated/axe_blue
+  witchcaster_animated-axe_darkblue:
+    display_name: Display (darkblue)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1995
+      model_path: witchcaster_animated/axe_darkblue
+  witchcaster_animated-axe_lightpurple:
+    display_name: Display (lightpurple)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1996
+      model_path: witchcaster_animated/axe_lightpurple
+  witchcaster_animated-axe_purple:
+    display_name: Display (purple)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1997
+      model_path: witchcaster_animated/axe_purple
+  witchcaster_animated-axe_darkpurple:
+    display_name: Display (darkpurple)
+    resource:
+      material: DIAMOND_AXE
+      generate: false
+      model_id: 1998
+      model_path: witchcaster_animated/axe_darkpurple
+  witchcaster_animated_bow_white:
+    display_name: Display (white)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2000
+      model_path: witchcaster_animated/bow_white
+  witchcaster_animated_bow_lightgray:
+    display_name: Display (lightgray)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2001
+      model_path: witchcaster_animated/bow_lightgray
+  witchcaster_animated_bow_gray:
+    display_name: Display (gray)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2002
+      model_path: witchcaster_animated/bow_gray
+  witchcaster_animated_bow_black:
+    display_name: Display (black)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2003
+      model_path: witchcaster_animated/bow_black
+  witchcaster_animated_bow_lightred:
+    display_name: Display (lightred)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2004
+      model_path: witchcaster_animated/bow_lightred
+  witchcaster_animated_bow_red:
+    display_name: Display (red)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2005
+      model_path: witchcaster_animated/bow_red
+  witchcaster_animated_bow_darkred:
+    display_name: Display (darkred)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2006
+      model_path: witchcaster_animated/bow_darkred
+  witchcaster_animated_bow_pink:
+    display_name: Display (pink)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2007
+      model_path: witchcaster_animated/bow_pink
+  witchcaster_animated_bow_darkpink:
+    display_name: Display (darkpink)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2008
+      model_path: witchcaster_animated/bow_darkpink
+  witchcaster_animated_bow_orange:
+    display_name: Display (orange)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2009
+      model_path: witchcaster_animated/bow_orange
+  witchcaster_animated_bow_darkorange:
+    display_name: Display (darkorange)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2010
+      model_path: witchcaster_animated/bow_darkorange
+  witchcaster_animated_bow_brown:
+    display_name: Display (brown)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2011
+      model_path: witchcaster_animated/bow_brown
+  witchcaster_animated_bow_darkbrown:
+    display_name: Display (darkbrown)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2012
+      model_path: witchcaster_animated/bow_darkbrown
+  witchcaster_animated_bow_yellow:
+    display_name: Display (yellow)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2013
+      model_path: witchcaster_animated/bow_yellow
+  witchcaster_animated_bow_darkyellow:
+    display_name: Display (darkyellow)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2014
+      model_path: witchcaster_animated/bow_darkyellow
+  witchcaster_animated_bow_lightgreen:
+    display_name: Display (lightgreen)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2015
+      model_path: witchcaster_animated/bow_lightgreen
+  witchcaster_animated_bow_green:
+    display_name: Display (green)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2016
+      model_path: witchcaster_animated/bow_green
+  witchcaster_animated_bow_darkgreen:
+    display_name: Display (darkgreen)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2017
+      model_path: witchcaster_animated/bow_darkgreen
+  witchcaster_animated_bow_cyan:
+    display_name: Display (cyan)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2018
+      model_path: witchcaster_animated/bow_cyan
+  witchcaster_animated_bow_teal:
+    display_name: Display (teal)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2019
+      model_path: witchcaster_animated/bow_teal
+  witchcaster_animated_bow_lightblue:
+    display_name: Display (lightblue)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2020
+      model_path: witchcaster_animated/bow_lightblue
+  witchcaster_animated_bow_blue:
+    display_name: Display (blue)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2021
+      model_path: witchcaster_animated/bow_blue
+  witchcaster_animated_bow_darkblue:
+    display_name: Display (darkblue)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2022
+      model_path: witchcaster_animated/bow_darkblue
+  witchcaster_animated_bow_lightpurple:
+    display_name: Display (lightpurple)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2023
+      model_path: witchcaster_animated/bow_lightpurple
+  witchcaster_animated_bow_purple:
+    display_name: Display (purple)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2024
+      model_path: witchcaster_animated/bow_purple
+  witchcaster_animated_bow_darkpurple:
+    display_name: Display (darkpurple)
+    resource:
+      material: BOW
+      generate: false
+      model_id: 2025
+      model_path: witchcaster_animated/bow_darkpurple
+  witchcaster_animated_dagger_white:
+    display_name: Display (white)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2027
+      model_path: witchcaster_animated/dagger_white
+  witchcaster_animated_dagger_lightgray:
+    display_name: Display (lightgray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2028
+      model_path: witchcaster_animated/dagger_lightgray
+  witchcaster_animated_dagger_gray:
+    display_name: Display (gray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2029
+      model_path: witchcaster_animated/dagger_gray
+  witchcaster_animated_dagger_black:
+    display_name: Display (black)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2030
+      model_path: witchcaster_animated/dagger_black
+  witchcaster_animated_dagger_lightred:
+    display_name: Display (lightred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2031
+      model_path: witchcaster_animated/dagger_lightred
+  witchcaster_animated_dagger_red:
+    display_name: Display (red)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2032
+      model_path: witchcaster_animated/dagger_red
+  witchcaster_animated_dagger_darkred:
+    display_name: Display (darkred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2033
+      model_path: witchcaster_animated/dagger_darkred
+  witchcaster_animated_dagger_pink:
+    display_name: Display (pink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2034
+      model_path: witchcaster_animated/dagger_pink
+  witchcaster_animated_dagger_darkpink:
+    display_name: Display (darkpink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2035
+      model_path: witchcaster_animated/dagger_darkpink
+  witchcaster_animated_dagger_orange:
+    display_name: Display (orange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2036
+      model_path: witchcaster_animated/dagger_orange
+  witchcaster_animated_dagger_darkorange:
+    display_name: Display (darkorange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2037
+      model_path: witchcaster_animated/dagger_darkorange
+  witchcaster_animated_dagger_brown:
+    display_name: Display (brown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2038
+      model_path: witchcaster_animated/dagger_brown
+  witchcaster_animated_dagger_darkbrown:
+    display_name: Display (darkbrown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2039
+      model_path: witchcaster_animated/dagger_darkbrown
+  witchcaster_animated_dagger_yellow:
+    display_name: Display (yellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2040
+      model_path: witchcaster_animated/dagger_yellow
+  witchcaster_animated_dagger_darkyellow:
+    display_name: Display (darkyellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2041
+      model_path: witchcaster_animated/dagger_darkyellow
+  witchcaster_animated_dagger_lightgreen:
+    display_name: Display (lightgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2042
+      model_path: witchcaster_animated/dagger_lightgreen
+  witchcaster_animated_dagger_green:
+    display_name: Display (green)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2043
+      model_path: witchcaster_animated/dagger_green
+  witchcaster_animated_dagger_darkgreen:
+    display_name: Display (darkgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2044
+      model_path: witchcaster_animated/dagger_darkgreen
+  witchcaster_animated_dagger_cyan:
+    display_name: Display (cyan)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2045
+      model_path: witchcaster_animated/dagger_cyan
+  witchcaster_animated_dagger_teal:
+    display_name: Display (teal)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2046
+      model_path: witchcaster_animated/dagger_teal
+  witchcaster_animated_dagger_lightblue:
+    display_name: Display (lightblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2047
+      model_path: witchcaster_animated/dagger_lightblue
+  witchcaster_animated_dagger_blue:
+    display_name: Display (blue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2048
+      model_path: witchcaster_animated/dagger_blue
+  witchcaster_animated_dagger_darkblue:
+    display_name: Display (darkblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2049
+      model_path: witchcaster_animated/dagger_darkblue
+  witchcaster_animated_dagger_lightpurple:
+    display_name: Display (lightpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2050
+      model_path: witchcaster_animated/dagger_lightpurple
+  witchcaster_animated_dagger_purple:
+    display_name: Display (purple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2051
+      model_path: witchcaster_animated/dagger_purple
+  witchcaster_animated_dagger_darkpurple:
+    display_name: Display (darkpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2052
+      model_path: witchcaster_animated/dagger_darkpurple
+  witchcaster_animated_greatsword_white:
+    display_name: Display (white)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2054
+      model_path: witchcaster_animated/greatsword_white
+  witchcaster_animated_greatsword_lightgray:
+    display_name: Display (lightgray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2055
+      model_path: witchcaster_animated/greatsword_lightgray
+  witchcaster_animated_greatsword_gray:
+    display_name: Display (gray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2056
+      model_path: witchcaster_animated/greatsword_gray
+  witchcaster_animated_greatsword_black:
+    display_name: Display (black)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2057
+      model_path: witchcaster_animated/greatsword_black
+  witchcaster_animated_greatsword_lightred:
+    display_name: Display (lightred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2058
+      model_path: witchcaster_animated/greatsword_lightred
+  witchcaster_animated_greatsword_red:
+    display_name: Display (red)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2059
+      model_path: witchcaster_animated/greatsword_red
+  witchcaster_animated_greatsword_darkred:
+    display_name: Display (darkred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2060
+      model_path: witchcaster_animated/greatsword_darkred
+  witchcaster_animated_greatsword_pink:
+    display_name: Display (pink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2061
+      model_path: witchcaster_animated/greatsword_pink
+  witchcaster_animated_greatsword_darkpink:
+    display_name: Display (darkpink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2062
+      model_path: witchcaster_animated/greatsword_darkpink
+  witchcaster_animated_greatsword_orange:
+    display_name: Display (orange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2063
+      model_path: witchcaster_animated/greatsword_orange
+  witchcaster_animated_greatsword_darkorange:
+    display_name: Display (darkorange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2064
+      model_path: witchcaster_animated/greatsword_darkorange
+  witchcaster_animated_greatsword_brown:
+    display_name: Display (brown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2065
+      model_path: witchcaster_animated/greatsword_brown
+  witchcaster_animated_greatsword_darkbrown:
+    display_name: Display (darkbrown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2066
+      model_path: witchcaster_animated/greatsword_darkbrown
+  witchcaster_animated_greatsword_yellow:
+    display_name: Display (yellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2067
+      model_path: witchcaster_animated/greatsword_yellow
+  witchcaster_animated_greatsword_darkyellow:
+    display_name: Display (darkyellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2068
+      model_path: witchcaster_animated/greatsword_darkyellow
+  witchcaster_animated_greatsword_lightgreen:
+    display_name: Display (lightgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2069
+      model_path: witchcaster_animated/greatsword_lightgreen
+  witchcaster_animated_greatsword_green:
+    display_name: Display (green)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2070
+      model_path: witchcaster_animated/greatsword_green
+  witchcaster_animated_greatsword_darkgreen:
+    display_name: Display (darkgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2071
+      model_path: witchcaster_animated/greatsword_darkgreen
+  witchcaster_animated_greatsword_cyan:
+    display_name: Display (cyan)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2072
+      model_path: witchcaster_animated/greatsword_cyan
+  witchcaster_animated_greatsword_teal:
+    display_name: Display (teal)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2073
+      model_path: witchcaster_animated/greatsword_teal
+  witchcaster_animated_greatsword_lightblue:
+    display_name: Display (lightblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2074
+      model_path: witchcaster_animated/greatsword_lightblue
+  witchcaster_animated_greatsword_blue:
+    display_name: Display (blue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2075
+      model_path: witchcaster_animated/greatsword_blue
+  witchcaster_animated_greatsword_darkblue:
+    display_name: Display (darkblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2076
+      model_path: witchcaster_animated/greatsword_darkblue
+  witchcaster_animated_greatsword_lightpurple:
+    display_name: Display (lightpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2077
+      model_path: witchcaster_animated/greatsword_lightpurple
+  witchcaster_animated_greatsword_purple:
+    display_name: Display (purple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2078
+      model_path: witchcaster_animated/greatsword_purple
+  witchcaster_animated_greatsword_darkpurple:
+    display_name: Display (darkpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2079
+      model_path: witchcaster_animated/greatsword_darkpurple
+  witchcaster_animated_hammer_white:
+    display_name: Display (white)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2081
+      model_path: witchcaster_animated/hammer_white
+  witchcaster_animated_hammer_lightgray:
+    display_name: Display (lightgray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2082
+      model_path: witchcaster_animated/hammer_lightgray
+  witchcaster_animated_hammer_gray:
+    display_name: Display (gray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2083
+      model_path: witchcaster_animated/hammer_gray
+  witchcaster_animated_hammer_black:
+    display_name: Display (black)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2084
+      model_path: witchcaster_animated/hammer_black
+  witchcaster_animated_hammer_lightred:
+    display_name: Display (lightred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2085
+      model_path: witchcaster_animated/hammer_lightred
+  witchcaster_animated_hammer_red:
+    display_name: Display (red)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2086
+      model_path: witchcaster_animated/hammer_red
+  witchcaster_animated_hammer_darkred:
+    display_name: Display (darkred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2087
+      model_path: witchcaster_animated/hammer_darkred
+  witchcaster_animated_hammer_pink:
+    display_name: Display (pink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2088
+      model_path: witchcaster_animated/hammer_pink
+  witchcaster_animated_hammer_darkpink:
+    display_name: Display (darkpink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2089
+      model_path: witchcaster_animated/hammer_darkpink
+  witchcaster_animated_hammer_orange:
+    display_name: Display (orange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2090
+      model_path: witchcaster_animated/hammer_orange
+  witchcaster_animated_hammer_darkorange:
+    display_name: Display (darkorange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2091
+      model_path: witchcaster_animated/hammer_darkorange
+  witchcaster_animated_hammer_brown:
+    display_name: Display (brown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2092
+      model_path: witchcaster_animated/hammer_brown
+  witchcaster_animated_hammer_darkbrown:
+    display_name: Display (darkbrown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2093
+      model_path: witchcaster_animated/hammer_darkbrown
+  witchcaster_animated_hammer_yellow:
+    display_name: Display (yellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2094
+      model_path: witchcaster_animated/hammer_yellow
+  witchcaster_animated_hammer_darkyellow:
+    display_name: Display (darkyellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2095
+      model_path: witchcaster_animated/hammer_darkyellow
+  witchcaster_animated_hammer_lightgreen:
+    display_name: Display (lightgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2096
+      model_path: witchcaster_animated/hammer_lightgreen
+  witchcaster_animated_hammer_green:
+    display_name: Display (green)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2097
+      model_path: witchcaster_animated/hammer_green
+  witchcaster_animated_hammer_darkgreen:
+    display_name: Display (darkgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2098
+      model_path: witchcaster_animated/hammer_darkgreen
+  witchcaster_animated_hammer_cyan:
+    display_name: Display (cyan)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2099
+      model_path: witchcaster_animated/hammer_cyan
+  witchcaster_animated_hammer_teal:
+    display_name: Display (teal)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2100
+      model_path: witchcaster_animated/hammer_teal
+  witchcaster_animated_hammer_lightblue:
+    display_name: Display (lightblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2101
+      model_path: witchcaster_animated/hammer_lightblue
+  witchcaster_animated_hammer_blue:
+    display_name: Display (blue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2102
+      model_path: witchcaster_animated/hammer_blue
+  witchcaster_animated_hammer_darkblue:
+    display_name: Display (darkblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2103
+      model_path: witchcaster_animated/hammer_darkblue
+  witchcaster_animated_hammer_lightpurple:
+    display_name: Display (lightpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2104
+      model_path: witchcaster_animated/hammer_lightpurple
+  witchcaster_animated_hammer_purple:
+    display_name: Display (purple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2105
+      model_path: witchcaster_animated/hammer_purple
+  witchcaster_animated_hammer_darkpurple:
+    display_name: Display (darkpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2106
+      model_path: witchcaster_animated/hammer_darkpurple
+  witchcaster_animated_key_white:
+    display_name: Display (white)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2108
+      model_path: witchcaster_animated/key_white
+  witchcaster_animated_key_lightgray:
+    display_name: Display (lightgray)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2109
+      model_path: witchcaster_animated/key_lightgray
+  witchcaster_animated_key_gray:
+    display_name: Display (gray)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2110
+      model_path: witchcaster_animated/key_gray
+  witchcaster_animated_key_black:
+    display_name: Display (black)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2111
+      model_path: witchcaster_animated/key_black
+  witchcaster_animated_key_lightred:
+    display_name: Display (lightred)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2112
+      model_path: witchcaster_animated/key_lightred
+  witchcaster_animated_key_red:
+    display_name: Display (red)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2113
+      model_path: witchcaster_animated/key_red
+  witchcaster_animated_key_darkred:
+    display_name: Display (darkred)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2114
+      model_path: witchcaster_animated/key_darkred
+  witchcaster_animated_key_pink:
+    display_name: Display (pink)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2115
+      model_path: witchcaster_animated/key_pink
+  witchcaster_animated_key_darkpink:
+    display_name: Display (darkpink)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2116
+      model_path: witchcaster_animated/key_darkpink
+  witchcaster_animated_key_orange:
+    display_name: Display (orange)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2117
+      model_path: witchcaster_animated/key_orange
+  witchcaster_animated_key_darkorange:
+    display_name: Display (darkorange)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2118
+      model_path: witchcaster_animated/key_darkorange
+  witchcaster_animated_key_brown:
+    display_name: Display (brown)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2119
+      model_path: witchcaster_animated/key_brown
+  witchcaster_animated_key_darkbrown:
+    display_name: Display (darkbrown)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2120
+      model_path: witchcaster_animated/key_darkbrown
+  witchcaster_animated_key_yellow:
+    display_name: Display (yellow)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2121
+      model_path: witchcaster_animated/key_yellow
+  witchcaster_animated_key_darkyellow:
+    display_name: Display (darkyellow)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2122
+      model_path: witchcaster_animated/key_darkyellow
+  witchcaster_animated_key_lightgreen:
+    display_name: Display (lightgreen)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2123
+      model_path: witchcaster_animated/key_lightgreen
+  witchcaster_animated_key_green:
+    display_name: Display (green)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2124
+      model_path: witchcaster_animated/key_green
+  witchcaster_animated_key_darkgreen:
+    display_name: Display (darkgreen)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2125
+      model_path: witchcaster_animated/key_darkgreen
+  witchcaster_animated_key_cyan:
+    display_name: Display (cyan)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2126
+      model_path: witchcaster_animated/key_cyan
+  witchcaster_animated_key_teal:
+    display_name: Display (teal)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2127
+      model_path: witchcaster_animated/key_teal
+  witchcaster_animated_key_lightblue:
+    display_name: Display (lightblue)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2128
+      model_path: witchcaster_animated/key_lightblue
+  witchcaster_animated_key_blue:
+    display_name: Display (blue)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2129
+      model_path: witchcaster_animated/key_blue
+  witchcaster_animated_key_darkblue:
+    display_name: Display (darkblue)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2130
+      model_path: witchcaster_animated/key_darkblue
+  witchcaster_animated_key_lightpurple:
+    display_name: Display (lightpurple)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2131
+      model_path: witchcaster_animated/key_lightpurple
+  witchcaster_animated_key_purple:
+    display_name: Display (purple)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2132
+      model_path: witchcaster_animated/key_purple
+  witchcaster_animated_key_darkpurple:
+    display_name: Display (darkpurple)
+    resource:
+      material: PAPER
+      generate: false
+      model_id: 2133
+      model_path: witchcaster_animated/key_darkpurple
+  witchcaster_animated_mace_white:
+    display_name: Display (white)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2135
+      model_path: witchcaster_animated/mace_white
+  witchcaster_animated_mace_lightgray:
+    display_name: Display (lightgray)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2136
+      model_path: witchcaster_animated/mace_lightgray
+  witchcaster_animated_mace_gray:
+    display_name: Display (gray)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2137
+      model_path: witchcaster_animated/mace_gray
+  witchcaster_animated_mace_black:
+    display_name: Display (black)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2138
+      model_path: witchcaster_animated/mace_black
+  witchcaster_animated_mace_lightred:
+    display_name: Display (lightred)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2139
+      model_path: witchcaster_animated/mace_lightred
+  witchcaster_animated_mace_red:
+    display_name: Display (red)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2140
+      model_path: witchcaster_animated/mace_red
+  witchcaster_animated_mace_darkred:
+    display_name: Display (darkred)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2141
+      model_path: witchcaster_animated/mace_darkred
+  witchcaster_animated_mace_pink:
+    display_name: Display (pink)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2142
+      model_path: witchcaster_animated/mace_pink
+  witchcaster_animated_mace_darkpink:
+    display_name: Display (darkpink)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2143
+      model_path: witchcaster_animated/mace_darkpink
+  witchcaster_animated_mace_orange:
+    display_name: Display (orange)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2144
+      model_path: witchcaster_animated/mace_orange
+  witchcaster_animated_mace_darkorange:
+    display_name: Display (darkorange)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2145
+      model_path: witchcaster_animated/mace_darkorange
+  witchcaster_animated_mace_brown:
+    display_name: Display (brown)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2146
+      model_path: witchcaster_animated/mace_brown
+  witchcaster_animated_mace_darkbrown:
+    display_name: Display (darkbrown)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2147
+      model_path: witchcaster_animated/mace_darkbrown
+  witchcaster_animated_mace_yellow:
+    display_name: Display (yellow)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2148
+      model_path: witchcaster_animated/mace_yellow
+  witchcaster_animated_mace_darkyellow:
+    display_name: Display (darkyellow)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2149
+      model_path: witchcaster_animated/mace_darkyellow
+  witchcaster_animated_mace_lightgreen:
+    display_name: Display (lightgreen)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2150
+      model_path: witchcaster_animated/mace_lightgreen
+  witchcaster_animated_mace_green:
+    display_name: Display (green)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2151
+      model_path: witchcaster_animated/mace_green
+  witchcaster_animated_mace_darkgreen:
+    display_name: Display (darkgreen)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2152
+      model_path: witchcaster_animated/mace_darkgreen
+  witchcaster_animated_mace_cyan:
+    display_name: Display (cyan)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2153
+      model_path: witchcaster_animated/mace_cyan
+  witchcaster_animated_mace_teal:
+    display_name: Display (teal)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2154
+      model_path: witchcaster_animated/mace_teal
+  witchcaster_animated_mace_lightblue:
+    display_name: Display (lightblue)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2155
+      model_path: witchcaster_animated/mace_lightblue
+  witchcaster_animated_mace_blue:
+    display_name: Display (blue)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2156
+      model_path: witchcaster_animated/mace_blue
+  witchcaster_animated_mace_darkblue:
+    display_name: Display (darkblue)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2157
+      model_path: witchcaster_animated/mace_darkblue
+  witchcaster_animated_mace_lightpurple:
+    display_name: Display (lightpurple)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2158
+      model_path: witchcaster_animated/mace_lightpurple
+  witchcaster_animated_mace_purple:
+    display_name: Display (purple)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2159
+      model_path: witchcaster_animated/mace_purple
+  witchcaster_animated_mace_darkpurple:
+    display_name: Display (darkpurple)
+    resource:
+      material: MACE
+      generate: false
+      model_id: 2160
+      model_path: witchcaster_animated/mace_darkpurple
+  witchcaster_animated_spear_white:
+    display_name: Display (white)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2162
+      model_path: witchcaster_animated/spear_white
+  witchcaster_animated_spear_lightgray:
+    display_name: Display (lightgray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2163
+      model_path: witchcaster_animated/spear_lightgray
+  witchcaster_animated_spear_gray:
+    display_name: Display (gray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2164
+      model_path: witchcaster_animated/spear_gray
+  witchcaster_animated_spear_black:
+    display_name: Display (black)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2165
+      model_path: witchcaster_animated/spear_black
+  witchcaster_animated_spear_lightred:
+    display_name: Display (lightred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2166
+      model_path: witchcaster_animated/spear_lightred
+  witchcaster_animated_spear_red:
+    display_name: Display (red)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2167
+      model_path: witchcaster_animated/spear_red
+  witchcaster_animated_spear_darkred:
+    display_name: Display (darkred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2168
+      model_path: witchcaster_animated/spear_darkred
+  witchcaster_animated_spear_pink:
+    display_name: Display (pink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2169
+      model_path: witchcaster_animated/spear_pink
+  witchcaster_animated_spear_darkpink:
+    display_name: Display (darkpink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2170
+      model_path: witchcaster_animated/spear_darkpink
+  witchcaster_animated_spear_orange:
+    display_name: Display (orange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2171
+      model_path: witchcaster_animated/spear_orange
+  witchcaster_animated_spear_darkorange:
+    display_name: Display (darkorange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2172
+      model_path: witchcaster_animated/spear_darkorange
+  witchcaster_animated_spear_brown:
+    display_name: Display (brown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2173
+      model_path: witchcaster_animated/spear_brown
+  witchcaster_animated_spear_darkbrown:
+    display_name: Display (darkbrown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2174
+      model_path: witchcaster_animated/spear_darkbrown
+  witchcaster_animated_spear_yellow:
+    display_name: Display (yellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2175
+      model_path: witchcaster_animated/spear_yellow
+  witchcaster_animated_spear_darkyellow:
+    display_name: Display (darkyellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2176
+      model_path: witchcaster_animated/spear_darkyellow
+  witchcaster_animated_spear_lightgreen:
+    display_name: Display (lightgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2177
+      model_path: witchcaster_animated/spear_lightgreen
+  witchcaster_animated_spear_green:
+    display_name: Display (green)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2178
+      model_path: witchcaster_animated/spear_green
+  witchcaster_animated_spear_darkgreen:
+    display_name: Display (darkgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2179
+      model_path: witchcaster_animated/spear_darkgreen
+  witchcaster_animated_spear_cyan:
+    display_name: Display (cyan)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2180
+      model_path: witchcaster_animated/spear_cyan
+  witchcaster_animated_spear_teal:
+    display_name: Display (teal)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2181
+      model_path: witchcaster_animated/spear_teal
+  witchcaster_animated_spear_lightblue:
+    display_name: Display (lightblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2182
+      model_path: witchcaster_animated/spear_lightblue
+  witchcaster_animated_spear_blue:
+    display_name: Display (blue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2183
+      model_path: witchcaster_animated/spear_blue
+  witchcaster_animated_spear_darkblue:
+    display_name: Display (darkblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2184
+      model_path: witchcaster_animated/spear_darkblue
+  witchcaster_animated_spear_lightpurple:
+    display_name: Display (lightpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2185
+      model_path: witchcaster_animated/spear_lightpurple
+  witchcaster_animated_spear_purple:
+    display_name: Display (purple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2186
+      model_path: witchcaster_animated/spear_purple
+  witchcaster_animated_spear_darkpurple:
+    display_name: Display (darkpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2187
+      model_path: witchcaster_animated/spear_darkpurple
+  witchcaster_animated_sword_white:
+    display_name: Display (white)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2189
+      model_path: witchcaster_animated/sword_white
+  witchcaster_animated_sword_lightgray:
+    display_name: Display (lightgray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2190
+      model_path: witchcaster_animated/sword_lightgray
+  witchcaster_animated_sword_gray:
+    display_name: Display (gray)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2191
+      model_path: witchcaster_animated/sword_gray
+  witchcaster_animated_sword_black:
+    display_name: Display (black)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2192
+      model_path: witchcaster_animated/sword_black
+  witchcaster_animated_sword_lightred:
+    display_name: Display (lightred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2193
+      model_path: witchcaster_animated/sword_lightred
+  witchcaster_animated_sword_red:
+    display_name: Display (red)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2194
+      model_path: witchcaster_animated/sword_red
+  witchcaster_animated_sword_darkred:
+    display_name: Display (darkred)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2195
+      model_path: witchcaster_animated/sword_darkred
+  witchcaster_animated_sword_pink:
+    display_name: Display (pink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2196
+      model_path: witchcaster_animated/sword_pink
+  witchcaster_animated_sword_darkpink:
+    display_name: Display (darkpink)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2197
+      model_path: witchcaster_animated/sword_darkpink
+  witchcaster_animated_sword_orange:
+    display_name: Display (orange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2198
+      model_path: witchcaster_animated/sword_orange
+  witchcaster_animated_sword_darkorange:
+    display_name: Display (darkorange)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2199
+      model_path: witchcaster_animated/sword_darkorange
+  witchcaster_animated_sword_brown:
+    display_name: Display (brown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2200
+      model_path: witchcaster_animated/sword_brown
+  witchcaster_animated_sword_darkbrown:
+    display_name: Display (darkbrown)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2201
+      model_path: witchcaster_animated/sword_darkbrown
+  witchcaster_animated_sword_yellow:
+    display_name: Display (yellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2202
+      model_path: witchcaster_animated/sword_yellow
+  witchcaster_animated_sword_darkyellow:
+    display_name: Display (darkyellow)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2203
+      model_path: witchcaster_animated/sword_darkyellow
+  witchcaster_animated_sword_lightgreen:
+    display_name: Display (lightgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2204
+      model_path: witchcaster_animated/sword_lightgreen
+  witchcaster_animated_sword_green:
+    display_name: Display (green)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2205
+      model_path: witchcaster_animated/sword_green
+  witchcaster_animated_sword_darkgreen:
+    display_name: Display (darkgreen)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2206
+      model_path: witchcaster_animated/sword_darkgreen
+  witchcaster_animated_sword_cyan:
+    display_name: Display (cyan)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2207
+      model_path: witchcaster_animated/sword_cyan
+  witchcaster_animated_sword_teal:
+    display_name: Display (teal)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2208
+      model_path: witchcaster_animated/sword_teal
+  witchcaster_animated_sword_lightblue:
+    display_name: Display (lightblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2209
+      model_path: witchcaster_animated/sword_lightblue
+  witchcaster_animated_sword_blue:
+    display_name: Display (blue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2210
+      model_path: witchcaster_animated/sword_blue
+  witchcaster_animated_sword_darkblue:
+    display_name: Display (darkblue)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2211
+      model_path: witchcaster_animated/sword_darkblue
+  witchcaster_animated_sword_lightpurple:
+    display_name: Display (lightpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2212
+      model_path: witchcaster_animated/sword_lightpurple
+  witchcaster_animated_sword_purple:
+    display_name: Display (purple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2213
+      model_path: witchcaster_animated/sword_purple
+  witchcaster_animated_sword_darkpurple:
+    display_name: Display (darkpurple)
+    resource:
+      material: DIAMOND_SWORD
+      generate: false
+      model_id: 2214
+      model_path: witchcaster_animated/sword_darkpurple

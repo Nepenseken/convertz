@@ -1,0 +1,48 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_teal:
+    color: '#fffffa'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_teal_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_teal_2
+    use_color: false
+items:
+  witchcaster_animated_hat_teal:
+    display_name: DISPLAY (teal)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_teal
+      model_id: 2297
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_teal:
+    display_name: DISPLAY (teal)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_teal
+      model_id: 2296
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: witchcaster_animated_teal
+  witchcaster_animated_leggings_teal:
+    display_name: DISPLAY (teal)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_teal
+      model_id: 2298
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: witchcaster_animated_teal
+  witchcaster_animated_boots_teal:
+    display_name: DISPLAY (teal)
+    resource:
+      model_path: witchcaster_animated/armor/boots_teal
+      model_id: 2295
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: witchcaster_animated_teal

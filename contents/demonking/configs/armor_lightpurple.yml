@@ -1,0 +1,56 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  demonking_assortment_lightpurple:
+    color: '#fffff8'
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_lightpurple_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_lightpurple_2
+    use_color: false
+equipments:
+  demonking_assortment_lightpurple:
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_lightpurple_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_lightpurple_2
+items:
+  demonking_assortment_hat_lightpurple:
+    display_name: demonkinghat (lightpurple)
+    permission: demonking_assortment.lightpurple
+    resource:
+      model_id: 234
+      material: PAPER
+      model_path: demonking_assortment/armor/hat_lightpurple
+      generate: false
+    behaviours:
+      hat: true
+  demonking_assortment_chestplate_lightpurple:
+    display_name: demonkingchestplate (lightpurple)
+    resource:
+      model_id: 233
+      generate: false
+      model_path: demonking_assortment/armor/chestplate_lightpurple
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: demonking_assortment_lightpurple
+      legacy_armor_rendering_id: demonking_assortment_lightpurple
+      slot: CHEST
+  demonking_assortment_leggings_lightpurple:
+    display_name: demonkingleggings (lightpurple)
+    resource:
+      model_id: 235
+      generate: false
+      model_path: demonking_assortment/armor/leggings_lightpurple
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: demonking_assortment_lightpurple
+      legacy_armor_rendering_id: demonking_assortment_lightpurple
+      slot: LEGS
+  demonking_assortment_boots_lightpurple:
+    display_name: demonkingboots (lightpurple)
+    resource:
+      model_id: 232
+      generate: false
+      model_path: demonking_assortment/armor/boots_lightpurple
+      material: LEATHER_BOOTS
+    equipment:
+      id: demonking_assortment_lightpurple
+      legacy_armor_rendering_id: demonking_assortment_lightpurple
+      slot: FEET

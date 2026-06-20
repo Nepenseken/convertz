@@ -1,0 +1,578 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  roman_armor_aquilifer_darkpink:
+    color: '#8c196e'
+    layer_1: roman_armor/aquilifer_armor_layer_darkpink_1
+    layer_2: roman_armor/aquilifer_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_centurion_darkpink:
+    color: '#8c1970'
+    layer_1: roman_armor/centurion_armor_layer_darkpink_1
+    layer_2: roman_armor/centurion_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_emperor_darkpink:
+    color: '#8c1976'
+    layer_1: roman_armor/emperor_armor_layer_darkpink_1
+    layer_2: roman_armor/emperor_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_general_darkpink:
+    color: '#8c1977'
+    layer_1: roman_armor/general_armor_layer_darkpink_1
+    layer_2: roman_armor/general_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_hastatus_darkpink:
+    color: '#8c1978'
+    layer_1: roman_armor/hastatus_armor_layer_darkpink_1
+    layer_2: roman_armor/hastatus_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_veles_darkpink:
+    color: '#8c1979'
+    layer_1: roman_armor/veles_armor_layer_darkpink_1
+    layer_2: roman_armor/veles_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_triarius_darkpink:
+    color: '#8c197a'
+    layer_1: roman_armor/triarius_armor_layer_darkpink_1
+    layer_2: roman_armor/triarius_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_legionnaire_darkpink:
+    color: '#8c197b'
+    layer_1: roman_armor/legionnaire_armor_layer_darkpink_1
+    layer_2: roman_armor/legionnaire_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_praetorian_darkpink:
+    color: '#8c197c'
+    layer_1: roman_armor/praetorian_armor_layer_darkpink_1
+    layer_2: roman_armor/praetorian_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_romanelite_darkpink:
+    color: '#8c197d'
+    layer_1: roman_armor/romanelite_armor_layer_darkpink_1
+    layer_2: roman_armor/romanelite_armor_layer_darkpink_2
+    use_color: false
+  roman_armor_praetorianred_darkpink:
+    color: '#8c197e'
+    layer_1: roman_armor/praetorianred_armor_layer_darkpink_1
+    layer_2: roman_armor/praetorianred_armor_layer_darkpink_2
+    use_color: false
+items:
+  roman_armor_aquilifer_helmet_darkpink:
+    display_name: Aquilifer Helmet (darkpink)
+    resource:
+      model_id: 3162
+      generate: false
+      model_path: auto_generated/aquilifer_helmet_darkpink
+      textures:
+      - roman_armor/aquilifer_helmet_darkpink.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_aquilifer_darkpink
+  roman_armor_aquilifer_chestplate_darkpink:
+    display_name: Aquilifer Chestplate (darkpink)
+    resource:
+      model_id: 3161
+      generate: false
+      model_path: auto_generated/aquilifer_chestplate_darkpink
+      textures:
+      - roman_armor/aquilifer_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_aquilifer_darkpink
+  roman_armor_aquilifer_leggings_darkpink:
+    display_name: Aquilifer Leggings (darkpink)
+    resource:
+      model_id: 3163
+      generate: false
+      model_path: auto_generated/aquilifer_leggings_darkpink
+      textures:
+      - roman_armor/aquilifer_leggings_darkpink.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_aquilifer_darkpink
+  roman_armor_aquilifer_boots_darkpink:
+    display_name: Aquilifer Boots (darkpink)
+    resource:
+      model_id: 3160
+      generate: false
+      model_path: auto_generated/aquilifer_boots_darkpink
+      textures:
+      - roman_armor/aquilifer_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_aquilifer_darkpink
+  roman_armor_centurion_helmet_darkpink:
+    display_name: Centurion Helmet (darkpink)
+    resource:
+      model_id: 3169
+      generate: false
+      model_path: auto_generated/centurion_helmet_darkpink
+      textures:
+      - roman_armor/centurion_helmet_darkpink.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_centurion_darkpink
+  roman_armor_centurion_chestplate_darkpink:
+    display_name: Centurion Chestplate (darkpink)
+    resource:
+      model_id: 3165
+      generate: false
+      model_path: auto_generated/centurion_chestplate_darkpink
+      textures:
+      - roman_armor/centurion_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_centurion_darkpink
+  roman_armor_centurion_leggings_darkpink:
+    display_name: Centurion Leggings (darkpink)
+    resource:
+      model_id: 3170
+      generate: false
+      model_path: auto_generated/centurion_leggings_darkpink
+      textures:
+      - roman_armor/centurion_leggings_darkpink.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_centurion_darkpink
+  roman_armor_centurion_boots_darkpink:
+    display_name: Centurion Boots (darkpink)
+    resource:
+      model_id: 3164
+      generate: false
+      model_path: auto_generated/centurion_boots_darkpink
+      textures:
+      - roman_armor/centurion_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_centurion_darkpink
+  roman_armor_centurion_hat_1_darkpink:
+    display_name: Centurion Hat 1 (darkpink)
+    resource:
+      model_id: 3166
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_darkpink_1
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_2_darkpink:
+    display_name: Centurion Hat 2 (darkpink)
+    resource:
+      model_id: 3167
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_darkpink_2
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_3_darkpink:
+    display_name: Centurion Hat 3 (darkpink)
+    resource:
+      model_id: 3168
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_darkpink_3
+    behaviours:
+      hat: true
+  roman_armor_emperor_helmet_darkpink:
+    display_name: Emperor Helmet (darkpink)
+    resource:
+      model_id: 3173
+      generate: false
+      model_path: auto_generated/emperor_helmet_darkpink
+      textures:
+      - roman_armor/emperor_helmet_darkpink.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_emperor_darkpink
+  roman_armor_emperor_chestplate_darkpink:
+    display_name: Emperor Chestplate (darkpink)
+    resource:
+      model_id: 3172
+      generate: false
+      model_path: auto_generated/emperor_chestplate_darkpink
+      textures:
+      - roman_armor/emperor_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_emperor_darkpink
+  roman_armor_emperor_leggings_darkpink:
+    display_name: Emperor Leggings (darkpink)
+    resource:
+      model_id: 3174
+      generate: false
+      model_path: auto_generated/emperor_leggings_darkpink
+      textures:
+      - roman_armor/emperor_leggings_darkpink.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_emperor_darkpink
+  roman_armor_emperor_boots_darkpink:
+    display_name: Emperor Boots (darkpink)
+    resource:
+      model_id: 3171
+      generate: false
+      model_path: auto_generated/emperor_boots_darkpink
+      textures:
+      - roman_armor/emperor_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_emperor_darkpink
+  roman_armor_general_hat_darkpink:
+    display_name: General Hat (darkpink)
+    resource:
+      model_id: 3177
+      material: PAPER
+      generate: false
+      model_path: roman_armor/general_hat_darkpink
+    behaviours:
+      hat: true
+  roman_armor_general_chestplate_darkpink:
+    display_name: General Chestplate (darkpink)
+    resource:
+      model_id: 3176
+      generate: false
+      model_path: auto_generated/general_chestplate_darkpink
+      textures:
+      - roman_armor/general_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_general_darkpink
+  roman_armor_general_leggings_darkpink:
+    display_name: General Leggings (darkpink)
+    resource:
+      model_id: 3178
+      generate: false
+      model_path: auto_generated/general_leggings_darkpink
+      textures:
+      - roman_armor/general_leggings_darkpink.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_general_darkpink
+  roman_armor_general_boots_darkpink:
+    display_name: General Boots (darkpink)
+    resource:
+      model_id: 3175
+      generate: false
+      model_path: auto_generated/general_boots_darkpink
+      textures:
+      - roman_armor/general_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_general_darkpink
+  roman_armor_hastatus_helmet_darkpink:
+    display_name: Hastatus Helmet (darkpink)
+    resource:
+      model_id: 3181
+      generate: false
+      model_path: auto_generated/hastatus_helmet_darkpink
+      textures:
+      - roman_armor/hastatus_helmet_darkpink.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_hastatus_darkpink
+  roman_armor_hastatus_chestplate_darkpink:
+    display_name: Hastatus Chestplate (darkpink)
+    resource:
+      model_id: 3180
+      generate: false
+      model_path: auto_generated/hastatus_chestplate_darkpink
+      textures:
+      - roman_armor/hastatus_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_hastatus_darkpink
+  roman_armor_hastatus_boots_darkpink:
+    display_name: Hastatus Boots (darkpink)
+    resource:
+      model_id: 3179
+      generate: false
+      model_path: auto_generated/hastatus_boots_darkpink
+      textures:
+      - roman_armor/hastatus_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_hastatus_darkpink
+  roman_armor_veles_helmet_darkpink:
+    display_name: Veles Helmet (darkpink)
+    resource:
+      model_id: 3204
+      generate: false
+      model_path: auto_generated/veles_helmet_darkpink
+      textures:
+      - roman_armor/veles_helmet_darkpink.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_veles_darkpink
+  roman_armor_veles_chestplate_darkpink:
+    display_name: Veles Chestplate (darkpink)
+    resource:
+      model_id: 3203
+      generate: false
+      model_path: auto_generated/veles_chestplate_darkpink
+      textures:
+      - roman_armor/veles_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_veles_darkpink
+  roman_armor_veles_boots_darkpink:
+    display_name: Veles Boots (darkpink)
+    resource:
+      model_id: 3202
+      generate: false
+      model_path: auto_generated/veles_boots_darkpink
+      textures:
+      - roman_armor/veles_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_veles_darkpink
+  roman_armor_triarius_helmet_darkpink:
+    display_name: Triarius Helmet (darkpink)
+    resource:
+      model_id: 3200
+      generate: false
+      model_path: auto_generated/triarius_helmet_darkpink
+      textures:
+      - roman_armor/triarius_helmet_darkpink.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_triarius_darkpink
+  roman_armor_triarius_chestplate_darkpink:
+    display_name: Triarius Chestplate (darkpink)
+    resource:
+      model_id: 3199
+      generate: false
+      model_path: auto_generated/triarius_chestplate_darkpink
+      textures:
+      - roman_armor/triarius_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_triarius_darkpink
+  roman_armor_triarius_leggings_darkpink:
+    display_name: Triarius Leggings (darkpink)
+    resource:
+      model_id: 3201
+      generate: false
+      model_path: auto_generated/triarius_leggings_darkpink
+      textures:
+      - roman_armor/triarius_leggings_darkpink.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_triarius_darkpink
+  roman_armor_triarius_boots_darkpink:
+    display_name: Triarius Boots (darkpink)
+    resource:
+      model_id: 3198
+      generate: false
+      model_path: auto_generated/triarius_boots_darkpink
+      textures:
+      - roman_armor/triarius_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_triarius_darkpink
+  roman_armor_legionnaire_helmet_darkpink:
+    display_name: Legionnaire Helmet (darkpink)
+    resource:
+      model_id: 3184
+      generate: false
+      model_path: auto_generated/legionnaire_helmet_darkpink
+      textures:
+      - roman_armor/legionnaire_helmet_darkpink.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_legionnaire_darkpink
+  roman_armor_legionnaire_chestplate_darkpink:
+    display_name: Legionnaire Chestplate (darkpink)
+    resource:
+      model_id: 3183
+      generate: false
+      model_path: auto_generated/legionnaire_chestplate_darkpink
+      textures:
+      - roman_armor/legionnaire_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_legionnaire_darkpink
+  roman_armor_legionnaire_leggings_darkpink:
+    display_name: Legionnaire Leggings (darkpink)
+    resource:
+      model_id: 3185
+      generate: false
+      model_path: auto_generated/legionnaire_leggings_darkpink
+      textures:
+      - roman_armor/legionnaire_leggings_darkpink.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_legionnaire_darkpink
+  roman_armor_legionnaire_boots_darkpink:
+    display_name: Legionnaire Boots (darkpink)
+    resource:
+      model_id: 3182
+      generate: false
+      model_path: auto_generated/legionnaire_boots_darkpink
+      textures:
+      - roman_armor/legionnaire_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_legionnaire_darkpink
+  roman_armor_praetorian_hat_darkpink:
+    display_name: Praetorian Hat (darkpink)
+    resource:
+      model_id: 3188
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorian_hat_darkpink
+    behaviours:
+      hat: true
+  roman_armor_praetorian_chestplate_darkpink:
+    display_name: Praetorian Chestplate (darkpink)
+    resource:
+      model_id: 3187
+      generate: false
+      model_path: auto_generated/praetorian_chestplate_darkpink
+      textures:
+      - roman_armor/praetorian_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_praetorian_darkpink
+  roman_armor_praetorian_leggings_darkpink:
+    display_name: Praetorian Leggings (darkpink)
+    resource:
+      model_id: 3189
+      generate: false
+      model_path: auto_generated/praetorian_leggings_darkpink
+      textures:
+      - roman_armor/praetorian_leggings_darkpink.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_praetorian_darkpink
+  roman_armor_praetorian_boots_darkpink:
+    display_name: Praetorian Boots (darkpink)
+    resource:
+      model_id: 3186
+      generate: false
+      model_path: auto_generated/praetorian_boots_darkpink
+      textures:
+      - roman_armor/praetorian_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_praetorian_darkpink
+  roman_armor_romanelite_hat_darkpink:
+    display_name: Romanelite Hat (darkpink)
+    resource:
+      model_id: 3196
+      material: PAPER
+      generate: false
+      model_path: roman_armor/romanelite_hat_darkpink
+    behaviours:
+      hat: true
+  roman_armor_romanelite_chestplate_darkpink:
+    display_name: Romanelite Chestplate (darkpink)
+    resource:
+      model_id: 3195
+      generate: false
+      model_path: auto_generated/romanelite_chestplate_darkpink
+      textures:
+      - roman_armor/romanelite_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_romanelite_darkpink
+  roman_armor_romanelite_leggings_darkpink:
+    display_name: Romanelite Leggings (darkpink)
+    resource:
+      model_id: 3197
+      generate: false
+      model_path: auto_generated/romanelite_leggings_darkpink
+      textures:
+      - roman_armor/romanelite_leggings_darkpink.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_romanelite_darkpink
+  roman_armor_romanelite_boots_darkpink:
+    display_name: Romanelite Boots (darkpink)
+    resource:
+      model_id: 3194
+      generate: false
+      model_path: auto_generated/romanelite_boots_darkpink
+      textures:
+      - roman_armor/romanelite_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_romanelite_darkpink
+  roman_armor_praetorianred_hat_darkpink:
+    display_name: Praetorianred Hat (darkpink)
+    resource:
+      model_id: 3192
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorianred_hat_darkpink
+    behaviours:
+      hat: true
+  roman_armor_praetorianred_chestplate_darkpink:
+    display_name: Praetorianred Chestplate (darkpink)
+    resource:
+      model_id: 3191
+      generate: false
+      model_path: auto_generated/praetorianred_chestplate_darkpink
+      textures:
+      - roman_armor/praetorianred_chestplate_darkpink.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_praetorianred_darkpink
+  roman_armor_praetorianred_leggings_darkpink:
+    display_name: Praetorianred Leggings (darkpink)
+    resource:
+      model_id: 3193
+      generate: false
+      model_path: auto_generated/praetorianred_leggings_darkpink
+      textures:
+      - roman_armor/praetorianred_leggings_darkpink.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_praetorianred_darkpink
+  roman_armor_praetorianred_boots_darkpink:
+    display_name: Praetorianred Boots (darkpink)
+    resource:
+      model_id: 3190
+      generate: false
+      model_path: auto_generated/praetorianred_boots_darkpink
+      textures:
+      - roman_armor/praetorianred_boots_darkpink.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_praetorianred_darkpink

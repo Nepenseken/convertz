@@ -1,0 +1,1137 @@
+info:
+  namespace: fantasy_medieval_weapons_pack
+items:
+  2hand_axe:
+    display_name: '&f2Hand Axe'
+    resource:
+      model_id: 244
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe
+  broadsword:
+    display_name: '&fBroadsword'
+    resource:
+      model_id: 271
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword
+  halberd:
+    display_name: '&fHalberd'
+    resource:
+      model_id: 298
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd
+  hammer:
+    display_name: '&fHammer'
+    resource:
+      model_id: 325
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer
+  polearm:
+    display_name: '&fPole Arm'
+    resource:
+      model_id: 352
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm
+  sword:
+    display_name: '&fSword'
+    resource:
+      model_id: 379
+      generate: false
+      material: IRON_SWORD
+      model_path: sword
+  2hand_axe_white:
+    display_name: '&f2Hand Axe (white)'
+    resource:
+      model_id: 245
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_white
+  2hand_axe_lightgray:
+    display_name: '&f2Hand Axe (lightgray)'
+    resource:
+      model_id: 246
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_lightgray
+  2hand_axe_gray:
+    display_name: '&f2Hand Axe (gray)'
+    resource:
+      model_id: 247
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_gray
+  2hand_axe_black:
+    display_name: '&f2Hand Axe (black)'
+    resource:
+      model_id: 248
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_black
+  2hand_axe_lightred:
+    display_name: '&f2Hand Axe (lightred)'
+    resource:
+      model_id: 249
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_lightred
+  2hand_axe_red:
+    display_name: '&f2Hand Axe (red)'
+    resource:
+      model_id: 250
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_red
+  2hand_axe_darkred:
+    display_name: '&f2Hand Axe (darkred)'
+    resource:
+      model_id: 251
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_darkred
+  2hand_axe_pink:
+    display_name: '&f2Hand Axe (pink)'
+    resource:
+      model_id: 252
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_pink
+  2hand_axe_darkpink:
+    display_name: '&f2Hand Axe (darkpink)'
+    resource:
+      model_id: 253
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_darkpink
+  2hand_axe_orange:
+    display_name: '&f2Hand Axe (orange)'
+    resource:
+      model_id: 254
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_orange
+  2hand_axe_darkorange:
+    display_name: '&f2Hand Axe (darkorange)'
+    resource:
+      model_id: 255
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_darkorange
+  2hand_axe_brown:
+    display_name: '&f2Hand Axe (brown)'
+    resource:
+      model_id: 256
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_brown
+  2hand_axe_darkbrown:
+    display_name: '&f2Hand Axe (darkbrown)'
+    resource:
+      model_id: 257
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_darkbrown
+  2hand_axe_yellow:
+    display_name: '&f2Hand Axe (yellow)'
+    resource:
+      model_id: 258
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_yellow
+  2hand_axe_darkyellow:
+    display_name: '&f2Hand Axe (darkyellow)'
+    resource:
+      model_id: 259
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_darkyellow
+  2hand_axe_lightgreen:
+    display_name: '&f2Hand Axe (lightgreen)'
+    resource:
+      model_id: 260
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_lightgreen
+  2hand_axe_green:
+    display_name: '&f2Hand Axe (green)'
+    resource:
+      model_id: 261
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_green
+  2hand_axe_darkgreen:
+    display_name: '&f2Hand Axe (darkgreen)'
+    resource:
+      model_id: 262
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_darkgreen
+  2hand_axe_cyan:
+    display_name: '&f2Hand Axe (cyan)'
+    resource:
+      model_id: 263
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_cyan
+  2hand_axe_teal:
+    display_name: '&f2Hand Axe (teal)'
+    resource:
+      model_id: 264
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_teal
+  2hand_axe_lightblue:
+    display_name: '&f2Hand Axe (lightblue)'
+    resource:
+      model_id: 265
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_lightblue
+  2hand_axe_blue:
+    display_name: '&f2Hand Axe (blue)'
+    resource:
+      model_id: 266
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_blue
+  2hand_axe_darkblue:
+    display_name: '&f2Hand Axe (darkblue)'
+    resource:
+      model_id: 267
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_darkblue
+  2hand_axe_lightpurple:
+    display_name: '&f2Hand Axe (lightpurple)'
+    resource:
+      model_id: 268
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_lightpurple
+  2hand_axe_purple:
+    display_name: '&f2Hand Axe (purple)'
+    resource:
+      model_id: 269
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_purple
+  2hand_axe_darkpurple:
+    display_name: '&f2Hand Axe (darkpurple)'
+    resource:
+      model_id: 270
+      generate: false
+      material: IRON_SWORD
+      model_path: 2hand_axe_darkpurple
+  broadsword_white:
+    display_name: '&fBroadsword (white)'
+    resource:
+      model_id: 272
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_white
+  broadsword_lightgray:
+    display_name: '&fBroadsword (lightgray)'
+    resource:
+      model_id: 273
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_lightgray
+  broadsword_gray:
+    display_name: '&fBroadsword (gray)'
+    resource:
+      model_id: 274
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_gray
+  broadsword_black:
+    display_name: '&fBroadsword (black)'
+    resource:
+      model_id: 275
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_black
+  broadsword_lightred:
+    display_name: '&fBroadsword (lightred)'
+    resource:
+      model_id: 276
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_lightred
+  broadsword_red:
+    display_name: '&fBroadsword (red)'
+    resource:
+      model_id: 277
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_red
+  broadsword_darkred:
+    display_name: '&fBroadsword (darkred)'
+    resource:
+      model_id: 278
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_darkred
+  broadsword_pink:
+    display_name: '&fBroadsword (pink)'
+    resource:
+      model_id: 279
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_pink
+  broadsword_darkpink:
+    display_name: '&fBroadsword (darkpink)'
+    resource:
+      model_id: 280
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_darkpink
+  broadsword_orange:
+    display_name: '&fBroadsword (orange)'
+    resource:
+      model_id: 281
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_orange
+  broadsword_darkorange:
+    display_name: '&fBroadsword (darkorange)'
+    resource:
+      model_id: 282
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_darkorange
+  broadsword_brown:
+    display_name: '&fBroadsword (brown)'
+    resource:
+      model_id: 283
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_brown
+  broadsword_darkbrown:
+    display_name: '&fBroadsword (darkbrown)'
+    resource:
+      model_id: 284
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_darkbrown
+  broadsword_yellow:
+    display_name: '&fBroadsword (yellow)'
+    resource:
+      model_id: 285
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_yellow
+  broadsword_darkyellow:
+    display_name: '&fBroadsword (darkyellow)'
+    resource:
+      model_id: 286
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_darkyellow
+  broadsword_lightgreen:
+    display_name: '&fBroadsword (lightgreen)'
+    resource:
+      model_id: 287
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_lightgreen
+  broadsword_green:
+    display_name: '&fBroadsword (green)'
+    resource:
+      model_id: 288
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_green
+  broadsword_darkgreen:
+    display_name: '&fBroadsword (darkgreen)'
+    resource:
+      model_id: 289
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_darkgreen
+  broadsword_cyan:
+    display_name: '&fBroadsword (cyan)'
+    resource:
+      model_id: 290
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_cyan
+  broadsword_teal:
+    display_name: '&fBroadsword (teal)'
+    resource:
+      model_id: 291
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_teal
+  broadsword_lightblue:
+    display_name: '&fBroadsword (lightblue)'
+    resource:
+      model_id: 292
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_lightblue
+  broadsword_blue:
+    display_name: '&fBroadsword (blue)'
+    resource:
+      model_id: 293
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_blue
+  broadsword_darkblue:
+    display_name: '&fBroadsword (darkblue)'
+    resource:
+      model_id: 294
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_darkblue
+  broadsword_lightpurple:
+    display_name: '&fBroadsword (lightpurple)'
+    resource:
+      model_id: 295
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_lightpurple
+  broadsword_purple:
+    display_name: '&fBroadsword (purple)'
+    resource:
+      model_id: 296
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_purple
+  broadsword_darkpurple:
+    display_name: '&fBroadsword (darkpurple)'
+    resource:
+      model_id: 297
+      generate: false
+      material: IRON_SWORD
+      model_path: broadsword_darkpurple
+  halberd_white:
+    display_name: '&fHalberd (white)'
+    resource:
+      model_id: 299
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_white
+  halberd_lightgray:
+    display_name: '&fHalberd (lightgray)'
+    resource:
+      model_id: 300
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_lightgray
+  halberd_gray:
+    display_name: '&fHalberd (gray)'
+    resource:
+      model_id: 301
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_gray
+  halberd_black:
+    display_name: '&fHalberd (black)'
+    resource:
+      model_id: 302
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_black
+  halberd_lightred:
+    display_name: '&fHalberd (lightred)'
+    resource:
+      model_id: 303
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_lightred
+  halberd_red:
+    display_name: '&fHalberd (red)'
+    resource:
+      model_id: 304
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_red
+  halberd_darkred:
+    display_name: '&fHalberd (darkred)'
+    resource:
+      model_id: 305
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_darkred
+  halberd_pink:
+    display_name: '&fHalberd (pink)'
+    resource:
+      model_id: 306
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_pink
+  halberd_darkpink:
+    display_name: '&fHalberd (darkpink)'
+    resource:
+      model_id: 307
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_darkpink
+  halberd_orange:
+    display_name: '&fHalberd (orange)'
+    resource:
+      model_id: 308
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_orange
+  halberd_darkorange:
+    display_name: '&fHalberd (darkorange)'
+    resource:
+      model_id: 309
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_darkorange
+  halberd_brown:
+    display_name: '&fHalberd (brown)'
+    resource:
+      model_id: 310
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_brown
+  halberd_darkbrown:
+    display_name: '&fHalberd (darkbrown)'
+    resource:
+      model_id: 311
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_darkbrown
+  halberd_yellow:
+    display_name: '&fHalberd (yellow)'
+    resource:
+      model_id: 312
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_yellow
+  halberd_darkyellow:
+    display_name: '&fHalberd (darkyellow)'
+    resource:
+      model_id: 313
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_darkyellow
+  halberd_lightgreen:
+    display_name: '&fHalberd (lightgreen)'
+    resource:
+      model_id: 314
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_lightgreen
+  halberd_green:
+    display_name: '&fHalberd (green)'
+    resource:
+      model_id: 315
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_green
+  halberd_darkgreen:
+    display_name: '&fHalberd (darkgreen)'
+    resource:
+      model_id: 316
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_darkgreen
+  halberd_cyan:
+    display_name: '&fHalberd (cyan)'
+    resource:
+      model_id: 317
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_cyan
+  halberd_teal:
+    display_name: '&fHalberd (teal)'
+    resource:
+      model_id: 318
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_teal
+  halberd_lightblue:
+    display_name: '&fHalberd (lightblue)'
+    resource:
+      model_id: 319
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_lightblue
+  halberd_blue:
+    display_name: '&fHalberd (blue)'
+    resource:
+      model_id: 320
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_blue
+  halberd_darkblue:
+    display_name: '&fHalberd (darkblue)'
+    resource:
+      model_id: 321
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_darkblue
+  halberd_lightpurple:
+    display_name: '&fHalberd (lightpurple)'
+    resource:
+      model_id: 322
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_lightpurple
+  halberd_purple:
+    display_name: '&fHalberd (purple)'
+    resource:
+      model_id: 323
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_purple
+  halberd_darkpurple:
+    display_name: '&fHalberd (darkpurple)'
+    resource:
+      model_id: 324
+      generate: false
+      material: IRON_SWORD
+      model_path: halberd_darkpurple
+  hammer_white:
+    display_name: '&fHammer (white)'
+    resource:
+      model_id: 326
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_white
+  hammer_lightgray:
+    display_name: '&fHammer (lightgray)'
+    resource:
+      model_id: 327
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_lightgray
+  hammer_gray:
+    display_name: '&fHammer (gray)'
+    resource:
+      model_id: 328
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_gray
+  hammer_black:
+    display_name: '&fHammer (black)'
+    resource:
+      model_id: 329
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_black
+  hammer_lightred:
+    display_name: '&fHammer (lightred)'
+    resource:
+      model_id: 330
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_lightred
+  hammer_red:
+    display_name: '&fHammer (red)'
+    resource:
+      model_id: 331
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_red
+  hammer_darkred:
+    display_name: '&fHammer (darkred)'
+    resource:
+      model_id: 332
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_darkred
+  hammer_pink:
+    display_name: '&fHammer (pink)'
+    resource:
+      model_id: 333
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_pink
+  hammer_darkpink:
+    display_name: '&fHammer (darkpink)'
+    resource:
+      model_id: 334
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_darkpink
+  hammer_orange:
+    display_name: '&fHammer (orange)'
+    resource:
+      model_id: 335
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_orange
+  hammer_darkorange:
+    display_name: '&fHammer (darkorange)'
+    resource:
+      model_id: 336
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_darkorange
+  hammer_brown:
+    display_name: '&fHammer (brown)'
+    resource:
+      model_id: 337
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_brown
+  hammer_darkbrown:
+    display_name: '&fHammer (darkbrown)'
+    resource:
+      model_id: 338
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_darkbrown
+  hammer_yellow:
+    display_name: '&fHammer (yellow)'
+    resource:
+      model_id: 339
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_yellow
+  hammer_darkyellow:
+    display_name: '&fHammer (darkyellow)'
+    resource:
+      model_id: 340
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_darkyellow
+  hammer_lightgreen:
+    display_name: '&fHammer (lightgreen)'
+    resource:
+      model_id: 341
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_lightgreen
+  hammer_green:
+    display_name: '&fHammer (green)'
+    resource:
+      model_id: 342
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_green
+  hammer_darkgreen:
+    display_name: '&fHammer (darkgreen)'
+    resource:
+      model_id: 343
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_darkgreen
+  hammer_cyan:
+    display_name: '&fHammer (cyan)'
+    resource:
+      model_id: 344
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_cyan
+  hammer_teal:
+    display_name: '&fHammer (teal)'
+    resource:
+      model_id: 345
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_teal
+  hammer_lightblue:
+    display_name: '&fHammer (lightblue)'
+    resource:
+      model_id: 346
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_lightblue
+  hammer_blue:
+    display_name: '&fHammer (blue)'
+    resource:
+      model_id: 347
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_blue
+  hammer_darkblue:
+    display_name: '&fHammer (darkblue)'
+    resource:
+      model_id: 348
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_darkblue
+  hammer_lightpurple:
+    display_name: '&fHammer (lightpurple)'
+    resource:
+      model_id: 349
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_lightpurple
+  hammer_purple:
+    display_name: '&fHammer (purple)'
+    resource:
+      model_id: 350
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_purple
+  hammer_darkpurple:
+    display_name: '&fHammer (darkpurple)'
+    resource:
+      model_id: 351
+      generate: false
+      material: IRON_SWORD
+      model_path: hammer_darkpurple
+  polearm_white:
+    display_name: '&fPole Arm (white)'
+    resource:
+      model_id: 353
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_white
+  polearm_lightgray:
+    display_name: '&fPole Arm (lightgray)'
+    resource:
+      model_id: 354
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_lightgray
+  polearm_gray:
+    display_name: '&fPole Arm (gray)'
+    resource:
+      model_id: 355
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_gray
+  polearm_black:
+    display_name: '&fPole Arm (black)'
+    resource:
+      model_id: 356
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_black
+  polearm_lightred:
+    display_name: '&fPole Arm (lightred)'
+    resource:
+      model_id: 357
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_lightred
+  polearm_red:
+    display_name: '&fPole Arm (red)'
+    resource:
+      model_id: 358
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_red
+  polearm_darkred:
+    display_name: '&fPole Arm (darkred)'
+    resource:
+      model_id: 359
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_darkred
+  polearm_pink:
+    display_name: '&fPole Arm (pink)'
+    resource:
+      model_id: 360
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_pink
+  polearm_darkpink:
+    display_name: '&fPole Arm (darkpink)'
+    resource:
+      model_id: 361
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_darkpink
+  polearm_orange:
+    display_name: '&fPole Arm (orange)'
+    resource:
+      model_id: 362
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_orange
+  polearm_darkorange:
+    display_name: '&fPole Arm (darkorange)'
+    resource:
+      model_id: 363
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_darkorange
+  polearm_brown:
+    display_name: '&fPole Arm (brown)'
+    resource:
+      model_id: 364
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_brown
+  polearm_darkbrown:
+    display_name: '&fPole Arm (darkbrown)'
+    resource:
+      model_id: 365
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_darkbrown
+  polearm_yellow:
+    display_name: '&fPole Arm (yellow)'
+    resource:
+      model_id: 366
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_yellow
+  polearm_darkyellow:
+    display_name: '&fPole Arm (darkyellow)'
+    resource:
+      model_id: 367
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_darkyellow
+  polearm_lightgreen:
+    display_name: '&fPole Arm (lightgreen)'
+    resource:
+      model_id: 368
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_lightgreen
+  polearm_green:
+    display_name: '&fPole Arm (green)'
+    resource:
+      model_id: 369
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_green
+  polearm_darkgreen:
+    display_name: '&fPole Arm (darkgreen)'
+    resource:
+      model_id: 370
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_darkgreen
+  polearm_cyan:
+    display_name: '&fPole Arm (cyan)'
+    resource:
+      model_id: 371
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_cyan
+  polearm_teal:
+    display_name: '&fPole Arm (teal)'
+    resource:
+      model_id: 372
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_teal
+  polearm_lightblue:
+    display_name: '&fPole Arm (lightblue)'
+    resource:
+      model_id: 373
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_lightblue
+  polearm_blue:
+    display_name: '&fPole Arm (blue)'
+    resource:
+      model_id: 374
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_blue
+  polearm_darkblue:
+    display_name: '&fPole Arm (darkblue)'
+    resource:
+      model_id: 375
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_darkblue
+  polearm_lightpurple:
+    display_name: '&fPole Arm (lightpurple)'
+    resource:
+      model_id: 376
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_lightpurple
+  polearm_purple:
+    display_name: '&fPole Arm (purple)'
+    resource:
+      model_id: 377
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_purple
+  polearm_darkpurple:
+    display_name: '&fPole Arm (darkpurple)'
+    resource:
+      model_id: 378
+      generate: false
+      material: IRON_SWORD
+      model_path: polearm_darkpurple
+  sword_white:
+    display_name: '&fSword (white)'
+    resource:
+      model_id: 380
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_white
+  sword_lightgray:
+    display_name: '&fSword (lightgray)'
+    resource:
+      model_id: 381
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_lightgray
+  sword_gray:
+    display_name: '&fSword (gray)'
+    resource:
+      model_id: 382
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_gray
+  sword_black:
+    display_name: '&fSword (black)'
+    resource:
+      model_id: 383
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_black
+  sword_lightred:
+    display_name: '&fSword (lightred)'
+    resource:
+      model_id: 384
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_lightred
+  sword_red:
+    display_name: '&fSword (red)'
+    resource:
+      model_id: 385
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_red
+  sword_darkred:
+    display_name: '&fSword (darkred)'
+    resource:
+      model_id: 386
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_darkred
+  sword_pink:
+    display_name: '&fSword (pink)'
+    resource:
+      model_id: 387
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_pink
+  sword_darkpink:
+    display_name: '&fSword (darkpink)'
+    resource:
+      model_id: 388
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_darkpink
+  sword_orange:
+    display_name: '&fSword (orange)'
+    resource:
+      model_id: 389
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_orange
+  sword_darkorange:
+    display_name: '&fSword (darkorange)'
+    resource:
+      model_id: 390
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_darkorange
+  sword_brown:
+    display_name: '&fSword (brown)'
+    resource:
+      model_id: 391
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_brown
+  sword_darkbrown:
+    display_name: '&fSword (darkbrown)'
+    resource:
+      model_id: 392
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_darkbrown
+  sword_yellow:
+    display_name: '&fSword (yellow)'
+    resource:
+      model_id: 393
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_yellow
+  sword_darkyellow:
+    display_name: '&fSword (darkyellow)'
+    resource:
+      model_id: 394
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_darkyellow
+  sword_lightgreen:
+    display_name: '&fSword (lightgreen)'
+    resource:
+      model_id: 395
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_lightgreen
+  sword_green:
+    display_name: '&fSword (green)'
+    resource:
+      model_id: 396
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_green
+  sword_darkgreen:
+    display_name: '&fSword (darkgreen)'
+    resource:
+      model_id: 397
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_darkgreen
+  sword_cyan:
+    display_name: '&fSword (cyan)'
+    resource:
+      model_id: 398
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_cyan
+  sword_teal:
+    display_name: '&fSword (teal)'
+    resource:
+      model_id: 399
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_teal
+  sword_lightblue:
+    display_name: '&fSword (lightblue)'
+    resource:
+      model_id: 400
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_lightblue
+  sword_blue:
+    display_name: '&fSword (blue)'
+    resource:
+      model_id: 401
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_blue
+  sword_darkblue:
+    display_name: '&fSword (darkblue)'
+    resource:
+      model_id: 402
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_darkblue
+  sword_lightpurple:
+    display_name: '&fSword (lightpurple)'
+    resource:
+      model_id: 403
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_lightpurple
+  sword_purple:
+    display_name: '&fSword (purple)'
+    resource:
+      model_id: 404
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_purple
+  sword_darkpurple:
+    display_name: '&fSword (darkpurple)'
+    resource:
+      model_id: 405
+      generate: false
+      material: IRON_SWORD
+      model_path: sword_darkpurple

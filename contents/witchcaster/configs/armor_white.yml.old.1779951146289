@@ -1,0 +1,48 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_white:
+    color: '#fffffa'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_white_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_white_2
+    use_color: false
+items:
+  witchcaster_animated_hat_white:
+    display_name: DISPLAY (white)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_white
+      model_id: 2221
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_white:
+    display_name: DISPLAY (white)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_white
+      model_id: 2220
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: witchcaster_animated_white
+  witchcaster_animated_leggings_white:
+    display_name: DISPLAY (white)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_white
+      model_id: 2222
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: witchcaster_animated_white
+  witchcaster_animated_boots_white:
+    display_name: DISPLAY (white)
+    resource:
+      model_path: witchcaster_animated/armor/boots_white
+      model_id: 2219
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: witchcaster_animated_white

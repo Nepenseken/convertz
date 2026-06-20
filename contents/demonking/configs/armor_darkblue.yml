@@ -1,0 +1,56 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  demonking_assortment_darkblue:
+    color: '#ffffdb'
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_darkblue_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_darkblue_2
+    use_color: false
+equipments:
+  demonking_assortment_darkblue:
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_darkblue_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_darkblue_2
+items:
+  demonking_assortment_hat_darkblue:
+    display_name: demonkinghat (darkblue)
+    permission: demonking_assortment.darkblue
+    resource:
+      model_id: 230
+      material: PAPER
+      model_path: demonking_assortment/armor/hat_darkblue
+      generate: false
+    behaviours:
+      hat: true
+  demonking_assortment_chestplate_darkblue:
+    display_name: demonkingchestplate (darkblue)
+    resource:
+      model_id: 229
+      generate: false
+      model_path: demonking_assortment/armor/chestplate_darkblue
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: demonking_assortment_darkblue
+      legacy_armor_rendering_id: demonking_assortment_darkblue
+      slot: CHEST
+  demonking_assortment_leggings_darkblue:
+    display_name: demonkingleggings (darkblue)
+    resource:
+      model_id: 231
+      generate: false
+      model_path: demonking_assortment/armor/leggings_darkblue
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: demonking_assortment_darkblue
+      legacy_armor_rendering_id: demonking_assortment_darkblue
+      slot: LEGS
+  demonking_assortment_boots_darkblue:
+    display_name: demonkingboots (darkblue)
+    resource:
+      model_id: 228
+      generate: false
+      model_path: demonking_assortment/armor/boots_darkblue
+      material: LEATHER_BOOTS
+    equipment:
+      id: demonking_assortment_darkblue
+      legacy_armor_rendering_id: demonking_assortment_darkblue
+      slot: FEET

@@ -1,0 +1,316 @@
+info:
+  namespace: ec_elitearmors
+armors_rendering:
+  ecrubyarmor_orange:
+    color: '#5cec2d'
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_orange
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_orange_2
+    emissive_1: armor/ec_elitearmorsvol6/ecrubyarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecrubyarmore_2
+    use_color: false
+  eclightknightarmor_orange:
+    color: '#66f6af'
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_orange
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_orange_2
+    emissive_1: armor/ec_elitearmorsvol6/eclightknightarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclightknightarmore_2
+    use_color: false
+  ecbluemecharmor_orange:
+    color: '#87dfb8'
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_orange
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_orange_2
+    emissive_1: armor/ec_elitearmorsvol6/ecbluemecharmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecbluemecharmore_2
+    use_color: false
+  eclavabeastarmor_orange:
+    color: '#28a7f0'
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_orange
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_orange_2
+    emissive_1: armor/ec_elitearmorsvol6/eclavabeastarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclavabeastarmore_2
+    use_color: false
+items:
+  ecrubychest_orange:
+    display_name: Ruby Chestplate (orange)
+    resource:
+      model_id: 2496
+      model_path: auto_generated/ecrubychest_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubychest_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecrubyarmor_orange
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecrubyhelmet_orange:
+    display_name: Ruby Helmet (orange)
+    resource:
+      model_id: 2497
+      model_path: auto_generated/ecrubyhelmet_orange
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecrubyarmor_orange
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecrubylegs_orange:
+    display_name: Ruby Leggings (orange)
+    resource:
+      model_id: 2498
+      model_path: auto_generated/ecrubylegs_orange
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecrubyarmor_orange
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecrubyboots_orange:
+    display_name: Ruby Boots (orange)
+    resource:
+      model_id: 2495
+      model_path: auto_generated/ecrubyboots_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubyboots_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecrubyarmor_orange
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclightknightchest_orange:
+    display_name: Lightknight Chestplate (orange)
+    resource:
+      model_id: 2492
+      model_path: auto_generated/eclightknightchest_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightchest_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclightknightarmor_orange
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclightknighthelmet_orange:
+    display_name: Lightknight Helmet (orange)
+    resource:
+      model_id: 2493
+      model_path: auto_generated/eclightknighthelmet_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknighthelmet_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclightknightarmor_orange
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclightknightlegs_orange:
+    display_name: Lightknight Leggings (orange)
+    resource:
+      model_id: 2494
+      model_path: auto_generated/eclightknightlegs_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightleggings_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclightknightarmor_orange
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclightknightboots_orange:
+    display_name: Lightknight Boots (orange)
+    resource:
+      model_id: 2491
+      model_path: auto_generated/eclightknightboots_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightboots_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclightknightarmor_orange
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  ecbluemechchest_orange:
+    display_name: Bluemech Chestplate (orange)
+    resource:
+      model_id: 2484
+      model_path: auto_generated/ecbluemechchest_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechchest_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecbluemecharmor_orange
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecbluemechhelmet_orange:
+    display_name: Bluemech Helmet (orange)
+    resource:
+      model_id: 2485
+      model_path: auto_generated/ecbluemechhelmet_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechhelmet_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecbluemecharmor_orange
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecbluemechlegs_orange:
+    display_name: Bluemech Leggings (orange)
+    resource:
+      model_id: 2486
+      model_path: auto_generated/ecbluemechlegs_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechleggings_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecbluemecharmor_orange
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecbluemechboots_orange:
+    display_name: Bluemech Boots (orange)
+    resource:
+      model_id: 2483
+      model_path: auto_generated/ecbluemechboots_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechboots_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecbluemecharmor_orange
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclavabeastchest_orange:
+    display_name: Lavabeast Chestplate (orange)
+    resource:
+      model_id: 2488
+      model_path: auto_generated/eclavabeastchest_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastchest_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclavabeastarmor_orange
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclavabeasthelmet_orange:
+    display_name: Lavabeast Helmet (orange)
+    resource:
+      model_id: 2489
+      model_path: auto_generated/eclavabeasthelmet_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeasthelmet_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclavabeastarmor_orange
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclavabeastlegs_orange:
+    display_name: Lavabeast Leggings (orange)
+    resource:
+      model_id: 2490
+      model_path: auto_generated/eclavabeastlegs_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastleggings_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclavabeastarmor_orange
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclavabeastboots_orange:
+    display_name: Lavabeast Boots (orange)
+    resource:
+      model_id: 2487
+      model_path: auto_generated/eclavabeastboots_orange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastboots_orange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclavabeastarmor_orange
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3

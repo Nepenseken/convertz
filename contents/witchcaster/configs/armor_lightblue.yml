@@ -1,0 +1,55 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_lightblue:
+    color: '#ffffe5'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_lightblue_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_lightblue_2
+    use_color: false
+equipments:
+  witchcaster_animated_lightblue:
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_lightblue_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_lightblue_2
+items:
+  witchcaster_animated_hat_lightblue:
+    display_name: DISPLAY (lightblue)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_lightblue
+      model_id: 2301
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_lightblue:
+    display_name: DISPLAY (lightblue)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_lightblue
+      model_id: 2300
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: witchcaster_animated_lightblue
+      legacy_armor_rendering_id: witchcaster_animated_lightblue
+      slot: CHEST
+  witchcaster_animated_leggings_lightblue:
+    display_name: DISPLAY (lightblue)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_lightblue
+      model_id: 2302
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: witchcaster_animated_lightblue
+      legacy_armor_rendering_id: witchcaster_animated_lightblue
+      slot: LEGS
+  witchcaster_animated_boots_lightblue:
+    display_name: DISPLAY (lightblue)
+    resource:
+      model_path: witchcaster_animated/armor/boots_lightblue
+      model_id: 2299
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: witchcaster_animated_lightblue
+      legacy_armor_rendering_id: witchcaster_animated_lightblue
+      slot: FEET

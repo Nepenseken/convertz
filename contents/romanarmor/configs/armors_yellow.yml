@@ -1,0 +1,650 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  roman_armor_aquilifer_yellow:
+    color: '#8c1a29'
+    layer_1: roman_armor/aquilifer_armor_layer_yellow_1
+    layer_2: roman_armor/aquilifer_armor_layer_yellow_2
+    use_color: false
+  roman_armor_centurion_yellow:
+    color: '#8c1a2a'
+    layer_1: roman_armor/centurion_armor_layer_yellow_1
+    layer_2: roman_armor/centurion_armor_layer_yellow_2
+    use_color: false
+  roman_armor_emperor_yellow:
+    color: '#8c1a2b'
+    layer_1: roman_armor/emperor_armor_layer_yellow_1
+    layer_2: roman_armor/emperor_armor_layer_yellow_2
+    use_color: false
+  roman_armor_general_yellow:
+    color: '#8c1a2c'
+    layer_1: roman_armor/general_armor_layer_yellow_1
+    layer_2: roman_armor/general_armor_layer_yellow_2
+    use_color: false
+  roman_armor_hastatus_yellow:
+    color: '#8c1a2d'
+    layer_1: roman_armor/hastatus_armor_layer_yellow_1
+    layer_2: roman_armor/hastatus_armor_layer_yellow_2
+    use_color: false
+  roman_armor_veles_yellow:
+    color: '#8c1a2e'
+    layer_1: roman_armor/veles_armor_layer_yellow_1
+    layer_2: roman_armor/veles_armor_layer_yellow_2
+    use_color: false
+  roman_armor_triarius_yellow:
+    color: '#8c1a2f'
+    layer_1: roman_armor/triarius_armor_layer_yellow_1
+    layer_2: roman_armor/triarius_armor_layer_yellow_2
+    use_color: false
+  roman_armor_legionnaire_yellow:
+    color: '#8c1a30'
+    layer_1: roman_armor/legionnaire_armor_layer_yellow_1
+    layer_2: roman_armor/legionnaire_armor_layer_yellow_2
+    use_color: false
+  roman_armor_praetorian_yellow:
+    color: '#8c1a31'
+    layer_1: roman_armor/praetorian_armor_layer_yellow_1
+    layer_2: roman_armor/praetorian_armor_layer_yellow_2
+    use_color: false
+  roman_armor_romanelite_yellow:
+    color: '#8c1a32'
+    layer_1: roman_armor/romanelite_armor_layer_yellow_1
+    layer_2: roman_armor/romanelite_armor_layer_yellow_2
+    use_color: false
+  roman_armor_praetorianred_yellow:
+    color: '#8c1a33'
+    layer_1: roman_armor/praetorianred_armor_layer_yellow_1
+    layer_2: roman_armor/praetorianred_armor_layer_yellow_2
+    use_color: false
+equipments:
+  roman_armor_aquilifer_yellow:
+    layer_1: roman_armor/aquilifer_armor_layer_yellow_1
+    layer_2: roman_armor/aquilifer_armor_layer_yellow_2
+  roman_armor_centurion_yellow:
+    layer_1: roman_armor/centurion_armor_layer_yellow_1
+    layer_2: roman_armor/centurion_armor_layer_yellow_2
+  roman_armor_emperor_yellow:
+    layer_1: roman_armor/emperor_armor_layer_yellow_1
+    layer_2: roman_armor/emperor_armor_layer_yellow_2
+  roman_armor_general_yellow:
+    layer_1: roman_armor/general_armor_layer_yellow_1
+    layer_2: roman_armor/general_armor_layer_yellow_2
+  roman_armor_hastatus_yellow:
+    layer_1: roman_armor/hastatus_armor_layer_yellow_1
+    layer_2: roman_armor/hastatus_armor_layer_yellow_2
+  roman_armor_veles_yellow:
+    layer_1: roman_armor/veles_armor_layer_yellow_1
+    layer_2: roman_armor/veles_armor_layer_yellow_2
+  roman_armor_triarius_yellow:
+    layer_1: roman_armor/triarius_armor_layer_yellow_1
+    layer_2: roman_armor/triarius_armor_layer_yellow_2
+  roman_armor_legionnaire_yellow:
+    layer_1: roman_armor/legionnaire_armor_layer_yellow_1
+    layer_2: roman_armor/legionnaire_armor_layer_yellow_2
+  roman_armor_praetorian_yellow:
+    layer_1: roman_armor/praetorian_armor_layer_yellow_1
+    layer_2: roman_armor/praetorian_armor_layer_yellow_2
+  roman_armor_romanelite_yellow:
+    layer_1: roman_armor/romanelite_armor_layer_yellow_1
+    layer_2: roman_armor/romanelite_armor_layer_yellow_2
+  roman_armor_praetorianred_yellow:
+    layer_1: roman_armor/praetorianred_armor_layer_yellow_1
+    layer_2: roman_armor/praetorianred_armor_layer_yellow_2
+items:
+  roman_armor_aquilifer_helmet_yellow:
+    display_name: Aquilifer Helmet (yellow)
+    resource:
+      model_id: 3387
+      generate: false
+      model_path: auto_generated/aquilifer_helmet_yellow
+      textures:
+      - roman_armor/aquilifer_helmet_yellow.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_aquilifer_yellow
+      legacy_armor_rendering_id: roman_armor_aquilifer_yellow
+      slot: HEAD
+  roman_armor_aquilifer_chestplate_yellow:
+    display_name: Aquilifer Chestplate (yellow)
+    resource:
+      model_id: 3386
+      generate: false
+      model_path: auto_generated/aquilifer_chestplate_yellow
+      textures:
+      - roman_armor/aquilifer_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_aquilifer_yellow
+      legacy_armor_rendering_id: roman_armor_aquilifer_yellow
+      slot: CHEST
+  roman_armor_aquilifer_leggings_yellow:
+    display_name: Aquilifer Leggings (yellow)
+    resource:
+      model_id: 3388
+      generate: false
+      model_path: auto_generated/aquilifer_leggings_yellow
+      textures:
+      - roman_armor/aquilifer_leggings_yellow.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_aquilifer_yellow
+      legacy_armor_rendering_id: roman_armor_aquilifer_yellow
+      slot: LEGS
+  roman_armor_aquilifer_boots_yellow:
+    display_name: Aquilifer Boots (yellow)
+    resource:
+      model_id: 3385
+      generate: false
+      model_path: auto_generated/aquilifer_boots_yellow
+      textures:
+      - roman_armor/aquilifer_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_aquilifer_yellow
+      legacy_armor_rendering_id: roman_armor_aquilifer_yellow
+      slot: FEET
+  roman_armor_centurion_helmet_yellow:
+    display_name: Centurion Helmet (yellow)
+    resource:
+      model_id: 3394
+      generate: false
+      model_path: auto_generated/centurion_helmet_yellow
+      textures:
+      - roman_armor/centurion_helmet_yellow.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_centurion_yellow
+      legacy_armor_rendering_id: roman_armor_centurion_yellow
+      slot: HEAD
+  roman_armor_centurion_chestplate_yellow:
+    display_name: Centurion Chestplate (yellow)
+    resource:
+      model_id: 3390
+      generate: false
+      model_path: auto_generated/centurion_chestplate_yellow
+      textures:
+      - roman_armor/centurion_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_centurion_yellow
+      legacy_armor_rendering_id: roman_armor_centurion_yellow
+      slot: CHEST
+  roman_armor_centurion_leggings_yellow:
+    display_name: Centurion Leggings (yellow)
+    resource:
+      model_id: 3395
+      generate: false
+      model_path: auto_generated/centurion_leggings_yellow
+      textures:
+      - roman_armor/centurion_leggings_yellow.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_centurion_yellow
+      legacy_armor_rendering_id: roman_armor_centurion_yellow
+      slot: LEGS
+  roman_armor_centurion_boots_yellow:
+    display_name: Centurion Boots (yellow)
+    resource:
+      model_id: 3389
+      generate: false
+      model_path: auto_generated/centurion_boots_yellow
+      textures:
+      - roman_armor/centurion_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_centurion_yellow
+      legacy_armor_rendering_id: roman_armor_centurion_yellow
+      slot: FEET
+  roman_armor_centurion_hat_1_yellow:
+    display_name: Centurion Hat 1 (yellow)
+    resource:
+      model_id: 3391
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_yellow_1
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_2_yellow:
+    display_name: Centurion Hat 2 (yellow)
+    resource:
+      model_id: 3392
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_yellow_2
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_3_yellow:
+    display_name: Centurion Hat 3 (yellow)
+    resource:
+      model_id: 3393
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_yellow_3
+    behaviours:
+      hat: true
+  roman_armor_emperor_helmet_yellow:
+    display_name: Emperor Helmet (yellow)
+    resource:
+      model_id: 3398
+      generate: false
+      model_path: auto_generated/emperor_helmet_yellow
+      textures:
+      - roman_armor/emperor_helmet_yellow.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_emperor_yellow
+      legacy_armor_rendering_id: roman_armor_emperor_yellow
+      slot: HEAD
+  roman_armor_emperor_chestplate_yellow:
+    display_name: Emperor Chestplate (yellow)
+    resource:
+      model_id: 3397
+      generate: false
+      model_path: auto_generated/emperor_chestplate_yellow
+      textures:
+      - roman_armor/emperor_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_emperor_yellow
+      legacy_armor_rendering_id: roman_armor_emperor_yellow
+      slot: CHEST
+  roman_armor_emperor_leggings_yellow:
+    display_name: Emperor Leggings (yellow)
+    resource:
+      model_id: 3399
+      generate: false
+      model_path: auto_generated/emperor_leggings_yellow
+      textures:
+      - roman_armor/emperor_leggings_yellow.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_emperor_yellow
+      legacy_armor_rendering_id: roman_armor_emperor_yellow
+      slot: LEGS
+  roman_armor_emperor_boots_yellow:
+    display_name: Emperor Boots (yellow)
+    resource:
+      model_id: 3396
+      generate: false
+      model_path: auto_generated/emperor_boots_yellow
+      textures:
+      - roman_armor/emperor_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_emperor_yellow
+      legacy_armor_rendering_id: roman_armor_emperor_yellow
+      slot: FEET
+  roman_armor_general_hat_yellow:
+    display_name: General Hat (yellow)
+    resource:
+      model_id: 3402
+      material: PAPER
+      generate: false
+      model_path: roman_armor/general_hat_yellow
+    behaviours:
+      hat: true
+  roman_armor_general_chestplate_yellow:
+    display_name: General Chestplate (yellow)
+    resource:
+      model_id: 3401
+      generate: false
+      model_path: auto_generated/general_chestplate_yellow
+      textures:
+      - roman_armor/general_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_general_yellow
+      legacy_armor_rendering_id: roman_armor_general_yellow
+      slot: CHEST
+  roman_armor_general_leggings_yellow:
+    display_name: General Leggings (yellow)
+    resource:
+      model_id: 3403
+      generate: false
+      model_path: auto_generated/general_leggings_yellow
+      textures:
+      - roman_armor/general_leggings_yellow.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_general_yellow
+      legacy_armor_rendering_id: roman_armor_general_yellow
+      slot: LEGS
+  roman_armor_general_boots_yellow:
+    display_name: General Boots (yellow)
+    resource:
+      model_id: 3400
+      generate: false
+      model_path: auto_generated/general_boots_yellow
+      textures:
+      - roman_armor/general_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_general_yellow
+      legacy_armor_rendering_id: roman_armor_general_yellow
+      slot: FEET
+  roman_armor_hastatus_helmet_yellow:
+    display_name: Hastatus Helmet (yellow)
+    resource:
+      model_id: 3406
+      generate: false
+      model_path: auto_generated/hastatus_helmet_yellow
+      textures:
+      - roman_armor/hastatus_helmet_yellow.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_hastatus_yellow
+      legacy_armor_rendering_id: roman_armor_hastatus_yellow
+      slot: HEAD
+  roman_armor_hastatus_chestplate_yellow:
+    display_name: Hastatus Chestplate (yellow)
+    resource:
+      model_id: 3405
+      generate: false
+      model_path: auto_generated/hastatus_chestplate_yellow
+      textures:
+      - roman_armor/hastatus_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_hastatus_yellow
+      legacy_armor_rendering_id: roman_armor_hastatus_yellow
+      slot: CHEST
+  roman_armor_hastatus_boots_yellow:
+    display_name: Hastatus Boots (yellow)
+    resource:
+      model_id: 3404
+      generate: false
+      model_path: auto_generated/hastatus_boots_yellow
+      textures:
+      - roman_armor/hastatus_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_hastatus_yellow
+      legacy_armor_rendering_id: roman_armor_hastatus_yellow
+      slot: FEET
+  roman_armor_veles_helmet_yellow:
+    display_name: Veles Helmet (yellow)
+    resource:
+      model_id: 3429
+      generate: false
+      model_path: auto_generated/veles_helmet_yellow
+      textures:
+      - roman_armor/veles_helmet_yellow.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_veles_yellow
+      legacy_armor_rendering_id: roman_armor_veles_yellow
+      slot: HEAD
+  roman_armor_veles_chestplate_yellow:
+    display_name: Veles Chestplate (yellow)
+    resource:
+      model_id: 3428
+      generate: false
+      model_path: auto_generated/veles_chestplate_yellow
+      textures:
+      - roman_armor/veles_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_veles_yellow
+      legacy_armor_rendering_id: roman_armor_veles_yellow
+      slot: CHEST
+  roman_armor_veles_boots_yellow:
+    display_name: Veles Boots (yellow)
+    resource:
+      model_id: 3427
+      generate: false
+      model_path: auto_generated/veles_boots_yellow
+      textures:
+      - roman_armor/veles_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_veles_yellow
+      legacy_armor_rendering_id: roman_armor_veles_yellow
+      slot: FEET
+  roman_armor_triarius_helmet_yellow:
+    display_name: Triarius Helmet (yellow)
+    resource:
+      model_id: 3425
+      generate: false
+      model_path: auto_generated/triarius_helmet_yellow
+      textures:
+      - roman_armor/triarius_helmet_yellow.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_triarius_yellow
+      legacy_armor_rendering_id: roman_armor_triarius_yellow
+      slot: HEAD
+  roman_armor_triarius_chestplate_yellow:
+    display_name: Triarius Chestplate (yellow)
+    resource:
+      model_id: 3424
+      generate: false
+      model_path: auto_generated/triarius_chestplate_yellow
+      textures:
+      - roman_armor/triarius_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_triarius_yellow
+      legacy_armor_rendering_id: roman_armor_triarius_yellow
+      slot: CHEST
+  roman_armor_triarius_leggings_yellow:
+    display_name: Triarius Leggings (yellow)
+    resource:
+      model_id: 3426
+      generate: false
+      model_path: auto_generated/triarius_leggings_yellow
+      textures:
+      - roman_armor/triarius_leggings_yellow.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_triarius_yellow
+      legacy_armor_rendering_id: roman_armor_triarius_yellow
+      slot: LEGS
+  roman_armor_triarius_boots_yellow:
+    display_name: Triarius Boots (yellow)
+    resource:
+      model_id: 3423
+      generate: false
+      model_path: auto_generated/triarius_boots_yellow
+      textures:
+      - roman_armor/triarius_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_triarius_yellow
+      legacy_armor_rendering_id: roman_armor_triarius_yellow
+      slot: FEET
+  roman_armor_legionnaire_helmet_yellow:
+    display_name: Legionnaire Helmet (yellow)
+    resource:
+      model_id: 3409
+      generate: false
+      model_path: auto_generated/legionnaire_helmet_yellow
+      textures:
+      - roman_armor/legionnaire_helmet_yellow.png
+      material: LEATHER_HELMET
+    equipment:
+      id: roman_armor_legionnaire_yellow
+      legacy_armor_rendering_id: roman_armor_legionnaire_yellow
+      slot: HEAD
+  roman_armor_legionnaire_chestplate_yellow:
+    display_name: Legionnaire Chestplate (yellow)
+    resource:
+      model_id: 3408
+      generate: false
+      model_path: auto_generated/legionnaire_chestplate_yellow
+      textures:
+      - roman_armor/legionnaire_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_legionnaire_yellow
+      legacy_armor_rendering_id: roman_armor_legionnaire_yellow
+      slot: CHEST
+  roman_armor_legionnaire_leggings_yellow:
+    display_name: Legionnaire Leggings (yellow)
+    resource:
+      model_id: 3410
+      generate: false
+      model_path: auto_generated/legionnaire_leggings_yellow
+      textures:
+      - roman_armor/legionnaire_leggings_yellow.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_legionnaire_yellow
+      legacy_armor_rendering_id: roman_armor_legionnaire_yellow
+      slot: LEGS
+  roman_armor_legionnaire_boots_yellow:
+    display_name: Legionnaire Boots (yellow)
+    resource:
+      model_id: 3407
+      generate: false
+      model_path: auto_generated/legionnaire_boots_yellow
+      textures:
+      - roman_armor/legionnaire_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_legionnaire_yellow
+      legacy_armor_rendering_id: roman_armor_legionnaire_yellow
+      slot: FEET
+  roman_armor_praetorian_hat_yellow:
+    display_name: Praetorian Hat (yellow)
+    resource:
+      model_id: 3413
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorian_hat_yellow
+    behaviours:
+      hat: true
+  roman_armor_praetorian_chestplate_yellow:
+    display_name: Praetorian Chestplate (yellow)
+    resource:
+      model_id: 3412
+      generate: false
+      model_path: auto_generated/praetorian_chestplate_yellow
+      textures:
+      - roman_armor/praetorian_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_praetorian_yellow
+      legacy_armor_rendering_id: roman_armor_praetorian_yellow
+      slot: CHEST
+  roman_armor_praetorian_leggings_yellow:
+    display_name: Praetorian Leggings (yellow)
+    resource:
+      model_id: 3414
+      generate: false
+      model_path: auto_generated/praetorian_leggings_yellow
+      textures:
+      - roman_armor/praetorian_leggings_yellow.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_praetorian_yellow
+      legacy_armor_rendering_id: roman_armor_praetorian_yellow
+      slot: LEGS
+  roman_armor_praetorian_boots_yellow:
+    display_name: Praetorian Boots (yellow)
+    resource:
+      model_id: 3411
+      generate: false
+      model_path: auto_generated/praetorian_boots_yellow
+      textures:
+      - roman_armor/praetorian_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_praetorian_yellow
+      legacy_armor_rendering_id: roman_armor_praetorian_yellow
+      slot: FEET
+  roman_armor_romanelite_hat_yellow:
+    display_name: Romanelite Hat (yellow)
+    resource:
+      model_id: 3421
+      material: PAPER
+      generate: false
+      model_path: roman_armor/romanelite_hat_yellow
+    behaviours:
+      hat: true
+  roman_armor_romanelite_chestplate_yellow:
+    display_name: Romanelite Chestplate (yellow)
+    resource:
+      model_id: 3420
+      generate: false
+      model_path: auto_generated/romanelite_chestplate_yellow
+      textures:
+      - roman_armor/romanelite_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_romanelite_yellow
+      legacy_armor_rendering_id: roman_armor_romanelite_yellow
+      slot: CHEST
+  roman_armor_romanelite_leggings_yellow:
+    display_name: Romanelite Leggings (yellow)
+    resource:
+      model_id: 3422
+      generate: false
+      model_path: auto_generated/romanelite_leggings_yellow
+      textures:
+      - roman_armor/romanelite_leggings_yellow.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_romanelite_yellow
+      legacy_armor_rendering_id: roman_armor_romanelite_yellow
+      slot: LEGS
+  roman_armor_romanelite_boots_yellow:
+    display_name: Romanelite Boots (yellow)
+    resource:
+      model_id: 3419
+      generate: false
+      model_path: auto_generated/romanelite_boots_yellow
+      textures:
+      - roman_armor/romanelite_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_romanelite_yellow
+      legacy_armor_rendering_id: roman_armor_romanelite_yellow
+      slot: FEET
+  roman_armor_praetorianred_hat_yellow:
+    display_name: Praetorianred Hat (yellow)
+    resource:
+      model_id: 3417
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorianred_hat_yellow
+    behaviours:
+      hat: true
+  roman_armor_praetorianred_chestplate_yellow:
+    display_name: Praetorianred Chestplate (yellow)
+    resource:
+      model_id: 3416
+      generate: false
+      model_path: auto_generated/praetorianred_chestplate_yellow
+      textures:
+      - roman_armor/praetorianred_chestplate_yellow.png
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: roman_armor_praetorianred_yellow
+      legacy_armor_rendering_id: roman_armor_praetorianred_yellow
+      slot: CHEST
+  roman_armor_praetorianred_leggings_yellow:
+    display_name: Praetorianred Leggings (yellow)
+    resource:
+      model_id: 3418
+      generate: false
+      model_path: auto_generated/praetorianred_leggings_yellow
+      textures:
+      - roman_armor/praetorianred_leggings_yellow.png
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: roman_armor_praetorianred_yellow
+      legacy_armor_rendering_id: roman_armor_praetorianred_yellow
+      slot: LEGS
+  roman_armor_praetorianred_boots_yellow:
+    display_name: Praetorianred Boots (yellow)
+    resource:
+      model_id: 3415
+      generate: false
+      model_path: auto_generated/praetorianred_boots_yellow
+      textures:
+      - roman_armor/praetorianred_boots_yellow.png
+      material: LEATHER_BOOTS
+    equipment:
+      id: roman_armor_praetorianred_yellow
+      legacy_armor_rendering_id: roman_armor_praetorianred_yellow
+      slot: FEET

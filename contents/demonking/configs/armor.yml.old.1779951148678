@@ -1,0 +1,49 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  demonking_assortment:
+    color: '#fffffa'
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_2
+    use_color: false
+items:
+  demonking_assortment_hat:
+    display_name: demonkinghat
+    permission: demonking_assortment
+    resource:
+      model_id: 138
+      material: PAPER
+      model_path: demonking_assortment/armor/hat
+      generate: false
+    behaviours:
+      hat: true
+  demonking_assortment_chestplate:
+    display_name: demonkingchestplate
+    resource:
+      model_id: 137
+      generate: false
+      model_path: demonking_assortment/armor/chestplate
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: demonking_assortment
+  demonking_assortment_leggings:
+    display_name: demonkingleggings
+    resource:
+      model_id: 139
+      generate: false
+      model_path: demonking_assortment/armor/leggings
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: demonking_assortment
+  demonking_assortment_boots:
+    display_name: demonkingboots
+    resource:
+      model_id: 136
+      generate: false
+      model_path: demonking_assortment/armor/boots
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: demonking_assortment

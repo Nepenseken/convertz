@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_darkblue:
+    color: '#5520cb'
+    layer_1: medieval_armor_set/heavy_armor_layer_darkblue_1
+    layer_2: medieval_armor_set/heavy_armor_layer_darkblue_2
+    use_color: false
+  medieval_armor_set_light_armor_darkblue:
+    color: '#5520cc'
+    layer_1: medieval_armor_set/light_armor_layer_darkblue_1
+    layer_2: medieval_armor_set/light_armor_layer_darkblue_2
+    use_color: false
+  medieval_armor_set_medium_armor_darkblue:
+    color: '#5520cd'
+    layer_1: medieval_armor_set/medium_armor_layer_darkblue_1
+    layer_2: medieval_armor_set/medium_armor_layer_darkblue_2
+    use_color: false
+  medieval_armor_set_wizard_armor_darkblue:
+    color: '#5520ce'
+    layer_1: medieval_armor_set/wizard_armor_layer_darkblue_1
+    layer_2: medieval_armor_set/wizard_armor_layer_darkblue_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_darkblue:
+    layer_1: medieval_armor_set/heavy_armor_layer_darkblue_1
+    layer_2: medieval_armor_set/heavy_armor_layer_darkblue_2
+  medieval_armor_set_light_armor_darkblue:
+    layer_1: medieval_armor_set/light_armor_layer_darkblue_1
+    layer_2: medieval_armor_set/light_armor_layer_darkblue_2
+  medieval_armor_set_medium_armor_darkblue:
+    layer_1: medieval_armor_set/medium_armor_layer_darkblue_1
+    layer_2: medieval_armor_set/medium_armor_layer_darkblue_2
+  medieval_armor_set_wizard_armor_darkblue:
+    layer_1: medieval_armor_set/wizard_armor_layer_darkblue_1
+    layer_2: medieval_armor_set/wizard_armor_layer_darkblue_2
+items:
+  medieval_armor_set_heavy_helmet_darkblue:
+    display_name: Heavy Helmet (darkblue)
+    resource:
+      model_id: 776
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_darkblue
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkblue
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_darkblue:
+    display_name: Heavy Chestplate (darkblue)
+    resource:
+      model_id: 775
+      model_path: medieval_armor_set/heavy_chestplate_darkblue
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkblue
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_darkblue:
+    display_name: Heavy Leggings (darkblue)
+    resource:
+      model_id: 777
+      model_path: medieval_armor_set/heavy_leggings_darkblue
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkblue
+      slot: LEGS
+  medieval_armor_set_heavy_boots_darkblue:
+    display_name: Heavy Boots (darkblue)
+    resource:
+      model_id: 774
+      model_path: medieval_armor_set/heavy_boots_darkblue
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkblue
+      slot: FEET
+  medieval_armor_set_light_helmet_darkblue:
+    display_name: Light Helmet (darkblue)
+    resource:
+      model_id: 780
+      model_path: medieval_armor_set/light_helmet_darkblue
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkblue
+      slot: HEAD
+  medieval_armor_set_light_chestplate_darkblue:
+    display_name: Light Chestplate (darkblue)
+    resource:
+      model_id: 779
+      model_path: medieval_armor_set/light_chestplate_darkblue
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkblue
+      slot: CHEST
+  medieval_armor_set_light_leggings_darkblue:
+    display_name: Light Leggings (darkblue)
+    resource:
+      model_id: 781
+      model_path: medieval_armor_set/light_leggings_darkblue
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkblue
+      slot: LEGS
+  medieval_armor_set_light_boots_darkblue:
+    display_name: Light Boots (darkblue)
+    resource:
+      model_id: 778
+      model_path: medieval_armor_set/light_boots_darkblue
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkblue
+      slot: FEET
+  medieval_armor_set_medium_helmet_darkblue:
+    display_name: Medium Helmet (darkblue)
+    resource:
+      model_id: 784
+      model_path: medieval_armor_set/medium_helmet_darkblue
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkblue
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_darkblue:
+    display_name: Medium Chestplate (darkblue)
+    resource:
+      model_id: 783
+      model_path: medieval_armor_set/medium_chestplate_darkblue
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkblue
+      slot: CHEST
+  medieval_armor_set_medium_leggings_darkblue:
+    display_name: Medium Leggings (darkblue)
+    resource:
+      model_id: 785
+      model_path: medieval_armor_set/medium_leggings_darkblue
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkblue
+      slot: LEGS
+  medieval_armor_set_medium_boots_darkblue:
+    display_name: Medium Boots (darkblue)
+    resource:
+      model_id: 782
+      model_path: medieval_armor_set/medium_boots_darkblue
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkblue
+      slot: FEET
+  medieval_armor_set_wizard_helmet_darkblue:
+    display_name: Wizard Helmet (darkblue)
+    resource:
+      model_id: 788
+      model_path: medieval_armor_set/wizard_helmet_darkblue
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkblue
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_darkblue:
+    display_name: Wizard Chestplate (darkblue)
+    resource:
+      model_id: 787
+      model_path: medieval_armor_set/wizard_chestplate_darkblue
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkblue
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_darkblue:
+    display_name: Wizard Leggings (darkblue)
+    resource:
+      model_id: 789
+      model_path: medieval_armor_set/wizard_leggings_darkblue
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkblue
+      slot: LEGS
+  medieval_armor_set_wizard_boots_darkblue:
+    display_name: Wizard Boots (darkblue)
+    resource:
+      model_id: 786
+      model_path: medieval_armor_set/wizard_boots_darkblue
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkblue
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkblue
+      slot: FEET

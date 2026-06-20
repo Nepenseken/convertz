@@ -1,0 +1,56 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  demonking_assortment_red:
+    color: '#ffffe1'
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_red_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_red_2
+    use_color: false
+equipments:
+  demonking_assortment_red:
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_red_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_red_2
+items:
+  demonking_assortment_hat_red:
+    display_name: demonkinghat (red)
+    permission: demonking_assortment.red
+    resource:
+      model_id: 162
+      material: PAPER
+      model_path: demonking_assortment/armor/hat_red
+      generate: false
+    behaviours:
+      hat: true
+  demonking_assortment_chestplate_red:
+    display_name: demonkingchestplate (red)
+    resource:
+      model_id: 161
+      generate: false
+      model_path: demonking_assortment/armor/chestplate_red
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: demonking_assortment_red
+      legacy_armor_rendering_id: demonking_assortment_red
+      slot: CHEST
+  demonking_assortment_leggings_red:
+    display_name: demonkingleggings (red)
+    resource:
+      model_id: 163
+      generate: false
+      model_path: demonking_assortment/armor/leggings_red
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: demonking_assortment_red
+      legacy_armor_rendering_id: demonking_assortment_red
+      slot: LEGS
+  demonking_assortment_boots_red:
+    display_name: demonkingboots (red)
+    resource:
+      model_id: 160
+      generate: false
+      model_path: demonking_assortment/armor/boots_red
+      material: LEATHER_BOOTS
+    equipment:
+      id: demonking_assortment_red
+      legacy_armor_rendering_id: demonking_assortment_red
+      slot: FEET

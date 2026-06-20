@@ -1,0 +1,8 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "particle": "elitecreatures:medieval_armor_set/wizard_chestplate_darkred",
+    "layer0": "elitecreatures:medieval_armor_set/wizard_chestplate_darkred"
+  }
+}

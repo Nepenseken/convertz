@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_darkred:
+    color: '#552097'
+    layer_1: medieval_armor_set/heavy_armor_layer_darkred_1
+    layer_2: medieval_armor_set/heavy_armor_layer_darkred_2
+    use_color: false
+  medieval_armor_set_light_armor_darkred:
+    color: '#552098'
+    layer_1: medieval_armor_set/light_armor_layer_darkred_1
+    layer_2: medieval_armor_set/light_armor_layer_darkred_2
+    use_color: false
+  medieval_armor_set_medium_armor_darkred:
+    color: '#552099'
+    layer_1: medieval_armor_set/medium_armor_layer_darkred_1
+    layer_2: medieval_armor_set/medium_armor_layer_darkred_2
+    use_color: false
+  medieval_armor_set_wizard_armor_darkred:
+    color: '#55209a'
+    layer_1: medieval_armor_set/wizard_armor_layer_darkred_1
+    layer_2: medieval_armor_set/wizard_armor_layer_darkred_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_darkred:
+    layer_1: medieval_armor_set/heavy_armor_layer_darkred_1
+    layer_2: medieval_armor_set/heavy_armor_layer_darkred_2
+  medieval_armor_set_light_armor_darkred:
+    layer_1: medieval_armor_set/light_armor_layer_darkred_1
+    layer_2: medieval_armor_set/light_armor_layer_darkred_2
+  medieval_armor_set_medium_armor_darkred:
+    layer_1: medieval_armor_set/medium_armor_layer_darkred_1
+    layer_2: medieval_armor_set/medium_armor_layer_darkred_2
+  medieval_armor_set_wizard_armor_darkred:
+    layer_1: medieval_armor_set/wizard_armor_layer_darkred_1
+    layer_2: medieval_armor_set/wizard_armor_layer_darkred_2
+items:
+  medieval_armor_set_heavy_helmet_darkred:
+    display_name: Heavy Helmet (darkred)
+    resource:
+      model_id: 520
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_darkred
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkred
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_darkred:
+    display_name: Heavy Chestplate (darkred)
+    resource:
+      model_id: 519
+      model_path: medieval_armor_set/heavy_chestplate_darkred
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkred
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_darkred:
+    display_name: Heavy Leggings (darkred)
+    resource:
+      model_id: 521
+      model_path: medieval_armor_set/heavy_leggings_darkred
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkred
+      slot: LEGS
+  medieval_armor_set_heavy_boots_darkred:
+    display_name: Heavy Boots (darkred)
+    resource:
+      model_id: 518
+      model_path: medieval_armor_set/heavy_boots_darkred
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkred
+      slot: FEET
+  medieval_armor_set_light_helmet_darkred:
+    display_name: Light Helmet (darkred)
+    resource:
+      model_id: 524
+      model_path: medieval_armor_set/light_helmet_darkred
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkred
+      slot: HEAD
+  medieval_armor_set_light_chestplate_darkred:
+    display_name: Light Chestplate (darkred)
+    resource:
+      model_id: 523
+      model_path: medieval_armor_set/light_chestplate_darkred
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkred
+      slot: CHEST
+  medieval_armor_set_light_leggings_darkred:
+    display_name: Light Leggings (darkred)
+    resource:
+      model_id: 525
+      model_path: medieval_armor_set/light_leggings_darkred
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkred
+      slot: LEGS
+  medieval_armor_set_light_boots_darkred:
+    display_name: Light Boots (darkred)
+    resource:
+      model_id: 522
+      model_path: medieval_armor_set/light_boots_darkred
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkred
+      slot: FEET
+  medieval_armor_set_medium_helmet_darkred:
+    display_name: Medium Helmet (darkred)
+    resource:
+      model_id: 528
+      model_path: medieval_armor_set/medium_helmet_darkred
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkred
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_darkred:
+    display_name: Medium Chestplate (darkred)
+    resource:
+      model_id: 527
+      model_path: medieval_armor_set/medium_chestplate_darkred
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkred
+      slot: CHEST
+  medieval_armor_set_medium_leggings_darkred:
+    display_name: Medium Leggings (darkred)
+    resource:
+      model_id: 529
+      model_path: medieval_armor_set/medium_leggings_darkred
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkred
+      slot: LEGS
+  medieval_armor_set_medium_boots_darkred:
+    display_name: Medium Boots (darkred)
+    resource:
+      model_id: 526
+      model_path: medieval_armor_set/medium_boots_darkred
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkred
+      slot: FEET
+  medieval_armor_set_wizard_helmet_darkred:
+    display_name: Wizard Helmet (darkred)
+    resource:
+      model_id: 532
+      model_path: medieval_armor_set/wizard_helmet_darkred
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkred
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_darkred:
+    display_name: Wizard Chestplate (darkred)
+    resource:
+      model_id: 531
+      model_path: medieval_armor_set/wizard_chestplate_darkred
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkred
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_darkred:
+    display_name: Wizard Leggings (darkred)
+    resource:
+      model_id: 533
+      model_path: medieval_armor_set/wizard_leggings_darkred
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkred
+      slot: LEGS
+  medieval_armor_set_wizard_boots_darkred:
+    display_name: Wizard Boots (darkred)
+    resource:
+      model_id: 530
+      model_path: medieval_armor_set/wizard_boots_darkred
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkred
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkred
+      slot: FEET

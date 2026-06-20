@@ -1,0 +1,316 @@
+info:
+  namespace: ec_elitearmors
+armors_rendering:
+  ecrubyarmor_darkorange:
+    color: '#5cec2d'
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_darkorange
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_darkorange_2
+    emissive_1: armor/ec_elitearmorsvol6/ecrubyarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecrubyarmore_2
+    use_color: false
+  eclightknightarmor_darkorange:
+    color: '#66f6af'
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_darkorange
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_darkorange_2
+    emissive_1: armor/ec_elitearmorsvol6/eclightknightarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclightknightarmore_2
+    use_color: false
+  ecbluemecharmor_darkorange:
+    color: '#87dfb8'
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_darkorange
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_darkorange_2
+    emissive_1: armor/ec_elitearmorsvol6/ecbluemecharmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecbluemecharmore_2
+    use_color: false
+  eclavabeastarmor_darkorange:
+    color: '#28a7f0'
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_darkorange
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_darkorange_2
+    emissive_1: armor/ec_elitearmorsvol6/eclavabeastarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclavabeastarmore_2
+    use_color: false
+items:
+  ecrubychest_darkorange:
+    display_name: Ruby Chestplate (darkorange)
+    resource:
+      model_id: 2512
+      model_path: auto_generated/ecrubychest_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubychest_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecrubyarmor_darkorange
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecrubyhelmet_darkorange:
+    display_name: Ruby Helmet (darkorange)
+    resource:
+      model_id: 2513
+      model_path: auto_generated/ecrubyhelmet_darkorange
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecrubyarmor_darkorange
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecrubylegs_darkorange:
+    display_name: Ruby Leggings (darkorange)
+    resource:
+      model_id: 2514
+      model_path: auto_generated/ecrubylegs_darkorange
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecrubyarmor_darkorange
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecrubyboots_darkorange:
+    display_name: Ruby Boots (darkorange)
+    resource:
+      model_id: 2511
+      model_path: auto_generated/ecrubyboots_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubyboots_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecrubyarmor_darkorange
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclightknightchest_darkorange:
+    display_name: Lightknight Chestplate (darkorange)
+    resource:
+      model_id: 2508
+      model_path: auto_generated/eclightknightchest_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightchest_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclightknightarmor_darkorange
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclightknighthelmet_darkorange:
+    display_name: Lightknight Helmet (darkorange)
+    resource:
+      model_id: 2509
+      model_path: auto_generated/eclightknighthelmet_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknighthelmet_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclightknightarmor_darkorange
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclightknightlegs_darkorange:
+    display_name: Lightknight Leggings (darkorange)
+    resource:
+      model_id: 2510
+      model_path: auto_generated/eclightknightlegs_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightleggings_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclightknightarmor_darkorange
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclightknightboots_darkorange:
+    display_name: Lightknight Boots (darkorange)
+    resource:
+      model_id: 2507
+      model_path: auto_generated/eclightknightboots_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightboots_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclightknightarmor_darkorange
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  ecbluemechchest_darkorange:
+    display_name: Bluemech Chestplate (darkorange)
+    resource:
+      model_id: 2500
+      model_path: auto_generated/ecbluemechchest_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechchest_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecbluemecharmor_darkorange
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecbluemechhelmet_darkorange:
+    display_name: Bluemech Helmet (darkorange)
+    resource:
+      model_id: 2501
+      model_path: auto_generated/ecbluemechhelmet_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechhelmet_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecbluemecharmor_darkorange
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecbluemechlegs_darkorange:
+    display_name: Bluemech Leggings (darkorange)
+    resource:
+      model_id: 2502
+      model_path: auto_generated/ecbluemechlegs_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechleggings_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecbluemecharmor_darkorange
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecbluemechboots_darkorange:
+    display_name: Bluemech Boots (darkorange)
+    resource:
+      model_id: 2499
+      model_path: auto_generated/ecbluemechboots_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechboots_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecbluemecharmor_darkorange
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclavabeastchest_darkorange:
+    display_name: Lavabeast Chestplate (darkorange)
+    resource:
+      model_id: 2504
+      model_path: auto_generated/eclavabeastchest_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastchest_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclavabeastarmor_darkorange
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclavabeasthelmet_darkorange:
+    display_name: Lavabeast Helmet (darkorange)
+    resource:
+      model_id: 2505
+      model_path: auto_generated/eclavabeasthelmet_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeasthelmet_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclavabeastarmor_darkorange
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclavabeastlegs_darkorange:
+    display_name: Lavabeast Leggings (darkorange)
+    resource:
+      model_id: 2506
+      model_path: auto_generated/eclavabeastlegs_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastleggings_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclavabeastarmor_darkorange
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclavabeastboots_darkorange:
+    display_name: Lavabeast Boots (darkorange)
+    resource:
+      model_id: 2503
+      model_path: auto_generated/eclavabeastboots_darkorange
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastboots_darkorange.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclavabeastarmor_darkorange
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3

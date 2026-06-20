@@ -1,0 +1,48 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_purple:
+    color: '#fffffa'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_purple_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_purple_2
+    use_color: false
+items:
+  witchcaster_animated_hat_purple:
+    display_name: DISPLAY (purple)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_purple
+      model_id: 2317
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_purple:
+    display_name: DISPLAY (purple)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_purple
+      model_id: 2316
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: witchcaster_animated_purple
+  witchcaster_animated_leggings_purple:
+    display_name: DISPLAY (purple)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_purple
+      model_id: 2318
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: witchcaster_animated_purple
+  witchcaster_animated_boots_purple:
+    display_name: DISPLAY (purple)
+    resource:
+      model_path: witchcaster_animated/armor/boots_purple
+      model_id: 2315
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: witchcaster_animated_purple

@@ -1,0 +1,8 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "particle": "elitecreatures:roman_armor/emperor_chestplate_lightblue",
+    "layer0": "elitecreatures:roman_armor/emperor_chestplate_lightblue"
+  }
+}

@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_lightpurple:
+    color: '#5520c3'
+    layer_1: medieval_armor_set/heavy_armor_layer_lightpurple_1
+    layer_2: medieval_armor_set/heavy_armor_layer_lightpurple_2
+    use_color: false
+  medieval_armor_set_light_armor_lightpurple:
+    color: '#5520c4'
+    layer_1: medieval_armor_set/light_armor_layer_lightpurple_1
+    layer_2: medieval_armor_set/light_armor_layer_lightpurple_2
+    use_color: false
+  medieval_armor_set_medium_armor_lightpurple:
+    color: '#5520c5'
+    layer_1: medieval_armor_set/medium_armor_layer_lightpurple_1
+    layer_2: medieval_armor_set/medium_armor_layer_lightpurple_2
+    use_color: false
+  medieval_armor_set_wizard_armor_lightpurple:
+    color: '#5520c6'
+    layer_1: medieval_armor_set/wizard_armor_layer_lightpurple_1
+    layer_2: medieval_armor_set/wizard_armor_layer_lightpurple_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_lightpurple:
+    layer_1: medieval_armor_set/heavy_armor_layer_lightpurple_1
+    layer_2: medieval_armor_set/heavy_armor_layer_lightpurple_2
+  medieval_armor_set_light_armor_lightpurple:
+    layer_1: medieval_armor_set/light_armor_layer_lightpurple_1
+    layer_2: medieval_armor_set/light_armor_layer_lightpurple_2
+  medieval_armor_set_medium_armor_lightpurple:
+    layer_1: medieval_armor_set/medium_armor_layer_lightpurple_1
+    layer_2: medieval_armor_set/medium_armor_layer_lightpurple_2
+  medieval_armor_set_wizard_armor_lightpurple:
+    layer_1: medieval_armor_set/wizard_armor_layer_lightpurple_1
+    layer_2: medieval_armor_set/wizard_armor_layer_lightpurple_2
+items:
+  medieval_armor_set_heavy_helmet_lightpurple:
+    display_name: Heavy Helmet (lightpurple)
+    resource:
+      model_id: 792
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_lightpurple
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightpurple
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_lightpurple:
+    display_name: Heavy Chestplate (lightpurple)
+    resource:
+      model_id: 791
+      model_path: medieval_armor_set/heavy_chestplate_lightpurple
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightpurple
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_lightpurple:
+    display_name: Heavy Leggings (lightpurple)
+    resource:
+      model_id: 793
+      model_path: medieval_armor_set/heavy_leggings_lightpurple
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightpurple
+      slot: LEGS
+  medieval_armor_set_heavy_boots_lightpurple:
+    display_name: Heavy Boots (lightpurple)
+    resource:
+      model_id: 790
+      model_path: medieval_armor_set/heavy_boots_lightpurple
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightpurple
+      slot: FEET
+  medieval_armor_set_light_helmet_lightpurple:
+    display_name: Light Helmet (lightpurple)
+    resource:
+      model_id: 796
+      model_path: medieval_armor_set/light_helmet_lightpurple
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightpurple
+      slot: HEAD
+  medieval_armor_set_light_chestplate_lightpurple:
+    display_name: Light Chestplate (lightpurple)
+    resource:
+      model_id: 795
+      model_path: medieval_armor_set/light_chestplate_lightpurple
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightpurple
+      slot: CHEST
+  medieval_armor_set_light_leggings_lightpurple:
+    display_name: Light Leggings (lightpurple)
+    resource:
+      model_id: 797
+      model_path: medieval_armor_set/light_leggings_lightpurple
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightpurple
+      slot: LEGS
+  medieval_armor_set_light_boots_lightpurple:
+    display_name: Light Boots (lightpurple)
+    resource:
+      model_id: 794
+      model_path: medieval_armor_set/light_boots_lightpurple
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightpurple
+      slot: FEET
+  medieval_armor_set_medium_helmet_lightpurple:
+    display_name: Medium Helmet (lightpurple)
+    resource:
+      model_id: 800
+      model_path: medieval_armor_set/medium_helmet_lightpurple
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightpurple
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_lightpurple:
+    display_name: Medium Chestplate (lightpurple)
+    resource:
+      model_id: 799
+      model_path: medieval_armor_set/medium_chestplate_lightpurple
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightpurple
+      slot: CHEST
+  medieval_armor_set_medium_leggings_lightpurple:
+    display_name: Medium Leggings (lightpurple)
+    resource:
+      model_id: 801
+      model_path: medieval_armor_set/medium_leggings_lightpurple
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightpurple
+      slot: LEGS
+  medieval_armor_set_medium_boots_lightpurple:
+    display_name: Medium Boots (lightpurple)
+    resource:
+      model_id: 798
+      model_path: medieval_armor_set/medium_boots_lightpurple
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightpurple
+      slot: FEET
+  medieval_armor_set_wizard_helmet_lightpurple:
+    display_name: Wizard Helmet (lightpurple)
+    resource:
+      model_id: 804
+      model_path: medieval_armor_set/wizard_helmet_lightpurple
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightpurple
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_lightpurple:
+    display_name: Wizard Chestplate (lightpurple)
+    resource:
+      model_id: 803
+      model_path: medieval_armor_set/wizard_chestplate_lightpurple
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightpurple
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_lightpurple:
+    display_name: Wizard Leggings (lightpurple)
+    resource:
+      model_id: 805
+      model_path: medieval_armor_set/wizard_leggings_lightpurple
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightpurple
+      slot: LEGS
+  medieval_armor_set_wizard_boots_lightpurple:
+    display_name: Wizard Boots (lightpurple)
+    resource:
+      model_id: 802
+      model_path: medieval_armor_set/wizard_boots_lightpurple
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightpurple
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightpurple
+      slot: FEET

@@ -1,0 +1,184 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_lightgray:
+    color: '#55208f'
+    layer_1: medieval_armor_set/heavy_armor_layer_lightgray_1
+    layer_2: medieval_armor_set/heavy_armor_layer_lightgray_2
+    use_color: false
+  medieval_armor_set_light_armor_lightgray:
+    color: '#552090'
+    layer_1: medieval_armor_set/light_armor_layer_lightgray_1
+    layer_2: medieval_armor_set/light_armor_layer_lightgray_2
+    use_color: false
+  medieval_armor_set_medium_armor_lightgray:
+    color: '#552091'
+    layer_1: medieval_armor_set/medium_armor_layer_lightgray_1
+    layer_2: medieval_armor_set/medium_armor_layer_lightgray_2
+    use_color: false
+  medieval_armor_set_wizard_armor_lightgray:
+    color: '#552092'
+    layer_1: medieval_armor_set/wizard_armor_layer_lightgray_1
+    layer_2: medieval_armor_set/wizard_armor_layer_lightgray_2
+    use_color: false
+items:
+  medieval_armor_set_heavy_helmet_lightgray:
+    display_name: Heavy Helmet (lightgray)
+    resource:
+      model_id: 440
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_lightgray
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_heavy_armor_lightgray
+  medieval_armor_set_heavy_chestplate_lightgray:
+    display_name: Heavy Chestplate (lightgray)
+    resource:
+      model_id: 439
+      model_path: medieval_armor_set/heavy_chestplate_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_heavy_armor_lightgray
+  medieval_armor_set_heavy_leggings_lightgray:
+    display_name: Heavy Leggings (lightgray)
+    resource:
+      model_id: 441
+      model_path: medieval_armor_set/heavy_leggings_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_heavy_armor_lightgray
+  medieval_armor_set_heavy_boots_lightgray:
+    display_name: Heavy Boots (lightgray)
+    resource:
+      model_id: 438
+      model_path: medieval_armor_set/heavy_boots_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_heavy_armor_lightgray
+  medieval_armor_set_light_helmet_lightgray:
+    display_name: Light Helmet (lightgray)
+    resource:
+      model_id: 444
+      model_path: medieval_armor_set/light_helmet_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_light_armor_lightgray
+  medieval_armor_set_light_chestplate_lightgray:
+    display_name: Light Chestplate (lightgray)
+    resource:
+      model_id: 443
+      model_path: medieval_armor_set/light_chestplate_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_light_armor_lightgray
+  medieval_armor_set_light_leggings_lightgray:
+    display_name: Light Leggings (lightgray)
+    resource:
+      model_id: 445
+      model_path: medieval_armor_set/light_leggings_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_light_armor_lightgray
+  medieval_armor_set_light_boots_lightgray:
+    display_name: Light Boots (lightgray)
+    resource:
+      model_id: 442
+      model_path: medieval_armor_set/light_boots_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_light_armor_lightgray
+  medieval_armor_set_medium_helmet_lightgray:
+    display_name: Medium Helmet (lightgray)
+    resource:
+      model_id: 448
+      model_path: medieval_armor_set/medium_helmet_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_medium_armor_lightgray
+  medieval_armor_set_medium_chestplate_lightgray:
+    display_name: Medium Chestplate (lightgray)
+    resource:
+      model_id: 447
+      model_path: medieval_armor_set/medium_chestplate_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_medium_armor_lightgray
+  medieval_armor_set_medium_leggings_lightgray:
+    display_name: Medium Leggings (lightgray)
+    resource:
+      model_id: 449
+      model_path: medieval_armor_set/medium_leggings_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_medium_armor_lightgray
+  medieval_armor_set_medium_boots_lightgray:
+    display_name: Medium Boots (lightgray)
+    resource:
+      model_id: 446
+      model_path: medieval_armor_set/medium_boots_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_medium_armor_lightgray
+  medieval_armor_set_wizard_helmet_lightgray:
+    display_name: Wizard Helmet (lightgray)
+    resource:
+      model_id: 452
+      model_path: medieval_armor_set/wizard_helmet_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: medieval_armor_set_wizard_armor_lightgray
+  medieval_armor_set_wizard_chestplate_lightgray:
+    display_name: Wizard Chestplate (lightgray)
+    resource:
+      model_id: 451
+      model_path: medieval_armor_set/wizard_chestplate_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: medieval_armor_set_wizard_armor_lightgray
+  medieval_armor_set_wizard_leggings_lightgray:
+    display_name: Wizard Leggings (lightgray)
+    resource:
+      model_id: 453
+      model_path: medieval_armor_set/wizard_leggings_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: medieval_armor_set_wizard_armor_lightgray
+  medieval_armor_set_wizard_boots_lightgray:
+    display_name: Wizard Boots (lightgray)
+    resource:
+      model_id: 450
+      model_path: medieval_armor_set/wizard_boots_lightgray
+      generate: false
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: medieval_armor_set_wizard_armor_lightgray

@@ -1,0 +1,49 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  demonking_assortment_lightblue:
+    color: '#fffffa'
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_lightblue_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_lightblue_2
+    use_color: false
+items:
+  demonking_assortment_hat_lightblue:
+    display_name: demonkinghat (lightblue)
+    permission: demonking_assortment.lightblue
+    resource:
+      model_id: 222
+      material: PAPER
+      model_path: demonking_assortment/armor/hat_lightblue
+      generate: false
+    behaviours:
+      hat: true
+  demonking_assortment_chestplate_lightblue:
+    display_name: demonkingchestplate (lightblue)
+    resource:
+      model_id: 221
+      generate: false
+      model_path: demonking_assortment/armor/chestplate_lightblue
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: demonking_assortment_lightblue
+  demonking_assortment_leggings_lightblue:
+    display_name: demonkingleggings (lightblue)
+    resource:
+      model_id: 223
+      generate: false
+      model_path: demonking_assortment/armor/leggings_lightblue
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: demonking_assortment_lightblue
+  demonking_assortment_boots_lightblue:
+    display_name: demonkingboots (lightblue)
+    resource:
+      model_id: 220
+      generate: false
+      model_path: demonking_assortment/armor/boots_lightblue
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: demonking_assortment_lightblue

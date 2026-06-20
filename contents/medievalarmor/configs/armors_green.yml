@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_green:
+    color: '#55208f'
+    layer_1: medieval_armor_set/heavy_armor_layer_green_1
+    layer_2: medieval_armor_set/heavy_armor_layer_green_2
+    use_color: false
+  medieval_armor_set_light_armor_green:
+    color: '#552090'
+    layer_1: medieval_armor_set/light_armor_layer_green_1
+    layer_2: medieval_armor_set/light_armor_layer_green_2
+    use_color: false
+  medieval_armor_set_medium_armor_green:
+    color: '#552091'
+    layer_1: medieval_armor_set/medium_armor_layer_green_1
+    layer_2: medieval_armor_set/medium_armor_layer_green_2
+    use_color: false
+  medieval_armor_set_wizard_armor_green:
+    color: '#552092'
+    layer_1: medieval_armor_set/wizard_armor_layer_green_1
+    layer_2: medieval_armor_set/wizard_armor_layer_green_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_green:
+    layer_1: medieval_armor_set/heavy_armor_layer_green_1
+    layer_2: medieval_armor_set/heavy_armor_layer_green_2
+  medieval_armor_set_light_armor_green:
+    layer_1: medieval_armor_set/light_armor_layer_green_1
+    layer_2: medieval_armor_set/light_armor_layer_green_2
+  medieval_armor_set_medium_armor_green:
+    layer_1: medieval_armor_set/medium_armor_layer_green_1
+    layer_2: medieval_armor_set/medium_armor_layer_green_2
+  medieval_armor_set_wizard_armor_green:
+    layer_1: medieval_armor_set/wizard_armor_layer_green_1
+    layer_2: medieval_armor_set/wizard_armor_layer_green_2
+items:
+  medieval_armor_set_heavy_helmet_green:
+    display_name: Heavy Helmet (green)
+    resource:
+      model_id: 680
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_green
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_green
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_green:
+    display_name: Heavy Chestplate (green)
+    resource:
+      model_id: 679
+      model_path: medieval_armor_set/heavy_chestplate_green
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_green
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_green:
+    display_name: Heavy Leggings (green)
+    resource:
+      model_id: 681
+      model_path: medieval_armor_set/heavy_leggings_green
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_green
+      slot: LEGS
+  medieval_armor_set_heavy_boots_green:
+    display_name: Heavy Boots (green)
+    resource:
+      model_id: 678
+      model_path: medieval_armor_set/heavy_boots_green
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_green
+      slot: FEET
+  medieval_armor_set_light_helmet_green:
+    display_name: Light Helmet (green)
+    resource:
+      model_id: 684
+      model_path: medieval_armor_set/light_helmet_green
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_green
+      slot: HEAD
+  medieval_armor_set_light_chestplate_green:
+    display_name: Light Chestplate (green)
+    resource:
+      model_id: 683
+      model_path: medieval_armor_set/light_chestplate_green
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_green
+      slot: CHEST
+  medieval_armor_set_light_leggings_green:
+    display_name: Light Leggings (green)
+    resource:
+      model_id: 685
+      model_path: medieval_armor_set/light_leggings_green
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_green
+      slot: LEGS
+  medieval_armor_set_light_boots_green:
+    display_name: Light Boots (green)
+    resource:
+      model_id: 682
+      model_path: medieval_armor_set/light_boots_green
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_green
+      slot: FEET
+  medieval_armor_set_medium_helmet_green:
+    display_name: Medium Helmet (green)
+    resource:
+      model_id: 688
+      model_path: medieval_armor_set/medium_helmet_green
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_green
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_green:
+    display_name: Medium Chestplate (green)
+    resource:
+      model_id: 687
+      model_path: medieval_armor_set/medium_chestplate_green
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_green
+      slot: CHEST
+  medieval_armor_set_medium_leggings_green:
+    display_name: Medium Leggings (green)
+    resource:
+      model_id: 689
+      model_path: medieval_armor_set/medium_leggings_green
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_green
+      slot: LEGS
+  medieval_armor_set_medium_boots_green:
+    display_name: Medium Boots (green)
+    resource:
+      model_id: 686
+      model_path: medieval_armor_set/medium_boots_green
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_green
+      slot: FEET
+  medieval_armor_set_wizard_helmet_green:
+    display_name: Wizard Helmet (green)
+    resource:
+      model_id: 692
+      model_path: medieval_armor_set/wizard_helmet_green
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_green
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_green:
+    display_name: Wizard Chestplate (green)
+    resource:
+      model_id: 691
+      model_path: medieval_armor_set/wizard_chestplate_green
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_green
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_green:
+    display_name: Wizard Leggings (green)
+    resource:
+      model_id: 693
+      model_path: medieval_armor_set/wizard_leggings_green
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_green
+      slot: LEGS
+  medieval_armor_set_wizard_boots_green:
+    display_name: Wizard Boots (green)
+    resource:
+      model_id: 690
+      model_path: medieval_armor_set/wizard_boots_green
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_green
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_green
+      slot: FEET

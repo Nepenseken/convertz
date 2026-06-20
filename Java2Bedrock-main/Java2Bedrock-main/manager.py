@@ -1,4 +1,4 @@
-import zipfile, os
+import zipfile, os, sys
 
 with zipfile.ZipFile("staging/input_pack.zip", "r") as file:
     file.extractall("pack/")
@@ -10,7 +10,10 @@ try:
     if os.getenv("MEG3_FIX") == "true": import meg3
 except Exception as e: print(e)
 try:
-    if os.getenv("ARMOR_CONVERSION") == "true": import armor
+    if os.getenv("ARMOR_CONVERSION") == "true":
+        import armor
+        contents_dir = os.getenv("ARMOR_CONTENTS_DIR", "contents")
+        armor.main([sys.argv[0], contents_dir] if len(sys.argv) < 2 else sys.argv)
 except Exception as e: print(e)
 try:
     if os.getenv("FONT_CONVERSION") == "true": import font

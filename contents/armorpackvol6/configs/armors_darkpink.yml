@@ -1,0 +1,329 @@
+info:
+  namespace: ec_elitearmors
+armors_rendering:
+  ecrubyarmor_darkpink:
+    color: '#5cec45'
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_darkpink
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_darkpink_2
+    emissive_1: armor/ec_elitearmorsvol6/ecrubyarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecrubyarmore_2
+    use_color: false
+  eclightknightarmor_darkpink:
+    color: '#66f6c7'
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_darkpink
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_darkpink_2
+    emissive_1: armor/ec_elitearmorsvol6/eclightknightarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclightknightarmore_2
+    use_color: false
+  ecbluemecharmor_darkpink:
+    color: '#87dfd0'
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_darkpink
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_darkpink_2
+    emissive_1: armor/ec_elitearmorsvol6/ecbluemecharmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecbluemecharmore_2
+    use_color: false
+  eclavabeastarmor_darkpink:
+    color: '#28a808'
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_darkpink
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_darkpink_2
+    emissive_1: armor/ec_elitearmorsvol6/eclavabeastarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclavabeastarmore_2
+    use_color: false
+equipments:
+  ecrubyarmor_darkpink:
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_darkpink
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_darkpink_2
+  eclightknightarmor_darkpink:
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_darkpink
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_darkpink_2
+  ecbluemecharmor_darkpink:
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_darkpink
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_darkpink_2
+  eclavabeastarmor_darkpink:
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_darkpink
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_darkpink_2
+items:
+  ecrubychest_darkpink:
+    display_name: Ruby Chestplate (darkpink)
+    resource:
+      model_id: 2480
+      model_path: auto_generated/ecrubychest_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubychest_darkpink.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_darkpink
+      legacy_armor_rendering_id: ecrubyarmor_darkpink
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  ecrubyhelmet_darkpink:
+    display_name: Ruby Helmet (darkpink)
+    resource:
+      model_id: 2481
+      model_path: auto_generated/ecrubyhelmet_darkpink
+      generate: false
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_darkpink
+      legacy_armor_rendering_id: ecrubyarmor_darkpink
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecrubylegs_darkpink:
+    display_name: Ruby Leggings (darkpink)
+    resource:
+      model_id: 2482
+      model_path: auto_generated/ecrubylegs_darkpink
+      generate: false
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_darkpink
+      legacy_armor_rendering_id: ecrubyarmor_darkpink
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  ecrubyboots_darkpink:
+    display_name: Ruby Boots (darkpink)
+    resource:
+      model_id: 2479
+      model_path: auto_generated/ecrubyboots_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubyboots_darkpink.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_darkpink
+      legacy_armor_rendering_id: ecrubyarmor_darkpink
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclightknightchest_darkpink:
+    display_name: Lightknight Chestplate (darkpink)
+    resource:
+      model_id: 2476
+      model_path: auto_generated/eclightknightchest_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightchest_darkpink.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_darkpink
+      legacy_armor_rendering_id: eclightknightarmor_darkpink
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  eclightknighthelmet_darkpink:
+    display_name: Lightknight Helmet (darkpink)
+    resource:
+      model_id: 2477
+      model_path: auto_generated/eclightknighthelmet_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknighthelmet_darkpink.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_darkpink
+      legacy_armor_rendering_id: eclightknightarmor_darkpink
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclightknightlegs_darkpink:
+    display_name: Lightknight Leggings (darkpink)
+    resource:
+      model_id: 2478
+      model_path: auto_generated/eclightknightlegs_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightleggings_darkpink.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_darkpink
+      legacy_armor_rendering_id: eclightknightarmor_darkpink
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  eclightknightboots_darkpink:
+    display_name: Lightknight Boots (darkpink)
+    resource:
+      model_id: 2475
+      model_path: auto_generated/eclightknightboots_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightboots_darkpink.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_darkpink
+      legacy_armor_rendering_id: eclightknightarmor_darkpink
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecbluemechchest_darkpink:
+    display_name: Bluemech Chestplate (darkpink)
+    resource:
+      model_id: 2468
+      model_path: auto_generated/ecbluemechchest_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechchest_darkpink.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_darkpink
+      legacy_armor_rendering_id: ecbluemecharmor_darkpink
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  ecbluemechhelmet_darkpink:
+    display_name: Bluemech Helmet (darkpink)
+    resource:
+      model_id: 2469
+      model_path: auto_generated/ecbluemechhelmet_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechhelmet_darkpink.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_darkpink
+      legacy_armor_rendering_id: ecbluemecharmor_darkpink
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecbluemechlegs_darkpink:
+    display_name: Bluemech Leggings (darkpink)
+    resource:
+      model_id: 2470
+      model_path: auto_generated/ecbluemechlegs_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechleggings_darkpink.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_darkpink
+      legacy_armor_rendering_id: ecbluemecharmor_darkpink
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  ecbluemechboots_darkpink:
+    display_name: Bluemech Boots (darkpink)
+    resource:
+      model_id: 2467
+      model_path: auto_generated/ecbluemechboots_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechboots_darkpink.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_darkpink
+      legacy_armor_rendering_id: ecbluemecharmor_darkpink
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclavabeastchest_darkpink:
+    display_name: Lavabeast Chestplate (darkpink)
+    resource:
+      model_id: 2472
+      model_path: auto_generated/eclavabeastchest_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastchest_darkpink.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_darkpink
+      legacy_armor_rendering_id: eclavabeastarmor_darkpink
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  eclavabeasthelmet_darkpink:
+    display_name: Lavabeast Helmet (darkpink)
+    resource:
+      model_id: 2473
+      model_path: auto_generated/eclavabeasthelmet_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeasthelmet_darkpink.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_darkpink
+      legacy_armor_rendering_id: eclavabeastarmor_darkpink
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclavabeastlegs_darkpink:
+    display_name: Lavabeast Leggings (darkpink)
+    resource:
+      model_id: 2474
+      model_path: auto_generated/eclavabeastlegs_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastleggings_darkpink.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_darkpink
+      legacy_armor_rendering_id: eclavabeastarmor_darkpink
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  eclavabeastboots_darkpink:
+    display_name: Lavabeast Boots (darkpink)
+    resource:
+      model_id: 2471
+      model_path: auto_generated/eclavabeastboots_darkpink
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastboots_darkpink.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_darkpink
+      legacy_armor_rendering_id: eclavabeastarmor_darkpink
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3

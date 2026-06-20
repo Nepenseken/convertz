@@ -1,0 +1,578 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  roman_armor_aquilifer_lightgray:
+    color: '#8c196e'
+    layer_1: roman_armor/aquilifer_armor_layer_lightgray_1
+    layer_2: roman_armor/aquilifer_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_centurion_lightgray:
+    color: '#8c1970'
+    layer_1: roman_armor/centurion_armor_layer_lightgray_1
+    layer_2: roman_armor/centurion_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_emperor_lightgray:
+    color: '#8c1976'
+    layer_1: roman_armor/emperor_armor_layer_lightgray_1
+    layer_2: roman_armor/emperor_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_general_lightgray:
+    color: '#8c1977'
+    layer_1: roman_armor/general_armor_layer_lightgray_1
+    layer_2: roman_armor/general_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_hastatus_lightgray:
+    color: '#8c1978'
+    layer_1: roman_armor/hastatus_armor_layer_lightgray_1
+    layer_2: roman_armor/hastatus_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_veles_lightgray:
+    color: '#8c1979'
+    layer_1: roman_armor/veles_armor_layer_lightgray_1
+    layer_2: roman_armor/veles_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_triarius_lightgray:
+    color: '#8c197a'
+    layer_1: roman_armor/triarius_armor_layer_lightgray_1
+    layer_2: roman_armor/triarius_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_legionnaire_lightgray:
+    color: '#8c197b'
+    layer_1: roman_armor/legionnaire_armor_layer_lightgray_1
+    layer_2: roman_armor/legionnaire_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_praetorian_lightgray:
+    color: '#8c197c'
+    layer_1: roman_armor/praetorian_armor_layer_lightgray_1
+    layer_2: roman_armor/praetorian_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_romanelite_lightgray:
+    color: '#8c197d'
+    layer_1: roman_armor/romanelite_armor_layer_lightgray_1
+    layer_2: roman_armor/romanelite_armor_layer_lightgray_2
+    use_color: false
+  roman_armor_praetorianred_lightgray:
+    color: '#8c197e'
+    layer_1: roman_armor/praetorianred_armor_layer_lightgray_1
+    layer_2: roman_armor/praetorianred_armor_layer_lightgray_2
+    use_color: false
+items:
+  roman_armor_aquilifer_helmet_lightgray:
+    display_name: Aquilifer Helmet (lightgray)
+    resource:
+      model_id: 2847
+      generate: false
+      model_path: auto_generated/aquilifer_helmet_lightgray
+      textures:
+      - roman_armor/aquilifer_helmet_lightgray.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_aquilifer_lightgray
+  roman_armor_aquilifer_chestplate_lightgray:
+    display_name: Aquilifer Chestplate (lightgray)
+    resource:
+      model_id: 2846
+      generate: false
+      model_path: auto_generated/aquilifer_chestplate_lightgray
+      textures:
+      - roman_armor/aquilifer_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_aquilifer_lightgray
+  roman_armor_aquilifer_leggings_lightgray:
+    display_name: Aquilifer Leggings (lightgray)
+    resource:
+      model_id: 2848
+      generate: false
+      model_path: auto_generated/aquilifer_leggings_lightgray
+      textures:
+      - roman_armor/aquilifer_leggings_lightgray.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_aquilifer_lightgray
+  roman_armor_aquilifer_boots_lightgray:
+    display_name: Aquilifer Boots (lightgray)
+    resource:
+      model_id: 2845
+      generate: false
+      model_path: auto_generated/aquilifer_boots_lightgray
+      textures:
+      - roman_armor/aquilifer_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_aquilifer_lightgray
+  roman_armor_centurion_helmet_lightgray:
+    display_name: Centurion Helmet (lightgray)
+    resource:
+      model_id: 2854
+      generate: false
+      model_path: auto_generated/centurion_helmet_lightgray
+      textures:
+      - roman_armor/centurion_helmet_lightgray.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_centurion_lightgray
+  roman_armor_centurion_chestplate_lightgray:
+    display_name: Centurion Chestplate (lightgray)
+    resource:
+      model_id: 2850
+      generate: false
+      model_path: auto_generated/centurion_chestplate_lightgray
+      textures:
+      - roman_armor/centurion_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_centurion_lightgray
+  roman_armor_centurion_leggings_lightgray:
+    display_name: Centurion Leggings (lightgray)
+    resource:
+      model_id: 2855
+      generate: false
+      model_path: auto_generated/centurion_leggings_lightgray
+      textures:
+      - roman_armor/centurion_leggings_lightgray.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_centurion_lightgray
+  roman_armor_centurion_boots_lightgray:
+    display_name: Centurion Boots (lightgray)
+    resource:
+      model_id: 2849
+      generate: false
+      model_path: auto_generated/centurion_boots_lightgray
+      textures:
+      - roman_armor/centurion_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_centurion_lightgray
+  roman_armor_centurion_hat_1_lightgray:
+    display_name: Centurion Hat 1 (lightgray)
+    resource:
+      model_id: 2851
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_lightgray_1
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_2_lightgray:
+    display_name: Centurion Hat 2 (lightgray)
+    resource:
+      model_id: 2852
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_lightgray_2
+    behaviours:
+      hat: true
+  roman_armor_centurion_hat_3_lightgray:
+    display_name: Centurion Hat 3 (lightgray)
+    resource:
+      model_id: 2853
+      material: PAPER
+      generate: false
+      model_path: roman_armor/centurion_hat_lightgray_3
+    behaviours:
+      hat: true
+  roman_armor_emperor_helmet_lightgray:
+    display_name: Emperor Helmet (lightgray)
+    resource:
+      model_id: 2858
+      generate: false
+      model_path: auto_generated/emperor_helmet_lightgray
+      textures:
+      - roman_armor/emperor_helmet_lightgray.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_emperor_lightgray
+  roman_armor_emperor_chestplate_lightgray:
+    display_name: Emperor Chestplate (lightgray)
+    resource:
+      model_id: 2857
+      generate: false
+      model_path: auto_generated/emperor_chestplate_lightgray
+      textures:
+      - roman_armor/emperor_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_emperor_lightgray
+  roman_armor_emperor_leggings_lightgray:
+    display_name: Emperor Leggings (lightgray)
+    resource:
+      model_id: 2859
+      generate: false
+      model_path: auto_generated/emperor_leggings_lightgray
+      textures:
+      - roman_armor/emperor_leggings_lightgray.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_emperor_lightgray
+  roman_armor_emperor_boots_lightgray:
+    display_name: Emperor Boots (lightgray)
+    resource:
+      model_id: 2856
+      generate: false
+      model_path: auto_generated/emperor_boots_lightgray
+      textures:
+      - roman_armor/emperor_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_emperor_lightgray
+  roman_armor_general_hat_lightgray:
+    display_name: General Hat (lightgray)
+    resource:
+      model_id: 2862
+      material: PAPER
+      generate: false
+      model_path: roman_armor/general_hat_lightgray
+    behaviours:
+      hat: true
+  roman_armor_general_chestplate_lightgray:
+    display_name: General Chestplate (lightgray)
+    resource:
+      model_id: 2861
+      generate: false
+      model_path: auto_generated/general_chestplate_lightgray
+      textures:
+      - roman_armor/general_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_general_lightgray
+  roman_armor_general_leggings_lightgray:
+    display_name: General Leggings (lightgray)
+    resource:
+      model_id: 2863
+      generate: false
+      model_path: auto_generated/general_leggings_lightgray
+      textures:
+      - roman_armor/general_leggings_lightgray.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_general_lightgray
+  roman_armor_general_boots_lightgray:
+    display_name: General Boots (lightgray)
+    resource:
+      model_id: 2860
+      generate: false
+      model_path: auto_generated/general_boots_lightgray
+      textures:
+      - roman_armor/general_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_general_lightgray
+  roman_armor_hastatus_helmet_lightgray:
+    display_name: Hastatus Helmet (lightgray)
+    resource:
+      model_id: 2866
+      generate: false
+      model_path: auto_generated/hastatus_helmet_lightgray
+      textures:
+      - roman_armor/hastatus_helmet_lightgray.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_hastatus_lightgray
+  roman_armor_hastatus_chestplate_lightgray:
+    display_name: Hastatus Chestplate (lightgray)
+    resource:
+      model_id: 2865
+      generate: false
+      model_path: auto_generated/hastatus_chestplate_lightgray
+      textures:
+      - roman_armor/hastatus_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_hastatus_lightgray
+  roman_armor_hastatus_boots_lightgray:
+    display_name: Hastatus Boots (lightgray)
+    resource:
+      model_id: 2864
+      generate: false
+      model_path: auto_generated/hastatus_boots_lightgray
+      textures:
+      - roman_armor/hastatus_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_hastatus_lightgray
+  roman_armor_veles_helmet_lightgray:
+    display_name: Veles Helmet (lightgray)
+    resource:
+      model_id: 2889
+      generate: false
+      model_path: auto_generated/veles_helmet_lightgray
+      textures:
+      - roman_armor/veles_helmet_lightgray.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_veles_lightgray
+  roman_armor_veles_chestplate_lightgray:
+    display_name: Veles Chestplate (lightgray)
+    resource:
+      model_id: 2888
+      generate: false
+      model_path: auto_generated/veles_chestplate_lightgray
+      textures:
+      - roman_armor/veles_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_veles_lightgray
+  roman_armor_veles_boots_lightgray:
+    display_name: Veles Boots (lightgray)
+    resource:
+      model_id: 2887
+      generate: false
+      model_path: auto_generated/veles_boots_lightgray
+      textures:
+      - roman_armor/veles_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_veles_lightgray
+  roman_armor_triarius_helmet_lightgray:
+    display_name: Triarius Helmet (lightgray)
+    resource:
+      model_id: 2885
+      generate: false
+      model_path: auto_generated/triarius_helmet_lightgray
+      textures:
+      - roman_armor/triarius_helmet_lightgray.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_triarius_lightgray
+  roman_armor_triarius_chestplate_lightgray:
+    display_name: Triarius Chestplate (lightgray)
+    resource:
+      model_id: 2884
+      generate: false
+      model_path: auto_generated/triarius_chestplate_lightgray
+      textures:
+      - roman_armor/triarius_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_triarius_lightgray
+  roman_armor_triarius_leggings_lightgray:
+    display_name: Triarius Leggings (lightgray)
+    resource:
+      model_id: 2886
+      generate: false
+      model_path: auto_generated/triarius_leggings_lightgray
+      textures:
+      - roman_armor/triarius_leggings_lightgray.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_triarius_lightgray
+  roman_armor_triarius_boots_lightgray:
+    display_name: Triarius Boots (lightgray)
+    resource:
+      model_id: 2883
+      generate: false
+      model_path: auto_generated/triarius_boots_lightgray
+      textures:
+      - roman_armor/triarius_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_triarius_lightgray
+  roman_armor_legionnaire_helmet_lightgray:
+    display_name: Legionnaire Helmet (lightgray)
+    resource:
+      model_id: 2869
+      generate: false
+      model_path: auto_generated/legionnaire_helmet_lightgray
+      textures:
+      - roman_armor/legionnaire_helmet_lightgray.png
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: roman_armor_legionnaire_lightgray
+  roman_armor_legionnaire_chestplate_lightgray:
+    display_name: Legionnaire Chestplate (lightgray)
+    resource:
+      model_id: 2868
+      generate: false
+      model_path: auto_generated/legionnaire_chestplate_lightgray
+      textures:
+      - roman_armor/legionnaire_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_legionnaire_lightgray
+  roman_armor_legionnaire_leggings_lightgray:
+    display_name: Legionnaire Leggings (lightgray)
+    resource:
+      model_id: 2870
+      generate: false
+      model_path: auto_generated/legionnaire_leggings_lightgray
+      textures:
+      - roman_armor/legionnaire_leggings_lightgray.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_legionnaire_lightgray
+  roman_armor_legionnaire_boots_lightgray:
+    display_name: Legionnaire Boots (lightgray)
+    resource:
+      model_id: 2867
+      generate: false
+      model_path: auto_generated/legionnaire_boots_lightgray
+      textures:
+      - roman_armor/legionnaire_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_legionnaire_lightgray
+  roman_armor_praetorian_hat_lightgray:
+    display_name: Praetorian Hat (lightgray)
+    resource:
+      model_id: 2873
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorian_hat_lightgray
+    behaviours:
+      hat: true
+  roman_armor_praetorian_chestplate_lightgray:
+    display_name: Praetorian Chestplate (lightgray)
+    resource:
+      model_id: 2872
+      generate: false
+      model_path: auto_generated/praetorian_chestplate_lightgray
+      textures:
+      - roman_armor/praetorian_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_praetorian_lightgray
+  roman_armor_praetorian_leggings_lightgray:
+    display_name: Praetorian Leggings (lightgray)
+    resource:
+      model_id: 2874
+      generate: false
+      model_path: auto_generated/praetorian_leggings_lightgray
+      textures:
+      - roman_armor/praetorian_leggings_lightgray.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_praetorian_lightgray
+  roman_armor_praetorian_boots_lightgray:
+    display_name: Praetorian Boots (lightgray)
+    resource:
+      model_id: 2871
+      generate: false
+      model_path: auto_generated/praetorian_boots_lightgray
+      textures:
+      - roman_armor/praetorian_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_praetorian_lightgray
+  roman_armor_romanelite_hat_lightgray:
+    display_name: Romanelite Hat (lightgray)
+    resource:
+      model_id: 2881
+      material: PAPER
+      generate: false
+      model_path: roman_armor/romanelite_hat_lightgray
+    behaviours:
+      hat: true
+  roman_armor_romanelite_chestplate_lightgray:
+    display_name: Romanelite Chestplate (lightgray)
+    resource:
+      model_id: 2880
+      generate: false
+      model_path: auto_generated/romanelite_chestplate_lightgray
+      textures:
+      - roman_armor/romanelite_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_romanelite_lightgray
+  roman_armor_romanelite_leggings_lightgray:
+    display_name: Romanelite Leggings (lightgray)
+    resource:
+      model_id: 2882
+      generate: false
+      model_path: auto_generated/romanelite_leggings_lightgray
+      textures:
+      - roman_armor/romanelite_leggings_lightgray.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_romanelite_lightgray
+  roman_armor_romanelite_boots_lightgray:
+    display_name: Romanelite Boots (lightgray)
+    resource:
+      model_id: 2879
+      generate: false
+      model_path: auto_generated/romanelite_boots_lightgray
+      textures:
+      - roman_armor/romanelite_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_romanelite_lightgray
+  roman_armor_praetorianred_hat_lightgray:
+    display_name: Praetorianred Hat (lightgray)
+    resource:
+      model_id: 2877
+      material: PAPER
+      generate: false
+      model_path: roman_armor/praetorianred_hat_lightgray
+    behaviours:
+      hat: true
+  roman_armor_praetorianred_chestplate_lightgray:
+    display_name: Praetorianred Chestplate (lightgray)
+    resource:
+      model_id: 2876
+      generate: false
+      model_path: auto_generated/praetorianred_chestplate_lightgray
+      textures:
+      - roman_armor/praetorianred_chestplate_lightgray.png
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: roman_armor_praetorianred_lightgray
+  roman_armor_praetorianred_leggings_lightgray:
+    display_name: Praetorianred Leggings (lightgray)
+    resource:
+      model_id: 2878
+      generate: false
+      model_path: auto_generated/praetorianred_leggings_lightgray
+      textures:
+      - roman_armor/praetorianred_leggings_lightgray.png
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: roman_armor_praetorianred_lightgray
+  roman_armor_praetorianred_boots_lightgray:
+    display_name: Praetorianred Boots (lightgray)
+    resource:
+      model_id: 2875
+      generate: false
+      model_path: auto_generated/praetorianred_boots_lightgray
+      textures:
+      - roman_armor/praetorianred_boots_lightgray.png
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: roman_armor_praetorianred_lightgray

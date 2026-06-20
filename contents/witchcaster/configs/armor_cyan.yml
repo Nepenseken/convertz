@@ -1,0 +1,55 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_cyan:
+    color: '#ffffd6'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_cyan_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_cyan_2
+    use_color: false
+equipments:
+  witchcaster_animated_cyan:
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_cyan_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_cyan_2
+items:
+  witchcaster_animated_hat_cyan:
+    display_name: DISPLAY (cyan)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_cyan
+      model_id: 2293
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_cyan:
+    display_name: DISPLAY (cyan)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_cyan
+      model_id: 2292
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: witchcaster_animated_cyan
+      legacy_armor_rendering_id: witchcaster_animated_cyan
+      slot: CHEST
+  witchcaster_animated_leggings_cyan:
+    display_name: DISPLAY (cyan)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_cyan
+      model_id: 2294
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: witchcaster_animated_cyan
+      legacy_armor_rendering_id: witchcaster_animated_cyan
+      slot: LEGS
+  witchcaster_animated_boots_cyan:
+    display_name: DISPLAY (cyan)
+    resource:
+      model_path: witchcaster_animated/armor/boots_cyan
+      model_id: 2291
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: witchcaster_animated_cyan
+      legacy_armor_rendering_id: witchcaster_animated_cyan
+      slot: FEET

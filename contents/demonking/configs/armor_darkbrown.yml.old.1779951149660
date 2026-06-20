@@ -1,0 +1,49 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  demonking_assortment_darkbrown:
+    color: '#fffffa'
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_darkbrown_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_darkbrown_2
+    use_color: false
+items:
+  demonking_assortment_hat_darkbrown:
+    display_name: demonkinghat (darkbrown)
+    permission: demonking_assortment.darkbrown
+    resource:
+      model_id: 190
+      material: PAPER
+      model_path: demonking_assortment/armor/hat_darkbrown
+      generate: false
+    behaviours:
+      hat: true
+  demonking_assortment_chestplate_darkbrown:
+    display_name: demonkingchestplate (darkbrown)
+    resource:
+      model_id: 189
+      generate: false
+      model_path: demonking_assortment/armor/chestplate_darkbrown
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: demonking_assortment_darkbrown
+  demonking_assortment_leggings_darkbrown:
+    display_name: demonkingleggings (darkbrown)
+    resource:
+      model_id: 191
+      generate: false
+      model_path: demonking_assortment/armor/leggings_darkbrown
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: demonking_assortment_darkbrown
+  demonking_assortment_boots_darkbrown:
+    display_name: demonkingboots (darkbrown)
+    resource:
+      model_id: 188
+      generate: false
+      model_path: demonking_assortment/armor/boots_darkbrown
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: demonking_assortment_darkbrown

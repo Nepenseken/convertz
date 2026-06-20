@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_lightred:
+    color: '#5520d3'
+    layer_1: medieval_armor_set/heavy_armor_layer_lightred_1
+    layer_2: medieval_armor_set/heavy_armor_layer_lightred_2
+    use_color: false
+  medieval_armor_set_light_armor_lightred:
+    color: '#5520d4'
+    layer_1: medieval_armor_set/light_armor_layer_lightred_1
+    layer_2: medieval_armor_set/light_armor_layer_lightred_2
+    use_color: false
+  medieval_armor_set_medium_armor_lightred:
+    color: '#5520d5'
+    layer_1: medieval_armor_set/medium_armor_layer_lightred_1
+    layer_2: medieval_armor_set/medium_armor_layer_lightred_2
+    use_color: false
+  medieval_armor_set_wizard_armor_lightred:
+    color: '#5520d6'
+    layer_1: medieval_armor_set/wizard_armor_layer_lightred_1
+    layer_2: medieval_armor_set/wizard_armor_layer_lightred_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_lightred:
+    layer_1: medieval_armor_set/heavy_armor_layer_lightred_1
+    layer_2: medieval_armor_set/heavy_armor_layer_lightred_2
+  medieval_armor_set_light_armor_lightred:
+    layer_1: medieval_armor_set/light_armor_layer_lightred_1
+    layer_2: medieval_armor_set/light_armor_layer_lightred_2
+  medieval_armor_set_medium_armor_lightred:
+    layer_1: medieval_armor_set/medium_armor_layer_lightred_1
+    layer_2: medieval_armor_set/medium_armor_layer_lightred_2
+  medieval_armor_set_wizard_armor_lightred:
+    layer_1: medieval_armor_set/wizard_armor_layer_lightred_1
+    layer_2: medieval_armor_set/wizard_armor_layer_lightred_2
+items:
+  medieval_armor_set_heavy_helmet_lightred:
+    display_name: Heavy Helmet (lightred)
+    resource:
+      model_id: 488
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_lightred
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightred
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_lightred:
+    display_name: Heavy Chestplate (lightred)
+    resource:
+      model_id: 487
+      model_path: medieval_armor_set/heavy_chestplate_lightred
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightred
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_lightred:
+    display_name: Heavy Leggings (lightred)
+    resource:
+      model_id: 489
+      model_path: medieval_armor_set/heavy_leggings_lightred
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightred
+      slot: LEGS
+  medieval_armor_set_heavy_boots_lightred:
+    display_name: Heavy Boots (lightred)
+    resource:
+      model_id: 486
+      model_path: medieval_armor_set/heavy_boots_lightred
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightred
+      slot: FEET
+  medieval_armor_set_light_helmet_lightred:
+    display_name: Light Helmet (lightred)
+    resource:
+      model_id: 492
+      model_path: medieval_armor_set/light_helmet_lightred
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightred
+      slot: HEAD
+  medieval_armor_set_light_chestplate_lightred:
+    display_name: Light Chestplate (lightred)
+    resource:
+      model_id: 491
+      model_path: medieval_armor_set/light_chestplate_lightred
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightred
+      slot: CHEST
+  medieval_armor_set_light_leggings_lightred:
+    display_name: Light Leggings (lightred)
+    resource:
+      model_id: 493
+      model_path: medieval_armor_set/light_leggings_lightred
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightred
+      slot: LEGS
+  medieval_armor_set_light_boots_lightred:
+    display_name: Light Boots (lightred)
+    resource:
+      model_id: 490
+      model_path: medieval_armor_set/light_boots_lightred
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightred
+      slot: FEET
+  medieval_armor_set_medium_helmet_lightred:
+    display_name: Medium Helmet (lightred)
+    resource:
+      model_id: 496
+      model_path: medieval_armor_set/medium_helmet_lightred
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightred
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_lightred:
+    display_name: Medium Chestplate (lightred)
+    resource:
+      model_id: 495
+      model_path: medieval_armor_set/medium_chestplate_lightred
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightred
+      slot: CHEST
+  medieval_armor_set_medium_leggings_lightred:
+    display_name: Medium Leggings (lightred)
+    resource:
+      model_id: 497
+      model_path: medieval_armor_set/medium_leggings_lightred
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightred
+      slot: LEGS
+  medieval_armor_set_medium_boots_lightred:
+    display_name: Medium Boots (lightred)
+    resource:
+      model_id: 494
+      model_path: medieval_armor_set/medium_boots_lightred
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightred
+      slot: FEET
+  medieval_armor_set_wizard_helmet_lightred:
+    display_name: Wizard Helmet (lightred)
+    resource:
+      model_id: 500
+      model_path: medieval_armor_set/wizard_helmet_lightred
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightred
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_lightred:
+    display_name: Wizard Chestplate (lightred)
+    resource:
+      model_id: 499
+      model_path: medieval_armor_set/wizard_chestplate_lightred
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightred
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_lightred:
+    display_name: Wizard Leggings (lightred)
+    resource:
+      model_id: 501
+      model_path: medieval_armor_set/wizard_leggings_lightred
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightred
+      slot: LEGS
+  medieval_armor_set_wizard_boots_lightred:
+    display_name: Wizard Boots (lightred)
+    resource:
+      model_id: 498
+      model_path: medieval_armor_set/wizard_boots_lightred
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightred
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightred
+      slot: FEET

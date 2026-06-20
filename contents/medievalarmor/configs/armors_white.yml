@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_white:
+    color: '#5520f7'
+    layer_1: medieval_armor_set/heavy_armor_layer_white_1
+    layer_2: medieval_armor_set/heavy_armor_layer_white_2
+    use_color: false
+  medieval_armor_set_light_armor_white:
+    color: '#5520f8'
+    layer_1: medieval_armor_set/light_armor_layer_white_1
+    layer_2: medieval_armor_set/light_armor_layer_white_2
+    use_color: false
+  medieval_armor_set_medium_armor_white:
+    color: '#5520f9'
+    layer_1: medieval_armor_set/medium_armor_layer_white_1
+    layer_2: medieval_armor_set/medium_armor_layer_white_2
+    use_color: false
+  medieval_armor_set_wizard_armor_white:
+    color: '#5520fa'
+    layer_1: medieval_armor_set/wizard_armor_layer_white_1
+    layer_2: medieval_armor_set/wizard_armor_layer_white_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_white:
+    layer_1: medieval_armor_set/heavy_armor_layer_white_1
+    layer_2: medieval_armor_set/heavy_armor_layer_white_2
+  medieval_armor_set_light_armor_white:
+    layer_1: medieval_armor_set/light_armor_layer_white_1
+    layer_2: medieval_armor_set/light_armor_layer_white_2
+  medieval_armor_set_medium_armor_white:
+    layer_1: medieval_armor_set/medium_armor_layer_white_1
+    layer_2: medieval_armor_set/medium_armor_layer_white_2
+  medieval_armor_set_wizard_armor_white:
+    layer_1: medieval_armor_set/wizard_armor_layer_white_1
+    layer_2: medieval_armor_set/wizard_armor_layer_white_2
+items:
+  medieval_armor_set_heavy_helmet_white:
+    display_name: Heavy Helmet (white)
+    resource:
+      model_id: 424
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_white
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_white
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_white:
+    display_name: Heavy Chestplate (white)
+    resource:
+      model_id: 423
+      model_path: medieval_armor_set/heavy_chestplate_white
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_white
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_white:
+    display_name: Heavy Leggings (white)
+    resource:
+      model_id: 425
+      model_path: medieval_armor_set/heavy_leggings_white
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_white
+      slot: LEGS
+  medieval_armor_set_heavy_boots_white:
+    display_name: Heavy Boots (white)
+    resource:
+      model_id: 422
+      model_path: medieval_armor_set/heavy_boots_white
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_white
+      slot: FEET
+  medieval_armor_set_light_helmet_white:
+    display_name: Light Helmet (white)
+    resource:
+      model_id: 428
+      model_path: medieval_armor_set/light_helmet_white
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_white
+      slot: HEAD
+  medieval_armor_set_light_chestplate_white:
+    display_name: Light Chestplate (white)
+    resource:
+      model_id: 427
+      model_path: medieval_armor_set/light_chestplate_white
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_white
+      slot: CHEST
+  medieval_armor_set_light_leggings_white:
+    display_name: Light Leggings (white)
+    resource:
+      model_id: 429
+      model_path: medieval_armor_set/light_leggings_white
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_white
+      slot: LEGS
+  medieval_armor_set_light_boots_white:
+    display_name: Light Boots (white)
+    resource:
+      model_id: 426
+      model_path: medieval_armor_set/light_boots_white
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_white
+      slot: FEET
+  medieval_armor_set_medium_helmet_white:
+    display_name: Medium Helmet (white)
+    resource:
+      model_id: 432
+      model_path: medieval_armor_set/medium_helmet_white
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_white
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_white:
+    display_name: Medium Chestplate (white)
+    resource:
+      model_id: 431
+      model_path: medieval_armor_set/medium_chestplate_white
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_white
+      slot: CHEST
+  medieval_armor_set_medium_leggings_white:
+    display_name: Medium Leggings (white)
+    resource:
+      model_id: 433
+      model_path: medieval_armor_set/medium_leggings_white
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_white
+      slot: LEGS
+  medieval_armor_set_medium_boots_white:
+    display_name: Medium Boots (white)
+    resource:
+      model_id: 430
+      model_path: medieval_armor_set/medium_boots_white
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_white
+      slot: FEET
+  medieval_armor_set_wizard_helmet_white:
+    display_name: Wizard Helmet (white)
+    resource:
+      model_id: 436
+      model_path: medieval_armor_set/wizard_helmet_white
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_white
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_white:
+    display_name: Wizard Chestplate (white)
+    resource:
+      model_id: 435
+      model_path: medieval_armor_set/wizard_chestplate_white
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_white
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_white:
+    display_name: Wizard Leggings (white)
+    resource:
+      model_id: 437
+      model_path: medieval_armor_set/wizard_leggings_white
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_white
+      slot: LEGS
+  medieval_armor_set_wizard_boots_white:
+    display_name: Wizard Boots (white)
+    resource:
+      model_id: 434
+      model_path: medieval_armor_set/wizard_boots_white
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_white
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_white
+      slot: FEET

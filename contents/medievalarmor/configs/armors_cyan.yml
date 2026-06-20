@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_cyan:
+    color: '#5520b7'
+    layer_1: medieval_armor_set/heavy_armor_layer_cyan_1
+    layer_2: medieval_armor_set/heavy_armor_layer_cyan_2
+    use_color: false
+  medieval_armor_set_light_armor_cyan:
+    color: '#5520b8'
+    layer_1: medieval_armor_set/light_armor_layer_cyan_1
+    layer_2: medieval_armor_set/light_armor_layer_cyan_2
+    use_color: false
+  medieval_armor_set_medium_armor_cyan:
+    color: '#5520b9'
+    layer_1: medieval_armor_set/medium_armor_layer_cyan_1
+    layer_2: medieval_armor_set/medium_armor_layer_cyan_2
+    use_color: false
+  medieval_armor_set_wizard_armor_cyan:
+    color: '#5520ba'
+    layer_1: medieval_armor_set/wizard_armor_layer_cyan_1
+    layer_2: medieval_armor_set/wizard_armor_layer_cyan_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_cyan:
+    layer_1: medieval_armor_set/heavy_armor_layer_cyan_1
+    layer_2: medieval_armor_set/heavy_armor_layer_cyan_2
+  medieval_armor_set_light_armor_cyan:
+    layer_1: medieval_armor_set/light_armor_layer_cyan_1
+    layer_2: medieval_armor_set/light_armor_layer_cyan_2
+  medieval_armor_set_medium_armor_cyan:
+    layer_1: medieval_armor_set/medium_armor_layer_cyan_1
+    layer_2: medieval_armor_set/medium_armor_layer_cyan_2
+  medieval_armor_set_wizard_armor_cyan:
+    layer_1: medieval_armor_set/wizard_armor_layer_cyan_1
+    layer_2: medieval_armor_set/wizard_armor_layer_cyan_2
+items:
+  medieval_armor_set_heavy_helmet_cyan:
+    display_name: Heavy Helmet (cyan)
+    resource:
+      model_id: 712
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_cyan
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_cyan
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_cyan:
+    display_name: Heavy Chestplate (cyan)
+    resource:
+      model_id: 711
+      model_path: medieval_armor_set/heavy_chestplate_cyan
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_cyan
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_cyan:
+    display_name: Heavy Leggings (cyan)
+    resource:
+      model_id: 713
+      model_path: medieval_armor_set/heavy_leggings_cyan
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_cyan
+      slot: LEGS
+  medieval_armor_set_heavy_boots_cyan:
+    display_name: Heavy Boots (cyan)
+    resource:
+      model_id: 710
+      model_path: medieval_armor_set/heavy_boots_cyan
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_cyan
+      slot: FEET
+  medieval_armor_set_light_helmet_cyan:
+    display_name: Light Helmet (cyan)
+    resource:
+      model_id: 716
+      model_path: medieval_armor_set/light_helmet_cyan
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_cyan
+      slot: HEAD
+  medieval_armor_set_light_chestplate_cyan:
+    display_name: Light Chestplate (cyan)
+    resource:
+      model_id: 715
+      model_path: medieval_armor_set/light_chestplate_cyan
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_cyan
+      slot: CHEST
+  medieval_armor_set_light_leggings_cyan:
+    display_name: Light Leggings (cyan)
+    resource:
+      model_id: 717
+      model_path: medieval_armor_set/light_leggings_cyan
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_cyan
+      slot: LEGS
+  medieval_armor_set_light_boots_cyan:
+    display_name: Light Boots (cyan)
+    resource:
+      model_id: 714
+      model_path: medieval_armor_set/light_boots_cyan
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_cyan
+      slot: FEET
+  medieval_armor_set_medium_helmet_cyan:
+    display_name: Medium Helmet (cyan)
+    resource:
+      model_id: 720
+      model_path: medieval_armor_set/medium_helmet_cyan
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_cyan
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_cyan:
+    display_name: Medium Chestplate (cyan)
+    resource:
+      model_id: 719
+      model_path: medieval_armor_set/medium_chestplate_cyan
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_cyan
+      slot: CHEST
+  medieval_armor_set_medium_leggings_cyan:
+    display_name: Medium Leggings (cyan)
+    resource:
+      model_id: 721
+      model_path: medieval_armor_set/medium_leggings_cyan
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_cyan
+      slot: LEGS
+  medieval_armor_set_medium_boots_cyan:
+    display_name: Medium Boots (cyan)
+    resource:
+      model_id: 718
+      model_path: medieval_armor_set/medium_boots_cyan
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_cyan
+      slot: FEET
+  medieval_armor_set_wizard_helmet_cyan:
+    display_name: Wizard Helmet (cyan)
+    resource:
+      model_id: 724
+      model_path: medieval_armor_set/wizard_helmet_cyan
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_cyan
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_cyan:
+    display_name: Wizard Chestplate (cyan)
+    resource:
+      model_id: 723
+      model_path: medieval_armor_set/wizard_chestplate_cyan
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_cyan
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_cyan:
+    display_name: Wizard Leggings (cyan)
+    resource:
+      model_id: 725
+      model_path: medieval_armor_set/wizard_leggings_cyan
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_cyan
+      slot: LEGS
+  medieval_armor_set_wizard_boots_cyan:
+    display_name: Wizard Boots (cyan)
+    resource:
+      model_id: 722
+      model_path: medieval_armor_set/wizard_boots_cyan
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_cyan
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_cyan
+      slot: FEET

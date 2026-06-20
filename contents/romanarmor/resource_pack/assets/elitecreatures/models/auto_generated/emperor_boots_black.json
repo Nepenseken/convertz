@@ -1,0 +1,8 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "particle": "elitecreatures:roman_armor/emperor_boots_black",
+    "layer0": "elitecreatures:roman_armor/emperor_boots_black"
+  }
+}

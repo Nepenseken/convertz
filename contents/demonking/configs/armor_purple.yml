@@ -1,0 +1,56 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  demonking_assortment_purple:
+    color: '#ffffd4'
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_purple_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_purple_2
+    use_color: false
+equipments:
+  demonking_assortment_purple:
+    layer_1: demonking_assortment/armor/demonkingassortment_armor_purple_1
+    layer_2: demonking_assortment/armor/demonkingassortment_armor_purple_2
+items:
+  demonking_assortment_hat_purple:
+    display_name: demonkinghat (purple)
+    permission: demonking_assortment.purple
+    resource:
+      model_id: 238
+      material: PAPER
+      model_path: demonking_assortment/armor/hat_purple
+      generate: false
+    behaviours:
+      hat: true
+  demonking_assortment_chestplate_purple:
+    display_name: demonkingchestplate (purple)
+    resource:
+      model_id: 237
+      generate: false
+      model_path: demonking_assortment/armor/chestplate_purple
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: demonking_assortment_purple
+      legacy_armor_rendering_id: demonking_assortment_purple
+      slot: CHEST
+  demonking_assortment_leggings_purple:
+    display_name: demonkingleggings (purple)
+    resource:
+      model_id: 239
+      generate: false
+      model_path: demonking_assortment/armor/leggings_purple
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: demonking_assortment_purple
+      legacy_armor_rendering_id: demonking_assortment_purple
+      slot: LEGS
+  demonking_assortment_boots_purple:
+    display_name: demonkingboots (purple)
+    resource:
+      model_id: 236
+      generate: false
+      model_path: demonking_assortment/armor/boots_purple
+      material: LEATHER_BOOTS
+    equipment:
+      id: demonking_assortment_purple
+      legacy_armor_rendering_id: demonking_assortment_purple
+      slot: FEET

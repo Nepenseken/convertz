@@ -1,0 +1,8 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "particle": "ec_elitearmors:item/ec_elitearmorsvol6/ecrubyboots_teal",
+    "layer0": "ec_elitearmors:item/ec_elitearmorsvol6/ecrubyboots_teal"
+  }
+}

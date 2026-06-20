@@ -1,0 +1,329 @@
+info:
+  namespace: ec_elitearmors
+armors_rendering:
+  ecrubyarmor_darkred:
+    color: '#5cec35'
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_darkred
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_darkred_2
+    emissive_1: armor/ec_elitearmorsvol6/ecrubyarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecrubyarmore_2
+    use_color: false
+  eclightknightarmor_darkred:
+    color: '#66f6b7'
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_darkred
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_darkred_2
+    emissive_1: armor/ec_elitearmorsvol6/eclightknightarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclightknightarmore_2
+    use_color: false
+  ecbluemecharmor_darkred:
+    color: '#87dfc0'
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_darkred
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_darkred_2
+    emissive_1: armor/ec_elitearmorsvol6/ecbluemecharmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecbluemecharmore_2
+    use_color: false
+  eclavabeastarmor_darkred:
+    color: '#28a7f8'
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_darkred
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_darkred_2
+    emissive_1: armor/ec_elitearmorsvol6/eclavabeastarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclavabeastarmore_2
+    use_color: false
+equipments:
+  ecrubyarmor_darkred:
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_darkred
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_darkred_2
+  eclightknightarmor_darkred:
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_darkred
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_darkred_2
+  ecbluemecharmor_darkred:
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_darkred
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_darkred_2
+  eclavabeastarmor_darkred:
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_darkred
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_darkred_2
+items:
+  ecrubychest_darkred:
+    display_name: Ruby Chestplate (darkred)
+    resource:
+      model_id: 2448
+      model_path: auto_generated/ecrubychest_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubychest_darkred.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_darkred
+      legacy_armor_rendering_id: ecrubyarmor_darkred
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  ecrubyhelmet_darkred:
+    display_name: Ruby Helmet (darkred)
+    resource:
+      model_id: 2449
+      model_path: auto_generated/ecrubyhelmet_darkred
+      generate: false
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_darkred
+      legacy_armor_rendering_id: ecrubyarmor_darkred
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecrubylegs_darkred:
+    display_name: Ruby Leggings (darkred)
+    resource:
+      model_id: 2450
+      model_path: auto_generated/ecrubylegs_darkred
+      generate: false
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_darkred
+      legacy_armor_rendering_id: ecrubyarmor_darkred
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  ecrubyboots_darkred:
+    display_name: Ruby Boots (darkred)
+    resource:
+      model_id: 2447
+      model_path: auto_generated/ecrubyboots_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubyboots_darkred.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecrubyarmor_darkred
+      legacy_armor_rendering_id: ecrubyarmor_darkred
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclightknightchest_darkred:
+    display_name: Lightknight Chestplate (darkred)
+    resource:
+      model_id: 2444
+      model_path: auto_generated/eclightknightchest_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightchest_darkred.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_darkred
+      legacy_armor_rendering_id: eclightknightarmor_darkred
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  eclightknighthelmet_darkred:
+    display_name: Lightknight Helmet (darkred)
+    resource:
+      model_id: 2445
+      model_path: auto_generated/eclightknighthelmet_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknighthelmet_darkred.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_darkred
+      legacy_armor_rendering_id: eclightknightarmor_darkred
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclightknightlegs_darkred:
+    display_name: Lightknight Leggings (darkred)
+    resource:
+      model_id: 2446
+      model_path: auto_generated/eclightknightlegs_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightleggings_darkred.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_darkred
+      legacy_armor_rendering_id: eclightknightarmor_darkred
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  eclightknightboots_darkred:
+    display_name: Lightknight Boots (darkred)
+    resource:
+      model_id: 2443
+      model_path: auto_generated/eclightknightboots_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightboots_darkred.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclightknightarmor_darkred
+      legacy_armor_rendering_id: eclightknightarmor_darkred
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecbluemechchest_darkred:
+    display_name: Bluemech Chestplate (darkred)
+    resource:
+      model_id: 2436
+      model_path: auto_generated/ecbluemechchest_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechchest_darkred.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_darkred
+      legacy_armor_rendering_id: ecbluemecharmor_darkred
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  ecbluemechhelmet_darkred:
+    display_name: Bluemech Helmet (darkred)
+    resource:
+      model_id: 2437
+      model_path: auto_generated/ecbluemechhelmet_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechhelmet_darkred.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_darkred
+      legacy_armor_rendering_id: ecbluemecharmor_darkred
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  ecbluemechlegs_darkred:
+    display_name: Bluemech Leggings (darkred)
+    resource:
+      model_id: 2438
+      model_path: auto_generated/ecbluemechlegs_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechleggings_darkred.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_darkred
+      legacy_armor_rendering_id: ecbluemecharmor_darkred
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  ecbluemechboots_darkred:
+    display_name: Bluemech Boots (darkred)
+    resource:
+      model_id: 2435
+      model_path: auto_generated/ecbluemechboots_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechboots_darkred.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: ecbluemecharmor_darkred
+      legacy_armor_rendering_id: ecbluemecharmor_darkred
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclavabeastchest_darkred:
+    display_name: Lavabeast Chestplate (darkred)
+    resource:
+      model_id: 2440
+      model_path: auto_generated/eclavabeastchest_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastchest_darkred.png
+      material: LEATHER_CHESTPLATE
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_darkred
+      legacy_armor_rendering_id: eclavabeastarmor_darkred
+      slot: CHEST
+      slot_attribute_modifiers:
+        armor: 7
+        armorToughness: 3
+  eclavabeasthelmet_darkred:
+    display_name: Lavabeast Helmet (darkred)
+    resource:
+      model_id: 2441
+      model_path: auto_generated/eclavabeasthelmet_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeasthelmet_darkred.png
+      material: LEATHER_HELMET
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_darkred
+      legacy_armor_rendering_id: eclavabeastarmor_darkred
+      slot: HEAD
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3
+  eclavabeastlegs_darkred:
+    display_name: Lavabeast Leggings (darkred)
+    resource:
+      model_id: 2442
+      model_path: auto_generated/eclavabeastlegs_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastleggings_darkred.png
+      material: LEATHER_LEGGINGS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_darkred
+      legacy_armor_rendering_id: eclavabeastarmor_darkred
+      slot: LEGS
+      slot_attribute_modifiers:
+        armor: 6
+        armorToughness: 3
+  eclavabeastboots_darkred:
+    display_name: Lavabeast Boots (darkred)
+    resource:
+      model_id: 2439
+      model_path: auto_generated/eclavabeastboots_darkred
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastboots_darkred.png
+      material: LEATHER_BOOTS
+    durability:
+      max_custom_durability: 602
+    equipment:
+      id: eclavabeastarmor_darkred
+      legacy_armor_rendering_id: eclavabeastarmor_darkred
+      slot: FEET
+      slot_attribute_modifiers:
+        armor: 4
+        armorToughness: 3

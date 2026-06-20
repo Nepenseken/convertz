@@ -1,0 +1,55 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_darkpink:
+    color: '#fffff6'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_darkpink_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_darkpink_2
+    use_color: false
+equipments:
+  witchcaster_animated_darkpink:
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_darkpink_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_darkpink_2
+items:
+  witchcaster_animated_hat_darkpink:
+    display_name: DISPLAY (darkpink)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_darkpink
+      model_id: 2253
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_darkpink:
+    display_name: DISPLAY (darkpink)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_darkpink
+      model_id: 2252
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: witchcaster_animated_darkpink
+      legacy_armor_rendering_id: witchcaster_animated_darkpink
+      slot: CHEST
+  witchcaster_animated_leggings_darkpink:
+    display_name: DISPLAY (darkpink)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_darkpink
+      model_id: 2254
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: witchcaster_animated_darkpink
+      legacy_armor_rendering_id: witchcaster_animated_darkpink
+      slot: LEGS
+  witchcaster_animated_boots_darkpink:
+    display_name: DISPLAY (darkpink)
+    resource:
+      model_path: witchcaster_animated/armor/boots_darkpink
+      model_id: 2251
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: witchcaster_animated_darkpink
+      legacy_armor_rendering_id: witchcaster_animated_darkpink
+      slot: FEET

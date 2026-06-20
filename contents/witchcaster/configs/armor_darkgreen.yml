@@ -1,0 +1,55 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_darkgreen:
+    color: '#ffffdf'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_darkgreen_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_darkgreen_2
+    use_color: false
+equipments:
+  witchcaster_animated_darkgreen:
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_darkgreen_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_darkgreen_2
+items:
+  witchcaster_animated_hat_darkgreen:
+    display_name: DISPLAY (darkgreen)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_darkgreen
+      model_id: 2289
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_darkgreen:
+    display_name: DISPLAY (darkgreen)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_darkgreen
+      model_id: 2288
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: witchcaster_animated_darkgreen
+      legacy_armor_rendering_id: witchcaster_animated_darkgreen
+      slot: CHEST
+  witchcaster_animated_leggings_darkgreen:
+    display_name: DISPLAY (darkgreen)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_darkgreen
+      model_id: 2290
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: witchcaster_animated_darkgreen
+      legacy_armor_rendering_id: witchcaster_animated_darkgreen
+      slot: LEGS
+  witchcaster_animated_boots_darkgreen:
+    display_name: DISPLAY (darkgreen)
+    resource:
+      model_path: witchcaster_animated/armor/boots_darkgreen
+      model_id: 2287
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: witchcaster_animated_darkgreen
+      legacy_armor_rendering_id: witchcaster_animated_darkgreen
+      slot: FEET

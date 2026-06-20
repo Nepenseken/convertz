@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_darkorange:
+    color: '#5520e7'
+    layer_1: medieval_armor_set/heavy_armor_layer_darkorange_1
+    layer_2: medieval_armor_set/heavy_armor_layer_darkorange_2
+    use_color: false
+  medieval_armor_set_light_armor_darkorange:
+    color: '#5520e8'
+    layer_1: medieval_armor_set/light_armor_layer_darkorange_1
+    layer_2: medieval_armor_set/light_armor_layer_darkorange_2
+    use_color: false
+  medieval_armor_set_medium_armor_darkorange:
+    color: '#5520e9'
+    layer_1: medieval_armor_set/medium_armor_layer_darkorange_1
+    layer_2: medieval_armor_set/medium_armor_layer_darkorange_2
+    use_color: false
+  medieval_armor_set_wizard_armor_darkorange:
+    color: '#5520ea'
+    layer_1: medieval_armor_set/wizard_armor_layer_darkorange_1
+    layer_2: medieval_armor_set/wizard_armor_layer_darkorange_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_darkorange:
+    layer_1: medieval_armor_set/heavy_armor_layer_darkorange_1
+    layer_2: medieval_armor_set/heavy_armor_layer_darkorange_2
+  medieval_armor_set_light_armor_darkorange:
+    layer_1: medieval_armor_set/light_armor_layer_darkorange_1
+    layer_2: medieval_armor_set/light_armor_layer_darkorange_2
+  medieval_armor_set_medium_armor_darkorange:
+    layer_1: medieval_armor_set/medium_armor_layer_darkorange_1
+    layer_2: medieval_armor_set/medium_armor_layer_darkorange_2
+  medieval_armor_set_wizard_armor_darkorange:
+    layer_1: medieval_armor_set/wizard_armor_layer_darkorange_1
+    layer_2: medieval_armor_set/wizard_armor_layer_darkorange_2
+items:
+  medieval_armor_set_heavy_helmet_darkorange:
+    display_name: Heavy Helmet (darkorange)
+    resource:
+      model_id: 584
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_darkorange
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkorange
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_darkorange:
+    display_name: Heavy Chestplate (darkorange)
+    resource:
+      model_id: 583
+      model_path: medieval_armor_set/heavy_chestplate_darkorange
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkorange
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_darkorange:
+    display_name: Heavy Leggings (darkorange)
+    resource:
+      model_id: 585
+      model_path: medieval_armor_set/heavy_leggings_darkorange
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkorange
+      slot: LEGS
+  medieval_armor_set_heavy_boots_darkorange:
+    display_name: Heavy Boots (darkorange)
+    resource:
+      model_id: 582
+      model_path: medieval_armor_set/heavy_boots_darkorange
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_darkorange
+      slot: FEET
+  medieval_armor_set_light_helmet_darkorange:
+    display_name: Light Helmet (darkorange)
+    resource:
+      model_id: 588
+      model_path: medieval_armor_set/light_helmet_darkorange
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkorange
+      slot: HEAD
+  medieval_armor_set_light_chestplate_darkorange:
+    display_name: Light Chestplate (darkorange)
+    resource:
+      model_id: 587
+      model_path: medieval_armor_set/light_chestplate_darkorange
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkorange
+      slot: CHEST
+  medieval_armor_set_light_leggings_darkorange:
+    display_name: Light Leggings (darkorange)
+    resource:
+      model_id: 589
+      model_path: medieval_armor_set/light_leggings_darkorange
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkorange
+      slot: LEGS
+  medieval_armor_set_light_boots_darkorange:
+    display_name: Light Boots (darkorange)
+    resource:
+      model_id: 586
+      model_path: medieval_armor_set/light_boots_darkorange
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_darkorange
+      slot: FEET
+  medieval_armor_set_medium_helmet_darkorange:
+    display_name: Medium Helmet (darkorange)
+    resource:
+      model_id: 592
+      model_path: medieval_armor_set/medium_helmet_darkorange
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkorange
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_darkorange:
+    display_name: Medium Chestplate (darkorange)
+    resource:
+      model_id: 591
+      model_path: medieval_armor_set/medium_chestplate_darkorange
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkorange
+      slot: CHEST
+  medieval_armor_set_medium_leggings_darkorange:
+    display_name: Medium Leggings (darkorange)
+    resource:
+      model_id: 593
+      model_path: medieval_armor_set/medium_leggings_darkorange
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkorange
+      slot: LEGS
+  medieval_armor_set_medium_boots_darkorange:
+    display_name: Medium Boots (darkorange)
+    resource:
+      model_id: 590
+      model_path: medieval_armor_set/medium_boots_darkorange
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_darkorange
+      slot: FEET
+  medieval_armor_set_wizard_helmet_darkorange:
+    display_name: Wizard Helmet (darkorange)
+    resource:
+      model_id: 596
+      model_path: medieval_armor_set/wizard_helmet_darkorange
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkorange
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_darkorange:
+    display_name: Wizard Chestplate (darkorange)
+    resource:
+      model_id: 595
+      model_path: medieval_armor_set/wizard_chestplate_darkorange
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkorange
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_darkorange:
+    display_name: Wizard Leggings (darkorange)
+    resource:
+      model_id: 597
+      model_path: medieval_armor_set/wizard_leggings_darkorange
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkorange
+      slot: LEGS
+  medieval_armor_set_wizard_boots_darkorange:
+    display_name: Wizard Boots (darkorange)
+    resource:
+      model_id: 594
+      model_path: medieval_armor_set/wizard_boots_darkorange
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_darkorange
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_darkorange
+      slot: FEET

@@ -1,0 +1,316 @@
+info:
+  namespace: ec_elitearmors
+armors_rendering:
+  ecrubyarmor_green:
+    color: '#5cec2d'
+    layer_1: armor/ec_elitearmorsvol6/ecrubyarmor_green
+    layer_2: armor/ec_elitearmorsvol6/ecrubyarmor_green_2
+    emissive_1: armor/ec_elitearmorsvol6/ecrubyarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecrubyarmore_2
+    use_color: false
+  eclightknightarmor_green:
+    color: '#66f6af'
+    layer_1: armor/ec_elitearmorsvol6/eclightknightarmor_green
+    layer_2: armor/ec_elitearmorsvol6/eclightknightarmor_green_2
+    emissive_1: armor/ec_elitearmorsvol6/eclightknightarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclightknightarmore_2
+    use_color: false
+  ecbluemecharmor_green:
+    color: '#87dfb8'
+    layer_1: armor/ec_elitearmorsvol6/ecbluemecharmor_green
+    layer_2: armor/ec_elitearmorsvol6/ecbluemecharmor_green_2
+    emissive_1: armor/ec_elitearmorsvol6/ecbluemecharmore_1
+    emissive_2: armor/ec_elitearmorsvol6/ecbluemecharmore_2
+    use_color: false
+  eclavabeastarmor_green:
+    color: '#28a7f0'
+    layer_1: armor/ec_elitearmorsvol6/eclavabeastarmor_green
+    layer_2: armor/ec_elitearmorsvol6/eclavabeastarmor_green_2
+    emissive_1: armor/ec_elitearmorsvol6/eclavabeastarmore_1
+    emissive_2: armor/ec_elitearmorsvol6/eclavabeastarmore_2
+    use_color: false
+items:
+  ecrubychest_green:
+    display_name: Ruby Chestplate (green)
+    resource:
+      model_id: 2608
+      model_path: auto_generated/ecrubychest_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubychest_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecrubyarmor_green
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecrubyhelmet_green:
+    display_name: Ruby Helmet (green)
+    resource:
+      model_id: 2609
+      model_path: auto_generated/ecrubyhelmet_green
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecrubyarmor_green
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecrubylegs_green:
+    display_name: Ruby Leggings (green)
+    resource:
+      model_id: 2610
+      model_path: auto_generated/ecrubylegs_green
+      generate: false
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecrubyarmor_green
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecrubyboots_green:
+    display_name: Ruby Boots (green)
+    resource:
+      model_id: 2607
+      model_path: auto_generated/ecrubyboots_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecrubyboots_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecrubyarmor_green
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclightknightchest_green:
+    display_name: Lightknight Chestplate (green)
+    resource:
+      model_id: 2604
+      model_path: auto_generated/eclightknightchest_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightchest_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclightknightarmor_green
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclightknighthelmet_green:
+    display_name: Lightknight Helmet (green)
+    resource:
+      model_id: 2605
+      model_path: auto_generated/eclightknighthelmet_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknighthelmet_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclightknightarmor_green
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclightknightlegs_green:
+    display_name: Lightknight Leggings (green)
+    resource:
+      model_id: 2606
+      model_path: auto_generated/eclightknightlegs_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightleggings_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclightknightarmor_green
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclightknightboots_green:
+    display_name: Lightknight Boots (green)
+    resource:
+      model_id: 2603
+      model_path: auto_generated/eclightknightboots_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclightknightboots_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclightknightarmor_green
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  ecbluemechchest_green:
+    display_name: Bluemech Chestplate (green)
+    resource:
+      model_id: 2596
+      model_path: auto_generated/ecbluemechchest_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechchest_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: ecbluemecharmor_green
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  ecbluemechhelmet_green:
+    display_name: Bluemech Helmet (green)
+    resource:
+      model_id: 2597
+      model_path: auto_generated/ecbluemechhelmet_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechhelmet_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: ecbluemecharmor_green
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  ecbluemechlegs_green:
+    display_name: Bluemech Leggings (green)
+    resource:
+      model_id: 2598
+      model_path: auto_generated/ecbluemechlegs_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechleggings_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: ecbluemecharmor_green
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  ecbluemechboots_green:
+    display_name: Bluemech Boots (green)
+    resource:
+      model_id: 2595
+      model_path: auto_generated/ecbluemechboots_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/ecbluemechboots_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: ecbluemecharmor_green
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3
+  eclavabeastchest_green:
+    display_name: Lavabeast Chestplate (green)
+    resource:
+      model_id: 2600
+      model_path: auto_generated/eclavabeastchest_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastchest_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: eclavabeastarmor_green
+    attribute_modifiers:
+      chest:
+        armor: 7
+        armorToughness: 3
+  eclavabeasthelmet_green:
+    display_name: Lavabeast Helmet (green)
+    resource:
+      model_id: 2601
+      model_path: auto_generated/eclavabeasthelmet_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeasthelmet_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: eclavabeastarmor_green
+    attribute_modifiers:
+      head:
+        armor: 4
+        armorToughness: 3
+  eclavabeastlegs_green:
+    display_name: Lavabeast Leggings (green)
+    resource:
+      model_id: 2602
+      model_path: auto_generated/eclavabeastlegs_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastleggings_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: eclavabeastarmor_green
+    attribute_modifiers:
+      legs:
+        armor: 6
+        armorToughness: 3
+  eclavabeastboots_green:
+    display_name: Lavabeast Boots (green)
+    resource:
+      model_id: 2599
+      model_path: auto_generated/eclavabeastboots_green
+      generate: false
+      textures:
+      - item/ec_elitearmorsvol6/eclavabeastboots_green.png
+    durability:
+      max_custom_durability: 602
+    specific_properties:
+      armor:
+        slot: FEET
+        custom_armor: eclavabeastarmor_green
+    attribute_modifiers:
+      feet:
+        armor: 4
+        armorToughness: 3

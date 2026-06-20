@@ -1,0 +1,213 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  medieval_armor_set_heavy_armor_lightblue:
+    color: '#5520ef'
+    layer_1: medieval_armor_set/heavy_armor_layer_lightblue_1
+    layer_2: medieval_armor_set/heavy_armor_layer_lightblue_2
+    use_color: false
+  medieval_armor_set_light_armor_lightblue:
+    color: '#5520f0'
+    layer_1: medieval_armor_set/light_armor_layer_lightblue_1
+    layer_2: medieval_armor_set/light_armor_layer_lightblue_2
+    use_color: false
+  medieval_armor_set_medium_armor_lightblue:
+    color: '#5520f1'
+    layer_1: medieval_armor_set/medium_armor_layer_lightblue_1
+    layer_2: medieval_armor_set/medium_armor_layer_lightblue_2
+    use_color: false
+  medieval_armor_set_wizard_armor_lightblue:
+    color: '#5520f2'
+    layer_1: medieval_armor_set/wizard_armor_layer_lightblue_1
+    layer_2: medieval_armor_set/wizard_armor_layer_lightblue_2
+    use_color: false
+equipments:
+  medieval_armor_set_heavy_armor_lightblue:
+    layer_1: medieval_armor_set/heavy_armor_layer_lightblue_1
+    layer_2: medieval_armor_set/heavy_armor_layer_lightblue_2
+  medieval_armor_set_light_armor_lightblue:
+    layer_1: medieval_armor_set/light_armor_layer_lightblue_1
+    layer_2: medieval_armor_set/light_armor_layer_lightblue_2
+  medieval_armor_set_medium_armor_lightblue:
+    layer_1: medieval_armor_set/medium_armor_layer_lightblue_1
+    layer_2: medieval_armor_set/medium_armor_layer_lightblue_2
+  medieval_armor_set_wizard_armor_lightblue:
+    layer_1: medieval_armor_set/wizard_armor_layer_lightblue_1
+    layer_2: medieval_armor_set/wizard_armor_layer_lightblue_2
+items:
+  medieval_armor_set_heavy_helmet_lightblue:
+    display_name: Heavy Helmet (lightblue)
+    resource:
+      model_id: 744
+      generate: false
+      model_path: medieval_armor_set/heavy_helmet_lightblue
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightblue
+      slot: HEAD
+  medieval_armor_set_heavy_chestplate_lightblue:
+    display_name: Heavy Chestplate (lightblue)
+    resource:
+      model_id: 743
+      model_path: medieval_armor_set/heavy_chestplate_lightblue
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightblue
+      slot: CHEST
+  medieval_armor_set_heavy_leggings_lightblue:
+    display_name: Heavy Leggings (lightblue)
+    resource:
+      model_id: 745
+      model_path: medieval_armor_set/heavy_leggings_lightblue
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightblue
+      slot: LEGS
+  medieval_armor_set_heavy_boots_lightblue:
+    display_name: Heavy Boots (lightblue)
+    resource:
+      model_id: 742
+      model_path: medieval_armor_set/heavy_boots_lightblue
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_heavy_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_heavy_armor_lightblue
+      slot: FEET
+  medieval_armor_set_light_helmet_lightblue:
+    display_name: Light Helmet (lightblue)
+    resource:
+      model_id: 748
+      model_path: medieval_armor_set/light_helmet_lightblue
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_light_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightblue
+      slot: HEAD
+  medieval_armor_set_light_chestplate_lightblue:
+    display_name: Light Chestplate (lightblue)
+    resource:
+      model_id: 747
+      model_path: medieval_armor_set/light_chestplate_lightblue
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_light_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightblue
+      slot: CHEST
+  medieval_armor_set_light_leggings_lightblue:
+    display_name: Light Leggings (lightblue)
+    resource:
+      model_id: 749
+      model_path: medieval_armor_set/light_leggings_lightblue
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_light_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightblue
+      slot: LEGS
+  medieval_armor_set_light_boots_lightblue:
+    display_name: Light Boots (lightblue)
+    resource:
+      model_id: 746
+      model_path: medieval_armor_set/light_boots_lightblue
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_light_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_light_armor_lightblue
+      slot: FEET
+  medieval_armor_set_medium_helmet_lightblue:
+    display_name: Medium Helmet (lightblue)
+    resource:
+      model_id: 752
+      model_path: medieval_armor_set/medium_helmet_lightblue
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_medium_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightblue
+      slot: HEAD
+  medieval_armor_set_medium_chestplate_lightblue:
+    display_name: Medium Chestplate (lightblue)
+    resource:
+      model_id: 751
+      model_path: medieval_armor_set/medium_chestplate_lightblue
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_medium_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightblue
+      slot: CHEST
+  medieval_armor_set_medium_leggings_lightblue:
+    display_name: Medium Leggings (lightblue)
+    resource:
+      model_id: 753
+      model_path: medieval_armor_set/medium_leggings_lightblue
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_medium_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightblue
+      slot: LEGS
+  medieval_armor_set_medium_boots_lightblue:
+    display_name: Medium Boots (lightblue)
+    resource:
+      model_id: 750
+      model_path: medieval_armor_set/medium_boots_lightblue
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_medium_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_medium_armor_lightblue
+      slot: FEET
+  medieval_armor_set_wizard_helmet_lightblue:
+    display_name: Wizard Helmet (lightblue)
+    resource:
+      model_id: 756
+      model_path: medieval_armor_set/wizard_helmet_lightblue
+      generate: false
+      material: LEATHER_HELMET
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightblue
+      slot: HEAD
+  medieval_armor_set_wizard_chestplate_lightblue:
+    display_name: Wizard Chestplate (lightblue)
+    resource:
+      model_id: 755
+      model_path: medieval_armor_set/wizard_chestplate_lightblue
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightblue
+      slot: CHEST
+  medieval_armor_set_wizard_leggings_lightblue:
+    display_name: Wizard Leggings (lightblue)
+    resource:
+      model_id: 757
+      model_path: medieval_armor_set/wizard_leggings_lightblue
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightblue
+      slot: LEGS
+  medieval_armor_set_wizard_boots_lightblue:
+    display_name: Wizard Boots (lightblue)
+    resource:
+      model_id: 754
+      model_path: medieval_armor_set/wizard_boots_lightblue
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: medieval_armor_set_wizard_armor_lightblue
+      legacy_armor_rendering_id: medieval_armor_set_wizard_armor_lightblue
+      slot: FEET

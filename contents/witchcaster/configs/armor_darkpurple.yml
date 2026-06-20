@@ -1,0 +1,55 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_darkpurple:
+    color: '#ffffe9'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_darkpurple_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_darkpurple_2
+    use_color: false
+equipments:
+  witchcaster_animated_darkpurple:
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_darkpurple_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_darkpurple_2
+items:
+  witchcaster_animated_hat_darkpurple:
+    display_name: DISPLAY (darkpurple)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_darkpurple
+      model_id: 2321
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_darkpurple:
+    display_name: DISPLAY (darkpurple)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_darkpurple
+      model_id: 2320
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: witchcaster_animated_darkpurple
+      legacy_armor_rendering_id: witchcaster_animated_darkpurple
+      slot: CHEST
+  witchcaster_animated_leggings_darkpurple:
+    display_name: DISPLAY (darkpurple)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_darkpurple
+      model_id: 2322
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: witchcaster_animated_darkpurple
+      legacy_armor_rendering_id: witchcaster_animated_darkpurple
+      slot: LEGS
+  witchcaster_animated_boots_darkpurple:
+    display_name: DISPLAY (darkpurple)
+    resource:
+      model_path: witchcaster_animated/armor/boots_darkpurple
+      model_id: 2319
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: witchcaster_animated_darkpurple
+      legacy_armor_rendering_id: witchcaster_animated_darkpurple
+      slot: FEET

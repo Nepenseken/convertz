@@ -1,0 +1,55 @@
+info:
+  namespace: elitecreatures
+armors_rendering:
+  witchcaster_animated_black:
+    color: '#ffffce'
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_black_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_black_2
+    use_color: false
+equipments:
+  witchcaster_animated_black:
+    layer_1: witchcaster_animated/armor/witchcasteranimated_armor_black_1
+    layer_2: witchcaster_animated/armor/witchcasteranimated_armor_black_2
+items:
+  witchcaster_animated_hat_black:
+    display_name: DISPLAY (black)
+    resource:
+      material: PAPER
+      model_path: witchcaster_animated/armor/hat_black
+      model_id: 2233
+      generate: false
+    behaviours:
+      hat: true
+  witchcaster_animated_chestplate_black:
+    display_name: DISPLAY (black)
+    resource:
+      model_path: witchcaster_animated/armor/chestplate_black
+      model_id: 2232
+      generate: false
+      material: LEATHER_CHESTPLATE
+    equipment:
+      id: witchcaster_animated_black
+      legacy_armor_rendering_id: witchcaster_animated_black
+      slot: CHEST
+  witchcaster_animated_leggings_black:
+    display_name: DISPLAY (black)
+    resource:
+      model_path: witchcaster_animated/armor/leggings_black
+      model_id: 2234
+      generate: false
+      material: LEATHER_LEGGINGS
+    equipment:
+      id: witchcaster_animated_black
+      legacy_armor_rendering_id: witchcaster_animated_black
+      slot: LEGS
+  witchcaster_animated_boots_black:
+    display_name: DISPLAY (black)
+    resource:
+      model_path: witchcaster_animated/armor/boots_black
+      model_id: 2231
+      generate: false
+      material: LEATHER_BOOTS
+    equipment:
+      id: witchcaster_animated_black
+      legacy_armor_rendering_id: witchcaster_animated_black
+      slot: FEET
