@@ -238,9 +238,16 @@ def main():
                     shutil.copy2(found_png, layer_dest)
 
                 # Find existing attachable for this item
+                # Try nested format first: attachables/{namespace}/{model_path}/*.json
                 attachable_pattern = f"{staging_dir}/target/rp/attachables/{namespace}/{model_path}*.json"
                 afiles = glob.glob(attachable_pattern)
                 afile = next((f for f in afiles if not f.endswith(".player.json")), None)
+                if not afile:
+                    # Try flat format (after consolidate_files): attachables/{model_name}*.json
+                    item_filename = Path(model_path).name
+                    flat_pattern = f"{staging_dir}/target/rp/attachables/{item_filename}*.json"
+                    afiles = glob.glob(flat_pattern)
+                    afile = next((f for f in afiles if not f.endswith(".player.json")), None)
                 if not afile:
                     print(f"  [SKIP] {item_name}: no attachable found")
                     total_errors += 1
