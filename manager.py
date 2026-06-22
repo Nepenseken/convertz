@@ -1,7 +1,9 @@
 import zipfile, os, sys
 
-with zipfile.ZipFile("staging/input_pack.zip", "r") as file:
-    file.extractall("pack/")
+# Only extract input_pack if it exists — converter.sh extracts pack/ directly
+if os.path.exists("staging/input_pack.zip"):
+    with zipfile.ZipFile("staging/input_pack.zip", "r") as file:
+        file.extractall("pack/")
 
 try: 
     if os.getenv("SOUNDS_CONVERSION") == "true": import sound
