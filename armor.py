@@ -167,29 +167,22 @@ def find_armor_texture(pack_dir: str, namespace: str, eq_id: str, layer_path: st
 
 
 def find_attachable(staging_dir: str, namespace: str, model_path: str) -> (str | None):
-    """Find an existing attachable JSON (non-.player) for the given namespace/model_path."""
-    item_filename = Path(model_path).name
+    """Find an existing converter.sh attachable via recursive search.
+    
+    converter.sh generates: {base}/{namespace}/{dir_only}/{model_name}.{hash}.attachable.json
+    We search:              {base}/{namespace}/**/{model_name}*.json  (recursive)
+    """
+    model_name = Path(model_path).name  # extracts filename regardless of directory depth
     attachable_dirs = [
         f"{staging_dir}/target/rp/attachables",
         "./target/rp/attachables",
         "target/rp/attachables",
     ]
     for base_dir in attachable_dirs:
-        # Try nested format: {base_dir}/{namespace}/{model_path}/*.json
-        afiles = glob.glob(f"{base_dir}/{namespace}/{model_path}/*.json")
-        afile = next((f for f in afiles if not f.endswith(".player.json")), None)
-        if afile:
-            return afile
-        # Try flat format: {base_dir}/{item_filename}*.json
-        afiles = glob.glob(f"{base_dir}/{item_filename}*.json")
-        afile = next((f for f in afiles if not f.endswith(".player.json")), None)
-        if afile:
-            return afile
-        # Try old hybrid: {base_dir}/{namespace}/{model_path}*.json
-        afiles = glob.glob(f"{base_dir}/{namespace}/{model_path}*.json")
-        afile = next((f for f in afiles if not f.endswith(".player.json")), None)
-        if afile:
-            return afile
+        # ** matches any intervening directory structure
+        for afile in sorted(glob.glob(f"{base_dir}/{namespace}/**/{model_name}*.json", recursive=True)):
+            if not afile.endswith(".player.json"):
+                return afile
     return None
 
 
@@ -389,12 +382,16 @@ def scan_armor_models(pack_dir: str, overlay_eq: dict = None) -> list:
                             if not eq_id:
                                 eq_id = base_name  # fallback: use base_name as eq_id
                             
-                            # Derive model_path
+                            # Derive model_path (directory-only, matching converter.sh)
+                            models_dir = ns_dir / "models"
                             if "auto_generated" in str(model_file):
-                                model_path = f"auto_generated/{model_name}"
+                                model_path = "auto_generated"
                             else:
-                                model_path_rel = model_file.relative_to(models_root.parent.parent)
-                                model_path = str(model_path_rel.with_suffix("")).replace("\\", "/")
+                                try:
+                                    rel = model_file.relative_to(models_dir)
+                                    model_path = "" if str(rel.parent) == "." else str(rel.parent).replace("\\", "/")
+                                except ValueError:
+                                    model_path = ""
                             
                             dedup = (namespace, model_name, slot_idx)
                             if dedup not in seen:
@@ -462,13 +459,15 @@ def process_armor_item(namespace: str, model_path: str, item_name: str, eq_id: s
         gmdl = attach_data["minecraft:attachable"]["description"]["identifier"].split(":")[1]
     else:
         # No existing attachable — generate a minimal one with deterministic gmdl
-        gmdl = generate_gmdl(f"{namespace}:{model_path}")
-        # Copy item icon texture (if available) for inventory rendering
-        copy_item_texture(pack_dir, staging_dir, namespace, model_path)
-        # Generate item attachable
-        model_name = Path(model_path).name
-        afile = f"{staging_dir}/target/rp/attachables/{model_name}.{gmdl}.attachable.json"
-        generate_item_attachable(afile, gmdl, namespace, model_path, model_name)
+        # Use item_name (pure model name) for hash, not model_path (directory-only)
+        gmdl = generate_gmdl(f"{namespace}:{item_name}")
+        # Copy item icon texture (if available)
+        copy_item_texture(pack_dir, staging_dir, namespace, item_name)
+        # Generate item attachable at converter.sh-compatible path
+        afile_dir = f"{staging_dir}/target/rp/attachables/{namespace}/{model_path}"
+        os.makedirs(afile_dir, exist_ok=True)
+        afile = f"{afile_dir}/{item_name}.{gmdl}.attachable.json"
+        generate_item_attachable(afile, gmdl, namespace, model_path, item_name)
         print(f"  [GEN]  {item_name}: generated attachable (gmdl={gmdl})")
 
     # Generate .player attachable
