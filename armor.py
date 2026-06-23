@@ -526,6 +526,12 @@ def main(argv: list[str] | None = None):
                 if item_name in ARMOR_SLOTS:
                     continue
 
+                # Extract directory-only model_path (matches converter.sh format)
+                raw_path = Path(model_path)
+                dir_path = str(raw_path.parent).replace("\\", "/")
+                if dir_path == ".":
+                    dir_path = ""
+
                 # Look up this item in configs
                 ns_config = configs.get(namespace)
                 if not ns_config:
@@ -564,7 +570,7 @@ def main(argv: list[str] | None = None):
                 if not eq_data:
                     continue
 
-                ok = process_armor_item(namespace, model_path, item_name, eq_id, eq_data,
+                ok = process_armor_item(namespace, dir_path or model_path, item_name, eq_id, eq_data,
                                         slot_idx, pack_dir, staging_dir, armor_layer_dir, processed)
                 if ok:
                     total_processed += 1
@@ -606,7 +612,14 @@ def main(argv: list[str] | None = None):
                 if dedup_key in processed:
                     continue
 
-                ok = process_armor_item(namespace, model_path, item_name, eq_id, eq_data,
+                # Extract directory-only model_path (matches converter.sh format)
+                # YAML gives "auto_generated/ecbluemechhelmet" → "auto_generated"
+                raw_path = Path(model_path)
+                dir_path = str(raw_path.parent).replace("\\", "/")
+                if dir_path == ".":
+                    dir_path = ""
+
+                ok = process_armor_item(namespace, dir_path or model_path, item_name, eq_id, eq_data,
                                         slot_idx, pack_dir, staging_dir, armor_layer_dir, processed)
                 if ok:
                     total_processed += 1
