@@ -341,7 +341,11 @@ def scan_armor_models(pack_dir: str, overlay_eq: dict = None) -> list:
                 if short.startswith(prefix):
                     short = short[len(prefix):]
                     break
-            eq_lookup[short] = eq_id
+            # Remove _armor suffix for matching with model base names
+            # e.g. "medieval_armor_set_heavy_armor" → "heavy" to match "heavy_boots" → "heavy"
+            short = short.replace("_armor", "")
+            if short:
+                eq_lookup[short] = eq_id
             eq_lookup[eq_id] = eq_id  # Also store full ID
     
     for base in search_bases:
@@ -354,11 +358,11 @@ def scan_armor_models(pack_dir: str, overlay_eq: dict = None) -> list:
             namespace = ns_dir.name
             if namespace in ("minecraft", "_iainternal"):
                 continue
-            # Scan auto_generated/ model dirs
+            # Scan model dirs recursively (supports sub-folders like medieval_armor_set/)
             for models_root in [ns_dir / "models" / "auto_generated", ns_dir / "models"]:
                 if not models_root.exists():
                     continue
-                for model_file in sorted(models_root.glob("*.json")):
+                for model_file in sorted(models_root.rglob("*.json")):
                     model_name = model_file.stem
                     # Check slot keywords
                     for kw, slot_idx in SLOT_KEYWORDS:
@@ -378,6 +382,9 @@ def scan_armor_models(pack_dir: str, overlay_eq: dict = None) -> list:
                                         if full.endswith(base_name) or base_name.endswith(short):
                                             eq_id = full
                                             break
+                                # Still no match: try using full model_name (without slot kw) as eq_id key
+                                if not eq_id and base_name in eq_lookup:
+                                    eq_id = eq_lookup[base_name]
                             
                             if not eq_id:
                                 eq_id = base_name  # fallback: use base_name as eq_id
