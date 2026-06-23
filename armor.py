@@ -474,12 +474,14 @@ def process_armor_item(namespace: str, model_path: str, item_name: str, eq_id: s
     return True
 
 
-def main():
-    if len(sys.argv) < 2:
+def main(argv: list[str] | None = None):
+    if argv is None:
+        argv = sys.argv
+    if len(argv) < 2:
         print("Usage: python armor.py <contents_dir>")
         sys.exit(1)
 
-    contents_dir = sys.argv[1]
+    contents_dir = argv[1]
     pack_dir = "pack"
     staging_dir = "staging"
 
