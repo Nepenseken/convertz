@@ -258,9 +258,11 @@ def find_attachable(staging_dir: str, namespace: str, model_name: str) -> (str |
                 return namespace_matches[0]
             return flat_matches[0]  # fallback
         # 2. Fall back to namespaced recursive search
-        for afile in sorted(glob.glob(f"{base_dir}/{namespace}/**/{model_name}*.json", recursive=True)):
-            if not afile.endswith(".player.json"):
-                return afile
+        for afile in sorted(glob.glob(f"{base_dir}/{namespace}/**/{model_name}*.attachable.json", recursive=True)):
+            return afile
+        # 3. Broader fallback: search ALL namespaced dirs (ignore namespace mismatch)
+        for afile in sorted(glob.glob(f"{base_dir}/**/{model_name}*.attachable.json", recursive=True)):
+            return afile
     return None
 
 
