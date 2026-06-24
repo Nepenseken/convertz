@@ -40,6 +40,12 @@ SLOT_MAP = {
     "FEET": 3,
 }
 
+# Namespace aliases — when a YAML config uses one namespace but
+# the actual texture/models live under a different namespace.
+NAMESPACE_ALIASES = {
+    "witchcasterspellsassortment": ["elitecreatures"],
+}
+
 
 def load_armor_configs(contents_dir: str) -> dict:
     """Load all armors*.yml files and build item -> equipment -> layer texture maps."""
@@ -50,7 +56,10 @@ def load_armor_configs(contents_dir: str) -> dict:
 
     configs = {}
 
-    for armors_file in sorted(contents.rglob("armors*.yml")):
+    yml_files = []
+    for pat in ("armors*.yml", "armor*.yml"):
+        yml_files.extend(sorted(contents.rglob(pat)))
+    for armors_file in yml_files:
         try:
             with open(armors_file, "r", encoding="utf-8") as f:
                 data = yaml.safe_load(f)
@@ -89,11 +98,16 @@ def load_armor_configs(contents_dir: str) -> dict:
 
             if ns_items:
                 if namespace in configs:
-                    # Merge with existing equipments and items (don't overwrite)
+                    # Merge equipments (different keys so no conflict)
                     configs[namespace]["equipments"].update(ns_eq)
-                    configs[namespace]["items"].update(ns_items)
+                    # Items may share names across YAML files (e.g. elitecreatures namespace
+                    # from both witchcaster/ and demonking/); track ALL per-source items
+                    configs[namespace]["items"].update(ns_items)  # last-file-wins for PASS 1
+                    if "sources" not in configs[namespace]:
+                        configs[namespace]["sources"] = []
+                    configs[namespace]["sources"].append(ns_items)
                 else:
-                    configs[namespace] = {"equipments": ns_eq, "items": ns_items}
+                    configs[namespace] = {"equipments": ns_eq, "items": ns_items, "sources": [ns_items]}
                 print(f"  [OK] {armors_file.name} ({namespace}): {len(ns_items)} items")
 
         except Exception as e:
@@ -136,33 +150,71 @@ def generate_gmdl(model_ref: str) -> str:
     return "gmdl_" + hashlib.md5(model_ref.encode()).hexdigest()[:8]
 
 
-def find_armor_texture(pack_dir: str, namespace: str, eq_id: str, layer_path: str, layer_key: str) -> (Path | None):
+def find_armor_texture(pack_dir: str, namespace: str, eq_id: str, layer_path: str, layer_key: str,
+                      slot_idx: int = -1) -> (Path | None):
     """Find the armor layer PNG in the Java pack, searching overlay dirs with fallbacks."""
+    # If namespace not found directly, try aliases (e.g. witchcasterspellsassortment -> elitecreatures)
+    namespaces_to_try = [namespace] + NAMESPACE_ALIASES.get(namespace, [])
+    
     layer_sub = "humanoid_leggings" if layer_key == "layer_2" else "humanoid"
     
     # Build a set of unique base dirs to search:
-    # pack/, root (.), and all ia_overlay_* dirs directly
+    # pack/, root (.), all ia_overlay_* dirs, and contents/*/resource_pack/
     search_bases = set()
     for base in [Path(pack_dir), Path(".")]:
         search_bases.add(base)
         for od in sorted(base.glob("ia_overlay_*/")):
             search_bases.add(od)
+        # Also search inside contents/*/resource_pack/ for legacy textures
+        for rp in sorted(base.glob("contents/*/resource_pack/")):
+            search_bases.add(rp)
     
-    for base in search_bases:
-        # Try overlay texture path (modern ItemsAdder): assets/{ns}/textures/entity/equipment/{layer_sub}/{eq_id}.png
-        p = base / "assets" / namespace / "textures" / "entity" / "equipment" / layer_sub / f"{eq_id}.png"
-        if p.exists():
-            return p
-        # Try overlay with layer_path basename instead of eq_id
-        layer_base = Path(layer_path).name
-        p = base / "assets" / namespace / "textures" / "entity" / "equipment" / layer_sub / f"{layer_base}.png"
-        if p.exists():
-            return p
-        # Try old format: assets/{ns}/textures/{layer_path}.png
-        p = base / "assets" / namespace / "textures" / f"{layer_path}.png"
-        if p.exists():
-            return p
-    return None
+    # If layer_key is layer_2 and we can't find it, also try falling back to layer_1 texture
+    # (some ItemsAdder packs only define layer_1 textures)
+    fallback_subs = [layer_sub]
+    if layer_key == "layer_2":
+        fallback_subs.append("humanoid")  # fallback: leggings use humanoid texture
+    
+    for base in sorted(search_bases, key=str):
+        for ns in namespaces_to_try:
+            for sub in fallback_subs:
+                # Try overlay texture path (modern ItemsAdder): assets/{ns}/textures/entity/equipment/{sub}/{eq_id}.png
+                p = base / "assets" / ns / "textures" / "entity" / "equipment" / sub / f"{eq_id}.png"
+                if p.exists():
+                    return p
+                # Try overlay with layer_path basename instead of eq_id
+                layer_base = Path(layer_path).name
+                p = base / "assets" / ns / "textures" / "entity" / "equipment" / sub / f"{layer_base}.png"
+                if p.exists():
+                    return p
+            # Try old format: assets/{ns}/textures/{layer_path}.png
+            p = base / "assets" / ns / "textures" / f"{layer_path}.png"
+            if p.exists():
+                return p
+            # Fallback: some YAML configs have wrong layer paths (e.g. armors_rendering
+            # uses "armor_1"/"armor_2" but actual textures use slot names like 
+            # "chestplate"/"leggings"/"boots"). Try mapping via split on "_armor_".
+            if slot_idx >= 0:
+                layer_part = Path(layer_path).stem  # e.g. "witchcasteranimated_armor_black_1"
+                if "_armor_" in layer_part:
+                    prefix, suffix = layer_part.split("_armor_", 1)
+                    # suffix is like "1", "black_1", "blue_2" etc.
+                    # Strip trailing _1 or _2 to get optional color
+                    color = ""
+                    slot_num = suffix
+                    if suffix.endswith("_1") or suffix.endswith("_2"):
+                        slot_num = suffix[-1]  # "1" or "2"
+                        color = suffix[:-2]    # e.g. "black", "blue", or ""  
+                    if color:
+                        color = f"_{color}"
+                    slot_name_map = {1: "chestplate", 2: "leggings", 3: "boots", 0: "helmet"}
+                    slot_name = slot_name_map.get(slot_idx, "")
+                    if slot_name:
+                        alt_name = f"{prefix}_{slot_name}{color}"
+                        alt_path = Path(layer_path).parent / alt_name
+                        p = base / "assets" / ns / "textures" / f"{alt_path}.png"
+                        if p.exists():
+                            return p
     return None
 
 
@@ -422,7 +474,7 @@ def process_armor_item(namespace: str, model_path: str, item_name: str, eq_id: s
     found_png = None
     if layer_path:
         # Search using layer_path from YAML config
-        found_png = find_armor_texture(pack_dir, namespace, eq_id, layer_path, layer_key)
+        found_png = find_armor_texture(pack_dir, namespace, eq_id, layer_path, layer_key, slot_idx)
     else:
         # No YAML config — search using eq_id directly in overlay dirs
         layer_sub = "humanoid_leggings" if slot_idx == 2 else "humanoid"
@@ -631,6 +683,43 @@ def main(argv: list[str] | None = None):
                 print(f"  [ERR]  {namespace}:{item_name}: {e}")
                 total_errors += 1
 
+        # Also process items from per-source entries (handles same-namespace, different YAML files)
+        for src_items in ns_config.get("sources", []):
+            for item_name, item_data in src_items.items():
+                # Skip if already picked up by main items loop
+                main_item = items.get(item_name)
+                if main_item and main_item.get("equipment_id") == item_data.get("equipment_id", ""):
+                    continue
+                try:
+                    eq_id = item_data.get("equipment_id", "")
+                    slot = item_data.get("slot", "")
+                    model_path = item_data.get("model_path", "")
+                    if not eq_id or not slot or not model_path:
+                        continue
+                    slot_idx = SLOT_MAP.get(slot)
+                    if slot_idx is None:
+                        continue
+                    eq_data = equipments.get(eq_id)
+                    if not eq_data:
+                        continue
+                    dedup_key = (namespace, eq_id, slot_idx)
+                    if dedup_key in processed:
+                        continue
+                    raw_path = Path(model_path)
+                    dir_path = str(raw_path.parent).replace("\\", "/")
+                    if dir_path == ".":
+                        dir_path = ""
+                    ok = process_armor_item(namespace, dir_path or model_path, item_name, eq_id, eq_data,
+                                            slot_idx, pack_dir, staging_dir, armor_layer_dir, processed)
+                    if ok:
+                        total_processed += 1
+                        direct_count += 1
+                    else:
+                        total_errors += 1
+                except Exception as e:
+                    print(f"  [ERR]  {namespace}:{item_name} (source): {e}")
+                    total_errors += 1
+
     if direct_count:
         print(f"\n[DIRECT SCAN] {direct_count} additional items processed from YAML configs")
 
@@ -670,8 +759,34 @@ def main(argv: list[str] | None = None):
     if overlay_count:
         print(f"\n[OVERLAY SCAN] {overlay_count} additional items processed from overlay scan")
 
+    # --- SUMMARY: Count generated armor layer PNGs ---
     print(f"\n{'='*50}")
-    print(f"Armor conversion: {total_processed} OK, {total_errors} errors")
+    generated_layers = sorted(armor_layer_dir.glob("*.png"))
+    generated_names = {p.stem for p in generated_layers}
+    
+    # Per-namespace breakdown from processed set
+    ns_counts = {}
+    for (ns, eq_id, slot_idx) in processed:
+        ns_counts.setdefault(ns, set()).add((eq_id, slot_idx))
+    
+    print(f"[SUMMARY] Generated {len(generated_layers)} armor layer textures")
+    print(f"[SUMMARY] Processed {total_processed} items ({total_errors} errors)")
+    
+    # Show per-namespace equipment sets
+    for ns in sorted(ns_counts):
+        eq_sets = set()
+        for (_, eq_id, _) in ns_counts[ns]:
+            base_eq = eq_id.rsplit("_", 1)[0] if any(eq_id.endswith(f"_{c}") for c in ["black","blue","brown","cyan","gray","green","orange","pink","purple","red","teal","white","yellow","darkblue","darkbrown","darkgreen","darkorange","darkpink","darkpurple","darkred","darkyellow","lightblue","lightgray","lightgreen","lightpurple","lightred"]) else eq_id
+            eq_sets.add(base_eq if base_eq != eq_id else eq_id)
+        print(f"[SUMMARY]   {ns}: {len(ns_counts[ns])} item-slots across {len(eq_sets)} equipment IDs")
+    
+    # Compare with config expectations
+    if configs:
+        expected_eq = 0
+        for ns, cfg in configs.items():
+            expected_eq += len(cfg.get("equipments", {}))
+        # Each equipment can have up to 4 slots, but some are partial sets
+        print(f"[SUMMARY] YAML configs define {expected_eq} total equipment entries across {len(configs)} namespaces")
 
 
 if __name__ == "__main__":
