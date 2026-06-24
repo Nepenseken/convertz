@@ -1,19 +1,18 @@
+# generated directories
+assets/
+ia_overlay_*/
 contents/
-pack/
+
+# staging output
 staging/
-geyser_resources.mcpack
-geyser_mappings.json
-pack.zip
-*.pyc
-__pycache__/
-.commandcode/
-$null
-Java2Bedrock-main/
-*.txt
-armor_output.txt
-armor_test_output.txt
-geyser_resources.mcpack.zip
-PackFiles*/
-PackFiles*.zip
-target/
-target.zip
+
+# temp test files
+temp/
+scratch_files/
+armor_convert*.log
+conv_*.log
+
+# generated pack files
+*.mcpack
+*.zip
+!PackFiles*.zip

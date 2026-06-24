@@ -221,17 +221,43 @@ def find_armor_texture(pack_dir: str, namespace: str, eq_id: str, layer_path: st
 def find_attachable(staging_dir: str, namespace: str, model_name: str) -> (str | None):
     """Find an existing converter.sh attachable via recursive search.
     
-    converter.sh generates: {base}/{namespace}/{dir_only}/{model_name}.{hash}.attachable.json
-    We search:              {base}/{namespace}/**/{model_name}*.json  (recursive)
+    converter.sh generates (flat, rename_model_files=true):
+        {base}/{model_name}.{hash}.attachable.json
+    or with namespace dirs:
+        {base}/{namespace}/{dir_only}/{model_name}.{hash}.attachable.json
+    
+    We search:
+        1. Flat:  {base}/{model_name}*.json              (converter.sh flat output)
+        2. Nested: {base}/{namespace}/**/{model_name}*.json  (converter.sh or armor.py output)
     """
-    # model_name is already the file stem (e.g. "medieval_armor_helmet"), no Path extraction needed
     attachable_dirs = [
         f"{staging_dir}/target/rp/attachables",
         "./target/rp/attachables",
         "target/rp/attachables",
     ]
     for base_dir in attachable_dirs:
-        # ** matches any intervening directory structure
+        # 1. Try flat search first (converter.sh with rename_model_files=true)
+        flat_matches = sorted(glob.glob(f"{base_dir}/{model_name}*.json", recursive=False))
+        flat_matches = [f for f in flat_matches if not f.endswith(".player.json")]
+        if len(flat_matches) == 1:
+            return flat_matches[0]
+        if len(flat_matches) > 1:
+            # Multiple matches — pick the one whose texture path matches the namespace
+            namespace_matches = []
+            for afile in flat_matches:
+                try:
+                    with open(afile) as f:
+                        data = json.load(f)
+                    tex = data.get("minecraft:attachable", {}).get("description", {}).get("textures", {})
+                    tex_path = list(tex.values())[0] if isinstance(tex, dict) else str(tex)
+                    if f"/{namespace}/" in tex_path:
+                        namespace_matches.append(afile)
+                except Exception:
+                    pass
+            if namespace_matches:
+                return namespace_matches[0]
+            return flat_matches[0]  # fallback
+        # 2. Fall back to namespaced recursive search
         for afile in sorted(glob.glob(f"{base_dir}/{namespace}/**/{model_name}*.json", recursive=True)):
             if not afile.endswith(".player.json"):
                 return afile
