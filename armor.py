@@ -218,13 +218,13 @@ def find_armor_texture(pack_dir: str, namespace: str, eq_id: str, layer_path: st
     return None
 
 
-def find_attachable(staging_dir: str, namespace: str, model_path: str) -> (str | None):
+def find_attachable(staging_dir: str, namespace: str, model_name: str) -> (str | None):
     """Find an existing converter.sh attachable via recursive search.
     
     converter.sh generates: {base}/{namespace}/{dir_only}/{model_name}.{hash}.attachable.json
     We search:              {base}/{namespace}/**/{model_name}*.json  (recursive)
     """
-    model_name = Path(model_path).name  # extracts filename regardless of directory depth
+    # model_name is already the file stem (e.g. "medieval_armor_helmet"), no Path extraction needed
     attachable_dirs = [
         f"{staging_dir}/target/rp/attachables",
         "./target/rp/attachables",
@@ -504,7 +504,10 @@ def process_armor_item(namespace: str, model_path: str, item_name: str, eq_id: s
         shutil.copy2(found_png, layer_dest)
 
     # Find existing attachable or generate one
-    afile = find_attachable(staging_dir, namespace, model_path)
+    # Pass item_name, NOT model_path: model_path is the directory-only path (e.g. "auto_generated"),
+    # while item_name is the actual model file name (e.g. "medieval_armor_helmet") that matches
+    # the attachable filename from converter.sh.
+    afile = find_attachable(staging_dir, namespace, item_name)
     if afile:
         with open(afile, "r") as f:
             attach_data = json.load(f)
