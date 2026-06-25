@@ -144,7 +144,14 @@ ${C_GRAY}Fallback pack URL: ${C_BLUE}${fallback_pack:=null}
 # decompress our input pack
 status_message process "Decompressing input pack"
 unzip -n -q "${1}"
-status_message completion "Input pack decompressed" if [ -f ./ia_fix.py ]; then status_message process "Resolving ItemsAdder ia: texture references"; python3 ./ia_fix.py . || python ./ia_fix.py . || true; fi
+status_message completion "Input pack decompressed"
+
+# ItemsAdder fix: merge contents/*/resource_pack/assets and resolve ia: texture references.
+if [ -f ./ia_fix.py ]; then
+  status_message process "Resolving ItemsAdder resource-pack overlays and ia: texture references"
+  python3 ./ia_fix.py . || python ./ia_fix.py . || true
+fi
+
 
 # exit the script if no input pack exists by checking for a pack.mcmeta file
 if [ ! -f pack.mcmeta ]
@@ -280,8 +287,17 @@ else
     cd ./scratch_files > /dev/null && zip -rq8 scratch_files.zip . -x "*/.*" && cd .. > /dev/null && mv ./scratch_files/scratch_files.zip ./target/scratch_files.zip
     status_message completion "Archived scratch files\n"
   fi
+# ItemsAdder/Geyser postprocess fix: geometry texture sizes and missing armor player layers.
+POSTPROCESS_SCRIPT="./convertz_itemsadder_postprocess.py"
+if [ ! -f "$POSTPROCESS_SCRIPT" ] && [ -f "../convertz_itemsadder_postprocess.py" ]; then
+  POSTPROCESS_SCRIPT="../convertz_itemsadder_postprocess.py"
+fi
+if [ -f "$POSTPROCESS_SCRIPT" ]; then
+  status_message process "Applying ItemsAdder/Geyser texture and armor fixes"
+  python3 "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || python "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || true
+fi
 
-  if [ -f ./convertz_integrated_fix.py ]; then status_message process "Applying integrated ItemsAdder/Geyser fixes"; python3 ./convertz_integrated_fix.py "${1}" ./target/rp || python ./convertz_integrated_fix.py "${1}" ./target/rp || true; fi status_message process "Compressing output packs"
+status_message process "Compressing output packs"
   mkdir ./target/packaged
   cd ./target/rp > /dev/null && zip -rq8 geyser_resources_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/rp/geyser_resources_preview.mcpack ./target/packaged/geyser_resources_preview.mcpack
   cd ./target/bp > /dev/null && zip -rq8 geyser_behaviors_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/bp/geyser_behaviors_preview.mcpack ./target/packaged/geyser_behaviors_preview.mcpack
@@ -1328,8 +1344,17 @@ else
   cd ./scratch_files > /dev/null && zip -rq8 scratch_files.zip . -x "*/.*" && cd .. > /dev/null && mv ./scratch_files/scratch_files.zip ./target/scratch_files.zip
   status_message completion "Archived scratch files\n"
 fi
+# ItemsAdder/Geyser postprocess fix: geometry texture sizes and missing armor player layers.
+POSTPROCESS_SCRIPT="./convertz_itemsadder_postprocess.py"
+if [ ! -f "$POSTPROCESS_SCRIPT" ] && [ -f "../convertz_itemsadder_postprocess.py" ]; then
+  POSTPROCESS_SCRIPT="../convertz_itemsadder_postprocess.py"
+fi
+if [ -f "$POSTPROCESS_SCRIPT" ]; then
+  status_message process "Applying ItemsAdder/Geyser texture and armor fixes"
+  python3 "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || python "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || true
+fi
 
-if [ -f ./convertz_integrated_fix.py ]; then status_message process "Applying integrated ItemsAdder/Geyser fixes"; python3 ./convertz_integrated_fix.py "${1}" ./target/rp || python ./convertz_integrated_fix.py "${1}" ./target/rp || true; fi status_message process "Compressing output packs"
+status_message process "Compressing output packs"
 mkdir ./target/packaged
 cd ./target/rp > /dev/null && zip -rq8 geyser_resources_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/rp/geyser_resources_preview.mcpack ./target/packaged/geyser_resources_preview.mcpack
 cd ./target/bp > /dev/null && zip -rq8 geyser_behaviors_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/bp/geyser_behaviors_preview.mcpack ./target/packaged/geyser_behaviors_preview.mcpack
