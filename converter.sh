@@ -144,7 +144,7 @@ ${C_GRAY}Fallback pack URL: ${C_BLUE}${fallback_pack:=null}
 # decompress our input pack
 status_message process "Decompressing input pack"
 unzip -n -q "${1}"
-status_message completion "Input pack decompressed"
+status_message completion "Input pack decompressed" if [ -f ./ia_fix.py ]; then status_message process "Resolving ItemsAdder ia: texture references"; python3 ./ia_fix.py . || python ./ia_fix.py . || true; fi
 
 # exit the script if no input pack exists by checking for a pack.mcmeta file
 if [ ! -f pack.mcmeta ]
@@ -281,7 +281,7 @@ else
     status_message completion "Archived scratch files\n"
   fi
 
-  status_message process "Compressing output packs"
+  if [ -f ./convertz_integrated_fix.py ]; then status_message process "Applying integrated ItemsAdder/Geyser fixes"; python3 ./convertz_integrated_fix.py "${1}" ./target/rp || python ./convertz_integrated_fix.py "${1}" ./target/rp || true; fi status_message process "Compressing output packs"
   mkdir ./target/packaged
   cd ./target/rp > /dev/null && zip -rq8 geyser_resources_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/rp/geyser_resources_preview.mcpack ./target/packaged/geyser_resources_preview.mcpack
   cd ./target/bp > /dev/null && zip -rq8 geyser_behaviors_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/bp/geyser_behaviors_preview.mcpack ./target/packaged/geyser_behaviors_preview.mcpack
@@ -1329,7 +1329,7 @@ else
   status_message completion "Archived scratch files\n"
 fi
 
-status_message process "Compressing output packs"
+if [ -f ./convertz_integrated_fix.py ]; then status_message process "Applying integrated ItemsAdder/Geyser fixes"; python3 ./convertz_integrated_fix.py "${1}" ./target/rp || python ./convertz_integrated_fix.py "${1}" ./target/rp || true; fi status_message process "Compressing output packs"
 mkdir ./target/packaged
 cd ./target/rp > /dev/null && zip -rq8 geyser_resources_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/rp/geyser_resources_preview.mcpack ./target/packaged/geyser_resources_preview.mcpack
 cd ./target/bp > /dev/null && zip -rq8 geyser_behaviors_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/bp/geyser_behaviors_preview.mcpack ./target/packaged/geyser_behaviors_preview.mcpack
