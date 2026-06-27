@@ -277,6 +277,15 @@ else
   cd -
   ARMOR_CONVERSION="${ARMOR_CONVERSION:-true}" ARMOR_CONTENTS_DIR="${ARMOR_CONTENTS_DIR:-contents}" python manager.py
   cd ./staging
+
+  # Deduplicate geyser_mappings.json entries (armor conversion may introduce duplicates)
+  if [ -f ./target/geyser_mappings.json ]; then
+    status_message process "Deduplicating geyser_mappings.json entries"
+    jq '
+      .items |= (to_entries | map(.value |= unique) | from_entries)
+    ' ./target/geyser_mappings.json | sponge ./target/geyser_mappings.json
+  fi
+
   # cleanup
   rm -rf assets && rm -f pack.mcmeta && rm -f pack.png
   if [[ ${save_scratch} != "true" ]] 
@@ -1333,6 +1342,14 @@ fi
 cd -
 ARMOR_CONVERSION="${ARMOR_CONVERSION:-true}" ARMOR_CONTENTS_DIR="${ARMOR_CONTENTS_DIR:-contents}" python manager.py
 cd ./staging
+
+# Deduplicate geyser_mappings.json entries (armor conversion may introduce duplicates)
+if [ -f ./target/geyser_mappings.json ]; then
+  status_message process "Deduplicating geyser_mappings.json entries"
+  jq '
+    .items |= (to_entries | map(.value |= unique) | from_entries)
+  ' ./target/geyser_mappings.json | sponge ./target/geyser_mappings.json
+fi
 
 # cleanup
 rm -rf assets && rm -f pack.mcmeta && rm -f pack.png

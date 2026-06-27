@@ -477,6 +477,36 @@ def resolve_existing_path(path_arg: str) -> Optional[Path]:
     return None
 
 
+def deduplicate_mappings(target_dir: Path) -> int:
+    """Remove duplicate entries from geyser_mappings.json in target_dir.
+
+    Returns the number of duplicates removed.
+    """
+    mappings_path = target_dir / "geyser_mappings.json"
+    if not mappings_path.exists():
+        return 0
+    try:
+        data = json.loads(mappings_path.read_text(encoding="utf-8"))
+    except Exception:
+        return 0
+    items = data.get("items", {})
+    total_dupes = 0
+    for java_item in list(items):
+        entries = items[java_item]
+        seen: set = set()
+        unique: list = []
+        for entry in entries:
+            key = json.dumps(entry, sort_keys=True)
+            if key not in seen:
+                seen.add(key)
+                unique.append(entry)
+            else:
+                total_dupes += 1
+        items[java_item] = unique
+    if total_dupes > 0:
+        write_json(mappings_path, data)
+    return total_dupes
+
 def main(argv: List[str]) -> None:
     source_arg = argv[1] if len(argv) > 1 else ""
     rp_arg = argv[2] if len(argv) > 2 else "./target/rp"
@@ -505,12 +535,16 @@ def main(argv: List[str]) -> None:
     geo_fixed, animated = fix_geometry_texture_sizes(rp_dir, source_models)
     armor_fixed = fix_missing_armor_player_layers(rp_dir, source_pngs)
 
+    # Deduplicate geyser_mappings.json (removes duplicates introduced by armor fix)
+    mappings_dupes = deduplicate_mappings(rp_dir.parent)
+
     report = rp_dir.parent / "itemsadder_fix_report.txt"
     report.write_text(
         "ItemsAdder/Geyser postprocess report\n"
         f"geometry_texture_size_fixed={geo_fixed}\n"
         f"armor_player_attachables_fixed={armor_fixed}\n"
         f"animated_model_candidates={len(animated)}\n"
+        f"mappings_duplicates_removed={mappings_dupes}\n"
         + ("\nAnimated candidates:\n" + "\n".join(animated[:500]) + "\n" if animated else ""),
         encoding="utf-8",
     )
@@ -518,6 +552,8 @@ def main(argv: List[str]) -> None:
     print(f"[POST] geometry texture size fixed: {geo_fixed}")
     print(f"[POST] missing armor .player attachables fixed: {armor_fixed}")
     print(f"[POST] animated model candidates reported: {len(animated)}")
+    if mappings_dupes:
+        print(f"[POST] mappings duplicates removed: {mappings_dupes}")
     print(f"[POST] report: {report}")
 
 

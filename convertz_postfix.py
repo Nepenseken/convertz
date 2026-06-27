@@ -315,7 +315,47 @@ def fix_missing_player_armor(files: dict[str, bytes], src: zipfile.ZipFile, equi
     return made
 
 
-def repack(input_mcpack: Path, output_mcpack: Path, source_zip: Path) -> None:
+def deduplicate_mappings(mappings_data: dict[str, Any]) -> tuple[int, int]:
+    """Remove duplicate entries from geyser_mappings items.
+
+    Returns (total_before, duplicates_removed).
+    """
+    items = mappings_data.get("items", {})
+    total_before = sum(len(v) for v in items.values())
+    total_dupes = 0
+    for java_item in list(items):
+        entries = items[java_item]
+        seen: set[str] = set()
+        unique: list[dict[str, Any]] = []
+        for entry in entries:
+            key = json.dumps(entry, sort_keys=True)
+            if key not in seen:
+                seen.add(key)
+                unique.append(entry)
+            else:
+                total_dupes += 1
+        items[java_item] = unique
+    return total_before, total_dupes
+
+
+def fix_mappings_file(mappings_path: Path, output_path: Path | None = None) -> tuple[int, int]:
+    """Read, deduplicate, and write a geyser_mappings.json file.
+
+    Returns (total_before, duplicates_removed).
+    """
+    if not mappings_path.exists():
+        return 0, 0
+    data = json.loads(mappings_path.read_text(encoding="utf-8"))
+    total_before, dupes = deduplicate_mappings(data)
+    out = output_path or mappings_path
+    out.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    return total_before, dupes
+
+
+def repack(input_mcpack: Path, output_mcpack: Path, source_zip: Path,
+           mappings_path: Path | None = None) -> None:
     with zipfile.ZipFile(input_mcpack, "r") as rp:
         files = {name: rp.read(name) for name in rp.namelist() if not name.endswith("/")}
     with zipfile.ZipFile(source_zip, "r") as src:
@@ -326,11 +366,31 @@ def repack(input_mcpack: Path, output_mcpack: Path, source_zip: Path) -> None:
     with zipfile.ZipFile(output_mcpack, "w", compression=zipfile.ZIP_DEFLATED) as out:
         for name in sorted(files):
             out.writestr(name, files[name])
+
+    # Deduplicate geyser_mappings.json if provided
+    mappings_dupes = 0
+    mappings_before = 0
+    if mappings_path and mappings_path.exists():
+        out_mappings = output_mcpack.parent / mappings_path.name
+        mappings_before, mappings_dupes = fix_mappings_file(
+            mappings_path, out_mappings if out_mappings != mappings_path else None
+        )
+    else:
+        # Try to find geyser_mappings.json next to the mcpack
+        candidate = input_mcpack.parent / "geyser_mappings.json"
+        if candidate.exists():
+            out_mappings = output_mcpack.parent / "geyser_mappings.json"
+            mappings_before, mappings_dupes = fix_mappings_file(
+                candidate, out_mappings if out_mappings != candidate else None
+            )
+
     report = output_mcpack.with_suffix(".postfix-report.txt")
     with report.open("w", encoding="utf-8") as f:
         f.write(f"geometry_texture_size_fixed={size_fixed}\n")
         f.write(f"player_armor_attachables_generated={player_fixed}\n")
         f.write(f"animated_model_candidates={len(animated_hits)}\n")
+        f.write(f"mappings_entries_before={mappings_before}\n")
+        f.write(f"mappings_duplicates_removed={mappings_dupes}\n")
         for line in animated_hits[:500]:
             f.write(line + "\n")
     print(f"[OK] wrote {output_mcpack}")
@@ -338,16 +398,23 @@ def repack(input_mcpack: Path, output_mcpack: Path, source_zip: Path) -> None:
     print(f"[SUMMARY] geometry texture_size fixed: {size_fixed}")
     print(f"[SUMMARY] .player armor attachables generated: {player_fixed}")
     print(f"[SUMMARY] animated 3D model candidates reported: {len(animated_hits)}")
+    if mappings_dupes:
+        print(f"[SUMMARY] mappings duplicates removed: {mappings_dupes} ({mappings_before} -> {mappings_before - mappings_dupes})")
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="Post-fix for convertz output packs: fix geometry texture sizes, "
+                    "generate missing armor .player attachables, and deduplicate mappings."
+    )
     parser.add_argument("source_zip", type=Path, help="Original ItemsAdder/Java resource pack zip")
     parser.add_argument("mcpack", type=Path, help="Converted Geyser/Bedrock mcpack")
     parser.add_argument("-o", "--output", type=Path, default=None, help="Fixed output mcpack")
+    parser.add_argument("-m", "--mappings", type=Path, default=None,
+                        help="Path to geyser_mappings.json (auto-detected if not specified)")
     args = parser.parse_args()
     out = args.output or args.mcpack.with_name(args.mcpack.stem + ".fixed.mcpack")
-    repack(args.mcpack, out, args.source_zip)
+    repack(args.mcpack, out, args.source_zip, mappings_path=args.mappings)
     return 0
 
 
