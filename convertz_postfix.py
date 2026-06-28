@@ -117,6 +117,37 @@ def choose_source_model(stem: str, bedrock_data: Any, candidates: list[dict[str,
     return sorted(candidates, key=lambda c: (c["priority"], -abs((c.get("elements") or 0) - cube_count)), reverse=True)[0]
 
 
+def clean_bedrock_stem(stem: str) -> str:
+    # Remove geyser hash suffix (e.g. .gmdl_ca5d6b7)
+    stem = re.sub(r"\.gmdl_[0-9a-fA-F]+$", "", stem)
+    return stem
+
+
+def get_base_stems(stem: str) -> list[str]:
+    stem = clean_bedrock_stem(stem)
+    stems = [stem]
+    stem_no_num = re.sub(r"_\d+$", "", stem)
+    if stem_no_num != stem:
+        stems.append(stem_no_num)
+        
+    extra = []
+    for s in stems:
+        for color in sorted(COLORS, key=len, reverse=True):
+            suffix = "_" + color
+            if s.endswith(suffix):
+                base = s[:-len(suffix)]
+                extra.append(base)
+                base_no_num = re.sub(r"_\d+$", "", base)
+                if base_no_num != base:
+                    extra.append(base_no_num)
+                    
+    res = []
+    for s in stems + extra:
+        if s and s not in res:
+            res.append(s)
+    return res
+
+
 def fix_geometry_texture_sizes(files: dict[str, bytes], source_models: dict[str, list[dict[str, Any]]]) -> tuple[int, list[str]]:
     changed = 0
     animated_hits: list[str] = []
@@ -127,7 +158,12 @@ def fix_geometry_texture_sizes(files: dict[str, bytes], source_models: dict[str,
         if not isinstance(data, dict) or "minecraft:geometry" not in data:
             continue
         stem = model_stem(name)
-        chosen = choose_source_model(stem, data, source_models.get(stem, []))
+        candidates = []
+        for base_stem in get_base_stems(stem):
+            if base_stem in source_models:
+                candidates = source_models[base_stem]
+                break
+        chosen = choose_source_model(stem, data, candidates)
         if not chosen:
             continue
         width, height = chosen["texture_size"]

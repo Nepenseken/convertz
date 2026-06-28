@@ -937,7 +937,7 @@ do
             }) end] + (pivot_groups | map(del(.cubes[].rotation)) | to_entries | map( (.value.name = "rot_\(1+.key)" ) | .value)))
         }]
       }
-      ' ${file} | sponge ./target/rp/models/blocks/${namespace}/${model_path}/${model_name}.json
+      ' ${file} | sponge ./target/rp/models/blocks/${namespace}/${model_path}/${model_name}.${path_hash}.json
 
       # generate our rp animations via display settings
       mkdir -p ./target/rp/animations/${namespace}/${model_path}
@@ -1050,7 +1050,7 @@ do
         }
       } | walk( if type == "object" then with_entries(select(.value != null)) else . end)
 
-      ' ${file} | sponge ./target/rp/animations/${namespace}/${model_path}/animation.${model_name}.json
+      ' ${file} | sponge ./target/rp/animations/${namespace}/${model_path}/animation.${model_name}.${path_hash}.json
 
       # generate our bp block definition if this is a 3D item
       if [[ ${generated} = false ]]
@@ -1207,7 +1207,7 @@ then
 	   ##Remaming the un-moved files to unique names and move the renamed files
 	   find ${1} -mindepth 2 -type f -print0 | while IFS= read -r -d '' file; do
 	       current_file=$(basename "$file")
-	       mv -n "$file" "./${nr}${current_file}"
+	       mv -n "$file" "${1}/${nr}${current_file}"
 	   done
 	   ## Incrementing counter to prefix to file name
 	   nr=$((nr+1))
@@ -1219,7 +1219,7 @@ then
      consolidate_files './target/rp/models/blocks'
      rm -rf ./target/rp/models/blocks/*/
      consolidate_files './target/rp/attachables'
-     rm -rf rm -rf ./target/rp/attachables/*/
+     rm -rf ./target/rp/attachables/*/
 fi
 
 # attempt to merge with existing pack if input was provided

@@ -76,14 +76,32 @@ def namespace_from_asset_path(path: str) -> str:
 
 def model_stem_candidates(path: Path) -> Iterable[str]:
     stem = path.stem
-    yield stem
-    # converter often emits name.hash.json or name.gmdl_xxx.json
-    if "." in stem:
-        yield stem.split(".", 1)[0]
-    m = re.match(r"(.+?)\.gmdl_[a-f0-9]+$", stem)
-    if m:
-        yield m.group(1)
-    # Some files are gmdl hashes only; cannot infer original name.
+    # Remove geyser hash suffix (e.g. .gmdl_ca5d6b7)
+    stem_clean = re.sub(r"\.gmdl_[0-9a-fA-F]+$", "", stem)
+    if "." in stem_clean:
+        stem_clean = stem_clean.split(".", 1)[0]
+    
+    stems = [stem, stem_clean]
+    stem_no_num = re.sub(r"_\d+$", "", stem_clean)
+    if stem_no_num != stem_clean:
+        stems.append(stem_no_num)
+        
+    extra = []
+    for s in stems:
+        for color in sorted(COLORS, key=len, reverse=True):
+            suffix = "_" + color
+            if s.endswith(suffix):
+                base = s[:-len(suffix)]
+                extra.append(base)
+                base_no_num = re.sub(r"_\d+$", "", base)
+                if base_no_num != base:
+                    extra.append(base_no_num)
+                    
+    seen = set()
+    for s in stems + extra:
+        if s and s not in seen:
+            seen.add(s)
+            yield s
 
 
 def count_java_elements(data: Any) -> int:
