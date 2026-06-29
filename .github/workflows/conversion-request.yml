@@ -206,7 +206,7 @@ jobs:
           BLOCK_CONVERSION: ${{ needs.get-pack-info.outputs.block_conversion }}
         run: |
           mkdir -p staging
-          cp converter.sh convertz_postfix.py staging/
+          cp converter.sh staging/
           cd staging
           chmod +x converter.sh
           COLUMNS=$COLUMNS-1 curl --no-styled-output -#L -o input_pack.zip "${PACK_URL}"
@@ -216,8 +216,6 @@ jobs:
             MERGE_PACK_FILE="merge_pack.zip"
           fi
           ./converter.sh input_pack.zip -w "false" -m ${MERGE_PACK_FILE} -a ${ATTACHABLE_MATERIAL} -b ${BLOCK_MATERIAL} -f ${DEFAULT_PACK_URL} -v ${DEFAULT_ASSETS_VERSION} -r ${RENAME_MODEL_FILES} -s ${ARCHIVE_SCRATCH} -u "true"
-          echo "Running post-process script..."
-          python3 convertz_postfix.py input_pack.zip ./target/packaged/geyser_resources.mcpack -o ./target/packaged/geyser_resources.mcpack -m ./target/geyser_mappings.json || python convertz_postfix.py input_pack.zip ./target/packaged/geyser_resources.mcpack -o ./target/packaged/geyser_resources.mcpack -m ./target/geyser_mappings.json || true
       - name: Upload converted pack
         uses: actions/upload-artifact@v4
         with:
