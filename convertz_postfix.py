@@ -168,12 +168,13 @@ def fix_geometry_texture_sizes(files: dict[str, bytes], source_models: dict[str,
             continue
         width, height = chosen["texture_size"]
         did = False
-        for geo in data.get("minecraft:geometry", []) or []:
-            desc = geo.get("description") or {}
-            if desc.get("texture_width") != width or desc.get("texture_height") != height:
-                desc["texture_width"] = width
-                desc["texture_height"] = height
-                did = True
+        # Do not overwrite the geometry texture sizes for items/weapons as they are mapped to spritesheets.
+        # for geo in data.get("minecraft:geometry", []) or []:
+        #     desc = geo.get("description") or {}
+        #     if desc.get("texture_width") != width or desc.get("texture_height") != height:
+        #         desc["texture_width"] = width
+        #         desc["texture_height"] = height
+        #         did = True
         if did:
             files[name] = dump_json(data)
             changed += 1

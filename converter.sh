@@ -861,21 +861,23 @@ do
         "rotation": (if (.rotation.axis) == "x" then [(.rotation.angle | tonumber * -1), 0, 0] elif (.rotation.axis) == "y" then [0, (.rotation.angle | tonumber * -1), 0] elif (.rotation.axis) == "z" then [0, 0, (.rotation.angle | tonumber)] else null end),
         "pivot": (if .rotation.origin then [((- .rotation.origin[0] + 8) | roundit), (.rotation.origin[1] | roundit), ((.rotation.origin[2] - 8) | roundit)] else null end),
         "uv": (
+          ($atlas[] | .meta.size.w * 0.001) as $shrink_w |
+          ($atlas[] | .meta.size.h * 0.001) as $shrink_h |
           def uv_calc($input):
             (if (.faces | .[$input]) then
             (.faces | .[$input].texture) as $input_n
-            | ( (((((.faces | .[$input].uv[0]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x)) * (16 / ($atlas[] | .meta.size.w))) ) ) as $fn0
-            | ( (((((.faces | .[$input].uv[1]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y)) * (16 / ($atlas[] | .meta.size.h))) ) ) as $fn1
-            | ( (((((.faces | .[$input].uv[2]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x)) * (16 / ($atlas[] | .meta.size.w))) ) ) as $fn2
-            | ( (((((.faces | .[$input].uv[3]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y)) * (16 / ($atlas[] | .meta.size.h))) ) ) as $fn3 
+            | ( (((((.faces | .[$input].uv[0]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x))) ) ) as $fn0
+            | ( (((((.faces | .[$input].uv[1]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn1
+            | ( (((((.faces | .[$input].uv[2]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x))) ) ) as $fn2
+            | ( (((((.faces | .[$input].uv[3]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn3 
             | (($fn2 - $fn0) as $num | [([-1, $num] | max), 1] | min) as $x_sign
             | (($fn3 - $fn1) as $num | [([-1, $num] | max), 1] | min) as $y_sign |
             (if ($input == "up" or $input == "down") then {
-              "uv": [(($fn2 - (0.016 * $x_sign)) | roundit), (($fn3 - (0.016 * $y_sign)) | roundit)],
-              "uv_size": [((($fn0 - $fn2) + (0.016 * $x_sign)) | roundit), ((($fn1 - $fn3) + (0.016 * $y_sign)) | roundit)]
+              "uv": [(($fn2 - ($shrink_w * $x_sign)) | roundit), (($fn3 - ($shrink_h * $y_sign)) | roundit)],
+              "uv_size": [((($fn0 - $fn2) + ($shrink_w * $x_sign)) | roundit), ((($fn1 - $fn3) + ($shrink_h * $y_sign)) | roundit)]
             } else {
-              "uv": [(($fn0 + (0.016 * $x_sign)) | roundit), (($fn1 + (0.016 * $y_sign)) | roundit)],
-              "uv_size": [((($fn2 - $fn0) - (0.016 * $x_sign)) | roundit), ((($fn3 - $fn1) - (0.016 * $y_sign)) | roundit)]
+              "uv": [(($fn0 + ($shrink_w * $x_sign)) | roundit), (($fn1 + ($shrink_h * $y_sign)) | roundit)],
+              "uv_size": [((($fn2 - $fn0) - ($shrink_w * $x_sign)) | roundit), ((($fn3 - $fn1) - ($shrink_h * $y_sign)) | roundit)]
             } end) else null end);
           {
           "north": uv_calc("north"),
@@ -905,8 +907,8 @@ do
         "minecraft:geometry": [{
           "description": {
             "identifier": ( "geometry.geyser_custom." + ($geometry)),
-            "texture_width": 16,
-            "texture_height": 16,
+            "texture_width": ($atlas[] | .meta.size.w),
+            "texture_height": ($atlas[] | .meta.size.h),
             "visible_bounds_width": 4,
             "visible_bounds_height": 4.5,
             "visible_bounds_offset": [0, 0.75, 0]
