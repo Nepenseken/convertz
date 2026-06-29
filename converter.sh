@@ -839,56 +839,14 @@ do
      # find which texture atlas we will be using if not generated
      if [[ ${generated} = "false" ]]
      then
-       # Get primary texture size and create a mock atlas for this model
-       local texture_0=$(jq -rc 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; ("./assets/" + (.textures | [.[]][0]? | namespace) + "/textures/" + ((.textures | [.[]][0]? // empty) | sub("(.*?)\\:"; "")) + ".png") // "null"' "${file}")
-       local tex_w=16
-       local tex_h=16
-       if [[ -f "${texture_0}" ]]; then
-         read -r tex_w tex_h <<< $(identify -format "%w %h" "${texture_0}" 2>/dev/null || echo "16 16")
-         
-         # Copy texture directly to the target RP using the model_name
-         mkdir -p "./target/rp/textures/${namespace}/${model_path}"
-         cp "${texture_0}" "./target/rp/textures/${namespace}/${model_path}/${model_name}.png"
-       fi
-       
-       # Generate mock atlas for this model mapping all textures to this standalone texture file
-       jq -n --arg w "${tex_w}" --arg h "${tex_h}" --slurpfile tex "${file}" '
-         def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end;
-         def topath($input): ("./assets/" + ($input | namespace) + "/textures/" + ($input | sub("(.*?)\\:"; "")) + ".png");
-         {
-           "frames": ($tex[0].textures | to_entries | map({
-             "key": topath(.value),
-             "value": {
-               "frame": {"x": 0, "y": 0, "w": ($w | tonumber), "h": ($h | tonumber)}
-             }
-           }) | from_entries),
-           "meta": {
-             "size": {"w": ($w | tonumber), "h": ($h | tonumber)}
-           }
-         }
-       ' > "scratch_files/${gid}.mock_atlas.json"
-       
-       # Copy all other textures used by this model directly to target/rp/textures
-       jq -r -s '
-         def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end;
-         def topath($input): ("./assets/" + ($input | namespace) + "/textures/" + ($input | sub("(.*?)\\:"; "")) + ".png");
-         .[0].textures | .[] | topath
-       ' "${file}" | while read -r tex_path; do
-         if [[ -f "${tex_path}" ]]; then
-           local dest_path=$(echo "${tex_path}" | sed 's|./assets/\([^/]*\)/textures/|./target/rp/textures/\1/|')
-           mkdir -p "$(dirname "${dest_path}")"
-           cp "${tex_path}" "${dest_path}"
-         fi
-       done
-       
-       local atlas_file="scratch_files/${gid}.mock_atlas.json"
+       local atlas_index=$(jq -r -s 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; def intersects(a;b): any(a[]; . as $x | any(b[]; . == $x)); (.[0] | [.textures[]] | map("./assets/" + (. | namespace) + "/textures/" + (. | sub("(.*?)\\:"; "")) + ".png")) as $inp | [(.[1] | (map(if intersects(.;$inp) then . else empty end)[])) as $entry | .[1] | to_entries[] | select(.value == $entry).key][0] // 0' ${file} scratch_files/union_atlas.temp)
      else
-       local atlas_file="scratch_files/spritesheet/0.json"
+       local atlas_index=0
      fi
 
      status_message process "Starting conversion of model with GeyserID ${gid}"
      mkdir -p ./target/rp/models/blocks/${namespace}/${model_path}
-     jq --slurpfile atlas "${atlas_file}" --arg generated "${generated}" --arg binding "c.item_slot == 'head' ? 'head' : q.item_slot_to_bone_name(c.item_slot)" --arg geometry "${geometry}" -c '
+     jq --slurpfile atlas scratch_files/spritesheet/${atlas_index}.json --arg generated "${generated}" --arg binding "c.item_slot == 'head' ? 'head' : q.item_slot_to_bone_name(c.item_slot)" --arg geometry "${geometry}" -c '
      .textures as $texture_list |
      def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end;
      def tobool: if .=="true" then true elif .=="false" then false else null end;
@@ -903,21 +861,23 @@ do
          "rotation": (if (.rotation.axis) == "x" then [(.rotation.angle | tonumber * -1), 0, 0] elif (.rotation.axis) == "y" then [0, (.rotation.angle | tonumber * -1), 0] elif (.rotation.axis) == "z" then [0, 0, (.rotation.angle | tonumber)] else null end),
          "pivot": (if .rotation.origin then [((- .rotation.origin[0] + 8) | roundit), (.rotation.origin[1] | roundit), ((.rotation.origin[2] - 8) | roundit)] else null end),
          "uv": (
+           ($atlas[] | .meta.size.w * 0.001) as $shrink_w |
+           ($atlas[] | .meta.size.h * 0.001) as $shrink_h |
            def uv_calc($input):
              (if (.faces | .[$input]) then
              (.faces | .[$input].texture) as $input_n
-             | ( (((((.faces | .[$input].uv[0]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x)) * (16 / ($atlas[] | .meta.size.w))) ) ) as $fn0
-             | ( (((((.faces | .[$input].uv[1]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y)) * (16 / ($atlas[] | .meta.size.h))) ) ) as $fn1
-             | ( (((((.faces | .[$input].uv[2]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x)) * (16 / ($atlas[] | .meta.size.w))) ) ) as $fn2
-             | ( (((((.faces | .[$input].uv[3]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y)) * (16 / ($atlas[] | .meta.size.h))) ) ) as $fn3 
+             | ( (((((.faces | .[$input].uv[0]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x))) ) ) as $fn0
+             | ( (((((.faces | .[$input].uv[1]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn1
+             | ( (((((.faces | .[$input].uv[2]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x))) ) ) as $fn2
+             | ( (((((.faces | .[$input].uv[3]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn3 
              | (($fn2 - $fn0) as $num | [([-1, $num] | max), 1] | min) as $x_sign
              | (($fn3 - $fn1) as $num | [([-1, $num] | max), 1] | min) as $y_sign |
              (if ($input == "up" or $input == "down") then {
-               "uv": [(($fn2 - (0.016 * $x_sign)) | roundit), (($fn3 - (0.016 * $y_sign)) | roundit)],
-               "uv_size": [((($fn0 - $fn2) + (0.016 * $x_sign)) | roundit), ((($fn1 - $fn3) + (0.016 * $y_sign)) | roundit)]
+               "uv": [(($fn2 - ($shrink_w * $x_sign)) | roundit), (($fn3 - ($shrink_h * $y_sign)) | roundit)],
+               "uv_size": [((($fn0 - $fn2) + ($shrink_w * $x_sign)) | roundit), ((($fn1 - $fn3) + ($shrink_h * $y_sign)) | roundit)]
              } else {
-               "uv": [(($fn0 + (0.016 * $x_sign)) | roundit), (($fn1 + (0.016 * $y_sign)) | roundit)],
-               "uv_size": [((($fn2 - $fn0) - (0.016 * $x_sign)) | roundit), ((($fn3 - $fn1) - (0.016 * $y_sign)) | roundit)]
+               "uv": [(($fn0 + ($shrink_w * $x_sign)) | roundit), (($fn1 + ($shrink_h * $y_sign)) | roundit)],
+               "uv_size": [((($fn2 - $fn0) - ($shrink_w * $x_sign)) | roundit), ((($fn3 - $fn1) - ($shrink_h * $y_sign)) | roundit)]
              } end) else null end);
            {
            "north": uv_calc("north"),
@@ -947,8 +907,8 @@ do
          "minecraft:geometry": [{
            "description": {
              "identifier": ( "geometry.geyser_custom." + ($geometry)),
-             "texture_width": 16,
-             "texture_height": 16,
+             "texture_width": ($atlas[] | .meta.size.w),
+             "texture_height": ($atlas[] | .meta.size.h),
             "visible_bounds_width": 4,
             "visible_bounds_height": 4.5,
             "visible_bounds_offset": [0, 0.75, 0]
@@ -1164,7 +1124,7 @@ do
               "enchanted": $attachable_material
             },
             "textures": {
-              "default": ("textures/" + $namespace + "/" + $model_path + "/" + $model_name),
+              "default": (if ($generated | tobool) == true then ("textures/" + $namespace + "/" + $model_path + "/" + $model_name) else ("textures/" + $atlas_index) end),
               "enchanted": "textures/misc/enchanted_item_glint"
             },
             "geometry": {
