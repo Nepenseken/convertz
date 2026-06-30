@@ -867,9 +867,9 @@ do
              (if (.faces | .[$input]) then
              (.faces | .[$input].texture) as $input_n
              | ( (((((.faces | .[$input].uv[0]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x))) ) ) as $fn0
-             | ( (((((.faces | .[$input].uv[1]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn1
+             | ( (((((.faces | .[$input].uv[1]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn1
              | ( (((((.faces | .[$input].uv[2]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x))) ) ) as $fn2
-             | ( (((((.faces | .[$input].uv[3]) * (texturedata($input_n) | .frame.h) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn3 
+             | ( (((((.faces | .[$input].uv[3]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn3 
              | (($fn2 - $fn0) as $num | [([-1, $num] | max), 1] | min) as $x_sign
              | (($fn3 - $fn1) as $num | [([-1, $num] | max), 1] | min) as $y_sign |
              (if ($input == "up" or $input == "down") then {
