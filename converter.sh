@@ -861,17 +861,18 @@ do
          "rotation": (if (.rotation.axis) == "x" then [(.rotation.angle | tonumber * -1), 0, 0] elif (.rotation.axis) == "y" then [0, (.rotation.angle | tonumber * -1), 0] elif (.rotation.axis) == "z" then [0, 0, (.rotation.angle | tonumber)] else null end),
          "pivot": (if .rotation.origin then [((- .rotation.origin[0] + 8) | roundit), (.rotation.origin[1] | roundit), ((.rotation.origin[2] - 8) | roundit)] else null end),
          "uv": (
-           ($atlas[] | .meta.size.w * 0.001) as $shrink_w |
-           ($atlas[] | .meta.size.h * 0.001) as $shrink_h |
+           (0.01) as $shrink_w |
+           (0.01) as $shrink_h |
            def uv_calc($input):
              (if (.faces | .[$input]) then
              (.faces | .[$input].texture) as $input_n
-             | ( (((((.faces | .[$input].uv[0]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x))) ) ) as $fn0
-             | ( (((((.faces | .[$input].uv[1]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn1
-             | ( (((((.faces | .[$input].uv[2]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.x))) ) ) as $fn2
-             | ( (((((.faces | .[$input].uv[3]) * (texturedata($input_n) | .frame.w) * 0.0625) + (texturedata($input_n) | .frame.y))) ) ) as $fn3 
-             | (($fn2 - $fn0) as $num | [([-1, $num] | max), 1] | min) as $x_sign
-             | (($fn3 - $fn1) as $num | [([-1, $num] | max), 1] | min) as $y_sign |
+             | (texturedata($input_n)) as $tex
+             | ( [ $tex.frame.x, [ (((((.faces | .[$input].uv[0]) * $tex.frame.w * 0.0625) + $tex.frame.x))), ($tex.frame.x + $tex.frame.w) ] | min ] | max ) as $fn0
+             | ( [ $tex.frame.y, [ (((((.faces | .[$input].uv[1]) * $tex.frame.w * 0.0625) + $tex.frame.y))), ($tex.frame.y + $tex.frame.h) ] | min ] | max ) as $fn1
+             | ( [ $tex.frame.x, [ (((((.faces | .[$input].uv[2]) * $tex.frame.w * 0.0625) + $tex.frame.x))), ($tex.frame.x + $tex.frame.w) ] | min ] | max ) as $fn2
+             | ( [ $tex.frame.y, [ (((((.faces | .[$input].uv[3]) * $tex.frame.w * 0.0625) + $tex.frame.y))), ($tex.frame.y + $tex.frame.h) ] | min ] | max ) as $fn3 
+             | (($fn2 - $fn0) as $num | if $num == 0 then 0 elif $num > 0 then 1 else -1 end) as $x_sign
+             | (($fn3 - $fn1) as $num | if $num == 0 then 0 elif $num > 0 then 1 else -1 end) as $y_sign |
              (if ($input == "up" or $input == "down") then {
                "uv": [(($fn2 - ($shrink_w * $x_sign)) | roundit), (($fn3 - ($shrink_h * $y_sign)) | roundit)],
                "uv_size": [((($fn0 - $fn2) + ($shrink_w * $x_sign)) | roundit), ((($fn1 - $fn3) + ($shrink_h * $y_sign)) | roundit)]
