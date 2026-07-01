@@ -867,10 +867,10 @@ do
              (if (.faces | .[$input]) then
              (.faces | .[$input].texture) as $input_n
              | (texturedata($input_n)) as $tex
-             | ( [ $tex.frame.x, [ (((((.faces | .[$input].uv[0]) * $tex.frame.w * 0.0625) + $tex.frame.x))), ($tex.frame.x + $tex.frame.w) ] | min ] | max ) as $fn0
-             | ( [ $tex.frame.y, [ (((((.faces | .[$input].uv[1]) * $tex.frame.w * 0.0625) + $tex.frame.y))), ($tex.frame.y + $tex.frame.h) ] | min ] | max ) as $fn1
-             | ( [ $tex.frame.x, [ (((((.faces | .[$input].uv[2]) * $tex.frame.w * 0.0625) + $tex.frame.x))), ($tex.frame.x + $tex.frame.w) ] | min ] | max ) as $fn2
-             | ( [ $tex.frame.y, [ (((((.faces | .[$input].uv[3]) * $tex.frame.w * 0.0625) + $tex.frame.y))), ($tex.frame.y + $tex.frame.h) ] | min ] | max ) as $fn3 
+             | ( (((((.faces | .[$input].uv[0]) * $tex.frame.w * 0.0625) + $tex.frame.x))) | if . < $tex.frame.x then $tex.frame.x elif . > ($tex.frame.x + $tex.frame.w) then ($tex.frame.x + $tex.frame.w) else . end ) as $fn0
+             | ( (((((.faces | .[$input].uv[1]) * $tex.frame.w * 0.0625) + $tex.frame.y))) | if . < $tex.frame.y then $tex.frame.y elif . > ($tex.frame.y + $tex.frame.h) then ($tex.frame.y + $tex.frame.h) else . end ) as $fn1
+             | ( (((((.faces | .[$input].uv[2]) * $tex.frame.w * 0.0625) + $tex.frame.x))) | if . < $tex.frame.x then $tex.frame.x elif . > ($tex.frame.x + $tex.frame.w) then ($tex.frame.x + $tex.frame.w) else . end ) as $fn2
+             | ( (((((.faces | .[$input].uv[3]) * $tex.frame.w * 0.0625) + $tex.frame.y))) | if . < $tex.frame.y then $tex.frame.y elif . > ($tex.frame.y + $tex.frame.h) then ($tex.frame.y + $tex.frame.h) else . end ) as $fn3 
              | (($fn2 - $fn0) as $num | if $num == 0 then 0 elif $num > 0 then 1 else -1 end) as $x_sign
              | (($fn3 - $fn1) as $num | if $num == 0 then 0 elif $num > 0 then 1 else -1 end) as $y_sign |
              (if ($input == "up" or $input == "down") then {
