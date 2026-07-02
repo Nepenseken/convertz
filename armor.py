@@ -806,7 +806,7 @@ def main(argv: list[str] | None = None):
     # Show per-namespace equipment sets
     for ns in sorted(ns_counts):
         eq_sets = set()
-        for (_, eq_id, _) in ns_counts[ns]:
+        for (eq_id, _) in ns_counts[ns]:
             base_eq = eq_id.rsplit("_", 1)[0] if any(eq_id.endswith(f"_{c}") for c in ["black","blue","brown","cyan","gray","green","orange","pink","purple","red","teal","white","yellow","darkblue","darkbrown","darkgreen","darkorange","darkpink","darkpurple","darkred","darkyellow","lightblue","lightgray","lightgreen","lightpurple","lightred"]) else eq_id
             eq_sets.add(base_eq if base_eq != eq_id else eq_id)
         print(f"[SUMMARY]   {ns}: {len(ns_counts[ns])} item-slots across {len(eq_sets)} equipment IDs")

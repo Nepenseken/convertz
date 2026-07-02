@@ -119,7 +119,7 @@ read -p $'\e[37mTo acknowledge and continue, press enter. To exit, press Ctrl+C.
 fi
 
 # ensure we have all the required dependencies
-dependency_check "jq" "https://stedolan.github.io/jq/download/" "jq --version" "1.6\|1.7"
+dependency_check "jq" "https://stedolan.github.io/jq/download/" "jq --version" "1.6\|1.7\|1.8"
 dependency_check "sponge" "https://joeyh.name/code/moreutils/" "-v sponge" ""
 dependency_check "imagemagick" "https://imagemagick.org/script/download.php" "convert --version" ""
 dependency_check "spritesheet-js" "https://www.npmjs.com/package/spritesheet-js" "-v spritesheet-js" ""
@@ -695,13 +695,7 @@ do
         "elements": ($jelements[])
       } + (if $jdisplay then ({"display": ($jdisplay[])}) else {} end)
       ' | sponge ${file}
-      # copy texture directly to the rp
-      if [[ -f "${texture_0}" ]]
-      then
-        mkdir -p "./target/rp/textures/${namespace}/${model_path}"
-        cp "${texture_0}" "./target/rp/textures/${namespace}/${model_path}/${model_name}.png"
-        echo "${path_hash},textures/${namespace}/${model_path}/${model_name}" >> scratch_files/icons.csv
-      fi
+
       echo >> scratch_files/count.csv
       local tot_pos=$(wc -l < scratch_files/count.csv)
       status_message completion "Located all parental info for Child ${gid}\n$(ProgressBar ${tot_pos} ${_end})"
@@ -714,11 +708,7 @@ do
         "textures": ([$jtextures[]][0])
       } + (if $jdisplay then ({"display": ($jdisplay[])}) else {} end)
       ' | sponge ${file}
-      # copy texture directly to the rp
-      mkdir -p "./target/rp/textures/${namespace}/${model_path}"
-      cp "${texture_0}" "./target/rp/textures/${namespace}/${model_path}/${model_name}.png"
-      # add texture to item atlas
-      echo "${path_hash},textures/${namespace}/${model_path}/${model_name}" >> scratch_files/icons.csv
+
       echo "${gid}" >> scratch_files/generated.csv
       echo >> scratch_files/count.csv
       local tot_pos=$(wc -l < scratch_files/count.csv)
@@ -753,6 +743,24 @@ then
   )
   ' scratch_files/generated.json config.json | sponge config.json
 fi
+
+# copy textures and generate icons.csv for all remaining models
+status_message process "Copying textures and registering icons..."
+rm -f scratch_files/icons.csv
+jq -r '.[] | [.path, .generated, .namespace, .model_path, .model_name, .path_hash] | @tsv | gsub("\\t";",")' config.json | while IFS=, read -r file generated namespace model_path model_name path_hash
+do
+  if [[ -f "${file}" ]]
+  then
+    texture_0=$(jq -rc 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; ("./assets/" + ([.[]][0]? | namespace) + "/textures/" + (([.[]][0]? // empty) | sub("(.*?)\\:"; "")) + ".png") // "null"' "${file}")
+    if [[ -f "${texture_0}" ]]
+    then
+      clean_model_path="${model_path//\/\//\/}"
+      mkdir -p "./target/rp/textures/${namespace}/${clean_model_path}"
+      cp "${texture_0}" "./target/rp/textures/${namespace}/${clean_model_path}/${model_name}.png"
+      echo "${path_hash},textures/${namespace}/${clean_model_path}/${model_name}" >> scratch_files/icons.csv
+    fi
+  fi
+done
 
 # add icon textures to item atlas
 if [[ -f scratch_files/icons.csv ]]
