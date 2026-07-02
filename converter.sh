@@ -1139,7 +1139,7 @@ do
               "enchanted": $attachable_material
             },
             "textures": {
-              "default": ("textures/" + $namespace + "/" + $model_path + "/" + $model_name),
+              "default": (("textures/" + $namespace + "/" + $model_path + "/" + $model_name) | gsub("//+"; "/")),
               "enchanted": "textures/misc/enchanted_item_glint"
             },
             "geometry": {
@@ -1224,7 +1224,7 @@ then
 	   ##Remaming the un-moved files to unique names and move the renamed files
 	   find ${1} -mindepth 2 -type f -print0 | while IFS= read -r -d '' file; do
 	       current_file=$(basename "$file")
-	       mv -n "$file" "./${nr}${current_file}"
+	       mv -n "$file" "${1}/${nr}${current_file}"
 	   done
 	   ## Incrementing counter to prefix to file name
 	   nr=$((nr+1))
@@ -1236,7 +1236,7 @@ then
      consolidate_files './target/rp/models/blocks'
      rm -rf ./target/rp/models/blocks/*/
      consolidate_files './target/rp/attachables'
-     rm -rf rm -rf ./target/rp/attachables/*/
+     rm -rf ./target/rp/attachables/*/
 fi
 
 # attempt to merge with existing pack if input was provided
