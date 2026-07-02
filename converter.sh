@@ -683,8 +683,8 @@ do
         local display="$(jq -rc '.display' ${parental} 2> /dev/null | tee scratch_files/${gid}.display.temp || (echo && echo null))"
       fi
       local parental="$(jq -rc 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; ("./assets/" + (.parent? | namespace) + "/models/" + ((.parent? // empty) | sub("(.*?)\\:"; "")) + ".json") // "null"' ${parental} 2> /dev/null || (echo && echo null))"
-      local texture_0="$(jq -rc 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; ("./assets/" + ([.[]][0]? | namespace) + "/textures/" + (([.[]][0]? // empty) | sub("(.*?)\\:"; "")) + ".png") // "null"' scratch_files/${gid}.textures.temp)"
     done
+    local texture_0="$(jq -rc 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; ("./assets/" + ([.[]][0]? | namespace) + "/textures/" + (([.[]][0]? // empty) | sub("(.*?)\\:"; "")) + ".png") // "null"' scratch_files/${gid}.textures.temp)" 
 
     # if we can, generate a model now
     if [[ ${elements} != null && ${textures} != null ]]
@@ -1064,7 +1064,7 @@ jq --arg generated "${generated}" --arg binding "c.item_slot == 'head' ? 'head' 
               "enchanted": $attachable_material
             },
             "textures": {
-              "default": ("textures/" + $namespace + "/" + $model_path + "/" + $model_name),
+              "default": (("textures/" + $namespace + "/" + $model_path + "/" + $model_name) | gsub("//"; "/")),
               "enchanted": "textures/misc/enchanted_item_glint"
             },
             "geometry": {
