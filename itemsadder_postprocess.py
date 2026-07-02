@@ -480,10 +480,40 @@ def deduplicate_mappings(target_dir: Path) -> int:
         write_json(mappings_path, data)
     return total_dupes
 
+
+def convert_pngs_to_rgba(rp_dir: Path) -> int:
+    try:
+        from PIL import Image
+    except ImportError:
+        print("[POST] PIL/Pillow not installed, skipping RGBA texture conversion")
+        return 0
+    textures_dir = rp_dir / "textures"
+    if not textures_dir.exists():
+        return 0
+    converted_count = 0
+    for filepath in list(textures_dir.rglob("*.png")):
+        try:
+            with Image.open(filepath) as img:
+                if img.mode != "RGBA":
+                    img.convert("RGBA").save(filepath)
+                    converted_count += 1
+        except Exception as e:
+            print(f"[POST] Error converting {filepath.name} to RGBA: {e}")
+    return converted_count
+
+
 def main(argv: List[str]) -> None:
     source_arg = argv[1] if len(argv) > 1 else ""
     rp_arg = argv[2] if len(argv) > 2 else "./target/rp"
     rp_dir = Path(rp_arg)
+    
+    # Convert all textures to RGBA mode
+    target_rp = Path("./target/rp")
+    if len(argv) > 1 and Path(argv[1]).exists() and (Path(argv[1]) / "textures").exists():
+        target_rp = Path(argv[1])
+    rgba_converted = convert_pngs_to_rgba(target_rp)
+    print(f"[POST] converted non-RGBA textures to RGBA: {rgba_converted}")
+
     if not rp_dir.exists():
         print(f"[POST] target rp dir not found: {rp_dir}")
         return
