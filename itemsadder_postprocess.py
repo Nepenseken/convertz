@@ -502,6 +502,62 @@ def convert_pngs_to_rgba(rp_dir: Path) -> int:
     return converted_count
 
 
+def fix_animated_texture_geometries(rp_dir: Path) -> int:
+    try:
+        from PIL import Image
+    except ImportError:
+        print("[POST] PIL/Pillow not installed, skipping animated texture aspect ratio fix")
+        return 0
+
+    geom_to_tex = {}
+    attachables_dir = rp_dir / "attachables"
+    if attachables_dir.exists():
+        for filepath in attachables_dir.rglob("*.json"):
+            try:
+                data = json.loads(filepath.read_text(encoding="utf-8"))
+                desc = data.get("minecraft:attachable", {}).get("description", {})
+                geom_id = desc.get("geometry", {}).get("default")
+                tex_path = desc.get("textures", {}).get("default")
+                if geom_id and tex_path:
+                    geom_to_tex[geom_id.lower()] = tex_path
+            except Exception:
+                pass
+
+    models_dir = rp_dir / "models" / "blocks"
+    updated_count = 0
+    if models_dir.exists():
+        for filepath in list(models_dir.rglob("*.json")):
+            try:
+                data = json.loads(filepath.read_text(encoding="utf-8"))
+                geoms = data.get("minecraft:geometry", [])
+                modified = False
+                for g in geoms:
+                    ident = g.get("description", {}).get("identifier")
+                    if not ident:
+                        continue
+                    tex_path = geom_to_tex.get(ident.lower())
+                    if not tex_path:
+                        continue
+                    png_path = rp_dir / f"{tex_path}.png"
+                    if png_path.exists():
+                        try:
+                            with Image.open(png_path) as img:
+                                w, h = img.size
+                            if h > w:
+                                ratio = h / w
+                                g["description"]["texture_width"] = 16.0
+                                g["description"]["texture_height"] = 16.0 * ratio
+                                modified = True
+                                updated_count += 1
+                        except Exception as img_err:
+                            print(f"[POST] Error opening image {png_path}: {img_err}")
+                if modified:
+                    write_json(filepath, data)
+            except Exception:
+                pass
+    return updated_count
+
+
 def main(argv: List[str]) -> None:
     source_arg = argv[1] if len(argv) > 1 else ""
     rp_arg = argv[2] if len(argv) > 2 else "./target/rp"
@@ -537,6 +593,7 @@ def main(argv: List[str]) -> None:
 
     geo_fixed, animated = fix_geometry_texture_sizes(rp_dir, source_models)
     armor_fixed = fix_missing_armor_player_layers(rp_dir, source_pngs)
+    anim_geoms_fixed = fix_animated_texture_geometries(rp_dir)
 
     # Deduplicate geyser_mappings.json (removes duplicates introduced by armor fix)
     mappings_dupes = deduplicate_mappings(rp_dir.parent)
@@ -547,6 +604,7 @@ def main(argv: List[str]) -> None:
         f"geometry_texture_size_fixed={geo_fixed}\n"
         f"armor_player_attachables_fixed={armor_fixed}\n"
         f"animated_model_candidates={len(animated)}\n"
+        f"animated_texture_geometries_fixed={anim_geoms_fixed}\n"
         f"mappings_duplicates_removed={mappings_dupes}\n"
         + ("\nAnimated candidates:\n" + "\n".join(animated[:500]) + "\n" if animated else ""),
         encoding="utf-8",
@@ -554,6 +612,7 @@ def main(argv: List[str]) -> None:
 
     print(f"[POST] geometry texture size fixed: {geo_fixed}")
     print(f"[POST] missing armor .player attachables fixed: {armor_fixed}")
+    print(f"[POST] animated weapon texture geometries fixed: {anim_geoms_fixed}")
     print(f"[POST] animated model candidates reported: {len(animated)}")
     if mappings_dupes:
         print(f"[POST] mappings duplicates removed: {mappings_dupes}")

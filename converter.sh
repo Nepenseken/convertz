@@ -846,7 +846,7 @@ do
       local atlas_index=$(jq -r -s 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; def intersects(a;b): any(a[]; . as $x | any(b[]; . == $x)); (.[0] | [.textures[]] | map("./assets/" + (. | namespace) + "/textures/" + (. | sub("(.*?)\\:"; "")) + ".png")) as $inp | [(.[1] | (map(if intersects(.;$inp) then . else empty end)[])) as $entry | .[1] | to_entries[] | select(.value == $entry).key][0] // 0' ${file} scratch_files/union_atlas.temp)
       
       # Copy standalone texture
-      local texture_ref=$(jq -r 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; .textures | to_entries | map(select(.value | startswith("#") | not)) | .[0].value // ""' ${file})
+      local texture_ref=$(jq -r '([.elements[].faces[].texture | select(type == "string" and startswith("#")) | sub("#"; "")] | unique) as $ref_keys | .textures as $textures | ($ref_keys | map($textures[.] | select(. != null))) as $ref_vals | (if ($ref_vals | length) > 0 then $ref_vals[0] else (.textures | to_entries | map(select(.value | startswith("#") | not)) | .[0].value) end) // ""' ${file})
       if [ -n "${texture_ref}" ]; then
         local tex_ns="minecraft"
         local tex_subpath="${texture_ref}"
