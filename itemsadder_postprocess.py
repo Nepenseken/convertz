@@ -728,6 +728,265 @@ def find_atlas_tile_for_texture(texture_path: str, rp_dir: Path) -> Optional[str
             pass
     return None
 
+import math
+
+def rotate_point(x, y, z, origin, axis, angle_deg):
+    ox, oy, oz = origin
+    rad = math.radians(angle_deg)
+    cos_a = math.cos(rad)
+    sin_a = math.sin(rad)
+    
+    px = x - ox
+    py = y - oy
+    pz = z - oz
+    
+    if axis == 'x':
+        ry = py * cos_a - pz * sin_a
+        rz = py * sin_a + pz * cos_a
+        rx = px
+    elif axis == 'y':
+        rx = px * cos_a + pz * sin_a
+        rz = -px * sin_a + pz * cos_a
+        ry = py
+    elif axis == 'z':
+        rx = px * cos_a - py * sin_a
+        ry = px * sin_a + py * cos_a
+        rz = pz
+    else:
+        rx, ry, rz = px, py, pz
+        
+    return rx + ox, ry + oy, rz + oz
+
+def rotate_gui(x, y, z, rx, ry, rz):
+    rad_x = math.radians(rx)
+    rad_y = math.radians(ry)
+    rad_z = math.radians(rz)
+    
+    cx, sx = math.cos(rad_x), math.sin(rad_x)
+    cy, sy = math.cos(rad_y), math.sin(rad_y)
+    cz, sz = math.cos(rad_z), math.sin(rad_z)
+    
+    x1 = x * cz - y * sz
+    y1 = x * sz + y * cz
+    z1 = z
+    
+    x2 = x1 * cy + z1 * sy
+    y2 = y1
+    z2 = -x1 * sy + z1 * cy
+    
+    x3 = x2
+    y3 = y2 * cx - z2 * sx
+    z3 = y2 * sx + z2 * cx
+    
+    return x3, y3, z3
+
+def solve_affine(p0, p1, p3, w, h):
+    x0, y0 = p0
+    x1, y1 = p1
+    x3, y3 = p3
+    
+    det = x0*(y1 - y3) - y0*(x1 - x3) + (x1*y3 - x3*y1)
+    if abs(det) < 1e-6:
+        return None
+        
+    a = w * (y3 - y0) / det
+    b = w * (x0 - x3) / det
+    c = w * (x3*y0 - x0*y3) / det
+    d = h * (y0 - y1) / det
+    e = h * (x1 - x0) / det
+    f = h * (x0*y1 - x1*y0) / det
+    
+    return (a, b, c, d, e, f)
+
+def locate_model_json(ref, workspace_root):
+    ns, path = ref.split(":", 1) if ":" in ref else ("minecraft", ref)
+    cand1 = Path(workspace_root) / "assets" / ns / "models" / f"{path}.json"
+    cand2 = Path(workspace_root) / "contents" / ns / "resource_pack" / "assets" / ns / "models" / f"{path}.json"
+    if cand1.exists():
+        return cand1
+    if cand2.exists():
+        return cand2
+    cands = list(Path(workspace_root).glob(f"**/models/{path}.json"))
+    if cands:
+        return cands[0]
+    return None
+
+def resolve_display_settings(model_path, workspace_root):
+    try:
+        with open(model_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        display = data.get("display", {})
+        if "gui" in display:
+            return display["gui"]
+        
+        parent = data.get("parent")
+        if parent:
+            parent_path = locate_model_json(parent, workspace_root)
+            if parent_path and parent_path.exists():
+                return resolve_display_settings(parent_path, workspace_root)
+    except Exception:
+        pass
+    return None
+
+def render_3d_icon(java_model_path: Path, workspace_root: Path, output_path: Path) -> bool:
+    from PIL import Image
+    try:
+        with open(java_model_path, "r", encoding="utf-8") as f:
+            model = json.load(f)
+    except Exception as e:
+        print(f"[POST] Error loading model for rendering: {e}")
+        return False
+        
+    gui_settings = resolve_display_settings(java_model_path, workspace_root) or {}
+    
+    rx, ry, rz = gui_settings.get("rotation", [-90, -135, -90])
+    tx, ty, tz = gui_settings.get("translation", [-1.5, 1, -1.5])
+    sx, sy, sz = gui_settings.get("scale", [0.45, 0.45, 0.45])
+    
+    resolved_textures = resolve_java_textures(java_model_path, workspace_root)
+    texture_paths = {}
+    for tex_key, tex_val in resolved_textures.items():
+        png_path = locate_texture_png(tex_val, workspace_root)
+        if png_path and png_path.exists():
+            try:
+                texture_paths[tex_key] = Image.open(png_path).convert("RGBA")
+            except Exception:
+                pass
+                
+    elements = model.get("elements", [])
+    if not elements:
+        return False
+        
+    faces_to_render = []
+    
+    for el in elements:
+        fx1, fy1, fz1 = el.get("from", [0, 0, 0])
+        fx2, fy2, fz2 = el.get("to", [16, 16, 16])
+        
+        x1, x2 = min(fx1, fx2), max(fx1, fx2)
+        y1, y2 = min(fy1, fy2), max(fy1, fy2)
+        z1, z2 = min(fz1, fz2), max(fz1, fz2)
+        
+        local_vertices = [
+            (x1, y1, z1), (x2, y1, z1), (x2, y2, z1), (x1, y2, z1),
+            (x1, y1, z2), (x2, y1, z2), (x2, y2, z2), (x1, y2, z2)
+        ]
+        
+        rot = el.get("rotation")
+        if rot:
+            angle = rot.get("angle", 0)
+            axis = rot.get("axis", "y")
+            origin = rot.get("origin", [8, 8, 8])
+            for i, (vx, vy, vz) in enumerate(local_vertices):
+                local_vertices[i] = rotate_point(vx, vy, vz, origin, axis, angle)
+                
+        faces_def = {
+            "north": {"indices": [3, 2, 1, 0]},
+            "south": {"indices": [6, 7, 4, 5]},
+            "west":  {"indices": [7, 3, 0, 4]},
+            "east":  {"indices": [2, 6, 5, 1]},
+            "up":    {"indices": [3, 2, 6, 7]},
+            "down":  {"indices": [4, 5, 1, 0]},
+        }
+        
+        for face_name, face_info in faces_def.items():
+            face_el = el.get("faces", {}).get(face_name)
+            if not face_el:
+                continue
+                
+            tex_key = face_el.get("texture", "").replace("#", "")
+            tex_img = texture_paths.get(tex_key)
+            if not tex_img:
+                continue
+                
+            uv = face_el.get("uv", [0, 0, 16, 16])
+            u1, v1, u2, v2 = uv
+            
+            tw, th = tex_img.size
+            left = min(u1, u2) / 16.0 * tw
+            right = max(u1, u2) / 16.0 * tw
+            top = min(v1, v2) / 16.0 * th
+            bottom = max(v1, v2) / 16.0 * th
+            
+            if left >= right or top >= bottom:
+                continue
+                
+            face_tex = tex_img.crop((left, top, right, bottom))
+            
+            if face_el.get("rotation"):
+                rot_ang = face_el.get("rotation")
+                face_tex = face_tex.rotate(-rot_ang, expand=True)
+                
+            v_indices = face_info["indices"]
+            f_v = [local_vertices[idx] for idx in v_indices]
+            
+            transformed_vertices = []
+            for (vx, vy, vz) in f_v:
+                vx_s = (vx - 8.0) * sx
+                vy_s = (vy - 8.0) * sy
+                vz_s = (vz - 8.0) * sz
+                
+                vx_r, vy_r, vz_r = rotate_gui(vx_s, vy_s, vz_s, rx, ry, rz)
+                
+                vx_t = vx_r + tx + 8.0
+                vy_t = vy_r + ty + 8.0
+                vz_t = vz_r + tz + 8.0
+                
+                transformed_vertices.append((vx_t, vy_t, vz_t))
+                
+            pts_2d = []
+            for (vx, vy, vz) in transformed_vertices:
+                sc_x = 128 + (vx - 8.0) * 12
+                sc_y = 128 - (vy - 8.0) * 12
+                pts_2d.append((sc_x, sc_y))
+                
+            avg_z = sum(v[2] for v in transformed_vertices) / 4.0
+            
+            faces_to_render.append({
+                "depth": avg_z,
+                "pts_2d": pts_2d,
+                "texture": face_tex
+            })
+            
+    if not faces_to_render:
+        return False
+        
+    faces_to_render.sort(key=lambda x: x["depth"])
+    
+    canvas = Image.new("RGBA", (256, 256), (0, 0, 0, 0))
+    for face in faces_to_render:
+        pts = face["pts_2d"]
+        tex = face["texture"]
+        tw, th = tex.size
+        
+        p0 = pts[0]
+        p1 = pts[1]
+        p3 = pts[3]
+        
+        coeffs = solve_affine(p0, p1, p3, tw, th)
+        if not coeffs:
+            continue
+            
+        warped = tex.transform((256, 256), Image.AFFINE, coeffs, Image.BILINEAR)
+        canvas.alpha_composite(warped)
+        
+    bbox = canvas.getbbox()
+    if bbox:
+        cropped = canvas.crop(bbox)
+        cw, ch = cropped.size
+        scale = min(220 / cw, 220 / ch)
+        nw = int(cw * scale)
+        nh = int(ch * scale)
+        if nw > 0 and nh > 0:
+            resized = cropped.resize((nw, nh), Image.Resampling.LANCZOS)
+            final_canvas = Image.new("RGBA", (256, 256), (0, 0, 0, 0))
+            final_canvas.paste(resized, ((256 - nw) // 2, (256 - nh) // 2))
+            canvas = final_canvas
+            
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    canvas.save(output_path, "PNG")
+    return True
+
 _image_cache = {}
 
 def fix_3d_items_textures_and_geometry(rp_dir: Path, workspace_root: Path) -> int:
@@ -854,6 +1113,22 @@ def fix_3d_items_textures_and_geometry(rp_dir: Path, workspace_root: Path) -> in
         target_texture_path = rp_dir / "textures" / ns / model_path / f"{model_name}.png"
         target_texture_path.parent.mkdir(parents=True, exist_ok=True)
         stitched_img.save(target_texture_path, "PNG")
+
+        # Generate 3D isometric inventory icon
+        icon_texture_path = rp_dir / "textures" / ns / model_path / f"{model_name}_icon.png"
+        try:
+            if render_3d_icon(java_model_path, workspace_root, icon_texture_path):
+                # Update item_texture.json
+                item_tex_path = rp_dir / "textures" / "item_texture.json"
+                if item_tex_path.exists():
+                    item_tex = json.loads(item_tex_path.read_text(encoding="utf-8"))
+                    path_hash = entry.get("path_hash")
+                    if path_hash and "texture_data" in item_tex:
+                        if path_hash in item_tex["texture_data"]:
+                            item_tex["texture_data"][path_hash]["textures"] = f"textures/{ns}/{model_path}/{model_name}_icon"
+                            write_json(item_tex_path, item_tex)
+        except Exception as e:
+            print(f"[POST] Failed to generate 3D icon for {model_name}: {e}")
 
         try:
             geom_data = json.loads(geom_file.read_text(encoding="utf-8"))
