@@ -1,21 +1,14 @@
 #!/usr/bin/env bash
 # Add common Windows ImageMagick installation directories to PATH if magick is not found
-echo "[DEBUG] Checking ImageMagick dependency..."
-echo "[DEBUG] Existing magick command: $(command -v magick 2>/dev/null || echo 'not found')"
-
 if ! command -v magick &>/dev/null; then
-  echo "[DEBUG] magick not in PATH. Searching in Program Files..."
   for dir in "/c/Program Files"/ImageMagick* "C:/Program Files"/ImageMagick* "/cygdrive/c/Program Files"/ImageMagick*; do
-    echo "[DEBUG] Checking directory candidate: $dir"
     if [ -d "$dir" ]; then
-      echo "[DEBUG] Found ImageMagick directory: $dir"
       export PATH="${dir}:${PATH}"
       break
     fi
   done
 fi
 export PATH="${PWD}/imagemagick_shims:${PATH}"
-echo "[DEBUG] Final magick command path: $(command -v magick 2>/dev/null || echo 'not found')"
 : ${1?'Please specify an input resource pack in the same directory as the script (e.g. ./converter.sh MyResourcePack.zip)'}
 
 # define color placeholders
@@ -58,9 +51,6 @@ dependency_check () {
       status_message completion "Dependency ${1} satisfied"
   else
       status_message error "Dependency ${1} must be installed to proceed\nSee ${2}\nExiting script..."
-      echo "[DEBUG] Failed command: command ${3}"
-      echo "[DEBUG] Command stderr/stdout output below:"
-      command ${3}
       exit 1
   fi
 }
