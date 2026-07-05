@@ -182,13 +182,9 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update || sudo apt-get update --fix-missing
-          sudo apt-get install -y moreutils zip
+          sudo apt-get install -y moreutils zip imagemagick
           npm install -g spritesheet-js
           pip install Pillow requests pyyaml
-      - name: Install ImageMagick 7
-        uses: mfinelli/setup-imagemagick@v7
-        with:
-          install-libfuse2: true
       - name: Convert Pack
         id: convert-pack
         continue-on-error: false

@@ -132,13 +132,26 @@ dependency_check "jq" "https://stedolan.github.io/jq/download/" "jq --version" "
 sponge () {
   cat > "${1}.tmp" && mv "${1}.tmp" "${1}"
 }
-convert () {
-  magick convert "$@"
-}
-mogrify () {
-  magick mogrify "$@"
-}
-dependency_check "imagemagick" "https://imagemagick.org/script/download.php" "magick --version" ""
+if command -v magick &>/dev/null; then
+  convert () {
+    magick convert "$@"
+  }
+  mogrify () {
+    magick mogrify "$@"
+  }
+  status_message completion "Dependency imagemagick satisfied"
+elif command -v convert &>/dev/null && convert -version 2>&1 | grep -q "ImageMagick"; then
+  convert () {
+    command convert "$@"
+  }
+  mogrify () {
+    command mogrify "$@"
+  }
+  status_message completion "Dependency imagemagick satisfied"
+else
+  status_message error "Dependency imagemagick must be installed to proceed\nSee https://imagemagick.org/script/download.php\nExiting script..."
+  exit 1
+fi
 dependency_check "spritesheet-js" "https://www.npmjs.com/package/spritesheet-js" "-v spritesheet-js" ""
 status_message completion "All dependencies have been satisfied\n"
 
