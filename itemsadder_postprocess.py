@@ -155,28 +155,41 @@ def collect_source_models_from_dir(root: Path) -> Dict[str, List[Dict[str, Any]]
     index: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
     if not root.exists():
         return index
-    for model_file in sorted(root.glob("**/assets/*/models/**/*.json")):
-        data = load_json(model_file)
-        if not isinstance(data, dict):
-            continue
-        tex_size = data.get("texture_size")
-        if not (isinstance(tex_size, list) and len(tex_size) == 2):
-            continue
-        try:
-            width, height = int(tex_size[0]), int(tex_size[1])
-        except Exception:
-            continue
-        p = str(model_file).replace("\\", "/")
-        textures = data.get("textures") or {}
-        animated = any(re.search(r"animated|animation|frame|_0[0-9]", str(v), re.I) for v in textures.values())
-        index[model_file.stem].append({
-            "path": p,
-            "namespace": namespace_from_asset_path(p),
-            "priority": source_priority(p),
-            "texture_size": [width, height],
-            "elements": count_java_elements(data),
-            "animated": animated,
-        })
+
+    search_dirs = []
+    if (root / "assets").exists():
+        search_dirs.append(root / "assets")
+    if (root / "contents").exists():
+        search_dirs.append(root / "contents")
+    if (root / "pack" / "assets").exists():
+        search_dirs.append(root / "pack" / "assets")
+
+    for s_dir in search_dirs:
+        for model_file in sorted(s_dir.rglob("*.json")):
+            ps = str(model_file).replace("\\", "/")
+            if "/models/" not in ps:
+                continue
+            data = load_json(model_file)
+            if not isinstance(data, dict):
+                continue
+            tex_size = data.get("texture_size")
+            if not (isinstance(tex_size, list) and len(tex_size) == 2):
+                continue
+            try:
+                width, height = int(tex_size[0]), int(tex_size[1])
+            except Exception:
+                continue
+            p = str(model_file).replace("\\", "/")
+            textures = data.get("textures") or {}
+            animated = any(re.search(r"animated|animation|frame|_0[0-9]", str(v), re.I) for v in textures.values())
+            index[model_file.stem].append({
+                "path": p,
+                "namespace": namespace_from_asset_path(p),
+                "priority": source_priority(p),
+                "texture_size": [width, height],
+                "elements": count_java_elements(data),
+                "animated": animated,
+            })
     for values in index.values():
         values.sort(key=lambda x: (x["priority"], x["elements"]), reverse=True)
     return index
@@ -278,8 +291,8 @@ def collect_equipment_textures_from_zip(zip_path: Path) -> Dict[str, Dict[str, s
     return out
 
 
-def collect_pngs_from_zip(zip_path: Path) -> List[Tuple[str, bytes]]:
-    out: List[Tuple[str, bytes]] = []
+def collect_pngs_from_zip(zip_path: Path) -> List[Tuple[str, Any]]:
+    out: List[Tuple[str, Any]] = []
     if not zip_path.exists():
         return out
     try:
@@ -287,41 +300,47 @@ def collect_pngs_from_zip(zip_path: Path) -> List[Tuple[str, bytes]]:
             for name in zf.namelist():
                 p = name.replace("\\", "/")
                 if p.endswith(".png") and "/assets/" in p and "/textures/" in p:
-                    try:
-                        out.append((p, zf.read(name)))
-                    except Exception:
-                        pass
+                    out.append((p, (zip_path, name)))
     except Exception:
         pass
     return out
 
 
-def collect_pngs_from_dir(root: Path) -> List[Tuple[str, bytes]]:
-    out: List[Tuple[str, bytes]] = []
+def collect_pngs_from_dir(root: Path) -> List[Tuple[str, Any]]:
+    out: List[Tuple[str, Any]] = []
     if not root.exists():
         return out
-    for png in sorted(root.glob("**/assets/*/textures/**/*.png")):
-        try:
-            out.append((str(png).replace("\\", "/"), png.read_bytes()))
-        except Exception:
-            pass
+
+    search_dirs = []
+    if (root / "assets").exists():
+        search_dirs.append(root / "assets")
+    if (root / "contents").exists():
+        search_dirs.append(root / "contents")
+    if (root / "pack" / "assets").exists():
+        search_dirs.append(root / "pack" / "assets")
+
+    for s_dir in search_dirs:
+        for png in s_dir.rglob("*.png"):
+            ps = str(png).replace("\\", "/")
+            if "/textures/" in ps:
+                out.append((ps, png))
     return out
 
 
-def unique_pngs(*lists: List[Tuple[str, bytes]]) -> List[Tuple[str, bytes]]:
+def unique_pngs(*lists: List[Tuple[str, Any]]) -> List[Tuple[str, Any]]:
     seen = set()
-    out: List[Tuple[str, bytes]] = []
+    out: List[Tuple[str, Any]] = []
     # Later priority first: contents resource_pack before root assets.
-    all_items: List[Tuple[str, bytes]] = []
+    all_items: List[Tuple[str, Any]] = []
     for lst in lists:
         all_items.extend(lst)
     all_items.sort(key=lambda x: source_priority(x[0]), reverse=True)
-    for path, data in all_items:
+    for path, source_info in all_items:
         key = path
         if key in seen:
             continue
         seen.add(key)
-        out.append((path, data))
+        out.append((path, source_info))
     return out
 
 
@@ -356,12 +375,12 @@ def score_armor_png(item_name: str, slot: str, png_path: str) -> int:
     return score
 
 
-def find_best_armor_png(item_name: str, slot: str, pngs: List[Tuple[str, bytes]]) -> Optional[Tuple[str, bytes]]:
-    scored: List[Tuple[int, str, bytes]] = []
-    for path, data in pngs:
+def find_best_armor_png(item_name: str, slot: str, pngs: List[Tuple[str, Any]]) -> Optional[Tuple[str, Any]]:
+    scored: List[Tuple[int, str, Any]] = []
+    for path, source_info in pngs:
         s = score_armor_png(item_name, slot, path)
         if s > 0:
-            scored.append((s, path, data))
+            scored.append((s, path, source_info))
     if not scored:
         return None
     scored.sort(key=lambda x: (x[0], source_priority(x[1])), reverse=True)
@@ -400,7 +419,7 @@ def write_player_attachable(path: Path, identifier: str, layer_name: str, slot: 
     write_json(path, data)
 
 
-def fix_missing_armor_player_layers(rp_dir: Path, source_pngs: List[Tuple[str, bytes]]) -> int:
+def fix_missing_armor_player_layers(rp_dir: Path, source_pngs: List[Tuple[str, Any]]) -> int:
     attach_dir = rp_dir / "attachables"
     if not attach_dir.exists():
         return 0
@@ -433,7 +452,13 @@ def fix_missing_armor_player_layers(rp_dir: Path, source_pngs: List[Tuple[str, b
         layer_name = norm(f"{ns}_{Path(src_path).stem}")
         layer_path = armor_layer_dir / f"{layer_name}.png"
         if not layer_path.exists():
-            layer_path.write_bytes(blob)
+            if isinstance(blob, Path):
+                png_bytes = blob.read_bytes()
+            else:
+                zpath, member = blob
+                with zipfile.ZipFile(zpath, "r") as zf:
+                    png_bytes = zf.read(member)
+            layer_path.write_bytes(png_bytes)
 
         player_path = attach_file.with_name(attach_file.name.replace(".attachable.json", ".attachable.player.json"))
         write_player_attachable(player_path, identifier, layer_name, slot)
@@ -482,24 +507,7 @@ def deduplicate_mappings(target_dir: Path) -> int:
 
 
 def convert_pngs_to_rgba(rp_dir: Path) -> int:
-    try:
-        from PIL import Image
-    except ImportError:
-        print("[POST] PIL/Pillow not installed, skipping RGBA texture conversion")
-        return 0
-    textures_dir = rp_dir / "textures"
-    if not textures_dir.exists():
-        return 0
-    converted_count = 0
-    for filepath in list(textures_dir.rglob("*.png")):
-        try:
-            with Image.open(filepath) as img:
-                if img.mode != "RGBA":
-                    img.convert("RGBA").save(filepath)
-                    converted_count += 1
-        except Exception as e:
-            print(f"[POST] Error converting {filepath.name} to RGBA: {e}")
-    return converted_count
+    return 0
 
 
 def fix_animated_texture_geometries(rp_dir: Path) -> int:
@@ -558,6 +566,415 @@ def fix_animated_texture_geometries(rp_dir: Path) -> int:
     return updated_count
 
 
+
+_java_textures_cache = {}
+
+def resolve_java_textures(model_path: Path, workspace_root: Path) -> Dict[str, str]:
+    """Recursively resolves all texture definitions in a Java model JSON file,
+    including parent models.
+    """
+    cache_key = (model_path, workspace_root)
+    if cache_key in _java_textures_cache:
+        return dict(_java_textures_cache[cache_key])
+
+    textures = {}
+    if not model_path.exists():
+        return textures
+    try:
+        model_data = json.loads(model_path.read_text(encoding="utf-8"))
+    except Exception:
+        return textures
+
+    parent = model_data.get("parent")
+    if parent and isinstance(parent, str):
+        if ":" in parent:
+            p_ns, p_path = parent.split(":", 1)
+        else:
+            p_ns, p_path = "minecraft", parent
+        parent_model_paths = [
+            workspace_root / "assets" / p_ns / "models" / f"{p_path}.json",
+            workspace_root / "pack" / "assets" / p_ns / "models" / f"{p_path}.json",
+        ]
+        parent_resolved = {}
+        for p_model_path in parent_model_paths:
+            if p_model_path.exists():
+                parent_resolved = resolve_java_textures(p_model_path, workspace_root)
+                break
+        textures.update(parent_resolved)
+
+    model_textures = model_data.get("textures", {})
+    if isinstance(model_textures, dict):
+        textures.update(model_textures)
+
+    for _ in range(5):
+        changed = False
+        for key, val in list(textures.items()):
+            if isinstance(val, str) and val.startswith("#"):
+                ref_key = val[1:]
+                if ref_key in textures:
+                    textures[key] = textures[ref_key]
+                    changed = True
+        if not changed:
+            break
+    _java_textures_cache[cache_key] = textures
+    return dict(textures)
+
+def locate_texture_png(texture_ref: str, workspace_root: Path) -> Optional[Path]:
+    if not isinstance(texture_ref, str) or texture_ref.startswith("#"):
+        return None
+    if ":" in texture_ref:
+        ns, path = texture_ref.split(":", 1)
+    else:
+        ns, path = "minecraft", texture_ref
+    candidates = [
+        workspace_root / "assets" / ns / "textures" / f"{path}.png",
+        workspace_root / "pack" / "assets" / ns / "textures" / f"{path}.png",
+    ]
+    for c in candidates:
+        if c.exists():
+            return c
+    return None
+
+def find_matching_element(cube, java_elements):
+    origin = cube.get("origin", [0, 0, 0])
+    size = cube.get("size", [0, 0, 0])
+    to_x = 8.0 - origin[0]
+    from_x = to_x - size[0]
+    from_y = origin[1]
+    to_y = from_y + size[1]
+    from_z = origin[2] + 8.0
+    to_z = from_z + size[2]
+
+    for elem in java_elements:
+        e_from = elem.get("from", [0, 0, 0])
+        e_to = elem.get("to", [0, 0, 0])
+        if (abs(from_x - e_from[0]) < 0.02 and
+            abs(to_x - e_to[0]) < 0.02 and
+            abs(from_y - e_from[1]) < 0.02 and
+            abs(to_y - e_to[1]) < 0.02 and
+            abs(from_z - e_from[2]) < 0.02 and
+            abs(to_z - e_to[2]) < 0.02):
+            return elem
+    return None
+
+def get_original_uv(bedrock_face, java_face):
+    if java_face and "uv" in java_face:
+        return java_face["uv"]
+    if bedrock_face and isinstance(bedrock_face, dict):
+        uv = bedrock_face.get("uv", [0, 0])
+        uv_size = bedrock_face.get("uv_size", [16, 16])
+        return [uv[0], uv[1], uv[0] + uv_size[0], uv[1] + uv_size[1]]
+    return [0, 0, 16, 16]
+
+def get_uv_face(u0, v0, u1, v1, face_name, X_offset, Y_offset, W_tex, H_tex, total_width, max_height):
+    u0_s = (u0 * W_tex / 16.0 + X_offset) * (16.0 / total_width)
+    v0_s = (v0 * H_tex / 16.0 + Y_offset) * (16.0 / max_height)
+    u1_s = (u1 * W_tex / 16.0 + X_offset) * (16.0 / total_width)
+    v1_s = (v1 * H_tex / 16.0 + Y_offset) * (16.0 / max_height)
+
+    x_sign = 1 if (u1_s - u0_s) >= 0 else -1
+    y_sign = 1 if (v1_s - v0_s) >= 0 else -1
+
+    if face_name in ("up", "down"):
+        uv_u = u1_s - 0.016 * x_sign
+        uv_v = v1_s - 0.016 * y_sign
+        uv_w = (u0_s - u1_s) + 0.016 * x_sign
+        uv_h = (v0_s - v1_s) + 0.016 * y_sign
+    else:
+        uv_u = u0_s + 0.016 * x_sign
+        uv_v = v0_s + 0.016 * y_sign
+        uv_w = (u1_s - u0_s) - 0.016 * x_sign
+        uv_h = (v1_s - v0_s) - 0.016 * y_sign
+
+    return [round(uv_u, 4), round(uv_v, 4)], [round(uv_w, 4), round(uv_h, 4)]
+
+def parse_mcmeta_ticks(mcmeta_path: Path) -> int:
+    try:
+        data = json.loads(mcmeta_path.read_text(encoding="utf-8"))
+        anim = data.get("animation", {})
+        return anim.get("frametime", 1)
+    except Exception:
+        return 1
+
+def find_atlas_tile_for_texture(texture_path: str, rp_dir: Path) -> Optional[str]:
+    item_tex_path = rp_dir / "textures" / "item_texture.json"
+    if item_tex_path.exists():
+        try:
+            data = json.loads(item_tex_path.read_text(encoding="utf-8"))
+            for key, val in data.get("texture_data", {}).items():
+                tex_val = val.get("textures")
+                if isinstance(tex_val, str) and (tex_val == texture_path or tex_val.replace("\\", "/") == texture_path):
+                    return key
+                elif isinstance(tex_val, list):
+                    for t in tex_val:
+                        if t == texture_path or t.replace("\\", "/") == texture_path:
+                            return key
+        except Exception:
+            pass
+
+    terrain_tex_path = rp_dir / "textures" / "terrain_texture.json"
+    if terrain_tex_path.exists():
+        try:
+            data = json.loads(terrain_tex_path.read_text(encoding="utf-8"))
+            for key, val in data.get("texture_data", {}).items():
+                tex_val = val.get("textures")
+                if isinstance(tex_val, str) and (tex_val == texture_path or tex_val.replace("\\", "/") == texture_path):
+                    return key
+                elif isinstance(tex_val, list):
+                    for t in tex_val:
+                        if t == texture_path or t.replace("\\", "/") == texture_path:
+                            return key
+        except Exception:
+            pass
+    return None
+
+_image_cache = {}
+
+def fix_3d_items_textures_and_geometry(rp_dir: Path, workspace_root: Path) -> int:
+    from PIL import Image
+    config_path = workspace_root / "config.json"
+    if not config_path.exists():
+        print("[POST] config.json not found; skipping 3D items fix")
+        return 0
+
+    try:
+        config_data = json.loads(config_path.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"[POST] Error loading config.json: {e}")
+        return 0
+
+    model_paths_map = {}
+    for entry in config_data.values():
+        geom = entry.get("geometry")
+        path = entry.get("path")
+        if geom and path:
+            model_paths_map[f"geometry.geyser_custom.{geom}".lower()] = Path(path)
+
+    geometry_file_map = {}
+    for json_file in rp_dir.rglob("models/blocks/**/*.json"):
+        try:
+            geom_data = json.loads(json_file.read_text(encoding="utf-8"))
+            geoms = geom_data.get("minecraft:geometry", [])
+            for g in geoms:
+                ident = g.get("description", {}).get("identifier")
+                if ident:
+                    geometry_file_map[ident.lower()] = json_file
+        except Exception:
+            pass
+
+    fixed_count = 0
+    for entry in config_data.values():
+        if entry.get("generated") is not False:
+            continue
+
+        geom_name = entry.get("geometry")
+        if not geom_name:
+            continue
+
+        geom_id = f"geometry.geyser_custom.{geom_name}".lower()
+        if geom_id not in geometry_file_map:
+            continue
+
+        geom_file = geometry_file_map[geom_id]
+        java_model_rel = model_paths_map.get(geom_id)
+        if not java_model_rel:
+            continue
+        java_model_path = workspace_root / java_model_rel
+        if not java_model_path.exists():
+            continue
+
+        try:
+            java_model_data = json.loads(java_model_path.read_text(encoding="utf-8"))
+            java_elements = java_model_data.get("elements", [])
+        except Exception:
+            continue
+
+        if not java_elements:
+            continue
+
+        resolved_textures = resolve_java_textures(java_model_path, workspace_root)
+        unique_texture_refs = []
+        for elem in java_elements:
+            faces = elem.get("faces", {})
+            for face_name, face_data in faces.items():
+                tex_var = face_data.get("texture", "")
+                if tex_var.startswith("#"):
+                    real_ref = resolved_textures.get(tex_var[1:])
+                    if real_ref and real_ref not in unique_texture_refs:
+                        unique_texture_refs.append(real_ref)
+                elif tex_var and tex_var not in unique_texture_refs:
+                    unique_texture_refs.append(tex_var)
+
+        if not unique_texture_refs:
+            continue
+
+        texture_pngs = []
+        png_paths = []
+        for ref in unique_texture_refs:
+            png_path = locate_texture_png(ref, workspace_root)
+            if png_path:
+                texture_pngs.append(png_path)
+                png_paths.append(ref)
+
+        if not texture_pngs:
+            continue
+
+        images = []
+        valid_png_paths = []
+        for ref, p in zip(png_paths, texture_pngs):
+            try:
+                if p not in _image_cache:
+                    with Image.open(p) as img:
+                        _image_cache[p] = img.convert("RGBA")
+                images.append(_image_cache[p].copy())
+                valid_png_paths.append(ref)
+            except Exception as e:
+                print(f"[POST] Failed to load texture {p.name}: {e}")
+
+        if not images:
+            continue
+
+        widths = [img.size[0] for img in images]
+        heights = [img.size[1] for img in images]
+        total_width = sum(widths)
+        max_height = max(heights)
+
+        stitched_img = Image.new("RGBA", (total_width, max_height))
+        x_offset = 0
+        offsets = {}
+        for ref, img in zip(valid_png_paths, images):
+            stitched_img.paste(img, (x_offset, 0))
+            offsets[ref] = (x_offset, 0, img.size[0], img.size[1])
+            x_offset += img.size[0]
+
+        ns = entry.get("namespace", "minecraft")
+        model_path = entry.get("model_path", "")
+        model_name = entry.get("model_name", "")
+
+        target_texture_path = rp_dir / "textures" / ns / model_path / f"{model_name}.png"
+        target_texture_path.parent.mkdir(parents=True, exist_ok=True)
+        stitched_img.save(target_texture_path, "PNG")
+
+        try:
+            geom_data = json.loads(geom_file.read_text(encoding="utf-8"))
+            geoms = geom_data.get("minecraft:geometry", [])
+            for g in geoms:
+                if g.get("description", {}).get("identifier", "").lower() != geom_id:
+                    continue
+                g["description"]["texture_width"] = 16.0
+                g["description"]["texture_height"] = 16.0
+
+                bones = g.get("bones", [])
+                for bone in bones:
+                    cubes = bone.get("cubes", [])
+                    for cube in cubes:
+                        match_elem = find_matching_element(cube, java_elements)
+                        if not match_elem:
+                            continue
+
+                        cube_uvs = cube.get("uv", {})
+                        if not isinstance(cube_uvs, dict):
+                            continue
+
+                        java_faces = match_elem.get("faces", {})
+                        for face_name, bedrock_face in list(cube_uvs.items()):
+                            java_face = java_faces.get(face_name)
+                            tex_var = ""
+                            if java_face:
+                                tex_var = java_face.get("texture", "")
+                            if not tex_var and bedrock_face:
+                                for f in java_faces.values():
+                                    if f.get("texture"):
+                                        tex_var = f.get("texture")
+                                        break
+                            real_ref = ""
+                            if tex_var.startswith("#"):
+                                real_ref = resolved_textures.get(tex_var[1:], "")
+                            elif tex_var:
+                                real_ref = tex_var
+
+                            if real_ref not in offsets:
+                                if valid_png_paths:
+                                    real_ref = valid_png_paths[0]
+                                else:
+                                    continue
+
+                            X_off, Y_off, W_tex, H_tex = offsets[real_ref]
+                            u0, v0, u1, v1 = get_original_uv(bedrock_face, java_face)
+                            uv_pos, uv_size = get_uv_face(u0, v0, u1, v1, face_name, X_off, Y_off, W_tex, H_tex, total_width, max_height)
+                            cube_uvs[face_name] = {
+                                "uv": uv_pos,
+                                "uv_size": uv_size
+                            }
+            write_json(geom_file, geom_data)
+            fixed_count += 1
+        except Exception as e:
+            print(f"[POST] Failed to update geometry for {geom_id}: {e}")
+    return fixed_count
+
+def generate_flipbook_animations(rp_dir: Path, workspace_root: Path) -> int:
+    flipbook_entries = []
+    mcmeta_files = []
+    for base_dir in [workspace_root / "assets", workspace_root / "pack" / "assets"]:
+        if base_dir.exists():
+            mcmeta_files.extend(list(base_dir.rglob("*.png.mcmeta")))
+
+    seen_refs = set()
+    for mcmeta_path in mcmeta_files:
+        try:
+            parts = mcmeta_path.relative_to(workspace_root / "assets").parts
+        except ValueError:
+            try:
+                parts = mcmeta_path.relative_to(workspace_root / "pack" / "assets").parts
+            except ValueError:
+                continue
+
+        if len(parts) < 3 or parts[1] != "textures":
+            continue
+
+        ns = parts[0]
+        subpath = Path(*parts[2:]).with_suffix("").with_suffix("")
+        texture_ref = f"{ns}:{subpath}".replace("\\", "/")
+
+        if texture_ref in seen_refs:
+            continue
+        seen_refs.add(texture_ref)
+
+        target_tex_path = f"textures/{ns}/{subpath}".replace("\\", "/")
+        target_png_file = rp_dir / f"{target_tex_path}.png"
+        if not target_png_file.exists():
+            continue
+
+        ticks = parse_mcmeta_ticks(mcmeta_path)
+        atlas_tile = find_atlas_tile_for_texture(target_tex_path, rp_dir)
+
+        entry = {
+            "flipbook_texture": target_tex_path,
+            "ticks_per_frame": ticks
+        }
+        if atlas_tile:
+            entry["atlas_tile"] = atlas_tile
+        flipbook_entries.append(entry)
+
+    if flipbook_entries:
+        flipbook_json_path = rp_dir / "textures" / "flipbook_textures.json"
+        try:
+            existing_data = []
+            if flipbook_json_path.exists():
+                try:
+                    existing_data = json.loads(flipbook_json_path.read_text(encoding="utf-8"))
+                    if not isinstance(existing_data, list):
+                        existing_data = []
+                except Exception:
+                    pass
+            merged = {e["flipbook_texture"]: e for e in existing_data + flipbook_entries}
+            write_json(flipbook_json_path, list(merged.values()))
+            return len(flipbook_entries)
+        except Exception as e:
+            print(f"[POST] Failed to write flipbook_textures.json: {e}")
+    return 0
+
+
 def main(argv: List[str]) -> None:
     source_arg = argv[1] if len(argv) > 1 else ""
     rp_arg = argv[2] if len(argv) > 2 else "./target/rp"
@@ -578,7 +995,7 @@ def main(argv: List[str]) -> None:
     dir_candidates = [Path("."), Path(".."), Path("pack"), Path("../pack")]
 
     source_indices: List[Dict[str, List[Dict[str, Any]]]] = []
-    source_png_lists: List[List[Tuple[str, bytes]]] = []
+    source_png_lists: List[List[Tuple[str, Any]]] = []
     if source_zip and source_zip.is_file():
         source_indices.append(collect_source_models_from_zip(source_zip))
         source_png_lists.append(collect_pngs_from_zip(source_zip))
@@ -598,6 +1015,21 @@ def main(argv: List[str]) -> None:
     # Deduplicate geyser_mappings.json (removes duplicates introduced by armor fix)
     mappings_dupes = deduplicate_mappings(rp_dir.parent)
 
+    # Resolve workspace root (contains config.json and original unpacked assets)
+    workspace_root = None
+    for p in [rp_dir.parent.parent.parent, rp_dir.parent.parent, Path.cwd(), Path.cwd().parent]:
+        if (p / "config.json").exists():
+            workspace_root = p.resolve()
+            break
+
+    fixed_3d_items = 0
+    flipbooks_generated = 0
+    if workspace_root:
+        fixed_3d_items = fix_3d_items_textures_and_geometry(rp_dir, workspace_root)
+        flipbooks_generated = generate_flipbook_animations(rp_dir, workspace_root)
+    else:
+        print("[POST] Could not resolve workspace root (config.json not found); skipping 3D items fix and flipbook generation")
+
     report = rp_dir.parent / "itemsadder_fix_report.txt"
     report.write_text(
         "ItemsAdder/Geyser postprocess report\n"
@@ -606,6 +1038,8 @@ def main(argv: List[str]) -> None:
         f"animated_model_candidates={len(animated)}\n"
         f"animated_texture_geometries_fixed={anim_geoms_fixed}\n"
         f"mappings_duplicates_removed={mappings_dupes}\n"
+        f"fixed_3d_items_textures_and_geometry={fixed_3d_items}\n"
+        f"flipbook_animations_generated={flipbooks_generated}\n"
         + ("\nAnimated candidates:\n" + "\n".join(animated[:500]) + "\n" if animated else ""),
         encoding="utf-8",
     )
@@ -614,6 +1048,8 @@ def main(argv: List[str]) -> None:
     print(f"[POST] missing armor .player attachables fixed: {armor_fixed}")
     print(f"[POST] animated weapon texture geometries fixed: {anim_geoms_fixed}")
     print(f"[POST] animated model candidates reported: {len(animated)}")
+    print(f"[POST] fixed 3D item textures and geometries: {fixed_3d_items}")
+    print(f"[POST] flipbook animations generated: {flipbooks_generated}")
     if mappings_dupes:
         print(f"[POST] mappings duplicates removed: {mappings_dupes}")
     print(f"[POST] report: {report}")
@@ -621,3 +1057,4 @@ def main(argv: List[str]) -> None:
 
 if __name__ == "__main__":
     main(sys.argv)
+

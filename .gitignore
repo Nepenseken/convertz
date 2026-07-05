@@ -33,3 +33,9 @@ $null
 
 # pycache
 __pycache__/
+
+# local shims and config
+config.json
+imagemagick_shims/
+.vscode/
+target/

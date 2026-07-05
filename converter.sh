@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+export PATH="${PWD}/imagemagick_shims:${PATH}"
 : ${1?'Please specify an input resource pack in the same directory as the script (e.g. ./converter.sh MyResourcePack.zip)'}
 
 # define color placeholders
@@ -118,10 +119,17 @@ read -p $'\e[37mTo acknowledge and continue, press enter. To exit, press Ctrl+C.
 '
 fi
 
-# ensure we have all the required dependencies
-dependency_check "jq" "https://stedolan.github.io/jq/download/" "jq --version" "1.6\|1.7"
-dependency_check "sponge" "https://joeyh.name/code/moreutils/" "-v sponge" ""
-dependency_check "imagemagick" "https://imagemagick.org/script/download.php" "convert --version" ""
+dependency_check "jq" "https://stedolan.github.io/jq/download/" "jq --version" "1.6\|1.7\|1.8"
+sponge () {
+  cat > "${1}.tmp" && mv "${1}.tmp" "${1}"
+}
+convert () {
+  magick convert "$@"
+}
+mogrify () {
+  magick mogrify "$@"
+}
+dependency_check "imagemagick" "https://imagemagick.org/script/download.php" "magick --version" ""
 dependency_check "spritesheet-js" "https://www.npmjs.com/package/spritesheet-js" "-v spritesheet-js" ""
 status_message completion "All dependencies have been satisfied\n"
 
@@ -143,7 +151,7 @@ ${C_GRAY}Fallback pack URL: ${C_BLUE}${fallback_pack:=null}
 
 # decompress our input pack
 status_message process "Decompressing input pack"
-unzip -n -q "${1}"
+python -c "import sys, zipfile; zipfile.ZipFile(sys.argv[1]).extractall('.')" "${1}"
 status_message completion "Input pack decompressed"
 
 # ItemsAdder fix: merge contents/*/resource_pack/assets and resolve ia: texture references.
@@ -153,7 +161,7 @@ if [ ! -f "$IA_FIX_SCRIPT" ] && [ -f "../ia_fix.py" ]; then
 fi
 if [ -f "$IA_FIX_SCRIPT" ]; then
   status_message process "Resolving ItemsAdder resource-pack overlays and ia: texture references"
-  python3 "$IA_FIX_SCRIPT" . || python "$IA_FIX_SCRIPT" . || true
+  python "$IA_FIX_SCRIPT" . || python3 "$IA_FIX_SCRIPT" . || true
 fi
 
 
@@ -179,10 +187,10 @@ else
   fi
 
   # generate uuids for our manifests
-  uuid1=($(uuidgen))
-  uuid2=($(uuidgen))
-  uuid3=($(uuidgen))
-  uuid4=($(uuidgen))
+  uuid1=($(python -c "import uuid; print(uuid.uuid4())"))
+  uuid2=($(python -c "import uuid; print(uuid.uuid4())"))
+  uuid3=($(python -c "import uuid; print(uuid.uuid4())"))
+  uuid4=($(python -c "import uuid; print(uuid.uuid4())"))
 
   # get pack description if we have one
   pack_desc="$(jq -r '(.pack.description // "Geyser 3D Items Resource Pack")' ./pack.mcmeta)"
@@ -278,9 +286,13 @@ else
     }
   }
   ' | sponge ./target/rp/animations/animation.geyser_custom.disable.json
-  cd -
-  ARMOR_CONVERSION="${ARMOR_CONVERSION:-true}" ARMOR_CONTENTS_DIR="${ARMOR_CONTENTS_DIR:-contents}" python manager.py
-  cd ./staging
+  if [[ -d "./staging" ]]; then
+    ARMOR_CONVERSION="${ARMOR_CONVERSION:-true}" ARMOR_CONTENTS_DIR="${ARMOR_CONTENTS_DIR:-contents}" python manager.py
+  else
+    cd ..
+    ARMOR_CONVERSION="${ARMOR_CONVERSION:-true}" ARMOR_CONTENTS_DIR="${ARMOR_CONTENTS_DIR:-contents}" python manager.py
+    cd ./staging
+  fi
 
   # Deduplicate geyser_mappings.json entries (armor conversion may introduce duplicates)
   if [ -f ./target/geyser_mappings.json ]; then
@@ -290,34 +302,53 @@ else
     ' ./target/geyser_mappings.json | sponge ./target/geyser_mappings.json
   fi
 
-  # cleanup
+  # ItemsAdder/Geyser postprocess fix: geometry texture sizes and missing armor player layers.
+  POSTPROCESS_SCRIPT="./itemsadder_postprocess.py"
+  if [ ! -f "$POSTPROCESS_SCRIPT" ] && [ -f "../itemsadder_postprocess.py" ]; then
+    POSTPROCESS_SCRIPT="../itemsadder_postprocess.py"
+  fi
+  if [ -f "$POSTPROCESS_SCRIPT" ]; then
+    status_message process "Applying ItemsAdder/Geyser texture and armor fixes"
+    python "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || python3 "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || true
+  fi
+
+  # Deduplicate geyser_mappings.json entries (armor conversion may introduce duplicates)
+  if [ -f ./target/geyser_mappings.json ]; then
+    status_message process "Deduplicating geyser_mappings.json entries"
+    jq '
+      .items |= (to_entries | map(.value |= unique) | from_entries)
+    ' ./target/geyser_mappings.json | sponge ./target/geyser_mappings.json
+  fi
+
+  # cleanup assets and pack files now that the post-processor has finished
   rm -rf assets && rm -f pack.mcmeta && rm -f pack.png
+
+  ZIP_HELPER="./zip_pack.py"
+  if [ ! -f "$ZIP_HELPER" ] && [ -f "../zip_pack.py" ]; then
+    ZIP_HELPER="../zip_pack.py"
+  fi
+
   if [[ ${save_scratch} != "true" ]] 
   then
     rm -rf scratch_files
     status_message critical "Deleted scratch files"
   else
-    cd ./scratch_files > /dev/null && zip -rq8 scratch_files.zip . -x "*/.*" && cd .. > /dev/null && mv ./scratch_files/scratch_files.zip ./target/scratch_files.zip
+    python "$ZIP_HELPER" scratch_files ./target/scratch_files.zip
     status_message completion "Archived scratch files\n"
   fi
-# ItemsAdder/Geyser postprocess fix: geometry texture sizes and missing armor player layers.
-POSTPROCESS_SCRIPT="./itemsadder_postprocess.py"
-if [ ! -f "$POSTPROCESS_SCRIPT" ] && [ -f "../itemsadder_postprocess.py" ]; then
-  POSTPROCESS_SCRIPT="../itemsadder_postprocess.py"
-fi
-if [ -f "$POSTPROCESS_SCRIPT" ]; then
-  status_message process "Applying ItemsAdder/Geyser texture and armor fixes"
-  python3 "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || python "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || true
-fi
 
-status_message process "Compressing output packs"
-  mkdir ./target/packaged
-  cd ./target/rp > /dev/null && zip -rq8 geyser_resources_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/rp/geyser_resources_preview.mcpack ./target/packaged/geyser_resources_preview.mcpack
-  cd ./target/bp > /dev/null && zip -rq8 geyser_behaviors_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/bp/geyser_behaviors_preview.mcpack ./target/packaged/geyser_behaviors_preview.mcpack
-  cd ./target/packaged > /dev/null && zip -rq8 geyser_addon.mcaddon . -i "*_preview.mcpack" && cd ../.. > /dev/null
-  jq 'delpaths([paths | select(.[-1] | strings | startswith("gmdl_atlas_"))])' ./target/rp/textures/terrain_texture.json | sponge ./target/rp/textures/terrain_texture.json
-  cd ./target/rp > /dev/null && zip -rq8 geyser_resources.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/rp/geyser_resources.mcpack ./target/packaged/geyser_resources.mcpack
-  mkdir ./target/unpackaged
+  status_message process "Compressing output packs"
+  mkdir -p ./target/packaged
+  python "$ZIP_HELPER" ./target/rp ./target/packaged/geyser_resources_preview.mcpack
+  python "$ZIP_HELPER" ./target/bp ./target/packaged/geyser_behaviors_preview.mcpack
+  python "$ZIP_HELPER" ./target/packaged ./target/packaged/geyser_addon.mcaddon "_preview.mcpack"
+
+  if [ -f ./target/rp/textures/terrain_texture.json ]; then
+    jq 'delpaths([paths | select(.[-1] | strings | startswith("gmdl_atlas_"))])' ./target/rp/textures/terrain_texture.json | sponge ./target/rp/textures/terrain_texture.json
+  fi
+  python "$ZIP_HELPER" ./target/rp ./target/packaged/geyser_resources.mcpack
+
+  mkdir -p ./target/unpackaged
   mv ./target/rp ./target/unpackaged/rp && mv ./target/bp ./target/unpackaged/bp
 
   exit
@@ -383,46 +414,47 @@ if contains(":") then sub("\\:(.+)"; "") else "minecraft" end
 ' ./assets/minecraft/models/item/*.json > config.json || { status_message error "Invalid JSON exists in block or item folder! See above log."; exit 1; }
 status_message completion "Initial predicate config generated"
 
-# get a bash array of all model json files in our resource pack
+# get a list of all model json files in our resource pack
 status_message process "Generating an array of all model JSON files to crosscheck with our predicate config"
-json_dir=($(find ./assets/**/models -type f -name '*.json'))
+find ./assets/**/models -type f -name '*.json' > scratch_files/json_files.txt
+jq -R . scratch_files/json_files.txt | jq -s . > scratch_files/json_files.json
 
 # ensure all our reference files in config.json exist, and delete the entry if they do not
 status_message critical "Removing config entries that do not have an associated JSON file in the pack"
-jq '
-
-def real_file($input):
-($ARGS.positional | index($input) // null);
-
-map_values(if real_file(.path) != null then . else empty end)
-
-' config.json --args ${json_dir[@]} | sponge config.json
-
-# get a bash array of all our input models
-status_message process "Creating a bash array for remaing models in our predicate config"
-model_array=($(jq -r '[.[].path] | unique | .[]' config.json))
+jq -s '
+  (.[0] | map({(.): true}) | add) as $files_dict
+  | .[1] | map_values(if $files_dict[.path] then . else empty end)
+' scratch_files/json_files.json config.json | sponge config.json
 
 # find initial parental information
 status_message process "Doing an initial sweep for level 1 parentals"
-jq -n '
-
-[def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end;
-
-inputs | {
-  "path": (input_filename),
-  "parent": ("./assets/" + (.parent | namespace) + "/models/" + ((.parent? // empty) | sub("(.*?)\\:"; "")) + ".json")
-  }
-]
-
-' ${model_array[@]} | sponge scratch_files/parents.json
+python -c '
+import json
+from pathlib import Path
+config = json.loads(Path("config.json").read_text(encoding="utf-8"))
+paths = sorted(list(set(v["path"] for v in config.values() if "path" in v)))
+parents = []
+for p in paths:
+    path_obj = Path(p)
+    if not path_obj.exists():
+        continue
+    try:
+        data = json.loads(path_obj.read_text(encoding="utf-8"))
+        parent = data.get("parent")
+        if parent:
+            ns, name = parent.split(":", 1) if ":" in parent else ("minecraft", parent)
+            parent_path = f"./assets/{ns}/models/{name}.json"
+        else:
+            parent_path = "./assets/minecraft/models/.json"
+        parents.append({"path": p, "parent": parent_path})
+    except Exception:
+        pass
+Path("scratch_files/parents.json").write_text(json.dumps(parents), encoding="utf-8")
+'
 
 # add initial parental information to config.json
 status_message critical "Removing config entries with non-supported parentals\n"
 jq -s '
-
-. as $global |
-
-def intest($input_i): ($global | .[0] | map({(.path): .parent}) | add | .[$input_i]? // null);
 
 def gtest($input_g):
 [ 
@@ -442,24 +474,30 @@ def gtest($input_g):
 ]
 | index($input_g) // null;
 
-.[1] | map_values(. + ({"parent": (intest(.path) // null)} | if gtest(.parent) == null then . else empty end))
+(.[0] | map({(.path): .parent}) | add) as $parents_dict |
+.[1] | map_values(. + ({"parent": ($parents_dict[.path] // null)} | if gtest(.parent) == null then . else empty end))
 | walk(if type == "object" then with_entries(select(.value != null)) else . end)
 
 ' scratch_files/parents.json config.json | sponge config.json
 
 # obtain hashes of all model predicate info to ensure consistent model naming
-jq -r '.[] | [.geyserID, (.item + "_c" + (.nbt.CustomModelData | tostring) + "_d" + (.nbt.Damage | tostring) + "_u" + (.nbt.Unbreakable | tostring)), .path] | @tsv | gsub("\\t";",")' config.json > scratch_files/paths.csv
-
-function write_hash () { 
-    local entry_hash=$(echo -n "${1}" | md5sum | head -c 7)
-    local path_hash=$(echo -n "${2}" | md5sum | head -c 7)
-    echo "${3},${entry_hash},${path_hash}" >> "${4}"
-}
-
-while IFS=, read -r gid predicate path
-    do write_hash "${predicate}" "${path}" "${gid}" "scratch_files/hashes.csv"
-done < scratch_files/paths.csv > /dev/null
-
+python -c '
+import json, hashlib
+from pathlib import Path
+config = json.loads(Path("config.json").read_text(encoding="utf-8"))
+hashes = []
+for gid, entry in config.items():
+    item = entry.get("item", "")
+    cmd = entry.get("nbt", {}).get("CustomModelData", "")
+    dmg = entry.get("nbt", {}).get("Damage", "")
+    unb = entry.get("nbt", {}).get("Unbreakable", "")
+    predicate = f"{item}_c{cmd}_d{dmg}_u{unb}"
+    path = entry.get("path", "")
+    entry_hash = hashlib.md5(predicate.encode("utf-8")).hexdigest()[:7]
+    path_hash = hashlib.md5(path.encode("utf-8")).hexdigest()[:7]
+    hashes.append(f"{gid},{entry_hash},{path_hash}")
+Path("scratch_files/hashes.csv").write_text("\n".join(hashes) + "\n", encoding="utf-8")
+'
 jq -cR 'split(",")' scratch_files/hashes.csv | jq -s 'map({(.[0]): [.[1], .[2]]}) | add' > scratch_files/hashmap.json
 
 jq --slurpfile hashmap scratch_files/hashmap.json '
@@ -482,10 +520,10 @@ if test -f "./pack.png"; then
 fi
 
 # generate uuids for our manifests
-uuid1=($(uuidgen))
-uuid2=($(uuidgen))
-uuid3=($(uuidgen))
-uuid4=($(uuidgen))
+uuid1=($(python -c "import uuid; print(uuid.uuid4())"))
+uuid2=($(python -c "import uuid; print(uuid.uuid4())"))
+uuid3=($(python -c "import uuid; print(uuid.uuid4())"))
+uuid4=($(python -c "import uuid; print(uuid.uuid4())"))
 
 # get pack description if we have one
 pack_desc="$(jq -r '(.pack.description // "Geyser 3D Items Resource Pack")' ./pack.mcmeta)"
@@ -653,89 +691,7 @@ printf "\r\e[37m█\e[m \e[37m${_fill// /█}\e[m\e[37m${_empty// /•}\e[m \e[3
 }
 
 # first, deal with parented models
-while IFS=, read -r file gid parental namespace model_path model_name path_hash
-do
-  resolve_parental () {
-    local file=${1}
-    local gid=${2}
-    local parental=${3}
-    local namespace=${4}
-    local model_path=${5}
-    local model_name=${6}
-    local path_hash=${7}
-
-    local elements="$(jq -rc '.elements' ${file} | tee scratch_files/${gid}.elements.temp)"
-    local element_parent=${file}
-    local textures="$(jq -rc '.textures' ${file} | tee scratch_files/${gid}.textures.temp)"
-    local display="$(jq -rc '.display' ${file} | tee scratch_files/${gid}.display.temp)"
-    status_message process "Locating parental info for child model with GeyserID ${gid}"
-
-    # itterate through parented models until they all have geometry, display, and textures
-    until [[ ${elements} != null && ${textures} != null && ${display} != null ]] || [[ ${parental} = "./assets/minecraft/models/builtin/generated.json" ]] || [[ ${parental} = null ]]
-    do
-      if [[ ${elements} = null ]]
-      then
-        local elements="$(jq -rc '.elements' ${parental} 2> /dev/null | tee scratch_files/${gid}.elements.temp || (echo && echo null))"
-        local element_parent=${parental}
-      fi
-      if [[ ${textures} = null ]]
-      then
-        local textures="$(jq -rc '.textures' ${parental} 2> /dev/null | tee scratch_files/${gid}.textures.temp || (echo && echo null))"
-      fi
-      if [[ ${display} = null ]]
-      then
-        local display="$(jq -rc '.display' ${parental} 2> /dev/null | tee scratch_files/${gid}.display.temp || (echo && echo null))"
-      fi
-      local parental="$(jq -rc 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; ("./assets/" + (.parent? | namespace) + "/models/" + ((.parent? // empty) | sub("(.*?)\\:"; "")) + ".json") // "null"' ${parental} 2> /dev/null || (echo && echo null))"
-      local texture_0="$(jq -rc 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; ("./assets/" + ([.[]][0]? | namespace) + "/textures/" + (([.[]][0]? // empty) | sub("(.*?)\\:"; "")) + ".png") // "null"' scratch_files/${gid}.textures.temp)"
-    done
-
-    # if we can, generate a model now
-    if [[ ${elements} != null && ${textures} != null ]]
-    then
-      jq -n --slurpfile jelements scratch_files/${gid}.elements.temp --slurpfile jtextures scratch_files/${gid}.textures.temp --slurpfile jdisplay scratch_files/${gid}.display.temp '
-      {
-        "textures": ($jtextures[]),
-        "elements": ($jelements[])
-      } + (if $jdisplay then ({"display": ($jdisplay[])}) else {} end)
-      ' | sponge ${file}
-      echo >> scratch_files/count.csv
-      local tot_pos=$(wc -l < scratch_files/count.csv)
-      status_message completion "Located all parental info for Child ${gid}\n$(ProgressBar ${tot_pos} ${_end})"
-      echo
-    # check if this is a 2d item dervived from ./assets/minecraft/models/builtin/generated
-    elif [[ ${textures} != null && ${parental} = "./assets/minecraft/models/builtin/generated.json" && -f "${texture_0}" ]]
-    then
-      jq -n --slurpfile jelements scratch_files/${gid}.elements.temp --slurpfile jtextures scratch_files/${gid}.textures.temp --slurpfile jdisplay scratch_files/${gid}.display.temp '
-      {
-        "textures": ([$jtextures[]][0])
-      } + (if $jdisplay then ({"display": ($jdisplay[])}) else {} end)
-      ' | sponge ${file}
-      # copy texture directly to the rp
-      mkdir -p "./target/rp/textures/${namespace}/${model_path}"
-      cp "${texture_0}" "./target/rp/textures/${namespace}/${model_path}/${model_name}.png"
-      # add texture to item atlas
-      echo "${path_hash},textures/${namespace}/${model_path}/${model_name}" >> scratch_files/icons.csv
-      echo "${gid}" >> scratch_files/generated.csv
-      echo >> scratch_files/count.csv
-      local tot_pos=$(wc -l < scratch_files/count.csv)
-      status_message completion "Located all parental info for 2D Child ${gid}\n$(ProgressBar ${tot_pos} ${_end})"
-      echo
-    # otherwise, remove it from our config
-    else
-      echo "${gid}" >> scratch_files/deleted.csv
-      echo >> scratch_files/count.csv
-      local tot_pos=$(wc -l < scratch_files/count.csv)
-      status_message critical "Deleting ${gid} from config as no suitable parent information was found\n$(ProgressBar ${tot_pos} ${_end})"
-      echo
-    fi
-    rm -f scratch_files/${gid}.elements.temp scratch_files/${gid}.textures.temp scratch_files/${gid}.display.temp
-  }
-  wait_for_jobs
-  resolve_parental "${file}" "${gid}" "${parental}" "${namespace}" "${model_path}" "${model_name}" "${path_hash}" &
-
-done < scratch_files/pa.csv
-wait # wait for all the jobs to finish
+python resolve_parentals.py
 
 # update generated models in config
 if [[ -f scratch_files/generated.csv ]]
@@ -776,15 +732,36 @@ model_list=( $(jq -r '.[] | select(.generated == false) | .path' config.json) )
 # get our final texture list to be atlased
 # get a bash array of all texture files in our resource pack
 status_message process "Generating an array of all model PNG files to crosscheck with our atlas"
-jq -n '$ARGS.positional' --args $(find ./assets/**/textures -type f -name '*.png') | sponge scratch_files/all_textures.temp
+find ./assets/**/textures -type f -name '*.png' > scratch_files/all_textures_list.txt
+jq -R . scratch_files/all_textures_list.txt | jq -s . > scratch_files/all_textures.temp
+
 # get bash array of all texture files listed in our models
 status_message process "Generating union atlas arrays for all model textures"
-jq -s '
-def namespace: 
-  if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; 
-[.[]| [.textures[]?] | unique] 
-| map(map("./assets/" + (. | namespace) + "/textures/" + (. | sub("(.*?)\\:"; "")) + ".png"))
-' ${model_list[@]} | sponge scratch_files/union_atlas.temp
+python -c '
+import json
+from pathlib import Path
+config = json.loads(Path("config.json").read_text(encoding="utf-8"))
+model_paths = sorted(list(set(v["path"] for v in config.values() if v.get("generated") is False and "path" in v)))
+union_atlas = []
+for p in model_paths:
+    path_obj = Path(p)
+    if not path_obj.exists():
+        continue
+    try:
+        data = json.loads(path_obj.read_text(encoding="utf-8"))
+        textures = data.get("textures", {})
+        if not isinstance(textures, dict):
+            continue
+        tex_refs = sorted(list(set(v for v in textures.values() if isinstance(v, str) and not v.startswith("#"))))
+        png_paths = []
+        for ref in tex_refs:
+            ns, t_path = ref.split(":", 1) if ":" in ref else ("minecraft", ref)
+            png_paths.append(f"./assets/{ns}/textures/{t_path}.png")
+        union_atlas.append(png_paths)
+    except Exception:
+        pass
+Path("scratch_files/union_atlas.temp").write_text(json.dumps(union_atlas), encoding="utf-8")
+'
 jq '
 def intersects(a;b): any(a[]; . as $x | any(b[]; . == $x));
 
@@ -798,21 +775,7 @@ reduce .[] as $entry ([]; mapatlas($entry))
 ' scratch_files/union_atlas.temp | sponge scratch_files/union_atlas.temp
 total_union_atlas=($(jq -r 'length - 1' scratch_files/union_atlas.temp))
 
-mkdir -p scratch_files/spritesheet
-status_message process "Generating $((1+${total_union_atlas})) sprite sheets..."
-for i in $(seq 0 ${total_union_atlas})
-do
-  generate_atlas () {
-    # find the union of all texture files listed in this atlas and all texture files in our resource pack
-    local texture_list=( $(jq -s --arg index "${1}" -r '(.[1][($index | tonumber)] - .[0] | length > 0) as $fallback_needed | ((.[1][($index | tonumber)] - (.[1][($index | tonumber)] - .[0])) + (if $fallback_needed then ["./assets/minecraft/textures/0.png"] else [] end)) | .[]' scratch_files/all_textures.temp scratch_files/union_atlas.temp) )
-    status_message process "Generating sprite sheet ${1} of ${total_union_atlas}"
-    spritesheet-js -f json --name scratch_files/spritesheet/${1} --fullpath ${texture_list[@]} 1> /dev/null
-    echo ${1} >> scratch_files/atlases.csv
-  }
-  wait_for_jobs
-  generate_atlas "${i}" &
-done
-wait # wait for all the jobs to finish
+python generate_atlases.py
 
 # generate terrain texture atlas
 jq -cR 'split(",")' scratch_files/atlases.csv | jq -s 'map({("gmdl_atlas_" + .[0]): {"textures": ("textures/" + .[0])}}) | add' > scratch_files/atlases.json
@@ -826,362 +789,8 @@ status_message completion "All sprite sheets generated"
 mv scratch_files/spritesheet/*.png ./target/rp/textures
 
 # begin conversion
-jq -r '.[] | [.path, .geyserID, .generated, .namespace, .model_path, .model_name, .path_hash, .geometry] | @tsv | gsub("\\t";",")' config.json | sponge scratch_files/all.csv
-
-while IFS=, read -r file gid generated namespace model_path model_name path_hash geometry
-do
-   convert_model () {
-    local file="${1}"
-    local gid="${2}"
-    local generated="${3}"
-    local namespace="${4}"
-    local model_path="${5}"
-    local model_name="${6}"
-    local path_hash="${7}"
-    local geometry="${8}"
-
-    # find which texture atlas we will be using if not generated
-    if [[ ${generated} = "false" ]]
-    then
-      local atlas_index=$(jq -r -s 'def namespace: if contains(":") then sub("\\:(.+)"; "") else "minecraft" end; def intersects(a;b): any(a[]; . as $x | any(b[]; . == $x)); (.[0] | [.textures[]] | map("./assets/" + (. | namespace) + "/textures/" + (. | sub("(.*?)\\:"; "")) + ".png")) as $inp | [(.[1] | (map(if intersects(.;$inp) then . else empty end)[])) as $entry | .[1] | to_entries[] | select(.value == $entry).key][0] // 0' ${file} scratch_files/union_atlas.temp)
-      
-      # Copy standalone texture
-      local texture_ref=$(jq -r '([.elements[].faces[].texture | select(type == "string" and startswith("#")) | sub("#"; "")] | unique) as $ref_keys | .textures as $textures | ($ref_keys | map($textures[.] | select(. != null))) as $ref_vals | (if ($ref_vals | length) > 0 then $ref_vals[0] else (.textures | to_entries | map(select(.value | startswith("#") | not)) | .[0].value) end) // ""' ${file})
-      if [ -n "${texture_ref}" ]; then
-        local tex_ns="minecraft"
-        local tex_subpath="${texture_ref}"
-        if [[ "${texture_ref}" == *":"* ]]; then
-          tex_ns="${texture_ref%%:*}"
-          tex_subpath="${texture_ref#*:}"
-        fi
-        # Check if the texture exists in the assets folder
-        local src_tex_file="./assets/${tex_ns}/textures/${tex_subpath}.png"
-        if [ -f "${src_tex_file}" ]; then
-          mkdir -p "./target/rp/textures/${namespace}/${model_path}"
-          cp "${src_tex_file}" "./target/rp/textures/${namespace}/${model_path}/${model_name}.png"
-          echo "${path_hash},textures/${namespace}/${model_path}/${model_name}" >> scratch_files/icons.csv
-        fi
-      fi
-    else
-      local atlas_index=0
-    fi
-
-    status_message process "Starting conversion of model with GeyserID ${gid}"
-    mkdir -p ./target/rp/models/blocks/${namespace}/${model_path}
-    jq --arg generated "${generated}" --arg binding "c.item_slot == 'head' ? 'head' : q.item_slot_to_bone_name(c.item_slot)" --arg geometry "${geometry}" -c '
-    def tobool: if .=="true" then true elif .=="false" then false else null end;
-    def roundit: (.*10000 | round) / 10000;
-    def element_array:
-        if .elements then (.elements | map({
-        "origin": [((-.to[0] + 8) | roundit), ((.from[1]) | roundit), ((.from[2] - 8) | roundit)],
-        "size": [((.to[0] - .from[0]) | roundit), ((.to[1] - .from[1]) | roundit), ((.to[2] - .from[2]) | roundit)],
-        "rotation": (if (.rotation.axis) == "x" then [(.rotation.angle | tonumber * -1), 0, 0] elif (.rotation.axis) == "y" then [0, (.rotation.angle | tonumber * -1), 0] elif (.rotation.axis) == "z" then [0, 0, (.rotation.angle | tonumber)] else null end),
-        "pivot": (if .rotation.origin then [((- .rotation.origin[0] + 8) | roundit), (.rotation.origin[1] | roundit), ((.rotation.origin[2] - 8) | roundit)] else null end),
-        "uv": (
-          def uv_calc($input):
-            (if (.faces | .[$input]) then
-            (.faces | .[$input].uv) as $uv
-            | ($uv[0] | roundit) as $fn0
-            | ($uv[1] | roundit) as $fn1
-            | ($uv[2] | roundit) as $fn2
-            | ($uv[3] | roundit) as $fn3
-            | (($fn2 - $fn0) as $num | [([-1, $num] | max), 1] | min) as $x_sign
-            | (($fn3 - $fn1) as $num | [([-1, $num] | max), 1] | min) as $y_sign |
-            (if ($input == "up" or $input == "down") then {
-              "uv": [(($fn2 - (0.016 * $x_sign)) | roundit), (($fn3 - (0.016 * $y_sign)) | roundit)],
-              "uv_size": [((($fn0 - $fn2) + (0.016 * $x_sign)) | roundit), ((($fn1 - $fn3) + (0.016 * $y_sign)) | roundit)]
-            } else {
-              "uv": [(($fn0 + (0.016 * $x_sign)) | roundit), (($fn1 + (0.016 * $y_sign)) | roundit)],
-              "uv_size": [((($fn2 - $fn0) - (0.016 * $x_sign)) | roundit), ((($fn3 - $fn1) - (0.016 * $y_sign)) | roundit)]
-            } end) else null end);
-          {
-          "north": uv_calc("north"),
-          "south": uv_calc("south"),
-          "east": uv_calc("east"),
-          "west": uv_calc("west"),
-          "up": uv_calc("up"),
-          "down": uv_calc("down")
-          })
-      }) | walk( if type == "object" then with_entries(select(.value != null)) else . end)) else {} end
-      ;
-      def pivot_groups:
-      if .elements then ((element_array) as $element_array |
-      [[.elements[].rotation] | unique | .[] | select (.!=null)]
-      | map((
-      [((- .origin[0] + 8) | roundit), (.origin[1] | roundit), ((.origin[2] - 8) | roundit)] as $i_piv |
-      (if (.axis) == "x" then [(.angle | tonumber * -1), 0, 0] elif (.axis) == "y" then [0, (.angle | tonumber * -1), 0] else [0, 0, (.angle | tonumber)] end) as $i_rot |
-      {
-        "parent": "geyser_custom_z",
-        "pivot": ($i_piv),
-        "rotation": ($i_rot),
-        "cubes": [($element_array | .[] | select(.rotation == $i_rot and .pivot == $i_piv))]
-      }))) else {} end
-      ;
-      {
-        "format_version": "1.16.0",
-        "minecraft:geometry": [{
-          "description": {
-            "identifier": ( "geometry.geyser_custom." + ($geometry)),
-            "texture_width": 16,
-            "texture_height": 16,
-            "visible_bounds_width": 4,
-            "visible_bounds_height": 4.5,
-            "visible_bounds_offset": [0, 0.75, 0]
-          },
-          "bones": ([{
-            "name": "geyser_custom",
-            "binding": $binding,
-            "pivot": [0, 8, 0]
-          }, {
-            "name": "geyser_custom_x",
-            "parent": "geyser_custom",
-            "pivot": [0, 8, 0]
-          }, {
-            "name": "geyser_custom_y",
-            "parent": "geyser_custom_x",
-            "pivot": [0, 8, 0]
-          }, 
-            if ($generated | tobool) == true then ({
-            "name": "geyser_custom_z",
-            "parent": "geyser_custom_y",
-            "pivot": [0, 8, 0],
-            "texture_meshes": ([{"texture": "default", "position": [0, 8, 0], "rotation": [90, 0, -180], "local_pivot": [8, 0.5, 8]}])
-          }) else ({
-            "name": "geyser_custom_z",
-            "parent": "geyser_custom_y",
-            "pivot": [0, 8, 0],
-            "cubes": ([(element_array | .[] | select(.rotation == null))])
-            }) end] + (pivot_groups | map(del(.cubes[].rotation)) | to_entries | map( (.value.name = "rot_\(1+.key)" ) | .value)))
-        }]
-      }
-      ' ${file} | sponge ./target/rp/models/blocks/${namespace}/${model_path}/${model_name}.json
-
-      # generate our rp animations via display settings
-      mkdir -p ./target/rp/animations/${namespace}/${model_path}
-      jq -c --arg geometry "${geometry}" '
-
-      {
-        "format_version": "1.8.0",
-        "animations": {
-          ("animation.geyser_custom." + ($geometry) + ".thirdperson_main_hand"): {
-            "loop": true,
-            "bones": {
-              "geyser_custom_x": (if .display.thirdperson_righthand then {
-                "rotation": (if .display.thirdperson_righthand.rotation then [(- .display.thirdperson_righthand.rotation[0]), 0, 0] else null end),
-                "position": (if .display.thirdperson_righthand.translation then [(- .display.thirdperson_righthand.translation[0]), (.display.thirdperson_righthand.translation[1]), (.display.thirdperson_righthand.translation[2])] else null end),
-                "scale": (if .display.thirdperson_righthand.scale then [(.display.thirdperson_righthand.scale[0]), (.display.thirdperson_righthand.scale[1]), (.display.thirdperson_righthand.scale[2])] else null end)
-              } else null end),
-              "geyser_custom_y": (if .display.thirdperson_righthand.rotation then {
-                "rotation": (if .display.thirdperson_righthand.rotation then [0, (- .display.thirdperson_righthand.rotation[1]), 0] else null end)
-              } else null end),
-              "geyser_custom_z": (if .display.thirdperson_righthand.rotation then {
-                "rotation": [0, 0, (.display.thirdperson_righthand.rotation[2])]
-              } else null end),
-              "geyser_custom": {
-                "rotation": [90, 0, 0],
-                "position": [0, 13, -3]
-              }
-            }
-          },
-          ("animation.geyser_custom." + ($geometry) + ".thirdperson_off_hand"): {
-            "loop": true,
-            "bones": {
-              "geyser_custom_x": (if .display.thirdperson_lefthand then {
-                "rotation": (if .display.thirdperson_lefthand.rotation then [(- .display.thirdperson_lefthand.rotation[0]), 0, 0] else null end),
-                "position": (if .display.thirdperson_lefthand.translation then [(.display.thirdperson_lefthand.translation[0]), (.display.thirdperson_lefthand.translation[1]), (.display.thirdperson_lefthand.translation[2])] else null end),
-                "scale": (if .display.thirdperson_lefthand.scale then [(.display.thirdperson_lefthand.scale[0]), (.display.thirdperson_lefthand.scale[1]), (.display.thirdperson_lefthand.scale[2])] else null end)
-              } else null end),
-              "geyser_custom_y": (if .display.thirdperson_lefthand.rotation then {
-                "rotation": (if .display.thirdperson_lefthand.rotation then [0, (- .display.thirdperson_lefthand.rotation[1]), 0] else null end)
-              } else null end),
-              "geyser_custom_z": (if .display.thirdperson_lefthand.rotation then {
-                "rotation": [0, 0, (.display.thirdperson_lefthand.rotation[2])]
-              } else null end),
-              "geyser_custom": {
-                "rotation": [90, 0, 0],
-                "position": [0, 13, -3]
-              }
-            }
-          },
-          ("animation.geyser_custom." + ($geometry) + ".head"): {
-            "loop": true,
-            "bones": {
-              "geyser_custom_x": {
-                "rotation": (if .display.head.rotation then [(- .display.head.rotation[0]), 0, 0] else null end),
-                "position": (if .display.head.translation then [(- .display.head.translation[0] * 0.625), (.display.head.translation[1] * 0.625), (.display.head.translation[2] * 0.625)] else null end),
-                "scale": (if .display.head.scale then (.display.head.scale | map(. * 0.625)) else 0.625 end)
-              },
-              "geyser_custom_y": (if .display.head.rotation then {
-                "rotation": [0, (- .display.head.rotation[1]), 0]
-              } else null end),
-              "geyser_custom_z": (if .display.head.rotation then {
-                "rotation": [0, 0, (.display.head.rotation[2])]
-              } else null end),
-              "geyser_custom": {
-                "position": [0, 19.9, 0]
-              }
-            }
-          },
-          ("animation.geyser_custom." + ($geometry) + ".firstperson_main_hand"): {
-            "loop": true,
-            "bones": {
-              "geyser_custom": {
-                "rotation": [90, 60, -40],
-                "position": [4, 10, 4],
-                "scale": 1.5
-              },
-              "geyser_custom_x": {
-                "position": (if .display.firstperson_righthand.translation then [(- .display.firstperson_righthand.translation[0]), (.display.firstperson_righthand.translation[1]), (- .display.firstperson_righthand.translation[2])] else null end),
-                "rotation": (if .display.firstperson_righthand.rotation then [(- .display.firstperson_righthand.rotation[0]), 0, 0] else [0.1, 0.1, 0.1] end),
-                "scale": (if .display.firstperson_righthand.scale then (.display.firstperson_righthand.scale) else null end)
-              },
-              "geyser_custom_y": (if .display.firstperson_righthand.rotation then {
-                "rotation": [0, (- .display.firstperson_righthand.rotation[1]), 0]
-              } else null end),
-              "geyser_custom_z": (if .display.firstperson_righthand.rotation then {
-                "rotation": [0, 0, (.display.firstperson_righthand.rotation[2])]
-              } else null end)
-            }
-          },
-          ("animation.geyser_custom." + ($geometry) + ".firstperson_off_hand"): {
-            "loop": true,
-            "bones": {
-              "geyser_custom": {
-                "rotation": [90, 60, -40],
-                "position": [4, 10, 4],
-                "scale": 1.5
-              },
-              "geyser_custom_x": {
-                "position": (if .display.firstperson_lefthand.translation then [(.display.firstperson_lefthand.translation[0]), (.display.firstperson_lefthand.translation[1]), (- .display.firstperson_lefthand.translation[2])] else null end),
-                "rotation": (if .display.firstperson_lefthand.rotation then [(- .display.firstperson_lefthand.rotation[0]), 0, 0] else [0.1, 0.1, 0.1] end),
-                "scale": (if .display.firstperson_lefthand.scale then (.display.firstperson_lefthand.scale) else null end)
-              },
-              "geyser_custom_y": (if .display.firstperson_lefthand.rotation then {
-                "rotation": [0, (- .display.firstperson_lefthand.rotation[1]), 0]
-              } else null end),
-              "geyser_custom_z": (if .display.firstperson_lefthand.rotation then {
-                "rotation": [0, 0, (.display.firstperson_lefthand.rotation[2])]
-              } else null end)
-            }
-          }
-        }
-      } | walk( if type == "object" then with_entries(select(.value != null)) else . end)
-
-      ' ${file} | sponge ./target/rp/animations/${namespace}/${model_path}/animation.${model_name}.json
-
-      # generate our bp block definition if this is a 3D item
-      if [[ ${generated} = false ]]
-      then
-        mkdir -p ./target/bp/blocks/${namespace}/${model_path}
-        jq -c -n --arg atlas_index "${atlas_index}" --arg block_material "${block_material}" --arg path_hash "${path_hash}" --arg geometry "${geometry}" '
-        {
-            "format_version": "1.16.100",
-            "minecraft:block": {
-                "description": {
-                    "identifier": ("geyser_custom:" + $path_hash)
-                },
-                "components": {
-                    "minecraft:material_instances": {
-                        "*": {
-                            "texture": ("gmdl_atlas_" + $atlas_index),
-                            "render_method": $block_material,
-                            "face_dimming": false,
-                            "ambient_occlusion": false
-                        }
-                    },
-                    "minecraft:geometry": ("geometry.geyser_custom." + $geometry),
-                    "minecraft:placement_filter": {
-                      "conditions": [
-                          {
-                              "allowed_faces": [
-                              ],
-                              "block_filter": [
-                              ]
-                          }
-                      ]
-                    }
-                }
-            }
-        }
-        ' | sponge ./target/bp/blocks/${namespace}/${model_path}/${model_name}.json
-      # generate our bp item definition if this is a 2D item
-      else
-        mkdir -p ./target/bp/items/${namespace}/${model_path}
-        jq -c -n --arg path_hash "${path_hash}" '
-        {
-            "format_version": "1.16.100",
-            "minecraft:item": {
-                "description": {
-                    "identifier": ("geyser_custom:" + $path_hash),
-                    "category": "items"
-                },
-                "components": {
-                  "minecraft:icon": {
-                    "texture": $path_hash
-                  }
-                }
-            }
-        }
-        ' | sponge ./target/bp/items/${namespace}/${model_path}/${model_name}.${path_hash}.json
-      fi
-
-      # generate our rp attachable definition
-      mkdir -p ./target/rp/attachables/${namespace}/${model_path}
-      jq -c -n --arg generated "${generated}" --arg atlas_index "${atlas_index}" --arg attachable_material "${attachable_material}" --arg v_main "v.main_hand = c.item_slot == 'main_hand';" --arg v_off "v.off_hand = c.item_slot == 'off_hand';" --arg v_head "v.head = c.item_slot == 'head';" --arg path_hash "${path_hash}" --arg namespace "${namespace}" --arg model_path "${model_path}" --arg model_name "${model_name}" --arg geometry "${geometry}" '
-      def tobool: if .=="true" then true elif .=="false" then false else null end;
-      {
-        "format_version": "1.10.0",
-        "minecraft:attachable": {
-          "description": {
-            "identifier": ("geyser_custom:" + $path_hash),
-            "materials": {
-              "default": $attachable_material,
-              "enchanted": $attachable_material
-            },
-            "textures": {
-              "default": (("textures/" + $namespace + "/" + $model_path + "/" + $model_name) | gsub("//+"; "/")),
-              "enchanted": "textures/misc/enchanted_item_glint"
-            },
-            "geometry": {
-              "default": ("geometry.geyser_custom." + $geometry)
-            },
-            "scripts": {
-              "pre_animation": [$v_main, $v_off, $v_head],
-              "animate": [
-                {"thirdperson_main_hand": "v.main_hand && !c.is_first_person"},
-                {"thirdperson_off_hand": "v.off_hand && !c.is_first_person"},
-                {"thirdperson_head": "v.head && !c.is_first_person"},
-                {"firstperson_main_hand": "v.main_hand && c.is_first_person"},
-                {"firstperson_off_hand": "v.off_hand && c.is_first_person"},
-                {"firstperson_head": "c.is_first_person && v.head"}
-              ]
-            },
-            "animations": {
-              "thirdperson_main_hand": ("animation.geyser_custom." + $geometry + ".thirdperson_main_hand"),
-              "thirdperson_off_hand": ("animation.geyser_custom." + $geometry + ".thirdperson_off_hand"),
-              "thirdperson_head": ("animation.geyser_custom." + $geometry + ".head"),
-              "firstperson_main_hand": ("animation.geyser_custom." + $geometry + ".firstperson_main_hand"),
-              "firstperson_off_hand": ("animation.geyser_custom." + $geometry + ".firstperson_off_hand"),
-              "firstperson_head": "animation.geyser_custom.disable"
-            },
-            "render_controllers": [ "controller.render.item_default" ]
-          }
-        }
-      }
-
-      ' | sponge ./target/rp/attachables/${namespace}/${model_path}/${model_name}.${path_hash}.attachable.json
-
-      # progress
-      echo >> scratch_files/count.csv
-      local tot_pos=$((cur_pos + $(wc -l < scratch_files/count.csv)))
-      status_message completion "${gid} converted\n$(ProgressBar ${tot_pos} ${_end})"
-      echo
-   }
-   wait_for_jobs
-   convert_model "${file}" "${gid}" "${generated}" "${namespace}" "${model_path}" "${model_name}" "${path_hash}" "${geometry}" &
-
-done < scratch_files/all.csv
-wait # wait for all the jobs to finish
+python convert_models.py "attachable_material=${attachable_material}" "block_material=${block_material}"
+ # wait for all the jobs to finish
 
 # write lang file US
 status_message process "Writing en_US and en_GB lang files"
@@ -1202,41 +811,13 @@ status_message completion "en_US and en_GB lang files written\n"
 
 # Ensure images are in the correct color space
 status_message process "Setting all images to png8"
-find ./target/rp/textures -name '*.png' -exec mogrify -define png:format=png8  {} +
+python convert_png8.py
 status_message completion "All images set to png8"
 
 if [[ ${rename_model_files} == "true" ]]
 then
     status_message process "Consolidating model files"
-    function consolidate_files () {
-	## Get a list of all files
-	list=$(find ${1} -mindepth 2 -type f -print)
-	nr=1
-	
-	## Move all files that are unique
-	find ${1} -mindepth 2 -type f -print0 | while IFS= read -r -d '' file; do
-	    mv -n "$file" ${1}/
-	done
-	list=$(find ${1} -mindepth 2 -type f -print)
-	
-	## Checking which files need to be renamed
-	while [[ $list != '' ]] ; do
-	   ##Remaming the un-moved files to unique names and move the renamed files
-	   find ${1} -mindepth 2 -type f -print0 | while IFS= read -r -d '' file; do
-	       current_file=$(basename "$file")
-	       mv -n "$file" "${1}/${nr}${current_file}"
-	   done
-	   ## Incrementing counter to prefix to file name
-	   nr=$((nr+1))
-	   list=$(find ${1} -mindepth 2 -type f -print)
-	done
-     }
-     consolidate_files './target/rp/animations'
-     rm -rf ./target/rp/animations/*/
-     consolidate_files './target/rp/models/blocks'
-     rm -rf ./target/rp/models/blocks/*/
-     consolidate_files './target/rp/attachables'
-     rm -rf ./target/rp/attachables/*/
+    python consolidate.py
 fi
 
 # attempt to merge with existing pack if input was provided
@@ -1285,50 +866,31 @@ fi
 
 status_message process "Creating Geyser mappings in target directory"
 echo
-jq '
-([map(
-  {
-    ("minecraft:" + .item): [
-      {
-        "name": .path_hash,
-        "allow_offhand": true,
-        "icon": .path_hash
-      }
-      + (if .nbt.CustomModelData then {"custom_model_data": (.nbt.CustomModelData)} else {} end)
-      + (if .nbt.Damage then {"damage_predicate": (.nbt.Damage)} else {} end)
-      + (if .nbt.Unbreakable then {"unbreakable": (.nbt.Unbreakable)} else {} end)
-    ]
-  }
-) 
-| map(to_entries[])
-| group_by(.key)[] 
-| {(.[0].key) : map(.value) | add}] | add) as $mappings
-| {
-    "format_version": "1",
-    "items": $mappings
-  }
-' config.json | sponge ./target/geyser_mappings.json
+python generate_mappings.py
 
 # Add sprites if sprites.json exists in the root pack
 if [ -f sprites.json ]; then
   status_message process "Adding provided sprite paths from sprites.json"
-  jq -r '
-  to_entries 
-  | map(.key as $item | .value | map(. += {"item": $item})) 
-  | add[] 
-  | [((.item | split(":")[-1]) + "_c" + (.custom_model_data | tostring) + "_d" + (.damage_predicate | tostring) + "_u" + (.unbreakable | tostring)), .sprite] 
-  | @tsv 
-  | gsub("\\t";",")
-  ' sprites.json > scratch_files/sprites.csv
-
-  function write_id_hash () { 
-    local entry_hash=$(echo -n "${1}" | md5sum | head -c 7)
-    echo "${2},${entry_hash}" >> "${3}"
-  }
- 
-  while IFS=, read -r predicate icon
-    do write_id_hash "${predicate}" "${icon}"  "scratch_files/sprite_hashes.csv" &
-  done < scratch_files/sprites.csv > /dev/null
+  python -c '
+import json, hashlib
+from pathlib import Path
+if Path("sprites.json").exists():
+    sprites_data = json.loads(Path("sprites.json").read_text(encoding="utf-8"))
+    sprite_hashes = []
+    for item, entries in sprites_data.items():
+        if not isinstance(entries, list):
+            continue
+        for entry in entries:
+            cmd = entry.get("custom_model_data", "")
+            dmg = entry.get("damage_predicate", "")
+            unb = entry.get("unbreakable", "")
+            sprite = entry.get("sprite", "")
+            item_suffix = item.split(":")[-1]
+            predicate = f"{item_suffix}_c{cmd}_d{dmg}_u{unb}"
+            entry_hash = hashlib.md5(predicate.encode("utf-8")).hexdigest()[:7]
+            sprite_hashes.append(f"{sprite},{entry_hash}")
+    Path("scratch_files/sprite_hashes.csv").write_text("\n".join(sprite_hashes) + "\n", encoding="utf-8")
+'
 
   jq -cR 'split(",")' scratch_files/sprite_hashes.csv | jq -s 'map({("gmdl_" + .[1]): {"textures": .[0]}}) | add' > scratch_files/sprite_hashmap.json
 
@@ -1355,9 +917,13 @@ if [ -f sprites.json ]; then
   
 fi
 
-cd -
-ARMOR_CONVERSION="${ARMOR_CONVERSION:-true}" ARMOR_CONTENTS_DIR="${ARMOR_CONTENTS_DIR:-contents}" python manager.py
-cd ./staging
+if [[ -d "./staging" ]]; then
+  ARMOR_CONVERSION="${ARMOR_CONVERSION:-true}" ARMOR_CONTENTS_DIR="${ARMOR_CONTENTS_DIR:-contents}" python manager.py
+else
+  cd ..
+  ARMOR_CONVERSION="${ARMOR_CONVERSION:-true}" ARMOR_CONTENTS_DIR="${ARMOR_CONTENTS_DIR:-contents}" python manager.py
+  cd ./staging
+fi
 
 # Deduplicate geyser_mappings.json entries (armor conversion may introduce duplicates)
 if [ -f ./target/geyser_mappings.json ]; then
@@ -1367,16 +933,6 @@ if [ -f ./target/geyser_mappings.json ]; then
   ' ./target/geyser_mappings.json | sponge ./target/geyser_mappings.json
 fi
 
-# cleanup
-rm -rf assets && rm -f pack.mcmeta && rm -f pack.png
-if [[ ${save_scratch} != "true" ]] 
-then
-  rm -rf scratch_files
-  status_message critical "Deleted scratch files"
-else
-  cd ./scratch_files > /dev/null && zip -rq8 scratch_files.zip . -x "*/.*" && cd .. > /dev/null && mv ./scratch_files/scratch_files.zip ./target/scratch_files.zip
-  status_message completion "Archived scratch files\n"
-fi
 # ItemsAdder/Geyser postprocess fix: geometry texture sizes and missing armor player layers.
 POSTPROCESS_SCRIPT="./itemsadder_postprocess.py"
 if [ ! -f "$POSTPROCESS_SCRIPT" ] && [ -f "../itemsadder_postprocess.py" ]; then
@@ -1384,17 +940,38 @@ if [ ! -f "$POSTPROCESS_SCRIPT" ] && [ -f "../itemsadder_postprocess.py" ]; then
 fi
 if [ -f "$POSTPROCESS_SCRIPT" ]; then
   status_message process "Applying ItemsAdder/Geyser texture and armor fixes"
-  python3 "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || python "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || true
+  python "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || python3 "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || true
+fi
+
+# cleanup
+rm -rf assets && rm -f pack.mcmeta && rm -f pack.png
+
+ZIP_HELPER="./zip_pack.py"
+if [ ! -f "$ZIP_HELPER" ] && [ -f "../zip_pack.py" ]; then
+  ZIP_HELPER="../zip_pack.py"
+fi
+
+if [[ ${save_scratch} != "true" ]] 
+then
+  rm -rf scratch_files
+  status_message critical "Deleted scratch files"
+else
+  python "$ZIP_HELPER" scratch_files ./target/scratch_files.zip
+  status_message completion "Archived scratch files\n"
 fi
 
 status_message process "Compressing output packs"
-mkdir ./target/packaged
-cd ./target/rp > /dev/null && zip -rq8 geyser_resources_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/rp/geyser_resources_preview.mcpack ./target/packaged/geyser_resources_preview.mcpack
-cd ./target/bp > /dev/null && zip -rq8 geyser_behaviors_preview.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/bp/geyser_behaviors_preview.mcpack ./target/packaged/geyser_behaviors_preview.mcpack
-cd ./target/packaged > /dev/null && zip -rq8 geyser_addon.mcaddon . -i "*_preview.mcpack" && cd ../.. > /dev/null
-jq 'delpaths([paths | select(.[-1] | strings | startswith("gmdl_atlas_"))])' ./target/rp/textures/terrain_texture.json | sponge ./target/rp/textures/terrain_texture.json
-cd ./target/rp > /dev/null && zip -rq8 geyser_resources.mcpack . -x "*/.*" && cd ../.. > /dev/null && mv ./target/rp/geyser_resources.mcpack ./target/packaged/geyser_resources.mcpack
-mkdir ./target/unpackaged
+mkdir -p ./target/packaged
+python "$ZIP_HELPER" ./target/rp ./target/packaged/geyser_resources_preview.mcpack
+python "$ZIP_HELPER" ./target/bp ./target/packaged/geyser_behaviors_preview.mcpack
+python "$ZIP_HELPER" ./target/packaged ./target/packaged/geyser_addon.mcaddon "_preview.mcpack"
+
+if [ -f ./target/rp/textures/terrain_texture.json ]; then
+  jq 'delpaths([paths | select(.[-1] | strings | startswith("gmdl_atlas_"))])' ./target/rp/textures/terrain_texture.json | sponge ./target/rp/textures/terrain_texture.json
+fi
+python "$ZIP_HELPER" ./target/rp ./target/packaged/geyser_resources.mcpack
+
+mkdir -p ./target/unpackaged
 mv ./target/rp ./target/unpackaged/rp && mv ./target/bp ./target/unpackaged/bp
 
 echo
