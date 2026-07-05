@@ -132,24 +132,13 @@ dependency_check "jq" "https://stedolan.github.io/jq/download/" "jq --version" "
 sponge () {
   cat > "${1}.tmp" && mv "${1}.tmp" "${1}"
 }
-if command -v magick &>/dev/null; then
-  convert () {
-    magick convert "$@"
-  }
-  mogrify () {
-    magick mogrify "$@"
-  }
-  IM_CMD="magick --version"
-else
-  convert () {
-    command convert "$@"
-  }
-  mogrify () {
-    command mogrify "$@"
-  }
-  IM_CMD="convert -version"
-fi
-dependency_check "imagemagick" "https://imagemagick.org/script/download.php" "$IM_CMD" ""
+convert () {
+  magick convert "$@"
+}
+mogrify () {
+  magick mogrify "$@"
+}
+dependency_check "imagemagick" "https://imagemagick.org/script/download.php" "magick --version" ""
 dependency_check "spritesheet-js" "https://www.npmjs.com/package/spritesheet-js" "-v spritesheet-js" ""
 status_message completion "All dependencies have been satisfied\n"
 
