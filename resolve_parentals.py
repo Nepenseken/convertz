@@ -142,6 +142,11 @@ def main():
                 with open(file_path_str, "w", encoding="utf-8") as f:
                     json.dump(output_data, f, indent=2)
                 json_cache[file_path_str] = output_data
+                
+                # Write icon mapping to icons.csv
+                path_str = f"textures/{namespace}/{model_path}/{model_name}".replace("//", "/")
+                icons_f.write(f"{path_hash},{path_str}\n")
+                
                 resolved = True
             except Exception as e:
                 print(f"Error writing 3D model file {file_path_str}: {e}")

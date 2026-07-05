@@ -975,6 +975,67 @@ def generate_flipbook_animations(rp_dir: Path, workspace_root: Path) -> int:
     return 0
 
 
+def consolidate_animations(rp_dir: Path) -> None:
+    import os
+    animations_dir = rp_dir / "animations"
+    if not animations_dir.exists():
+        return
+
+    merged_animations = {}
+    json_files_to_delete = []
+
+    try:
+        for json_path in list(animations_dir.rglob("*.json")):
+            if json_path.name == "animations.json":
+                try:
+                    with open(json_path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        if isinstance(data, dict) and "animations" in data:
+                            merged_animations.update(data["animations"])
+                except Exception:
+                    pass
+                json_files_to_delete.append(json_path)
+                continue
+
+            try:
+                with open(json_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, dict) and "animations" in data:
+                    merged_animations.update(data["animations"])
+                    json_files_to_delete.append(json_path)
+            except Exception as e:
+                print(f"[POST] Error reading animation file {json_path}: {e}")
+
+        if merged_animations:
+            target_file = animations_dir / "animations.json"
+            animations_dir.mkdir(parents=True, exist_ok=True)
+            output_data = {
+                "format_version": "1.8.0",
+                "animations": merged_animations
+            }
+            with open(target_file, "w", encoding="utf-8") as f:
+                json.dump(output_data, f, indent=2)
+            print(f"[POST] Consolidated {len(merged_animations)} animations into {target_file}")
+
+            for p in json_files_to_delete:
+                if p.exists() and p != target_file:
+                    try:
+                        p.unlink()
+                    except Exception:
+                        pass
+
+            for root, dirs, files in os.walk(str(animations_dir), topdown=False):
+                for d in dirs:
+                    dir_path = Path(root) / d
+                    try:
+                        if not os.listdir(dir_path):
+                            os.rmdir(dir_path)
+                    except Exception:
+                        pass
+    except Exception as e:
+        print(f"[POST] Error consolidating animations: {e}")
+
+
 def main(argv: List[str]) -> None:
     source_arg = argv[1] if len(argv) > 1 else ""
     rp_arg = argv[2] if len(argv) > 2 else "./target/rp"
@@ -1027,6 +1088,7 @@ def main(argv: List[str]) -> None:
     if workspace_root:
         fixed_3d_items = fix_3d_items_textures_and_geometry(rp_dir, workspace_root)
         flipbooks_generated = generate_flipbook_animations(rp_dir, workspace_root)
+        consolidate_animations(rp_dir)
     else:
         print("[POST] Could not resolve workspace root (config.json not found); skipping 3D items fix and flipbook generation")
 
