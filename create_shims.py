@@ -5,7 +5,13 @@ from pathlib import Path
 def main():
     magick_path = shutil.which("magick")
     if not magick_path:
-        print("ERROR: magick.exe not found in PATH!")
+        import glob
+        candidates = glob.glob(r"C:\Program Files\ImageMagick*\magick.exe")
+        if candidates:
+            magick_path = candidates[0]
+            
+    if not magick_path:
+        print("ERROR: magick.exe not found in PATH or C:\\Program Files\\ImageMagick*!")
         sys.exit(1)
         
     print(f"Found magick.exe at: {magick_path}")
@@ -13,7 +19,7 @@ def main():
     shims_dir.mkdir(exist_ok=True)
     
     # Overwrite batch files with native binary copies
-    for name in ["convert.exe", "identify.exe", "mogrify.exe"]:
+    for name in ["convert.exe", "identify.exe", "mogrify.exe", "magick.exe"]:
         dest = shims_dir / name
         try:
             shutil.copy2(magick_path, dest)

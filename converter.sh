@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
+# Add common Windows ImageMagick installation directories to PATH if magick is not found
+if ! command -v magick &>/dev/null; then
+  for dir in "/c/Program Files"/ImageMagick* "C:/Program Files"/ImageMagick*; do
+    if [ -d "$dir" ]; then
+      export PATH="${dir}:${PATH}"
+      break
+    fi
+  done
+fi
 export PATH="${PWD}/imagemagick_shims:${PATH}"
 : ${1?'Please specify an input resource pack in the same directory as the script (e.g. ./converter.sh MyResourcePack.zip)'}
 
