@@ -207,8 +207,8 @@ jobs:
         run: |
           mkdir -p staging
           cp converter.sh staging/
-          cp ia_fix.py staging/
-          cp itemsadder_postprocess.py staging/
+          cp *.py staging/
+          cp blank256.png staging/ || true
           cd staging
           chmod +x converter.sh
           COLUMNS=$COLUMNS-1 curl --no-styled-output -#L -o input_pack.zip "${PACK_URL}"
