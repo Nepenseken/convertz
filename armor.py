@@ -165,9 +165,10 @@ def find_armor_texture(pack_dir: str, namespace: str, eq_id: str, layer_path: st
         search_bases.add(base)
         for od in sorted(base.glob("ia_overlay_*/")):
             search_bases.add(od)
-        # Also search inside contents/*/resource_pack/ for legacy textures
-        for rp in sorted(base.glob("contents/*/resource_pack/")):
-            search_bases.add(rp)
+        # Also search inside contents/*/resource_pack/ and resourcepack/ for legacy textures
+        for rp_name in ["resource_pack", "resourcepack"]:
+            for rp in sorted(base.glob(f"contents/*/{rp_name}/")):
+                search_bases.add(rp)
     
     # If layer_key is layer_2 and we can't find it, also try falling back to layer_1 texture
     # (some ItemsAdder packs only define layer_1 textures)

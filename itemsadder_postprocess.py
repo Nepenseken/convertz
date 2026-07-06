@@ -61,7 +61,7 @@ def norm(value: str) -> str:
 
 def source_priority(path: str) -> int:
     p = path.replace("\\", "/")
-    if p.startswith("contents/") and "/resource_pack/assets/" in p:
+    if p.startswith("contents/") and ("/resource_pack/assets/" in p or "/resourcepack/assets/" in p):
         return 100
     if p.startswith("assets/"):
         return 50
@@ -801,11 +801,12 @@ def solve_affine(p0, p1, p3, w, h):
 def locate_model_json(ref, workspace_root):
     ns, path = ref.split(":", 1) if ":" in ref else ("minecraft", ref)
     cand1 = Path(workspace_root) / "assets" / ns / "models" / f"{path}.json"
-    cand2 = Path(workspace_root) / "contents" / ns / "resource_pack" / "assets" / ns / "models" / f"{path}.json"
     if cand1.exists():
         return cand1
-    if cand2.exists():
-        return cand2
+    for rp_name in ["resource_pack", "resourcepack"]:
+        cand2 = Path(workspace_root) / "contents" / ns / rp_name / "assets" / ns / "models" / f"{path}.json"
+        if cand2.exists():
+            return cand2
     cands = list(Path(workspace_root).glob(f"**/models/{path}.json"))
     if cands:
         return cands[0]
@@ -1125,7 +1126,7 @@ def fix_3d_items_textures_and_geometry(rp_dir: Path, workspace_root: Path) -> in
                     path_hash = entry.get("path_hash")
                     if path_hash and "texture_data" in item_tex:
                         if path_hash in item_tex["texture_data"]:
-                            item_tex["texture_data"][path_hash]["textures"] = f"textures/{ns}/{model_path}/{model_name}_icon"
+                            item_tex["texture_data"][path_hash]["textures"] = f"textures/{ns}/{model_path}/{model_name}_icon".replace("//", "/")
                             write_json(item_tex_path, item_tex)
         except Exception as e:
             print(f"[POST] Failed to generate 3D icon for {model_name}: {e}")
@@ -1190,33 +1191,46 @@ def fix_3d_items_textures_and_geometry(rp_dir: Path, workspace_root: Path) -> in
 def generate_flipbook_animations(rp_dir: Path, workspace_root: Path) -> int:
     flipbook_entries = []
     mcmeta_files = []
-    for base_dir in [workspace_root / "assets", workspace_root / "pack" / "assets"]:
+    for base_dir in [workspace_root / "assets", workspace_root / "pack" / "assets", workspace_root / "contents"]:
         if base_dir.exists():
             mcmeta_files.extend(list(base_dir.rglob("*.png.mcmeta")))
 
     seen_refs = set()
     for mcmeta_path in mcmeta_files:
+        path_str = mcmeta_path.as_posix()
+        if "/assets/" not in path_str:
+            continue
+        parts = mcmeta_path.parts
         try:
-            parts = mcmeta_path.relative_to(workspace_root / "assets").parts
-        except ValueError:
-            try:
-                parts = mcmeta_path.relative_to(workspace_root / "pack" / "assets").parts
-            except ValueError:
+            idx = parts.index("assets")
+            if parts[idx + 2] != "textures":
                 continue
-
-        if len(parts) < 3 or parts[1] != "textures":
+            ns = parts[idx + 1]
+            subpath_parts = list(parts[idx + 3:-1])
+            stem_name = mcmeta_path.stem
+            if stem_name.endswith(".png"):
+                stem_name = stem_name[:-4]
+            subpath_parts.append(stem_name)
+            subpath = "/".join(subpath_parts)
+        except Exception:
             continue
 
-        ns = parts[0]
-        subpath = Path(*parts[2:]).with_suffix("").with_suffix("")
         texture_ref = f"{ns}:{subpath}".replace("\\", "/")
-
         if texture_ref in seen_refs:
             continue
         seen_refs.add(texture_ref)
 
         target_tex_path = f"textures/{ns}/{subpath}".replace("\\", "/")
         target_png_file = rp_dir / f"{target_tex_path}.png"
+        
+        # If target file does not exist, copy the uncropped vertical strip PNG from source
+        if not target_png_file.exists():
+            src_png = mcmeta_path.parent / mcmeta_path.stem
+            if src_png.exists():
+                target_png_file.parent.mkdir(parents=True, exist_ok=True)
+                import shutil
+                shutil.copy2(src_png, target_png_file)
+
         if not target_png_file.exists():
             continue
 

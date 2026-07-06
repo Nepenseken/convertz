@@ -48,12 +48,20 @@ def write_json(path: Path, data: Dict[str, Any]) -> None:
 
 
 def merge_itemsadder_resource_pack(pack_dir: Path) -> int:
-    """Copy contents/*/resource_pack/assets over root assets with priority."""
+    """Copy contents/*/resource_pack/assets and contents/*/resourcepack/assets over root assets with priority."""
     copied = 0
     root_assets = pack_dir / "assets"
     root_assets.mkdir(parents=True, exist_ok=True)
 
-    content_roots = sorted((pack_dir / "contents").glob("*/resource_pack/assets")) if (pack_dir / "contents").exists() else []
+    content_roots = []
+    if (pack_dir / "contents").exists():
+        for p in (pack_dir / "contents").iterdir():
+            if p.is_dir():
+                for rp_name in ["resource_pack", "resourcepack"]:
+                    rp_dir = p / rp_name / "assets"
+                    if rp_dir.exists() and rp_dir.is_dir():
+                        content_roots.append(rp_dir)
+
     for assets_dir in content_roots:
         for src in assets_dir.rglob("*"):
             if not src.is_file():
@@ -65,7 +73,7 @@ def merge_itemsadder_resource_pack(pack_dir: Path) -> int:
             shutil.copy2(src, dst)
             copied += 1
     if copied:
-        print(f"[IA] merged {copied} files from contents/*/resource_pack/assets into assets/")
+        print(f"[IA] merged {copied} files from contents/*/resource_pack(s)/assets into assets/")
     return copied
 
 
