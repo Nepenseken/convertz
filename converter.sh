@@ -833,11 +833,6 @@ cp ./target/rp/texts/en_US.lang ./target/rp/texts/en_GB.lang
 jq -n '["en_US","en_GB"]' | sponge ./target/rp/texts/languages.json
 status_message completion "en_US and en_GB lang files written\n"
 
-# Ensure images are in the correct color space
-status_message process "Setting all images to png8"
-python convert_png8.py
-status_message completion "All images set to png8"
-
 if [[ ${rename_model_files} == "true" ]]
 then
     status_message process "Consolidating model files"

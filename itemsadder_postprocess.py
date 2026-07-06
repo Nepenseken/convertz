@@ -507,7 +507,24 @@ def deduplicate_mappings(target_dir: Path) -> int:
 
 
 def convert_pngs_to_rgba(rp_dir: Path) -> int:
-    return 0
+    try:
+        from PIL import Image
+    except ImportError:
+        print("[POST] PIL/Pillow not installed, skipping RGBA texture conversion")
+        return 0
+    textures_dir = rp_dir / "textures"
+    if not textures_dir.exists():
+        return 0
+    converted_count = 0
+    for filepath in list(textures_dir.rglob("*.png")):
+        try:
+            with Image.open(filepath) as img:
+                if img.mode != "RGBA":
+                    img.convert("RGBA").save(filepath)
+                    converted_count += 1
+        except Exception as e:
+            print(f"[POST] Error converting {filepath.name} to RGBA: {e}")
+    return converted_count
 
 
 def fix_animated_texture_geometries(rp_dir: Path) -> int:
