@@ -33,7 +33,7 @@ def main():
         mapping = {
             "name": path_hash,
             "allow_offhand": True,
-            "icon": path_hash if generate_3d_icons else item_type
+            "icon": path_hash
         }
         
         if "CustomModelData" in nbt:
