@@ -1,8 +1,13 @@
+import sys
 import json
 from pathlib import Path
 
 def main():
     print("Starting fast Python Geyser mappings generator...")
+    generate_3d_icons = True
+    if len(sys.argv) > 1 and sys.argv[1].lower() == "false":
+        generate_3d_icons = False
+
     config_path = Path("config.json")
     if not config_path.exists():
         print("ERROR: config.json not found!")
@@ -28,7 +33,7 @@ def main():
         mapping = {
             "name": path_hash,
             "allow_offhand": True,
-            "icon": path_hash
+            "icon": path_hash if generate_3d_icons else item_type
         }
         
         if "CustomModelData" in nbt:

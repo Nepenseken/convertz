@@ -15,6 +15,9 @@ def main():
     
     count = 0
     for idx, p in enumerate(png_files):
+        p_str = p.as_posix().lower()
+        if "armor" in p_str or "auto_generated" in p_str or "active_armors" in p_str:
+            continue
         try:
             with Image.open(p) as img:
                 # If image is already in Palette mode, skip

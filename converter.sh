@@ -79,7 +79,7 @@ else
 fi
 
 # get user defined start flags
-while getopts w:m:a:b:f:v:r:s:u: flag "${@:2}"
+while getopts w:m:a:b:f:v:r:s:u:i: flag "${@:2}"
 do
     case "${flag}" in
         w) warn=${OPTARG};;
@@ -91,6 +91,7 @@ do
 	r) rename_model_files=${OPTARG};;
         s) save_scratch=${OPTARG};;
         u) disable_ulimit=${OPTARG};;
+        i) generate_3d_icons=${OPTARG};;
     esac
 done
 
@@ -169,6 +170,7 @@ ${C_GRAY}Input pack to merge: ${C_BLUE}${merge_input:=null}
 ${C_GRAY}Attachable material: ${C_BLUE}${attachable_material:=entity_alphatest_one_sided}
 ${C_GRAY}Block material: ${C_BLUE}${block_material:=alpha_test}
 ${C_GRAY}Fallback pack URL: ${C_BLUE}${fallback_pack:=null}
+${C_GRAY}Generate 3D Icons: ${C_BLUE}${generate_3d_icons:=true}
 "
 
 # decompress our input pack
@@ -888,7 +890,7 @@ fi
 
 status_message process "Creating Geyser mappings in target directory"
 echo
-python generate_mappings.py
+python generate_mappings.py "${generate_3d_icons}"
 
 # Add sprites if sprites.json exists in the root pack
 if [ -f sprites.json ]; then
@@ -962,7 +964,7 @@ if [ ! -f "$POSTPROCESS_SCRIPT" ] && [ -f "../itemsadder_postprocess.py" ]; then
 fi
 if [ -f "$POSTPROCESS_SCRIPT" ]; then
   status_message process "Applying ItemsAdder/Geyser texture and armor fixes"
-  python "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || python3 "$POSTPROCESS_SCRIPT" "${1}" ./target/rp || true
+  python "$POSTPROCESS_SCRIPT" "${1}" ./target/rp "${generate_3d_icons}" || python3 "$POSTPROCESS_SCRIPT" "${1}" ./target/rp "${generate_3d_icons}" || true
 fi
 
 # cleanup

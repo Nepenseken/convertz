@@ -990,12 +990,22 @@ def render_3d_icon(java_model_path: Path, workspace_root: Path, output_path: Pat
 
 _image_cache = {}
 
-def fix_3d_items_textures_and_geometry(rp_dir: Path, workspace_root: Path) -> int:
+def fix_3d_items_textures_and_geometry(rp_dir: Path, workspace_root: Path, generate_3d_icons: bool = True) -> int:
     from PIL import Image
     config_path = workspace_root / "config.json"
     if not config_path.exists():
         print("[POST] config.json not found; skipping 3D items fix")
         return 0
+
+    ARMOR_ITEM_TYPES = {
+        "leather_helmet", "leather_chestplate", "leather_leggings", "leather_boots",
+        "chainmail_helmet", "chainmail_chestplate", "chainmail_leggings", "chainmail_boots",
+        "iron_helmet", "iron_chestplate", "iron_leggings", "iron_boots",
+        "golden_helmet", "golden_chestplate", "golden_leggings", "golden_boots",
+        "diamond_helmet", "diamond_chestplate", "diamond_leggings", "diamond_boots",
+        "netherite_helmet", "netherite_chestplate", "netherite_leggings", "netherite_boots",
+        "turtle_helmet", "elytra"
+    }
 
     try:
         config_data = json.loads(config_path.read_text(encoding="utf-8"))
@@ -1116,20 +1126,21 @@ def fix_3d_items_textures_and_geometry(rp_dir: Path, workspace_root: Path) -> in
         stitched_img.save(target_texture_path, "PNG")
 
         # Generate 3D isometric inventory icon
-        icon_texture_path = rp_dir / "textures" / ns / model_path / f"{model_name}_icon.png"
-        try:
-            if render_3d_icon(java_model_path, workspace_root, icon_texture_path):
-                # Update item_texture.json
-                item_tex_path = rp_dir / "textures" / "item_texture.json"
-                if item_tex_path.exists():
-                    item_tex = json.loads(item_tex_path.read_text(encoding="utf-8"))
-                    path_hash = entry.get("path_hash")
-                    if path_hash and "texture_data" in item_tex:
-                        if path_hash in item_tex["texture_data"]:
-                            item_tex["texture_data"][path_hash]["textures"] = f"textures/{ns}/{model_path}/{model_name}_icon".replace("//", "/")
-                            write_json(item_tex_path, item_tex)
-        except Exception as e:
-            print(f"[POST] Failed to generate 3D icon for {model_name}: {e}")
+        if generate_3d_icons and entry.get("item") not in ARMOR_ITEM_TYPES:
+            icon_texture_path = rp_dir / "textures" / ns / model_path / f"{model_name}_icon.png"
+            try:
+                if render_3d_icon(java_model_path, workspace_root, icon_texture_path):
+                    # Update item_texture.json
+                    item_tex_path = rp_dir / "textures" / "item_texture.json"
+                    if item_tex_path.exists():
+                        item_tex = json.loads(item_tex_path.read_text(encoding="utf-8"))
+                        path_hash = entry.get("path_hash")
+                        if path_hash and "texture_data" in item_tex:
+                            if path_hash in item_tex["texture_data"]:
+                                item_tex["texture_data"][path_hash]["textures"] = f"textures/{ns}/{model_path}/{model_name}_icon".replace("//", "/")
+                                write_json(item_tex_path, item_tex)
+            except Exception as e:
+                print(f"[POST] Failed to generate 3D icon for {model_name}: {e}")
 
         try:
             geom_data = json.loads(geom_file.read_text(encoding="utf-8"))
@@ -1329,6 +1340,9 @@ def main(argv: List[str]) -> None:
     source_arg = argv[1] if len(argv) > 1 else ""
     rp_arg = argv[2] if len(argv) > 2 else "./target/rp"
     rp_dir = Path(rp_arg)
+    generate_3d_icons = True
+    if len(argv) > 3 and argv[3].lower() == "false":
+        generate_3d_icons = False
     
     # Convert all textures to RGBA mode
     target_rp = Path("./target/rp")
@@ -1375,7 +1389,7 @@ def main(argv: List[str]) -> None:
     fixed_3d_items = 0
     flipbooks_generated = 0
     if workspace_root:
-        fixed_3d_items = fix_3d_items_textures_and_geometry(rp_dir, workspace_root)
+        fixed_3d_items = fix_3d_items_textures_and_geometry(rp_dir, workspace_root, generate_3d_icons)
         flipbooks_generated = generate_flipbook_animations(rp_dir, workspace_root)
         consolidate_animations(rp_dir)
     else:

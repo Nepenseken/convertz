@@ -58,6 +58,10 @@ on:
         description: 'Block Conversion'
         default: 'false'
         required: false
+      generate_3d_icons:
+        description: 'Generate 3D Icons'
+        default: 'true'
+        required: false
 
 jobs:
   get-pack-info:
@@ -82,6 +86,7 @@ jobs:
       bow_conversion: ${{ steps.organize-inputs.outputs.BOW_CONVERSION }}
       shield_conversion: ${{ steps.organize-inputs.outputs.SHIELD_CONVERSION }}
       block_conversion: ${{ steps.organize-inputs.outputs.BLOCK_CONVERSION }}
+      generate_3d_icons: ${{ steps.organize-inputs.outputs.GENERATE_3D_ICONS }}
     steps:
       - name: Issue Forms Body Parser
         id: parse-issue
@@ -106,6 +111,7 @@ jobs:
               --arg bow "${{ github.event.inputs.bow_conversion }}" \
               --arg shld "${{ github.event.inputs.shield_conversion }}" \
               --arg blk "${{ github.event.inputs.block_conversion }}" \
+              --arg icon "${{ github.event.inputs.generate_3d_icons }}" \
               '{
                 "pack_url": $pk,
                 "default_pack_url": (if $def == "" then "null" else $def end),
@@ -121,7 +127,8 @@ jobs:
                 "sounds_conversion": (if $snd == "" then "false" else $snd end),
                 "bow_conversion": (if $bow == "" then "false" else $bow end),
                 "shield_conversion": (if $shld == "" then "false" else $shld end),
-                "block_conversion": (if $blk == "" then "false" else $blk end)
+                "block_conversion": (if $blk == "" then "false" else $blk end),
+                "generate_3d_icons": (if $icon == "" then "true" else $icon end)
               }' > inputs.json
           else
             echo ${{ toJSON(steps.parse-issue.outputs.data) }} | jq '
@@ -142,7 +149,8 @@ jobs:
               "sounds_conversion": test_input(.["sounds-conversion"].text; "false"),
               "bow_conversion": test_input(.["bow-conversion"].text; "false"),
               "shield_conversion": test_input(.["shield-conversion"].text; "false"),
-              "block_conversion": test_input(.["block-conversion"].text; "false")
+              "block_conversion": test_input(.["block-conversion"].text; "false"),
+              "generate_3d_icons": test_input(.["generate-3d-icons"].text; "true")
             }' > inputs.json
           fi
           echo "PACK_URL=$(jq -r '.pack_url' inputs.json)" >> $GITHUB_OUTPUT
@@ -160,6 +168,7 @@ jobs:
           echo "BOW_CONVERSION=$(jq -r '.bow_conversion' inputs.json)" >> $GITHUB_OUTPUT
           echo "SHIELD_CONVERSION=$(jq -r '.bow_conversion' inputs.json)" >> $GITHUB_OUTPUT
           echo "BLOCK_CONVERSION=$(jq -r '.block_conversion' inputs.json)" >> $GITHUB_OUTPUT
+          echo "GENERATE_3D_ICONS=$(jq -r '.generate_3d_icons' inputs.json)" >> $GITHUB_OUTPUT
           
   convert-pack:
     runs-on: ubuntu-latest
@@ -204,6 +213,7 @@ jobs:
           BOW_CONVERSION: ${{ needs.get-pack-info.outputs.bow_conversion }}
           SHIELD_CONVERSION: ${{ needs.get-pack-info.outputs.shield_conversion }}
           BLOCK_CONVERSION: ${{ needs.get-pack-info.outputs.block_conversion }}
+          GENERATE_3D_ICONS: ${{ needs.get-pack-info.outputs.generate_3d_icons }}
         run: |
           mkdir -p staging
           cp converter.sh staging/
@@ -217,7 +227,7 @@ jobs:
             COLUMNS=$COLUMNS-1 curl --no-styled-output -#L -o merge_pack.zip "${MERGE_PACK_URL}"
             MERGE_PACK_FILE="merge_pack.zip"
           fi
-          ./converter.sh input_pack.zip -w "false" -m ${MERGE_PACK_FILE} -a ${ATTACHABLE_MATERIAL} -b ${BLOCK_MATERIAL} -f ${DEFAULT_PACK_URL} -v ${DEFAULT_ASSETS_VERSION} -r ${RENAME_MODEL_FILES} -s ${ARCHIVE_SCRATCH} -u "true"
+          ./converter.sh input_pack.zip -w "false" -m ${MERGE_PACK_FILE} -a ${ATTACHABLE_MATERIAL} -b ${BLOCK_MATERIAL} -f ${DEFAULT_PACK_URL} -v ${DEFAULT_ASSETS_VERSION} -r ${RENAME_MODEL_FILES} -s ${ARCHIVE_SCRATCH} -u "true" -i ${GENERATE_3D_ICONS}
       - name: Upload converted pack
         uses: actions/upload-artifact@v4
         with:
