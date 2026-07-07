@@ -432,6 +432,7 @@ def main():
     for idx, (geyser_id, entry) in enumerate(config.items()):
         file_path = entry.get("path")
         generated = to_bool(entry.get("generated"))
+        item_type = entry.get("item")
         namespace = entry.get("namespace", "minecraft")
         model_path = entry.get("model_path", "")
         model_name = entry.get("model_name", "")
@@ -492,36 +493,66 @@ def main():
             except Exception:
                 pass
 
-            # 4. Generate BP Block Definition
-            bp_block = {
-                "format_version": "1.16.100",
-                "minecraft:block": {
-                    "description": {
-                        "identifier": f"geyser_custom:{path_hash}"
-                    },
-                    "components": {
-                        "minecraft:material_instances": {
-                            "*": {
-                                "texture": f"gmdl_atlas_{atlas_index}",
-                                "render_method": block_material,
-                                "face_dimming": False,
-                                "ambient_occlusion": False
-                            }
+            # 4. Generate BP Block Definition (or BP Item Definition if it's armor)
+            is_armor = item_type in {
+                "leather_helmet", "leather_chestplate", "leather_leggings", "leather_boots",
+                "chainmail_helmet", "chainmail_chestplate", "chainmail_leggings", "chainmail_boots",
+                "iron_helmet", "iron_chestplate", "iron_leggings", "iron_boots",
+                "golden_helmet", "golden_chestplate", "golden_leggings", "golden_boots",
+                "diamond_helmet", "diamond_chestplate", "diamond_leggings", "diamond_boots",
+                "netherite_helmet", "netherite_chestplate", "netherite_leggings", "netherite_boots",
+                "turtle_helmet", "elytra"
+            }
+
+            if is_armor:
+                bp_item = {
+                    "format_version": "1.16.100",
+                    "minecraft:item": {
+                        "description": {
+                            "identifier": f"geyser_custom:{path_hash}",
+                            "category": "items"
                         },
-                        "minecraft:geometry": f"geometry.geyser_custom.{geometry}",
-                        "minecraft:placement_filter": {
-                            "conditions": [{
-                                "allowed_faces": [],
-                                "block_filter": []
-                            }]
+                        "components": {
+                            "minecraft:icon": {
+                                "texture": path_hash
+                            }
                         }
                     }
                 }
-            }
-            dest = Path(f"./target/bp/blocks/{namespace}/{model_path}/{model_name}.json")
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            with open(dest, "w", encoding="utf-8") as f:
-                json.dump(bp_block, f, ensure_ascii=False, separators=(",", ":"))
+                dest = Path(f"./target/bp/items/{namespace}/{model_path}/{model_name}.{path_hash}.json")
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                with open(dest, "w", encoding="utf-8") as f:
+                    json.dump(bp_item, f, ensure_ascii=False, separators=(",", ":"))
+            else:
+                bp_block = {
+                    "format_version": "1.16.100",
+                    "minecraft:block": {
+                        "description": {
+                            "identifier": f"geyser_custom:{path_hash}"
+                        },
+                        "components": {
+                            "minecraft:material_instances": {
+                                "*": {
+                                    "texture": f"gmdl_atlas_{atlas_index}",
+                                    "render_method": block_material,
+                                    "face_dimming": False,
+                                    "ambient_occlusion": False
+                                }
+                            },
+                            "minecraft:geometry": f"geometry.geyser_custom.{geometry}",
+                            "minecraft:placement_filter": {
+                                "conditions": [{
+                                    "allowed_faces": [],
+                                    "block_filter": []
+                                }]
+                            }
+                        }
+                    }
+                }
+                dest = Path(f"./target/bp/blocks/{namespace}/{model_path}/{model_name}.json")
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                with open(dest, "w", encoding="utf-8") as f:
+                    json.dump(bp_block, f, ensure_ascii=False, separators=(",", ":"))
 
             # 5. Generate RP Attachable Definition
             bp_attachable = {

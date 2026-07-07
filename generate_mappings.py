@@ -20,6 +20,16 @@ def main():
         print(f"ERROR reading config.json: {e}")
         return
         
+    ARMOR_ITEM_TYPES = {
+        "leather_helmet", "leather_chestplate", "leather_leggings", "leather_boots",
+        "chainmail_helmet", "chainmail_chestplate", "chainmail_leggings", "chainmail_boots",
+        "iron_helmet", "iron_chestplate", "iron_leggings", "iron_boots",
+        "golden_helmet", "golden_chestplate", "golden_leggings", "golden_boots",
+        "diamond_helmet", "diamond_chestplate", "diamond_leggings", "diamond_boots",
+        "netherite_helmet", "netherite_chestplate", "netherite_leggings", "netherite_boots",
+        "turtle_helmet", "elytra"
+    }
+
     items = {}
     for key, entry in config.items():
         item_type = entry.get("item")
@@ -30,10 +40,11 @@ def main():
             continue
             
         full_key = f"minecraft:{item_type}"
+        is_armor = item_type in ARMOR_ITEM_TYPES
         mapping = {
             "name": path_hash,
             "allow_offhand": True,
-            "icon": path_hash
+            "icon": path_hash if (generate_3d_icons or is_armor) else item_type
         }
         
         if "CustomModelData" in nbt:
